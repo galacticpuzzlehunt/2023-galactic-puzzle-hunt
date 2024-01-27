@@ -1,0 +1,421 @@
+
+
+
+
+
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no">
+    
+    <title>Galactic Puzzle Hunt</title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=0.5">
+    <meta property="og:title" content="Galactic Puzzle Hunt 2023">
+    <meta property="og:description" content="What will you find inside the GalactiCosmiCave? Register now!">
+    <meta property="og:image" content="https://2023.galacticpuzzlehunt.com/static/images/banner.png">
+    <meta property="twitter:card" content="summary_large_image">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Asap+Condensed:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital@0;1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital@0;1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Recursive:slnt,CASL,CRSV,MONO@-3,0.5,1,1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/skeleton.css">
+    <link rel="stylesheet" href="/static/css/base.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.19/jquery.touchSwipe.min.js"></script>
+    <script src="/jsi18n/"></script>
+    <script src="/static/js/jquery.formset.js"></script>
+    <script src="/static/js/sorttable.js"></script>
+    <script src="/static/js/tray.js"></script>
+    <script src="/static/js/notify.js"></script>
+    <script src="/static/js/time.js"></script>
+    <link rel="icon" sizes="16x16 32x32 48x48 64x64" href="/static/images/favicon.ico" type="image/vnd.microsoft.icon">
+    
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Y1N52VY61R"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-Y1N52VY61R', {cookie_flags: 'secure;samesite=none'});
+</script>
+
+</head>
+<body>
+    <a class="skip-to-main">Press enter to skip to main content.</a>
+    <nav class="top-navbar">
+        <span class="tray">
+            <div class="top-tabs">
+                <div class="top-team-actions">
+                    <div id="nav-team-name">
+                        
+                    </div>
+                    
+                </div>
+                <div class="site-nav">
+                    
+                        <a class="selected-tab" href="/">
+                            Home
+                        </a>
+                        <a href="/about">
+                            About
+                        </a>
+                        
+                        
+                        <a href="/puzzles">
+                            Puzzles
+                        </a>
+                        
+                        <a href="/teams">
+                            Teams
+                        </a>
+                        
+                        <a href="/errata">
+                            Updates
+                        </a>
+                        
+                        
+                        <a href="/wrapup">
+                            Wrap-Up
+                        </a>
+                        
+                        <a href="https://galacticpuzzlehunt.com/archive">
+                            Archive
+                        </a>
+                        <a href="/donate">
+                            Donate
+                        </a>
+                    
+                </div>
+            </div>
+        </span>
+    </nav>
+    <script>
+    
+    
+    </script>
+    
+    <div class="top-more-actions">
+        
+    </div>
+    <div class="content">
+        
+<style>
+body {
+    margin: initial;
+    overflow-x: hidden;
+    scrollbar-gutter: stable both-edges;
+}
+
+.content {
+    width: 100vw;
+}
+
+
+/* only show this if the viewport needs it */
+.scroll-down {
+    text-align: center;
+    margin-top: calc(100vw * 0.3);
+    margin-bottom: 5rem;
+    color: var(--subtle-text-color);
+    font-style: italic;
+}
+
+.post-bg {
+    margin: 0 auto;
+    width: 100vw;
+}
+
+.bottom {
+    background-color: var(--info-bg-color);
+    padding-bottom: 10rem;
+}
+
+.feedback, .register {
+    text-align: center;
+}
+
+.register .btn {
+    height: 48px;
+    line-height: 48px;
+    font-size: 3rem;
+}
+
+.info-row {
+    padding: 5rem 5rem 10rem;
+}
+
+.info-row h4 {
+    font-weight: 700;
+    font-size: 4rem;
+    text-transform: uppercase;
+    margin: 4rem 0 0;
+    color: var(--accent-color);
+    padding-bottom: 3rem;
+    border: none;
+}
+
+.info-row > div {
+    margin: 1rem 2rem;
+}
+
+.title {
+    color-scheme: only light; /* https://developer.chrome.com/blog/auto-dark-theme/ */
+    color: var(--dark-text-color);
+    text-align: center;
+}
+
+@media (prefers-color-scheme: dark) {
+    .title {
+        color: var(--dark-text-color);
+    }
+}
+
+@media screen and (max-width: 960px) {
+    .title {
+        font-size: 1.8rem;
+    }
+}
+
+.footnote {
+    font-size: 80%;
+    line-height: 1.5;
+}
+
+
+.bg {
+    z-index: -100;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    pointer-events: none;
+    mask: linear-gradient(to bottom, white 95%, transparent);
+    -webkit-mask: linear-gradient(
+      to bottom,
+      white 95%,
+      transparent
+    );
+}
+
+
+.bg .layers {
+    width: 100%;
+    height: 100%;
+}
+
+.bg .layer {
+    position: absolute;
+    width: 100%;
+    object-fit: contain;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.bg .sublayers {
+    position: relative;
+    height: 100vh; /* gets adjusted accordingly */
+}
+
+.bg .l1 {
+    height: auto;
+}
+
+.bg .l4 {
+    mix-blend-mode: overlay;
+}
+
+.bg .l5 {
+    overflow: hidden;
+}
+
+.bg .sublayers {
+    overflow: hidden;
+}
+
+#gcc-float {
+    width: 55vw;
+    transform: translateX(calc((100vw - 100%) / 2)) translateY(calc(100vw * 690/2673));
+}
+
+#gcc-float img {
+    /*margin: 20rem auto 30rem;*/
+    width: 100%;
+}
+
+.gcc {
+    position: absolute;
+    top: 0;
+    z-index: 2;
+    filter: drop-shadow(0 0 7px rgba(255, 255, 255, 0.5));
+}
+
+.feedback {
+    position: relative;
+    z-index: 10;
+
+    font-size: 1.55rem;
+    color: var(--link-text-color);
+    font-style: initial;
+    text-align: left;
+
+    width: 60rem;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: var(--btn-bg-2-color);
+    border: 2px solid var(--accent-hover-color);
+    border-radius: 5px;
+
+    filter: drop-shadow(0 0 7px rgba(255, 255, 255, 0.5));
+
+}
+
+</style>
+<div class="bg">
+    <div class="layers">
+        <img class="layer l1" src="/static/images/bg/1-sky.png">
+        <div class="sublayers">
+            <img class="layer l2" src="/static/images/bg/2-cave.png">
+            <img class="layer l3" src="/static/images/bg/3-mist.png">
+            <img class="layer l4" src="/static/images/bg/4-flow.gif">
+            <img class="layer l5" src="/static/images/bg/5-rays.png">
+            <img class="layer l6" src="/static/images/bg/6-stalactites.png">
+        </div>
+    </div>
+</div>
+
+<script>
+    // scale height to fit
+    const resizeBg = () => {
+        const layer1 = document.querySelector('.layer.l1');
+        const sublayers = document.querySelector('.sublayers');
+        sublayers.style.height = `${layer1.offsetHeight+1}px`;
+    }
+    window.onload = resizeBg;
+    window.addEventListener('resize', resizeBg);
+
+    // parallax scroll
+    const layer2 = document.querySelector('.layer.l2');
+    const layer3 = document.querySelector('.layer.l3');
+    const layer4 = document.querySelector('.layer.l4');
+    const layer5 = document.querySelector('.layer.l5');
+    const layer6 = document.querySelector('.layer.l6');
+    window.addEventListener('scroll', () => {
+        const scrollY = window.scrollY;
+        layer2.style.transform = `translateY(${-scrollY * 0.12 * 0.045}vw)`
+        layer3.style.transform = `translateY(${-scrollY * 0.12 * 0.045}vw)`
+        layer4.style.transform = `translateY(${-scrollY * 0.12 * 0.045}vw)`
+        layer6.style.transform = `translateY(${-scrollY * 0.30 * 0.045}vw)`
+    });
+</script>
+
+<div class="post-bg">
+
+<h1 class="title">Galactic Puzzle Hunt 2023</h1>
+
+
+<div class="gcc" id="gcc">
+    <div id="gcc-float">
+        <img src="/static/images/bg/galacticosmicave.png" alt="GalactiCosmiCave">
+    </div>
+</div>
+
+<div class="scroll-down">
+
+<div class="feedback">
+<p>
+
+
+Galactic Puzzle Hunt 2023 has come to a close. Thanks for puzzling with us!
+
+</p>
+<p>
+
+
+
+
+See the <a href=/puzzles >Map</a> to view puzzles, solutions, and instructions for new visitors.<br/>
+Please fill out our <a href="https://forms.gle/rCDjii8iMwSRhv5KA">feedback form</a> and check out our <a target="_blank" rel="noopener noreferrer" href="/wrapup">wrap-up</a>!
+
+
+</p>
+If you enjoyed our hunt, please consider <a target="_blank" rel="noopener noreferrer" href="/donate">donating</a>.<br/>
+<b>If you&rsquo;d like to hear from us about future events, please join our
+<a target="_blank" rel="noopener noreferrer" href="https://groups.google.com/g/galacticpuzzlehunt">interest list</a>.</b>
+</div>
+
+</div>
+
+<div class="bottom">
+    <div class="info-row">
+        <div>
+            <h4>What</h4>
+            <div class="info-desc">
+                An ancient treasure map has led you to this secret cave entrance. What terrible dangers or great riches await within?<sup>*</sup>
+                <br><br>
+                <div class="footnote"><sup>*</sup>rocks, mainly</div>
+            </div>
+        </div>
+        <div>
+            <h4>When</h4>
+            <div class="info-desc">
+                
+                
+                
+                The hunt began on <time datetime="2023-11-11T11:11:00+11:00" data-format="F j, Y \a\t g:i A T">November 10, 2023 at 7:11 PM EST</time>, and ended on <time datetime="2023-11-21T11:11:00+11:00" data-format="F j, Y \a\t g:i A T">November 20, 2023 at 7:11 PM EST</time>.
+                
+            </div>
+        </div>
+        <div>
+            <h4>Who</h4>
+            <div class="info-desc">
+                This was a puzzlehunt run by
+                ✈&#xfeff;✈&#xfeff;✈&nbsp;Galactic Trendsetters ✈&#xfeff;✈&#xfeff;✈,
+                and was a follow-up
+                to the previous <a href="https://galacticpuzzlehunt.com/archive">Galactic Puzzle Hunts</a>.
+                
+            </div>
+        </div>
+    </div>
+
+</div>
+</div>
+
+    </div>
+    
+    <script>
+        const skipToMainLink = document.querySelector("a.skip-to-main");
+        const mainContentElement = document.getElementsByTagName("main")?.item(0) || document.querySelector("div.content");
+        if (skipToMainLink && mainContentElement) {
+            const mainContentAnchor = document.createElement("a");
+            const anchorId = "main-content-anchor"
+            mainContentAnchor.className = anchorId;
+            mainContentAnchor.id = anchorId;
+            skipToMainLink.href = `#${anchorId}`;
+            mainContentElement.parentNode.insertBefore(mainContentAnchor, mainContentElement);
+        }
+    </script>
+
+    
+    <script>
+        window.djangoBaseUrl = "https://2023.galacticpuzzlehunt.com/";
+        window.wsEndpoint = "wss://2023.galacticpuzzlehunt.com/game-ws-django/";
+        
+    </script>
+    <link rel="stylesheet" href="/static/game/assets/main-a586d973.css">
+    <script type="module" src="/static/game/assets/main-8c846e1d.js"></script>
+    
+
+    <script>
+        
+            window.isPosthunt = true;
+        
+    </script>
+</body>
+</html>

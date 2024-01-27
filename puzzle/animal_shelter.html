@@ -1,0 +1,332 @@
+
+
+
+
+
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no">
+    
+<title>Animal Shelter</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=0.5">
+    <meta property="og:title" content="Galactic Puzzle Hunt 2023">
+    <meta property="og:description" content="What will you find inside the GalactiCosmiCave? Register now!">
+    <meta property="og:image" content="https://2023.galacticpuzzlehunt.com/static/images/banner.png">
+    <meta property="twitter:card" content="summary_large_image">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Asap+Condensed:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital@0;1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital@0;1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Recursive:slnt,CASL,CRSV,MONO@-3,0.5,1,1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/skeleton.css">
+    <link rel="stylesheet" href="/static/css/base.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.19/jquery.touchSwipe.min.js"></script>
+    <script src="/jsi18n/"></script>
+    <script src="/static/js/jquery.formset.js"></script>
+    <script src="/static/js/sorttable.js"></script>
+    <script src="/static/js/tray.js"></script>
+    <script src="/static/js/notify.js"></script>
+    <script src="/static/js/time.js"></script>
+    <link rel="icon" sizes="16x16 32x32 48x48 64x64" href="/static/images/favicon.ico" type="image/vnd.microsoft.icon">
+    
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Y1N52VY61R"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-Y1N52VY61R', {cookie_flags: 'secure;samesite=none'});
+</script>
+
+</head>
+<body>
+    <a class="skip-to-main">Press enter to skip to main content.</a>
+    <nav class="top-navbar">
+        <span class="tray">
+            <div class="top-tabs">
+                <div class="top-team-actions">
+                    <div id="nav-team-name">
+                        
+                    </div>
+                    
+                </div>
+                <div class="site-nav">
+                    
+                        <a href="/">
+                            Home
+                        </a>
+                        <a href="/about">
+                            About
+                        </a>
+                        
+                        
+                        <a class="selected-tab" href="/puzzles">
+                            Puzzles
+                        </a>
+                        
+                        <a href="/teams">
+                            Teams
+                        </a>
+                        
+                        <a href="/errata">
+                            Updates
+                        </a>
+                        
+                        
+                        <a href="/wrapup">
+                            Wrap-Up
+                        </a>
+                        
+                        <a href="https://galacticpuzzlehunt.com/archive">
+                            Archive
+                        </a>
+                        <a href="/donate">
+                            Donate
+                        </a>
+                    
+                </div>
+            </div>
+        </span>
+    </nav>
+    <script>
+    
+    
+    </script>
+    
+    <div class="top-more-actions">
+        
+
+
+
+<a href="/solve/animal_shelter" class="btn">Submit an answer</a>
+
+
+
+<a href="/solution/animal_shelter" class="btn">View solution</a>
+<a href="/stats/animal_shelter" class="btn">Stats</a>
+
+
+    </div>
+    <div class="content">
+        
+
+<h1>
+    Animal Shelter
+    
+</h1>
+
+<main class="puzzle-main clipboard-container">
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+
+<style>
+  .puzzle-main .animal-clues {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+  }
+  
+  .puzzle-main .animal-image-and-label {
+    text-align: center;
+  }
+
+  .puzzle-main .animal-image-and-label img {
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+    background-color: white;
+  }
+</style>
+
+<p>
+  A 3&times;3 grid of houses contains families of animals (each &ldquo;family&rdquo; comprising one or more of the same type of animal). &ldquo;Adjacent&rdquo; or &ldquo;neighbor&rdquo; means directly north, south, east, or west (not diagonal). All animals are truthful.
+</p>
+
+<div class="animal-clues">
+  <div class="animal-image-and-label">
+    <img aria-hidden="true" src='/static/puzzle_resources/animal_shelter/1.png'/>
+    <label>Ant</label>
+  </div>
+  <div>
+    <ul>
+      <li>My northern neighbors have 1 more resident than I do.</li>
+      <li>The number of floors in my house is equal to the number of squirrels.</li>
+      <li>The number of residents in my house is half the number of floors.</li>
+    </ul>
+  </div>
+  <div class="copy-only"><br/></div>
+  <div class="animal-image-and-label">
+    <img aria-hidden="true" src='/static/puzzle_resources/animal_shelter/2.png'/>
+    <label>Badger</label>
+  </div>
+  <div>
+    <ul>
+      <li>My house has half the number of floors of the southwest house.</li>
+      <li>My house has two fewer residents than floors.</li>
+      <li>My two neighboring houses contain animals with strictly more legs than me.</li>
+    </ul>
+  </div>
+  <div class="copy-only"><br/></div>
+  <div class="animal-image-and-label">
+    <img aria-hidden="true" src='/static/puzzle_resources/animal_shelter/3.png'/>
+    <label>Beaver</label>
+  </div>
+  <div>
+    <ul>
+      <li>I live in the center house.</li>
+      <li>My family is the same size as the northwest house&rsquo;s.</li>
+      <li>My house has the same number of floors as the northwest house.</li>
+    </ul>
+  </div>
+  <div class="copy-only"><br/></div>
+  <div class="animal-image-and-label">
+    <img aria-hidden="true" src='/static/puzzle_resources/animal_shelter/4.png'/>
+    <label>Chicken</label>
+  </div>
+  <div>
+    <ul>
+      <li>My family is 3 smaller than my eastern neighbors&rsquo;.</li>
+      <li>The honeybees live in my column.</li>
+      <li>The number of floors in my house is 4 times the number of residents.</li>
+    </ul>
+  </div>
+  <div class="copy-only"><br/></div>
+  <div class="animal-image-and-label">
+    <img aria-hidden="true" src='/static/puzzle_resources/animal_shelter/5.png'/>
+    <label>Eagle</label>
+  </div>
+  <div>
+    <ul>
+      <li>Both of my neighbors&rsquo; houses have queens.</li>
+      <li>My family is the same size as the beavers&rsquo;.</li>
+      <li>My house has 5 floors and is tied with one other house for second tallest.</li>
+    </ul>
+  </div>
+  <div class="copy-only"><br/></div>
+  <div class="animal-image-and-label">
+    <img aria-hidden="true" src='/static/puzzle_resources/animal_shelter/6.png'/>
+    <label>Honeybee</label>
+  </div>
+  <div>
+    <ul>
+      <li>My family is strictly larger than the other families in my row and my column. </li>
+      <li>My family is the same size as the squirrels&rsquo;.</li>
+      <li>My house has the same number of floors as the ants&rsquo;.</li>
+    </ul>
+  </div>
+  <div class="copy-only"><br/></div>
+  <div class="animal-image-and-label">
+    <img aria-hidden="true" src='/static/puzzle_resources/animal_shelter/7.png'/>
+    <label>Rabbit</label>
+  </div>
+  <div>
+    <ul>
+      <li>I live in the southernmost row.</li>
+      <li>My family has 6 members.</li>
+      <li>My house has strictly more floors than any other.</li>
+    </ul>
+  </div>
+  <div class="copy-only"><br/></div>
+  <div class="animal-image-and-label">
+    <img aria-hidden="true" src='/static/puzzle_resources/animal_shelter/8.png'/>
+    <label>Spider</label>
+  </div>
+  <div>
+    <ul>
+      <li>All of my neighbors&rsquo; names either start with the same letter as mine or end with the same letter as mine.</li>
+      <li>My family size is less than my number of floors, and is even.</li>
+      <li>My house has the same number of floors as the house north of mine.</li>
+    </ul>
+  </div>
+  <div class="copy-only"><br/></div>
+  <div class="animal-image-and-label">
+    <img aria-hidden="true" src='/static/puzzle_resources/animal_shelter/9.png'/>
+    <label>Squirrel</label>
+  </div>
+  <div>
+    <ul>
+      <li>I live in the southeast house.</li>
+      <li>My family is twice as large as the spiders&rsquo;.</li>
+      <li>My house is one of 3 that have the same number of floors as residents.</li>
+    </ul>
+  </div>
+</div>
+
+<button class="btn clipboard-button" data-skip-inline-styles="true"></button>
+
+</main>
+
+<script src="/static/js/copyjack.js"></script>
+
+<script>
+    window.puzName = "animal_shelter";
+</script>
+
+
+    </div>
+    
+    <script>
+        const skipToMainLink = document.querySelector("a.skip-to-main");
+        const mainContentElement = document.getElementsByTagName("main")?.item(0) || document.querySelector("div.content");
+        if (skipToMainLink && mainContentElement) {
+            const mainContentAnchor = document.createElement("a");
+            const anchorId = "main-content-anchor"
+            mainContentAnchor.className = anchorId;
+            mainContentAnchor.id = anchorId;
+            skipToMainLink.href = `#${anchorId}`;
+            mainContentElement.parentNode.insertBefore(mainContentAnchor, mainContentElement);
+        }
+    </script>
+
+    
+    <script>
+        window.djangoBaseUrl = "https://2023.galacticpuzzlehunt.com/";
+        window.wsEndpoint = "wss://2023.galacticpuzzlehunt.com/game-ws-django/";
+        
+    </script>
+    <link rel="stylesheet" href="/static/game/assets/main-a586d973.css">
+    <script type="module" src="/static/game/assets/main-8c846e1d.js"></script>
+    
+
+    <script>
+        
+            window.isPosthunt = true;
+        
+    </script>
+</body>
+</html>

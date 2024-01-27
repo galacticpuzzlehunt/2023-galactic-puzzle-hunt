@@ -1,0 +1,1152 @@
+
+
+
+
+
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no">
+    
+<title>Hunt Stats</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=0.5">
+    <meta property="og:title" content="Galactic Puzzle Hunt 2023">
+    <meta property="og:description" content="What will you find inside the GalactiCosmiCave? Register now!">
+    <meta property="og:image" content="https://2023.galacticpuzzlehunt.com/static/images/banner.png">
+    <meta property="twitter:card" content="summary_large_image">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Asap+Condensed:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital@0;1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital@0;1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Recursive:slnt,CASL,CRSV,MONO@-3,0.5,1,1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/skeleton.css">
+    <link rel="stylesheet" href="/static/css/base.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.19/jquery.touchSwipe.min.js"></script>
+    <script src="/jsi18n/"></script>
+    <script src="/static/js/jquery.formset.js"></script>
+    <script src="/static/js/sorttable.js"></script>
+    <script src="/static/js/tray.js"></script>
+    <script src="/static/js/notify.js"></script>
+    <script src="/static/js/time.js"></script>
+    <link rel="icon" sizes="16x16 32x32 48x48 64x64" href="/static/images/favicon.ico" type="image/vnd.microsoft.icon">
+    
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Y1N52VY61R"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-Y1N52VY61R', {cookie_flags: 'secure;samesite=none'});
+</script>
+
+</head>
+<body>
+    <a class="skip-to-main">Press enter to skip to main content.</a>
+    <nav class="top-navbar">
+        <span class="tray">
+            <div class="top-tabs">
+                <div class="top-team-actions">
+                    <div id="nav-team-name">
+                        
+                    </div>
+                    
+                </div>
+                <div class="site-nav">
+                    
+                        <a href="/">
+                            Home
+                        </a>
+                        <a href="/about">
+                            About
+                        </a>
+                        
+                        
+                        <a href="/puzzles">
+                            Puzzles
+                        </a>
+                        
+                        <a href="/teams">
+                            Teams
+                        </a>
+                        
+                        <a href="/errata">
+                            Updates
+                        </a>
+                        
+                        
+                        <a href="/wrapup">
+                            Wrap-Up
+                        </a>
+                        
+                        <a href="https://galacticpuzzlehunt.com/archive">
+                            Archive
+                        </a>
+                        <a href="/donate">
+                            Donate
+                        </a>
+                    
+                </div>
+            </div>
+        </span>
+    </nav>
+    <script>
+    
+    
+    </script>
+    
+    <div class="top-more-actions">
+        
+<a href="/wrapup/finishers" class="btn">Finishers</a>
+<a href="/biggraph" class="btn">Big Graph</a>
+<a href="/speedruns" class="btn">Speedruns</a>
+
+    </div>
+    <div class="content">
+        
+
+<h1>Hunt Stats</h1>
+
+<main>
+    <div class="info-row">
+        <div>
+            <div class="stat-entry">Total teams: <span class="stat-value">1162</span></div>
+            <div class="stat-entry">Total participants: <span class="stat-value">2822</span></div>
+        </div>
+        <div>
+            <div class="stat-entry">Total solves: <span class="stat-value">17925</span></div>
+            <div class="stat-entry">Total hints: <span class="stat-value">3583</span></div>
+        </div>
+    </div>
+
+    <table class="sortable list-table">
+        <tr>
+            <th>Puzzle</th>
+            <th title="Total number of correct answers">Solves</th>
+            <th title="Total number of answer attempts">Guesses</th>
+            <th title="Total number of hints requested">Hints</th>
+            <th title="Total number of non-backsolves">Forward solves</th>
+            <th title="Forward solve after using no hints on this puzzle">0&#8288;-&#8288;hint forward</th>
+            <th title="Forward solve after using one hint on this puzzle">1&#8288;-&#8288;hint forward</th>
+            <th title="Forward solve after using multiple hints on this puzzle">2&#8288;+&#8288;-&#8288;hint forward</th>
+            <th title="Solved after its metapuzzle">Back solves</th>
+            <th title="Made at least one guess but none were correct">No solve</th>
+        </tr>
+        
+        <tr>
+            <td sorttable_customkey="1">
+                <a href="/stats/trigram_hell">Trigram Hell</a>
+            </td>
+            
+            <td>557</td>
+            
+            <td>822</td>
+            
+            <td>183</td>
+            
+            <td>557</td>
+            
+            <td>433</td>
+            
+            <td>112</td>
+            
+            <td>12</td>
+            
+            <td>0</td>
+            
+            <td>12</td>
+            
+        </tr>
+        
+        <tr>
+            <td sorttable_customkey="2">
+                <a href="/stats/petroglyph">Petroglyph</a>
+            </td>
+            
+            <td>515</td>
+            
+            <td>942</td>
+            
+            <td>133</td>
+            
+            <td>515</td>
+            
+            <td>444</td>
+            
+            <td>61</td>
+            
+            <td>10</td>
+            
+            <td>0</td>
+            
+            <td>13</td>
+            
+        </tr>
+        
+        <tr>
+            <td sorttable_customkey="3">
+                <a href="/stats/limericks">Limericks</a>
+            </td>
+            
+            <td>582</td>
+            
+            <td>1114</td>
+            
+            <td>12</td>
+            
+            <td>582</td>
+            
+            <td>575</td>
+            
+            <td>7</td>
+            
+            <td>0</td>
+            
+            <td>0</td>
+            
+            <td>6</td>
+            
+        </tr>
+        
+        <tr>
+            <td sorttable_customkey="4">
+                <a href="/stats/make_your_own_star_battle">Make Your Own Star Battle</a>
+            </td>
+            
+            <td>510</td>
+            
+            <td>1662</td>
+            
+            <td>69</td>
+            
+            <td>510</td>
+            
+            <td>475</td>
+            
+            <td>29</td>
+            
+            <td>6</td>
+            
+            <td>0</td>
+            
+            <td>30</td>
+            
+        </tr>
+        
+        <tr>
+            <td sorttable_customkey="5">
+                <a href="/stats/now_i_know">Now I Know</a>
+            </td>
+            
+            <td>501</td>
+            
+            <td>886</td>
+            
+            <td>135</td>
+            
+            <td>500</td>
+            
+            <td>418</td>
+            
+            <td>74</td>
+            
+            <td>8</td>
+            
+            <td>1</td>
+            
+            <td>2</td>
+            
+        </tr>
+        
+        <tr>
+            <td sorttable_customkey="6">
+                <a href="/stats/gessner_mom">Gessner Mom</a>
+            </td>
+            
+            <td>436</td>
+            
+            <td>809</td>
+            
+            <td>30</td>
+            
+            <td>429</td>
+            
+            <td>409</td>
+            
+            <td>20</td>
+            
+            <td>0</td>
+            
+            <td>7</td>
+            
+            <td>6</td>
+            
+        </tr>
+        
+        <tr>
+            <td sorttable_customkey="7">
+                <a href="/stats/console-ation_prize">Console-ation Prize</a>
+            </td>
+            
+            <td>430</td>
+            
+            <td>959</td>
+            
+            <td>167</td>
+            
+            <td>423</td>
+            
+            <td>278</td>
+            
+            <td>144</td>
+            
+            <td>1</td>
+            
+            <td>7</td>
+            
+            <td>20</td>
+            
+        </tr>
+        
+        <tr>
+            <td sorttable_customkey="8">
+                <a href="/stats/faces">Faces</a>
+            </td>
+            
+            <td>458</td>
+            
+            <td>672</td>
+            
+            <td>73</td>
+            
+            <td>458</td>
+            
+            <td>410</td>
+            
+            <td>46</td>
+            
+            <td>2</td>
+            
+            <td>0</td>
+            
+            <td>4</td>
+            
+        </tr>
+        
+        <tr>
+            <td sorttable_customkey="9">
+                <a href="/stats/beige_flags">Beige Flags</a>
+            </td>
+            
+            <td>458</td>
+            
+            <td>764</td>
+            
+            <td>42</td>
+            
+            <td>458</td>
+            
+            <td>438</td>
+            
+            <td>18</td>
+            
+            <td>2</td>
+            
+            <td>0</td>
+            
+            <td>1</td>
+            
+        </tr>
+        
+        <tr>
+            <td sorttable_customkey="10">
+                <a href="/stats/animal_shelter">Animal Shelter</a>
+            </td>
+            
+            <td>436</td>
+            
+            <td>831</td>
+            
+            <td>153</td>
+            
+            <td>436</td>
+            
+            <td>316</td>
+            
+            <td>116</td>
+            
+            <td>4</td>
+            
+            <td>0</td>
+            
+            <td>5</td>
+            
+        </tr>
+        
+        <tr>
+            <td sorttable_customkey="11">
+                <a href="/stats/vent">#vent</a>
+            </td>
+            
+            <td>394</td>
+            
+            <td>1114</td>
+            
+            <td>214</td>
+            
+            <td>388</td>
+            
+            <td>261</td>
+            
+            <td>99</td>
+            
+            <td>28</td>
+            
+            <td>6</td>
+            
+            <td>4</td>
+            
+        </tr>
+        
+        <tr>
+            <td sorttable_customkey="12">
+                <a href="/stats/paint_by_numbers">Paint By Numbers</a>
+            </td>
+            
+            <td>402</td>
+            
+            <td>505</td>
+            
+            <td>52</td>
+            
+            <td>402</td>
+            
+            <td>362</td>
+            
+            <td>38</td>
+            
+            <td>2</td>
+            
+            <td>0</td>
+            
+            <td>1</td>
+            
+        </tr>
+        
+        <tr>
+            <td sorttable_customkey="13">
+                <a href="/stats/bovine_social_media_corp">Bovine Social Media Corp</a>
+            </td>
+            
+            <td>408</td>
+            
+            <td>792</td>
+            
+            <td>13</td>
+            
+            <td>407</td>
+            
+            <td>399</td>
+            
+            <td>8</td>
+            
+            <td>0</td>
+            
+            <td>1</td>
+            
+            <td>4</td>
+            
+        </tr>
+        
+        <tr>
+            <td sorttable_customkey="14">
+                <a href="/stats/op_pls_nerf">OP pls nerf</a>
+            </td>
+            
+            <td>361</td>
+            
+            <td>832</td>
+            
+            <td>187</td>
+            
+            <td>356</td>
+            
+            <td>255</td>
+            
+            <td>86</td>
+            
+            <td>15</td>
+            
+            <td>5</td>
+            
+            <td>9</td>
+            
+        </tr>
+        
+        <tr>
+            <td sorttable_customkey="15">
+                <a href="/stats/gausss_sketches">Gauss&#x27;s Sketches</a>
+            </td>
+            
+            <td>352</td>
+            
+            <td>612</td>
+            
+            <td>65</td>
+            
+            <td>343</td>
+            
+            <td>309</td>
+            
+            <td>30</td>
+            
+            <td>4</td>
+            
+            <td>9</td>
+            
+            <td>2</td>
+            
+        </tr>
+        
+        <tr>
+            <td sorttable_customkey="16">
+                <a href="/stats/postseason_tournaments">Postseason Tournaments</a>
+            </td>
+            
+            <td>345</td>
+            
+            <td>1356</td>
+            
+            <td>75</td>
+            
+            <td>310</td>
+            
+            <td>261</td>
+            
+            <td>45</td>
+            
+            <td>4</td>
+            
+            <td>35</td>
+            
+            <td>11</td>
+            
+        </tr>
+        
+        <tr>
+            <td sorttable_customkey="17">
+                <a href="/stats/two_worlds_collide">Two Worlds Collide</a>
+            </td>
+            
+            <td>365</td>
+            
+            <td>495</td>
+            
+            <td>38</td>
+            
+            <td>359</td>
+            
+            <td>335</td>
+            
+            <td>22</td>
+            
+            <td>2</td>
+            
+            <td>6</td>
+            
+            <td>3</td>
+            
+        </tr>
+        
+        <tr>
+            <td sorttable_customkey="18">
+                <a href="/stats/areciboar">ARECIBOAR</a>
+            </td>
+            
+            <td>361</td>
+            
+            <td>764</td>
+            
+            <td>30</td>
+            
+            <td>337</td>
+            
+            <td>315</td>
+            
+            <td>22</td>
+            
+            <td>0</td>
+            
+            <td>24</td>
+            
+            <td>1</td>
+            
+        </tr>
+        
+        <tr>
+            <td sorttable_customkey="19">
+                <a href="/stats/mastery_tree">Mastery Tree</a>
+            </td>
+            
+            <td>323</td>
+            
+            <td>1586</td>
+            
+            <td>354</td>
+            
+            <td>323</td>
+            
+            <td>189</td>
+            
+            <td>99</td>
+            
+            <td>35</td>
+            
+            <td>0</td>
+            
+            <td>23</td>
+            
+        </tr>
+        
+        <tr>
+            <td sorttable_customkey="20">
+                <a href="/stats/tutorial">Tutorial</a>
+            </td>
+            
+            <td>802</td>
+            
+            <td>802</td>
+            
+            <td>9</td>
+            
+            <td>802</td>
+            
+            <td>798</td>
+            
+            <td>3</td>
+            
+            <td>1</td>
+            
+            <td>0</td>
+            
+            <td>0</td>
+            
+        </tr>
+        
+        <tr>
+            <td sorttable_customkey="21">
+                <a href="/stats/angry_boarry_farmer">Angry Boarry Farmer</a>
+            </td>
+            
+            <td>751</td>
+            
+            <td>751</td>
+            
+            <td>0</td>
+            
+            <td>751</td>
+            
+            <td>751</td>
+            
+            <td>0</td>
+            
+            <td>0</td>
+            
+            <td>0</td>
+            
+            <td>0</td>
+            
+        </tr>
+        
+        <tr>
+            <td sorttable_customkey="22">
+                <a href="/stats/dargle">Dargle</a>
+            </td>
+            
+            <td>662</td>
+            
+            <td>662</td>
+            
+            <td>25</td>
+            
+            <td>662</td>
+            
+            <td>649</td>
+            
+            <td>11</td>
+            
+            <td>2</td>
+            
+            <td>0</td>
+            
+            <td>0</td>
+            
+        </tr>
+        
+        <tr>
+            <td sorttable_customkey="23">
+                <a href="/stats/beebay_fulfillment_center">beeBay Fulfillment Center</a>
+            </td>
+            
+            <td>598</td>
+            
+            <td>598</td>
+            
+            <td>73</td>
+            
+            <td>598</td>
+            
+            <td>561</td>
+            
+            <td>29</td>
+            
+            <td>8</td>
+            
+            <td>0</td>
+            
+            <td>0</td>
+            
+        </tr>
+        
+        <tr>
+            <td sorttable_customkey="24">
+                <a href="/stats/miss_yu">Miss Yu</a>
+            </td>
+            
+            <td>592</td>
+            
+            <td>592</td>
+            
+            <td>75</td>
+            
+            <td>592</td>
+            
+            <td>551</td>
+            
+            <td>36</td>
+            
+            <td>5</td>
+            
+            <td>0</td>
+            
+            <td>0</td>
+            
+        </tr>
+        
+        <tr>
+            <td sorttable_customkey="25">
+                <a href="/stats/gnutmeg_tree">Gnutmeg Tree</a>
+            </td>
+            
+            <td>629</td>
+            
+            <td>629</td>
+            
+            <td>13</td>
+            
+            <td>629</td>
+            
+            <td>617</td>
+            
+            <td>12</td>
+            
+            <td>0</td>
+            
+            <td>0</td>
+            
+            <td>0</td>
+            
+        </tr>
+        
+        <tr>
+            <td sorttable_customkey="26">
+                <a href="/stats/coloring">Coloring</a>
+            </td>
+            
+            <td>474</td>
+            
+            <td>474</td>
+            
+            <td>422</td>
+            
+            <td>474</td>
+            
+            <td>261</td>
+            
+            <td>172</td>
+            
+            <td>41</td>
+            
+            <td>0</td>
+            
+            <td>0</td>
+            
+        </tr>
+        
+        <tr>
+            <td sorttable_customkey="27">
+                <a href="/stats/spirit_of_the_vines">Spirit of the Vines</a>
+            </td>
+            
+            <td>526</td>
+            
+            <td>526</td>
+            
+            <td>38</td>
+            
+            <td>526</td>
+            
+            <td>505</td>
+            
+            <td>20</td>
+            
+            <td>1</td>
+            
+            <td>0</td>
+            
+            <td>0</td>
+            
+        </tr>
+        
+        <tr>
+            <td sorttable_customkey="28">
+                <a href="/stats/othello">Othello</a>
+            </td>
+            
+            <td>528</td>
+            
+            <td>528</td>
+            
+            <td>5</td>
+            
+            <td>528</td>
+            
+            <td>526</td>
+            
+            <td>2</td>
+            
+            <td>0</td>
+            
+            <td>0</td>
+            
+            <td>0</td>
+            
+        </tr>
+        
+        <tr>
+            <td sorttable_customkey="29">
+                <a href="/stats/jabberwock">Jabberwock</a>
+            </td>
+            
+            <td>412</td>
+            
+            <td>412</td>
+            
+            <td>93</td>
+            
+            <td>412</td>
+            
+            <td>366</td>
+            
+            <td>39</td>
+            
+            <td>7</td>
+            
+            <td>0</td>
+            
+            <td>0</td>
+            
+        </tr>
+        
+        <tr>
+            <td sorttable_customkey="30">
+                <a href="/stats/asteroid">Asteroid</a>
+            </td>
+            
+            <td>440</td>
+            
+            <td>440</td>
+            
+            <td>15</td>
+            
+            <td>440</td>
+            
+            <td>436</td>
+            
+            <td>4</td>
+            
+            <td>0</td>
+            
+            <td>0</td>
+            
+            <td>0</td>
+            
+        </tr>
+        
+        <tr>
+            <td sorttable_customkey="31">
+                <a href="/stats/bb_b">bb b</a>
+            </td>
+            
+            <td>456</td>
+            
+            <td>456</td>
+            
+            <td>17</td>
+            
+            <td>456</td>
+            
+            <td>443</td>
+            
+            <td>13</td>
+            
+            <td>0</td>
+            
+            <td>0</td>
+            
+            <td>0</td>
+            
+        </tr>
+        
+        <tr>
+            <td sorttable_customkey="32">
+                <a href="/stats/moonick">Moonick</a>
+            </td>
+            
+            <td>362</td>
+            
+            <td>362</td>
+            
+            <td>152</td>
+            
+            <td>362</td>
+            
+            <td>284</td>
+            
+            <td>64</td>
+            
+            <td>14</td>
+            
+            <td>0</td>
+            
+            <td>0</td>
+            
+        </tr>
+        
+        <tr>
+            <td sorttable_customkey="33">
+                <a href="/stats/the_swarm">The Swarm</a>
+            </td>
+            
+            <td>420</td>
+            
+            <td>420</td>
+            
+            <td>7</td>
+            
+            <td>420</td>
+            
+            <td>414</td>
+            
+            <td>6</td>
+            
+            <td>0</td>
+            
+            <td>0</td>
+            
+            <td>0</td>
+            
+        </tr>
+        
+        <tr>
+            <td sorttable_customkey="34">
+                <a href="/stats/spelling_bee">Spelling Bee</a>
+            </td>
+            
+            <td>386</td>
+            
+            <td>386</td>
+            
+            <td>29</td>
+            
+            <td>386</td>
+            
+            <td>375</td>
+            
+            <td>10</td>
+            
+            <td>1</td>
+            
+            <td>0</td>
+            
+            <td>0</td>
+            
+        </tr>
+        
+        <tr>
+            <td sorttable_customkey="35">
+                <a href="/stats/blancmange">Blancmange</a>
+            </td>
+            
+            <td>362</td>
+            
+            <td>362</td>
+            
+            <td>36</td>
+            
+            <td>362</td>
+            
+            <td>352</td>
+            
+            <td>8</td>
+            
+            <td>2</td>
+            
+            <td>0</td>
+            
+            <td>0</td>
+            
+        </tr>
+        
+        <tr>
+            <td sorttable_customkey="36">
+                <a href="/stats/infinitely_many_hogs_and_logs">Infinitely Many Hogs (and Logs)</a>
+            </td>
+            
+            <td>366</td>
+            
+            <td>366</td>
+            
+            <td>4</td>
+            
+            <td>361</td>
+            
+            <td>360</td>
+            
+            <td>1</td>
+            
+            <td>0</td>
+            
+            <td>5</td>
+            
+            <td>0</td>
+            
+        </tr>
+        
+        <tr>
+            <td sorttable_customkey="37">
+                <a href="/stats/slime">Slime</a>
+            </td>
+            
+            <td>328</td>
+            
+            <td>328</td>
+            
+            <td>343</td>
+            
+            <td>328</td>
+            
+            <td>135</td>
+            
+            <td>151</td>
+            
+            <td>42</td>
+            
+            <td>0</td>
+            
+            <td>0</td>
+            
+        </tr>
+        
+        <tr>
+            <td sorttable_customkey="38">
+                <a href="/stats/mister_penny">Mister Penny</a>
+            </td>
+            
+            <td>342</td>
+            
+            <td>342</td>
+            
+            <td>22</td>
+            
+            <td>342</td>
+            
+            <td>331</td>
+            
+            <td>11</td>
+            
+            <td>0</td>
+            
+            <td>0</td>
+            
+            <td>0</td>
+            
+        </tr>
+        
+        <tr>
+            <td sorttable_customkey="39">
+                <a href="/stats/kero">Kero</a>
+            </td>
+            
+            <td>295</td>
+            
+            <td>295</td>
+            
+            <td>180</td>
+            
+            <td>295</td>
+            
+            <td>194</td>
+            
+            <td>79</td>
+            
+            <td>22</td>
+            
+            <td>0</td>
+            
+            <td>0</td>
+            
+        </tr>
+        
+    </table>
+</main>
+
+
+    </div>
+    
+    <script>
+        const skipToMainLink = document.querySelector("a.skip-to-main");
+        const mainContentElement = document.getElementsByTagName("main")?.item(0) || document.querySelector("div.content");
+        if (skipToMainLink && mainContentElement) {
+            const mainContentAnchor = document.createElement("a");
+            const anchorId = "main-content-anchor"
+            mainContentAnchor.className = anchorId;
+            mainContentAnchor.id = anchorId;
+            skipToMainLink.href = `#${anchorId}`;
+            mainContentElement.parentNode.insertBefore(mainContentAnchor, mainContentElement);
+        }
+    </script>
+
+    
+    <script>
+        window.djangoBaseUrl = "https://2023.galacticpuzzlehunt.com/";
+        window.wsEndpoint = "wss://2023.galacticpuzzlehunt.com/game-ws-django/";
+        
+    </script>
+    <link rel="stylesheet" href="/static/game/assets/main-a586d973.css">
+    <script type="module" src="/static/game/assets/main-8c846e1d.js"></script>
+    
+
+    <script>
+        
+            window.isPosthunt = true;
+        
+    </script>
+</body>
+</html>

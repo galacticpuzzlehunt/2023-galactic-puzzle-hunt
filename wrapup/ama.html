@@ -1,0 +1,353 @@
+
+
+
+
+
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no">
+    
+<title>Ask Us Anything</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=0.5">
+    <meta property="og:title" content="Galactic Puzzle Hunt 2023">
+    <meta property="og:description" content="What will you find inside the GalactiCosmiCave? Register now!">
+    <meta property="og:image" content="https://2023.galacticpuzzlehunt.com/static/images/banner.png">
+    <meta property="twitter:card" content="summary_large_image">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Asap+Condensed:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital@0;1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital@0;1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Recursive:slnt,CASL,CRSV,MONO@-3,0.5,1,1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/skeleton.css">
+    <link rel="stylesheet" href="/static/css/base.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.19/jquery.touchSwipe.min.js"></script>
+    <script src="/jsi18n/"></script>
+    <script src="/static/js/jquery.formset.js"></script>
+    <script src="/static/js/sorttable.js"></script>
+    <script src="/static/js/tray.js"></script>
+    <script src="/static/js/notify.js"></script>
+    <script src="/static/js/time.js"></script>
+    <link rel="icon" sizes="16x16 32x32 48x48 64x64" href="/static/images/favicon.ico" type="image/vnd.microsoft.icon">
+    
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Y1N52VY61R"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-Y1N52VY61R', {cookie_flags: 'secure;samesite=none'});
+</script>
+
+</head>
+<body>
+    <a class="skip-to-main">Press enter to skip to main content.</a>
+    <nav class="top-navbar">
+        <span class="tray">
+            <div class="top-tabs">
+                <div class="top-team-actions">
+                    <div id="nav-team-name">
+                        
+                    </div>
+                    
+                </div>
+                <div class="site-nav">
+                    
+                        <a href="/">
+                            Home
+                        </a>
+                        <a href="/about">
+                            About
+                        </a>
+                        
+                        
+                        <a href="/puzzles">
+                            Puzzles
+                        </a>
+                        
+                        <a href="/teams">
+                            Teams
+                        </a>
+                        
+                        <a href="/errata">
+                            Updates
+                        </a>
+                        
+                        
+                        <a class="selected-tab" href="/wrapup">
+                            Wrap-Up
+                        </a>
+                        
+                        <a href="https://galacticpuzzlehunt.com/archive">
+                            Archive
+                        </a>
+                        <a href="/donate">
+                            Donate
+                        </a>
+                    
+                </div>
+            </div>
+        </span>
+    </nav>
+    <script>
+    
+    
+    </script>
+    
+    <div class="top-more-actions">
+        
+<a href="/wrapup" class="btn">Back to wrap-up</a>
+
+    </div>
+    <div class="content">
+        
+
+<style>
+  #wrapup-shader {
+    position: absolute;
+    background-color: var(--info-bg-color);
+    inset: -100% -30px 0;
+    z-index: -1;
+    pointer-events: none;
+  }
+
+  #wrapup-corner {
+    position: fixed;
+    width: 10vw;
+    inset: auto 0 0 auto;
+    z-index: -1;
+    pointer-events: none;
+  }
+
+  aside {
+    display: none;
+  }
+
+  @media screen and (min-width: 961px) {
+    aside {
+      display: block;
+      position: fixed;
+      font-size: 1.5rem;
+      line-height: 2rem;
+      width: 200px;
+      top: 100px;
+      left: 0;
+      bottom: 0;
+      overflow: auto;
+    }
+
+    aside div {
+      color: var(--link-text-color);
+      cursor: pointer;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    aside :hover {
+      text-decoration: underline;
+    }
+
+    aside .highlight {
+      font-weight: bold;
+    }
+
+    .top-more-actions,
+    .content {
+      margin-left: calc(240px - 10vw);
+    }
+  }
+
+  .img-full {
+    max-width: 80%;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .img-fixed {
+    height: 200px;
+  }
+</style>
+
+<h1>Ask Us Anything</h1>
+
+<div id="wrapup-background"></div>
+
+<main>
+<div id="wrapup-shader"></div>
+<img id="wrapup-corner" src="/static/images/wrapup/lobster.png">
+
+<p><strong><em>Questions have been edited slightly for clarity. Many of the questions we received are answered in the wrap-up, so those are not included here.</em></strong></p>
+<h2>Misc</h2>
+<p><strong>Was there a meta in the PvP arena?</strong></p>
+<p>We heard that Dino decks (involving <span class="embed">Thesaurus</span>) were quite strong, though we also saw decks of every faction being played successfully. </p>
+<p>(Was there a metapuzzle in the PvP arena? No. Though you may have spotted an elusive “✈️✈️✈️ Tutorial 7 ✈️✈️✈️” team. )</p>
+<p><strong>Some teams have insanely fast speedruns. How is that even possible?</strong></p>
+<p>The top speedrun teams gradually optimized their strategies on each puzzle. See this video from Please Clap for their full speedrun of the hunt (<a href="https://www.youtube.com/watch?v=HKaEAR87OWY">https://www.youtube.com/watch?v=HKaEAR87OWY</a>).</p>
+<p><strong>How did some teams get such absurdly high faction points?</strong></p>
+<p>One solver reported grinding for hours in The Swarm by setting up a situation that allowed them to rack up faction points by cycling through keystrokes.</p>
+<h2>Card Game</h2>
+<p><strong>I’m curious about how you testsolved to make sure things wouldn’t break. Did you play lots of PvP matches against each other to balance the cards? And, did you ret-con cards for specific puzzle purposes like o/re and Rude Cow? I know about some cases of crazy alternate solutions, and I’m sure there are many more :)</strong></p>
+<p><strong>How did the cards change over the course of hunt writing?</strong></p>
+<p>We ran an internal PvP “tournament” to test an early version of the card system before any puzzles had been written. Some of the early puzzles introduced new cards into the pool that would be useful for solving them. After the puzzles were written, the cards were primarily balanced for the purposes of the puzzles, and there were numerous cards whose names, abilities, or stats had constraints on them for puzzle purposes. However, we did try to re-balance extremely underpowered or overpowered cards for PvP purposes.</p>
+<p>Things that changed, largely for balance reasons:</p>
+<ul>
+<li><span class="embed">King of Bison</span> and <span class="embed">Queen of Bison</span> used to be 1/20 and 20/1</li>
+<li><span class="embed">Glass of Moo</span>/<span class="embed">Moocha</span> used to just be 1-drops that could Create 2 Food, and did not sacrifice themselves (they were very overpowered in this state).</li>
+<li><span class="embed">Murray</span> used to have much better stats, in addition to being able to Flex to Attack repeatedly. We were terrified of Murray breaking every puzzle.</li>
+<li><span class="embed">Thesaurus</span> used to have much worse stats, but is now very strong after being buffed repeatedly.</li>
+</ul>
+<p>Many cards had placeholder names originally, and were lately changed for story and theming purposes.</p>
+<p><strong>Are you going back to traditional style next year? Or will it be something different again?</strong></p>
+<p><strong>Any plans on another Galactic Puzzle Hunt? The hunts are a ton of work, but I really enjoy them!</strong></p>
+<p><strong>Are y’all planning on another GPH next year? There seems to be a trend of a later date every year and I would have to spend a whole calendar year with no GPH :(</strong></p>
+<p>Who knows?! We don’t have any specific plans yet. Thanks for experiencing this hunt with us!</p>
+<h2>Hunt Design</h2>
+<p><strong>How do you decide what puzzles get cut from the end hunt? Like your puzzle team must create like 50 puzzles. How do you decide what (in this year’s case) 39 to feature?</strong></p>
+<p>We did have more than 39 puzzle ideas, but ideas that authors chose to further develop into puzzles generally made it into the hunt (possibly with some amount of editing). We didn’t need to cut any ideas (though perhaps some of the answers had very rough backup puzzles written in case the “actual” puzzle wasn’t written) to meet a puzzle quota. In fact, we added several non-legendary battles later in the process in order to balance the factions somewhat and to better balance the number of battles with the number of answerables.</p>
+<p>Having almost all developed ideas make it into the final product is common among many puzzlehunts. If only the opposite problem were more common….</p>
+<p><strong>Was the hunt scrolling design inspired by <a href="https://puzzles.mit.edu/2015/intro.html">MIT Mystery Hunt 2015</a>?</strong></p>
+<p>Definitely! Though, it might surprise you to learn that we didn’t decide on a linear unlock order until much later – we originally had ideas about a sprawling 2D map unlock system where each faction could be explored independently. We were very fortunate that we could assign cards and puzzles that allowed for a sensible linear unlock order while keeping factions grouped together. Many puzzles had ordering constraints (Mister Penny’s card means it needs to come last; Blancmange, Jabberwock require certain card unlocks; we wanted Dargle and beeBay to be early, etc.)</p>
+<p><strong>What informed the shorter length of the hunt? Did development of the card game cause less time to be put into making more of a hunt (i.e. more card game battles and more normal puzzles)?</strong></p>
+<p><strong>We will be intrigued to read about your motivation to make this hunt much simpler than previous years. It was great for our little team, since we never had a hope of completing them before, but we’re wondering if some of the top teams might be disappointed. Personally, I’m a little disappointed that we don’t get the spectacle of a ludicrously hard puzzle that is completely unattainable until we read the detailed solution and think “wow - how could anyone have got that?” :-)</strong></p>
+<p><strong>I definitely want to hear more about how the decision to scale down this year’s hunt came about. It’s very different from previous years, and it was a really fun, fresh concept. Was it intended as proof that a scaled down hunt can still be exciting and ambitious? I know that hunt size is a huge area of interest for MIT, with team mate’s run being the most extreme example of a recent trend. Was it actually less work to write? The puzzles definitely seemed simpler, but there was clearly so much effort put into making the card game.</strong></p>
+<p>This year’s hunt had the longest development time of all GPHs (although 2020’s was split between pre-Mystery Hunt and post-Mystery Hunt writing). We intentionally designed our hunt to be shorter than past hunts to make it more accessible for teams, and lowered our team size recommendation to match. Check the wrap-up for more musings on the hunt philosophy.</p>
+<h2>Hints</h2>
+<p><strong>How many hint requests do you get on average? it can be a rate, like per hour or something. just curious.</strong></p>
+<p>Throughout the day, there were 15 hints per hour on average, but there were definitely specific times of day where you just knew there would either be a much greater or lesser rate.</p>
+<p>During the late night/early morning in North America, we’d sometimes get down to one or two hint requests an hour, but it was sometimes slightly busier since there were many solvers from China this year.</p>
+<p>On the other hand, just before 7:11 PM there would sometimes be a flood of hint requests.</p>
+<p><strong>When are the best and worst times to submit hint requests?</strong></p>
+<p>Our two most prolific hint answerers are both in the US East Coast, with Wayne sleeping at 3 AM and Yannick waking at 7. So we think the time to respond to hints was probably a little worse around 3–7 AM Eastern time.</p>
+<p><strong>Favourite hint question/answer?</strong></p>
+<p>(Wayne) Besides the ones that thanked us for the hunt, my favorite hint question was probably <del>the two times I told a team they literally already had the answer</del> this one:</p>
+<p><img class="img-full" src="/static/images/wrapup-ama/image1.png"></p>
+<p>And my favorite hint answer I gave was:</p>
+<p><em>Sowwy for the weaker pwewious hint 🥺👉👈</em></p>
+<p><em>OwO, wat’s this? 😻 YoUwU have a (cowowect) matching betuWueen, for exampwle, Yellow and Morse E, Sepia and Morse T, etc. YoUwU should soWort by that Morse letter and yoUwU’ll get an OwOrdering OwOf Slimes.</em></p>
+<h2>Merch</h2>
+<p><strong>How come most teams did not realize that the correct faction to align with is boars? It just seems obvious so it’s hard to believe that so many teams missed it? It says a lot about our society frankly, true values have been lost.</strong></p>
+<p>Asking the real questions here.</p>
+<p>I’m a Boar fan myself. I’m sure most people on the writing team are.</p>
+<p><strong>Will there ever be a Kero plush? Please I need him in my life.</strong></p>
+<p><strong>Are you guys planning to make or sell any keepsakes about the slimes? THEY ARE ACTUALLY SOOOOOOOOOOOOOOOOOOOOOOOOOOOO CUTEEEEEEEEEEEEEEEE!!!!!!!!!!! SOFTIES AND WARMIES🤤🤤🤤🤤🤤😍😍😍😍😘😘😘😘😘😘😘😘!! IF THERE ARE ANY LIKE SLIME PLUSHIES OR STICKERS OR KEYCHAINS OR WHATEVER I WOULD LITERALLY GO BUY THEM ALL!! &lt;333333333333333333333333333 QWQ PLSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS (FALLING-IN-LOVE KISSING SQUISHING HUGGING slime slime slime slime noises noises noises noises)</strong></p>
+<p>We’re pretty tired from writing hunt, but we would love to make merch as well. Plushies are quite expensive to manufacture, so we’d have to make a lot for it to be worthwhile. No promises, but let us know if you’d be interested in any merch!</p>
+<h2>Cards</h2>
+<p><strong>Can we get more info about Her Moojesty?</strong></p>
+<p><strong>Can we get more pics of Queen of Bison! She’s adorable!</strong></p>
+<p>Her Moojesty, otherwise known as Luna, comes from a line of Alaskan Klee Kais, and is a regal 4 years of age. She is allergic to a wide variety of meats, so much like her subjects, she eats a (primarily) vegan diet. Her 1 Health represents the gastrointestinal issues and anxiety issues she often faces, while her 10 Power represents her ferocious running and growling abilities.</p>
+<p style="text-align: center"><img class="img-fixed" src="/static/images/wrapup-ama/image2.png"><img class="img-fixed" src="/static/images/wrapup-ama/image3.png"><img class="img-fixed" src="/static/images/wrapup-ama/image4.png"><img class="img-fixed" src="/static/images/wrapup-ama/image5.png"></p>
+
+<p><strong>Favorite card? What’s your favourite dinosaur? (this includes birds too)? What’s your favourite flower?</strong></p>
+<p>They’re all our favorite, Corythoraptor, sakura</p>
+<p>Incidentally, here’s all of your favorite factions:</p>
+<p><img class="img-full" src="/static/images/wrapup-ama/image6.png"></p>
+<p><strong>w, h, y did the b, e, e, s spell things with c, o, m, m, a, s instead of h-y-p-h-e-n-s (or literally any separator that doesn’t already have a prosodic usecase)?</strong></p>
+<p>No one suggested anything different. Although I like to imagine the bees taking their sweet time spelling out their words.</p>
+<p><strong>How did you all come up with the card ideas? The puns and art are all excellent (special shoutout to whoever designed o and re).</strong></p>
+<p>Many of them were created based on inspiration from mechanics we’ve seen elsewhere, or for a particular purpose for a puzzle design. The names were mostly picked to be thematic with the faction the card belonged to.</p>
+<p><strong>who made the card art? loved all the different styles.</strong></p>
+<p>Check our <a href="/game/art_credits">Art Credits</a>!</p>
+<p><strong>Why are o and re named o and re? Just for Jabberwock?</strong></p>
+<p><a href="https://knowyourmeme.com/memes/oreo-grammar">o and re are inspired by memes like this:</a> 
+<img class="img-fixed" src="/static/images/wrapup-ama/image7.jpg"></p>
+<p>Interestingly, they were originally both in the Dinosaur faction, and were moved to the Cow faction when we realized that the Cows needed more cards. Jabberwock was designed after o and re to use them in the solve path.</p>
+<h2>Specific Puzzles</h2>
+<p><strong>I’m quite curious about the story behind each puzzle, how did you come up with these wonderful ideas?</strong></p>
+<p><strong>How do you guys come up with such great ideas (puzzles, format, and design)?</strong></p>
+<p><strong>How is Moonick designed? Am I just delusional or does it in fact pick the hardest puzzle to solve based on the current situation?</strong></p>
+<p><strong>There were a few presentations of puzzles that seemed pretty inspired, e.g. Areciboar to really lean into the whole flavor idea, beige flags to remove colors from flags. Could perhaps the authors of those puzzles discuss a bit about their decisions to present the puzzles in those cool ways?</strong></p>
+<p>The author’s notes for each puzzle usually explain the motivation behind them, and we usually try to cover the most frequently asked questions there.</p>
+<p><strong>How the hell do you get everything to fit together so nicely! The fact that all the answers formed a new puzzle that was so well defined seems impossible. Obviously for some puzzles like Star Battle the answer can be whatever, but making them thematic and getting the perfect answers for all of them seems so difficult.</strong></p>
+<p>In most puzzlehunts with metapuzzles, the metapuzzle is written first, and then authors write puzzles, which are sometimes tailored to specific answers in the metapuzzle.</p>
+<h2>Miscellaneous</h2>
+<p><strong>Do you run IRL puzzle hunts?</strong></p>
+<p>We haven’t yet, but I wouldn’t rule out the possibility. It’s nice that everyone can participate when it’s online.</p>
+<p><strong>Who has the most slime cards included in a deck (coming from a person who added 2763 slimes)?</strong></p>
+<p>Unfortunately, we did not track deck compositions across all time, but at some point after hunt end, Field of the Gecko had 27 slimes in their deck, which was the most number of slimes across all teams.</p>
+<p>(Wayne) …Is that a BFDI reference 😍</p>
+<p><strong>Is there a maximum number of slimes on the ending page? Even with the browser zoomed out, they were everywhere.</strong></p>
+<p>Nope!</p>
+<p><img class="img-full" src="/static/images/wrapup-ama/image8.png"></p>
+<p><strong>Do you accept puzzle submissions?</strong></p>
+<p>No, but we encourage you to write your own! You can use <a href="https://www.puzzlehunt.net/checker">https://www.puzzlehunt.net/checker</a> to generate answer checkers for standalone answerables, and <a href="https://github.com/galacticpuzzlehunt/gph-site">gph-site</a> to host your own hunts.</p>
+<p><strong>Also, to put a spin on one of the given prompts, what’s your favorite writing system?</strong></p>
+<p>Graduate mathematics.</p>
+<p><strong>Why don’t you charge a tiny bit of money for something with this much polish?</strong></p>
+<p>We don’t want to force people to pay for the puzzle hunt experience, but if you think it was worth money, please <a href="/donate">donate</a> to us! We will find a way to put your money to good use. (Servers are pricey.)</p>
+<p><strong>Any chance of a sailor moon puzzle hunt follow up?</strong></p>
+<p>No, we couldn’t possibly do that…unless?</p>
+<p><em>Sailor Moon</em> is just what people happen to flip to in their shoujo magazines while trying to read <em>Cardcaptor Sakura</em>, so no 😎. - anonymous</p>
+<h2>Web</h2>
+<p><strong>Tech: How was the scrollbar on the left of the screen implemented? Very nice stuff. For some reason the infinite hogs only appear when you scroll down far enough, even if it has been previously already unlocked, just curious why is that? </strong></p>
+<p>We had coordinates for each of the map items already, so implementing the scrollbar was a matter of a bunch of math to place the items and draw the screen boundaries.</p>
+<p>The infinite hogs thing has to do with how some browsers handle image rendering. We didn’t think it was important enough to try to fix.</p>
+<p><strong>How much work was it to add the PvP multiplayer? I would have been paranoid of exposure to the risk of spending tons of time fixing bugs on a minor feature if I had to do that!</strong></p>
+<p>We designed and built the card game as a multiplayer game from the beginning. Exposing this in the hunt as the PvP arena took a bit more work, but we were very intent on supporting it since the idea of the card game being a real game that you can play with others was a central aspect of our hunt’s theme. Nevertheless, we took care to scope the feature appropriately, and only implemented the minimal features necessary for players to have fun with it over the hunt’s timeframe.</p>
+<p>The PvP arena was indeed the source of many bugs, but we were able to catch most of them as we had dedicated play sessions across the development timeline specifically for this purpose.</p>
+<p><strong>How long did it take you to build this web? That’s amazing! Why don’t you put it on Steam!</strong></p>
+<p>We started work in April.</p>
+<p>We don’t have plans to release GCC on other platforms. We are working on preserving the hunt experience on our website.</p>
+<p><strong>Was the webtech y’all used for the Baba is You puzzle last year the same tech you used for this overarching hunt? Because it was so smooth + felt like a truly cooperative experience</strong></p>
+<p>Not at all. The Baba Is You puzzle from MH2021 depended on the same tech that caused major atomicity problems in other interactive puzzles during that hunt, and the frequent website crashes during GPH2022.</p>
+</main>
+
+<aside>
+  <script>
+    const heads = [...$('h1,h2,h3,h4,h5')].map(head => [head, $('<div>')
+      .text(head.textContent)
+      .css('padding-left', head.tagName.substr(1) + 'ch')
+      .click(() => head.scrollIntoView())
+      .appendTo('aside')]);
+    function highlight() {
+      const rects = heads.map(([head]) => head.getBoundingClientRect());
+      heads.forEach(([head, link], i) => link.toggleClass('highlight',
+        (!rects[i + 1] || rects[i + 1].top > 0) && rects[i].top < innerHeight));
+    }
+    document.addEventListener('scroll', highlight, { passive: true });
+    highlight();
+  </script>
+</aside>
+
+<script src="https://twemoji.maxcdn.com/v/latest/twemoji.min.js" crossorigin="anonymous"></script>
+<script>for (const p of document.querySelectorAll('main p')) twemoji.parse(p);</script>
+
+    </div>
+    
+    <script>
+        const skipToMainLink = document.querySelector("a.skip-to-main");
+        const mainContentElement = document.getElementsByTagName("main")?.item(0) || document.querySelector("div.content");
+        if (skipToMainLink && mainContentElement) {
+            const mainContentAnchor = document.createElement("a");
+            const anchorId = "main-content-anchor"
+            mainContentAnchor.className = anchorId;
+            mainContentAnchor.id = anchorId;
+            skipToMainLink.href = `#${anchorId}`;
+            mainContentElement.parentNode.insertBefore(mainContentAnchor, mainContentElement);
+        }
+    </script>
+
+    
+    <script>
+        window.djangoBaseUrl = "https://2023.galacticpuzzlehunt.com/";
+        window.wsEndpoint = "wss://2023.galacticpuzzlehunt.com/game-ws-django/";
+        
+    </script>
+    <link rel="stylesheet" href="/static/game/assets/main-a586d973.css">
+    <script type="module" src="/static/game/assets/main-8c846e1d.js"></script>
+    
+
+    <script>
+        
+            window.isPosthunt = true;
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,1088 @@
+
+
+
+
+
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no">
+    
+<title>Wrap-Up</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=0.5">
+    <meta property="og:title" content="Galactic Puzzle Hunt 2023">
+    <meta property="og:description" content="What will you find inside the GalactiCosmiCave? Register now!">
+    <meta property="og:image" content="https://2023.galacticpuzzlehunt.com/static/images/banner.png">
+    <meta property="twitter:card" content="summary_large_image">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Asap+Condensed:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital@0;1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital@0;1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Recursive:slnt,CASL,CRSV,MONO@-3,0.5,1,1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/skeleton.css">
+    <link rel="stylesheet" href="/static/css/base.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.19/jquery.touchSwipe.min.js"></script>
+    <script src="/jsi18n/"></script>
+    <script src="/static/js/jquery.formset.js"></script>
+    <script src="/static/js/sorttable.js"></script>
+    <script src="/static/js/tray.js"></script>
+    <script src="/static/js/notify.js"></script>
+    <script src="/static/js/time.js"></script>
+    <link rel="icon" sizes="16x16 32x32 48x48 64x64" href="/static/images/favicon.ico" type="image/vnd.microsoft.icon">
+    
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Y1N52VY61R"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-Y1N52VY61R', {cookie_flags: 'secure;samesite=none'});
+</script>
+
+</head>
+<body>
+    <a class="skip-to-main">Press enter to skip to main content.</a>
+    <nav class="top-navbar">
+        <span class="tray">
+            <div class="top-tabs">
+                <div class="top-team-actions">
+                    <div id="nav-team-name">
+                        
+                    </div>
+                    
+                </div>
+                <div class="site-nav">
+                    
+                        <a href="/">
+                            Home
+                        </a>
+                        <a href="/about">
+                            About
+                        </a>
+                        
+                        
+                        <a href="/puzzles">
+                            Puzzles
+                        </a>
+                        
+                        <a href="/teams">
+                            Teams
+                        </a>
+                        
+                        <a href="/errata">
+                            Updates
+                        </a>
+                        
+                        
+                        <a class="selected-tab" href="/wrapup">
+                            Wrap-Up
+                        </a>
+                        
+                        <a href="https://galacticpuzzlehunt.com/archive">
+                            Archive
+                        </a>
+                        <a href="/donate">
+                            Donate
+                        </a>
+                    
+                </div>
+            </div>
+        </span>
+    </nav>
+    <script>
+    
+    
+    </script>
+    
+    <div class="top-more-actions">
+        
+<a href="/wrapup/ama" class="btn">Ask Us Anything</a>
+<a href="/stats" class="btn">Hunt Stats</a>
+<a href="/wrapup/finishers" class="btn">Finishers</a>
+<a href="/biggraph" class="btn">Big Graph</a>
+<a href="/speedruns" class="btn">Speedruns</a>
+
+    </div>
+    <div class="content">
+        
+
+<style>
+#wrapup-shader {
+  position: absolute;
+  background-color: var(--info-bg-color);
+  inset: -100% -30px 0;
+  z-index: -1;
+  pointer-events: none;
+}
+
+#wrapup-corner {
+  position: fixed;
+  width: 10vw;
+  inset: auto 0 0 auto;
+  z-index: -1;
+  pointer-events: none;
+}
+
+aside {
+  display: none;
+}
+
+@media screen and (min-width: 961px) {
+  aside {
+    display: block;
+    position: fixed;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    width: 200px;
+    top: 100px;
+    left: 0;
+    bottom: 0;
+    overflow: auto;
+  }
+
+  aside div {
+    color: var(--link-text-color);
+    cursor: pointer;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  aside :hover {
+    text-decoration: underline;
+  }
+
+  aside .highlight {
+    font-weight: bold;
+  }
+
+  .top-more-actions,
+  .content {
+    margin-left: calc(240px - 10vw);
+  }
+}
+
+.tooltip-colored-circle {
+  /* echarts:util/format.ts */
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 4px;
+  height: 10px;
+  width: 10px;
+  border-radius: 10px;
+}
+
+@media screen and (max-width: 960px) {
+  .top-navbar .tray::before {
+    top: -20vh;
+    bottom: -48px;
+    padding-top: 40vh;
+  }
+}
+
+.team-name-container {
+  white-space: nowrap;
+}
+
+.team-display-name {
+  white-space: normal;
+}
+
+.tooltip-container {
+  display: inline;
+}
+
+.faction-icon .color-symbol {
+  cursor: inherit;
+}
+
+span.nbsp::before {
+  content: '\00a0';
+  display: inline;
+}
+
+.img-full {
+  max-width: 80%;
+  display: block;
+  margin: 0 auto;
+}
+
+.img-float {
+  max-width: 50%;
+  float: right;
+  margin: 1em;
+}
+
+figcaption {
+  font-size: 1.5rem;
+  font-style: italic;
+  margin: 0.5rem 0;
+}
+
+details summary {
+  list-style: none;
+  cursor: pointer;
+}
+
+details .reflection-title::before{
+  content: "▸";
+
+}
+
+details[open] .reflection-title::before{
+  content: "▾";
+}
+
+
+details .reflection-author {
+  font-size: 1.5rem;
+  font-style: italic;
+  margin: 0 0 1rem;
+}
+
+.funny-answer {
+  word-break: break-all;
+}
+
+</style>
+
+<h1>Wrap-Up</h1>
+
+<div id="wrapup-background"></div>
+
+<main>
+<div id="wrapup-shader"></div>
+<img id="wrapup-corner" src="/static/images/wrapup/lobster.png">
+
+<p>Wow, what a year! Congratulations to the <strong>294</strong>(!!) teams that finished the hunt, and to the <strong>811</strong> teams that solved at least one puzzle! The first three teams to defeat Kero and finish the hunt were:</p>
+<ol>
+<li><span class="wrapup-embed" data-embed-team="662">we left it too late to come up with something witty for the leaderboard ):</span></li>
+<li><span class="wrapup-embed" data-embed-team="338">idk</span></li>
+<li><span class="wrapup-embed" data-embed-team="307">And now, I said, let me show in a figure how far our nature is enlightened or unenlightened: --Behold! human beings living in a GalactiCosmiCave, which has a mouth open towards the light and reaching</span></li>
+</ol>
+<p>Among the fastest solvers, this was the most closely contested Galactic Puzzle Hunt in history, with many teams in contention for the top spots.</p>
+<div id="biggraph" style="min-height: 400px; width: 600px; margin: auto"></div>
+
+<p>We also had a <a href="/speedruns">speedrun leaderboard</a>, and were very impressed to see competing teams sail past our internal fastest total time of 29m29.054s. Congrats to those teams, who all speedran our hunt in under 20 minutes:</p>
+<ul>
+<li><span class="wrapup-embed" data-embed-team="103">Please Clap</span>, <span class="wrapup-embed" data-embed-team="213">Sea Lionses</span>, <span class="wrapup-embed" data-embed-team="629">EolithiCosmonauts of r/PictureGame</span>, <span class="wrapup-embed" data-embed-team="21">ghostbloods</span>, <span class="wrapup-embed" data-embed-team="90">Eggplant Parms</span>, <span class="wrapup-embed" data-embed-team="256">3 Woodpecker Wormholes</span>, <span class="wrapup-embed" data-embed-team="338">idk</span>, <span class="wrapup-embed" data-embed-team="30">Time Vultures</span></li>
+</ul>
+<p>This year, Galactic Puzzle Hunt had a significantly different format than in the past, with a smaller size and about half of the puzzles being based on the <strong>GalactiCardCaptors</strong> game. Creating <strong>GalactiCardCaptors</strong> was a wild journey for the writing team, and in this wrap-up we would like to share how it came into creation, to reflect on what lessons we learned, and to muse on some puzzlehunt philosophy.</p>
+<p>If you want to jump ahead, you can find more <a href="#fun">fun stuff</a> at the end!</p>
+<h1>Hunt summary</h1>
+
+<p>At the very entrance of the GalactiCosmiCave, you find a treasure chest, surely filled with great riches. But inside the chest is Kero, a magic carp! Kero informs you that opening the chest has unleashed CHAOS throughout the cave! ＼(º □ º l|l)/ Fortunately, Kero also gives you the uwuand, a magical wand that converts cave dwellers into <del>cards</del> friends that you can use to battle! Using the power of the uwuand, by solving puzzles and playing GalactiCardCaptors, you befriend the 12 legendary creatures living in the cave.</p>
+<p><img class="img-full" src="/static/images/wrapup/image12.png"></p>
+<p>But, all is not well; for every legendary that you befriend, Kero <a href="https://en.wikipedia.org/wiki/Chinese_dragon#Mythical_creature">gains a body part</a> and grows stronger. After befriending all 12 legendaries, Kero turns on you! With the legendaries united, you defeat Kero in a final battle. You are given one last choice: seal Kero back inside the treasure chest, or invite him to join you for some pie?</p>
+<p>Look carefully and you’ll see what the first team chose:</p>
+<style>
+.link-nocss,
+.link-nocss:hover,
+.link-nocss:focus,
+.link-nocss:active {
+    color: inherit;
+    transition: inherit;
+    text-decoration: inherit;
+    text-shadow: inherit;
+    vertical-align: inherit;
+
+    cursor: pointer;
+}
+
+.deck-card {
+    mix-blend-mode: luminosity;
+}
+
+</style>
+<div id="svg-container" style="width: 100%; text-align: center"><div style="display: inline-block; line-height: 1.5; font-size: 1.4em; overflow: hidden; border-radius: 8px;"><div class="deck-card-motion" style="transform: rotateX(0deg) rotateY(0deg); background-image: linear-gradient(55deg, transparent, rgba(255, 100, 100, 0.4) 0%, rgba(255, 255, 100, 0.4) 20%, rgba(100, 255, 100, 0.4) 40%, rgba(100, 255, 255, 0.4) 50%, rgba(100, 100, 255, 0.4) 60%, rgba(255, 100, 255, 0.4) 80%, rgba(255, 100, 100, 0.4) 100%, transparent);"><div class="deck-card"><div class="game-card-container"><div class="game-card large" style="background: var(--cold-gray-700); border-color: var(--cold-gray-400); height: 56rem; border-width: 8px;"><div data-overlayscrollbars-initialize="" class="card-main-contents" style="overflow-y: hidden;" data-overlayscrollbars="host"><div class="os-size-observer"><div class="os-size-observer-listener ltr"></div></div><div data-overlayscrollbars-contents="" data-overlayscrollbars-viewport="scrollbarHidden overflowVisible" style="margin-right: 0px; margin-bottom: 0px; margin-left: 0px; top: 0px; right: auto; left: 0px; width: calc(100% + 0px); padding: 0px;"><div class="card-cost" style="padding: 0.25em"><div class="gem-gems"><div class="color-symbol  " style="font-size: 0.8em; height: 1.25em; width: 1.25em; background: var(--cold-gray-800); color: var(--cold-gray-400);">✈</div><div class="color-symbol  " style="font-size: 0.8em; height: 1.25em; width: 1.25em; background: var(--cold-gray-800); color: var(--cold-gray-400);">✈</div><div class="color-symbol  " style="font-size: 0.8em; height: 1.25em; width: 1.25em; background: var(--cold-gray-800); color: var(--cold-gray-400);">✈</div></div></div><div class="card-title" style="white-space: nowrap; transform-origin: left center; padding: 0px; margin: 0px 0.25em; width: auto; transform: scaleX(0.397564);">we left it too late to come up with something witty for the leaderboard ):</div><a class="link-nocss" href="/victory" target="_blank" rel="noopener noreferrer"><img style="aspect-ratio: initial" class="card-image" src="/static/images/pie/legendary-pie-no-kero.png"></a><div class="card-text" style="padding: 0.25em"><div class="formatted-text"><div class=""><span><div class="tooltip-container"><span class="inline-keyword">Legendary</span></div></span><span>.</span></div><div class="formatted-context"><span><div style="margin-bottom: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">- bryan</div><div style="margin-bottom: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">- brian</div><div style="margin-bottom: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">- pie</div><div style="margin-bottom: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">- navi</div><div style="margin-bottom: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">- kevin</div><div style="margin-bottom: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">- eggy</div></span></div><div class=""><span></span><span><span class="inline-flavor">Everyone loves Pie!</span></span><span></span></div></div></div></div><div class="os-scrollbar os-scrollbar-horizontal os-theme-light os-scrollbar-auto-hide os-scrollbar-handle-interactive os-scrollbar-cornerless os-scrollbar-unusable"><div class="os-scrollbar-track"><div class="os-scrollbar-handle" style="width: 100%;"></div></div></div><div class="os-scrollbar os-scrollbar-vertical os-theme-light os-scrollbar-auto-hide os-scrollbar-handle-interactive os-scrollbar-cornerless os-scrollbar-unusable"><div class="os-scrollbar-track"><div class="os-scrollbar-handle" style="height: 100%;"></div></div></div></div><div class="card-footer"><div class="card-counters"></div><div class="card-stats"><div class="tooltip-container"><div class="stat-box card-power " icon="power" padding="0.125em 0.25em"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" icon="power" style="fill: var(--primary-50);"><g class="" transform="translate(2,5)"><path d="M227.227 21.777c-1.845 0-3.704.05-5.567.157-15.314.875-30.76 5.305-39.494 10.863l-.008 73.15c2.884-.094 5.777-.147 8.676-.142 23.382.036 47.104 3.286 68.47 9.513l.01-87.507c-7.034-3.518-19.178-6.03-32.087-6.033zm80.74 9.16c-11.925.15-23.077 2.364-29.967 5.596l-.008 77.602v7.658c38.486 15.67 64.814 42.48 58.735 78.764l-.96 5.73-5.562 1.674c-17.45 5.253-34.872 9.703-52.225 13.335V246.53c25.562-.704 51.327-2.687 77.145-6.098l.02-197.928c-8.284-5.563-23.508-10.243-38.842-11.328-2.792-.198-5.584-.273-8.336-.238zM143.223 46.294c-1.176-.015-2.374-.01-3.588.02-4.175.1-8.533.468-12.903 1.152-15.67 2.454-31.477 8.565-40.406 15.402l-.01 72.955c18.808-15.81 46.704-25.143 77.15-28.54l.007-57.966c-4.82-1.752-12.018-2.916-20.25-3.023zm258.394 3.46c-10.804.117-20.722 1.93-27.043 4.655l-.02 183.182c25.074-4.02 50.16-9.412 75.122-16.358l1.99-158.447c-8.352-5.9-23.648-11.025-39.05-12.553-3.698-.366-7.398-.517-11-.478zm-222.775 74.202c-53.72.702-101.407 20.365-97.887 66.6 15.836-3.918 30.84-5.893 44.94-6.1 34.84-.51 64.213 9.704 87.318 27.613 34.608-3.11 69.852-10 105.412-20.314.14-41.287-74.098-68.657-139.783-67.8zm-48.877 78.65c-1.296-.003-2.603.012-3.92.045-17.256.436-36.45 4.03-57.566 11.037 5.79 53.808 26.325 106.41 58.5 143.346 6.226 7.15 12.856 13.712 19.875 19.615 29.303 9.282 69.26 12.917 110.534 12.14 3.777-55.805-8.717-108.357-36.193-142.74-21.265-26.61-51.064-43.39-91.232-43.444zm129.326 22.282c-9.358 1.637-18.69 3.016-27.995 4.15 1.54 1.74 3.043 3.52 4.502 5.346 3.146 3.937 6.094 8.062 8.873 12.334 9.916.144 19.868.125 29.857-.106H259.29v-21.723zm191.817 15.343c-65.406 17.826-131.462 25.41-195.85 25.315 16.998 35.144 23.828 78.093 21.013 122.6 42.482-2.08 85.03-8.23 118.187-15.983 26.693-32.78 47.37-77.118 56.65-131.932zM400.51 389.9c-38.334 9.145-87.95 16.056-136.873 17.454-47.67 1.36-94.336-2.228-129.448-15.262l-.01 78.93c27.187 12.568 76.414 20.205 127.318 20.298 51.224.094 104.214-7.173 139-20.773l.012-80.647z" fill-opacity="1" transform="translate(51.2, 51.2) scale(0.8, 0.8) rotate(0, 256, 256) skewX(0) skewY(0)"></path></g></svg><span style="position: relative;">∞</span></div></div><div class="tooltip-container"><div class="stat-box card-health " icon="health" padding="0.125em 0.25em"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" icon="health" style="fill: var(--primary-50);"><g class="" transform="translate(2,5)"><path d="M196 16a30 30 0 0 0-30 30v120H46a30 30 0 0 0-30 30v120a30 30 0 0 0 30 30h120v120a30 30 0 0 0 30 30h120a30 30 0 0 0 30-30V346h120a30 30 0 0 0 30-30V196a30 30 0 0 0-30-30H346V46a30 30 0 0 0-30-30H196z" fill-opacity="1" transform="translate(51.2, 51.2) scale(0.8, 0.8) rotate(0, 256, 256) skewX(0) skewY(0)"></path></g></svg><span style="position: relative;">∞</span></div></div></div></div></div></div></div></div></div></div>
+<div style="text-align: center; margin-bottom: 1em">(you can check out <a href="/victory" target="_blank" rel="noopener noreferrer">the Victory page</a> too!)</div>
+
+<p>If you want to see the plot in more detail, go watch all of the <a href="/game/map">cutscenes</a>!</p>
+<h3>Final faction scores</h3>
+<iframe class="img-float" width="417" height="259" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSP7Y9G9BvZmPOmQBG9mN1xZGGe0r1NDaJM0Js9jWNNWJSjCumibxYqCkdAjKNqn8s7ZtyFFAMELfRs/pubchart?oid=254488171&amp;format=interactive"></iframe>
+
+<p>Near midway or thereabouts through the hunt, a team could choose to align itself with one of the five factions dwelling in the cave, and therewise earn a smidgen of points during battles.</p>
+<ul>
+<li><strong><span class="wrapup-embed" data-embed-faction="dinosaurs"></span> Dinos: 4850820 <span class="wrapup-embed" data-embed-faction="dinosaurs"></span></strong></li>
+<li><span class="wrapup-embed" data-embed-faction="cows"></span> Cows: 4446436 <span class="wrapup-embed" data-embed-faction="cows"></span></li>
+<li><span class="wrapup-embed" data-embed-faction="bees"></span> Bees: 3409702 <span class="wrapup-embed" data-embed-faction="bees"></span></li>
+<li><span class="wrapup-embed" data-embed-faction="dryads"></span> Dryads: 2082386 <span class="wrapup-embed" data-embed-faction="dryads"></span></li>
+<li><span class="wrapup-embed" data-embed-faction="boars"></span> Boars: 1787669 <span class="wrapup-embed" data-embed-faction="boars"></span></li>
+</ul>
+<p>Golly, we haven’t seen a closer race in millennia! I daresay we Dinos were on the brink of settling for a humble bronze, but lo! That dash of vim, that final surge! Methinks we right put those Cows in their place, did we not? (Granted, we’ve since reconciled our differences, but who doesn’t relish a good-natured tussle?)</p>
+<p>Hats off to <span class="wrapup-embed" data-embed-team="631">The Coraline Schism</span>, whose efforts furnished a staggering &gt;50% of our final tally. Yet, let us not forget all our other Dino supporters, for without your stalwart backing, our triumph would’ve been naught but a dream! Huzzah, huzzah, to one and all!</p>
+<h1>Writing the hunt</h1>
+<h3>Goals</h3>
+
+<p>Our main goals when we kicked off hunt writing were:</p>
+<ul>
+<li>more cross-team interaction (PvP Arena! Also speedrunning, and faction competition)</li>
+<li>more beginner friendly (We almost quadrupled the number of finishing teams, so even if we account for smaller team sizes, this was a huge success)</li>
+<li>make every puzzle important (See <a href="#philosophy">Philosophy</a>)</li>
+<li>decrease competition (We think adding multiple leaderboards helped alleviate the “one true winner” effect)</li>
+<li>less website shenanigans (We did not succeed at this, our Overworked Web Operatives need a break)</li>
+</ul>
+<h3>Timeline</h3>
+<p><img class="img-float" src="/static/images/wrapup/puzzlord-graph.png"></p>
+<ul>
+<li>February: kickoff meeting</li>
+<li>March: theme decision. </li>
+<li>April: story, structure, game design</li>
+<li>May: base game ready to play</li>
+<li>June: writing retreat, hunt announcement, story again</li>
+<li>August: Small Big TestSolve (Small BTS), mastery meta, kero battle</li>
+<li>September: Medium BTS, all battles</li>
+<li>October: Big BTS, all battles and answerables, load testing</li>
+</ul>
+<h3>Theme</h3>
+
+<p>From our past experience writing GPH and MIT Mystery Hunt, during the theme proposal phase we have seen several “arms races” between different theme ideas, trying to be as fully developed as possible to maximize the chance of being selected. While this might make the hunt-writing later a bit easier, it risks wasting valuable effort that went into other unselected themes (even though they might be re-proposed later).</p>
+<p>Therefore, this year we decided to have two phases of theme proposal:</p>
+<ul>
+<li>In the first phase, different themes were proposed as “elevator pitches” (two sentences max!), giving an overview of the story. This allows us to establish a full-team buy-in before we more fully explore the idea.</li>
+<li>In the second phase, we proposed different ways to develop the theme selected in the first phase, including specific hunt structure and mechanics.</li>
+</ul>
+<p>We received <em>fourteen</em> theme pitches in the first phase, and the winning pitch was <strong>Galactic Card Patrol</strong>:</p>
+<blockquote>
+<p>Deployed across the galaxy, teams solve puzzles to collect Galactic Cards, manifestations of ancient alien technology, which they use to unlock secrets and overcome challenges. These cards have unique abilities, and can be combined for unexpected and powerful synergies.</p>
+</blockquote>
+<p>In the second phase, there were seven proposals, including two “partial” ones that were meant to be integrated into other proposals if possible (e.g. as one round or an additional mechanic). When voting, we considered how exciting the theme was, how willing people were to work on the theme, as well as strengths and potential risks of the theme. The winning proposal, <strong>GalactiCardCaptors</strong>, was centered around the premise that “each puzzle is a bespoke card battle with an enemy, and defeating it captures them into a card”. While this premise was somewhat relaxed during the writing process, much of the original vision made it into the hunt you played! </p>
+<figure><a href="https://docs.google.com/document/d/e/2PACX-1vRCEbGxG7UVP03cQjX1JS5nL9Pb2wx5bcqJ8WEUZC-U7l_xQfDBurq6Wgef8nWQOYegLOFpPRqSgaIo/pub" target="_blank" rel="noopener noreferrer"><img class="img-full" src="/static/images/wrapup/image4.png"></a><figcaption>
+    (Click to read the <a href="https://docs.google.com/document/d/e/2PACX-1vRCEbGxG7UVP03cQjX1JS5nL9Pb2wx5bcqJ8WEUZC-U7l_xQfDBurq6Wgef8nWQOYegLOFpPRqSgaIo/pub" target="_blank" rel="noopener noreferrer">original theme proposal</a>.)
+  </figcaption></figure>
+
+<p>As we had hoped, some aspects of the unselected proposals from the second phase also managed to make their way into the hunt in some form:</p>
+<ul>
+<li>Playing cards as letters (Spelling Bee)</li>
+<li>Collecting other “real-life cards” (Mastery Tree)</li>
+<li>Factions and faction leaderboards</li>
+<li>Card battles with other teams (PvP Arena)</li>
+</ul>
+<h3>Answerables</h3>
+
+<p>As early as announcing the winning theme, we decided to include <strong>answerables</strong>, traditional puzzlehunt puzzles with answers, in our hunt as well. (This may seem obvious to experienced puzzlehunters – keep in mind our theme proposal was comfortable leaving answerables behind entirely!) More than just being familiar staples of hunts, we wanted answerables to diversify the experience of the hunt (allowing both writers and solvers who are not so into card games to contribute), as well as possibly provide some additional benefit to the card game. We intentionally asked writers for answerables to be short to not draw too much attention away from the main theme.</p>
+<p>Ideas for answerable rewards included card upgrades (à la Slay the Spire), additional copies of existing cards, card cosmetics, and awarding “booster packs” of new cards – the last of which ended up in the final game! </p>
+<p>When possible, we tried our best to match thematic card rewards to answerables (as well as non-legendary battles): the two best pairings are getting <span class="embed">Quail Aboard Fiery Steeds</span> with Limericks and getting <span class="embed">Eager Beever</span> after beeBay Fulfillment Center.</p>
+<p>We have more thoughts about <strong>answerables</strong> in our <a href="#reflections">Reflections</a> section.</p>
+<h3>Card game design</h3>
+
+<p>As soon as the theme was finalized, we started drafting, playtesting, and iterating on designs for what would eventually become GalactiCardCaptors.</p>
+<p>The first design of the game (from the theme proposal) was inspired by Inscryption/Air Land Sea/Marvel Snap, with players taking simultaneous turns, opposing cards attacking each other, and dealing damage to the player’s “life points”. This design then evolved to a larger, 6x5 grid with different terrains that cards automatically moved down – and the win condition changed to controlling three or more columns.</p>
+<figure><img class="img-full" src="/static/images/wrapup/gcc-rps.png"><figcaption>
+    Concept art for GCC “rock paper scissors chess”. This was the first design to be prototyped and playable.
+  </figcaption></figure>
+
+<p>We experimented with many additional features, like cards having “sets”/”suits”, and additional “types”/”elements”. Inspired by <a href="https://boardgamegeek.com/boardgame/329082/radlands">Radlands</a>, a tabletop card game, we drafted a new design centered around defending Bases, cards which produce Energy for other cards to take actions.</p>
+<p>This latest design also added six colors to the game, with cards from each color having different playstyles. Sound familiar? This is also when “protection” – placing cards in front of other cards to defend them – was added.</p>
+<p>When we playtested the GCC “Radlands edition” in Tabletop Simulator, we found that the emergent gameplay of the Energy mechanic (later renamed to Gems, which finally became Food) created deep strategic choices: should we attack with a creature this turn, or create food to play stronger creatures? How strong of a board presence do we need to “ramp up” to before we can attack? Should we defensively protect our Camps first, or attack aggressively? Finding these classic card game tradeoffs in this design really solidified this ruleset, and we found ourselves having a lot of fun playing matches with basic cards against each other.</p>
+<p>Having finalized our base game, we went to work getting the game prototyped and playable so that we could start designing cards, and most importantly, designing card battle puzzles. Once we had the basics of the game implemented, we hosted a writing retreat for everyone to learn the rules of the game, play in a big tournament, and start iterating on battle puzzles. </p>
+<h3>Battles</h3>
+
+<p>We have lots of interesting stories about writing our battles: see our Author’s Notes in the solutions for each battle!</p>
+<p>Early on, we divided battles internally into what we called “just battles” and “puzzle battles”, the latter of which would involve more enigmatic insights, like Coloring and Slime. This distinction ended up not really mattering both publicly and internally, especially since there isn’t a clear line between the two. Once the Kero fight was designed, we decided to communicate the “legendary battle” (👑) and “non-legendary battle” (⚔️) distinction instead, since it was more important thematically and structurally to know which battles were key to solve. All our battles are puzzles! 😙</p>
+<h3>Testsolving</h3>
+
+<p>We had <strong>three</strong> “big testsolves” (BTSes) starting from August to October. The first (Small BTS, or SBTS) was internal and tested about half the battles (including Mastery Tree and the Kero fight). The following Medium BTS (MBTS) and Big BTS (BBTS) tested all the battles and most/all of the answerables. Our hunt really came together thanks to our BTSes, which helped give early feedback and iteration cycles on our hunt flow, puzzle &amp; game design, and user experience. Thanks so much to our BTS testsolvers for making our hunt as polished and cohesive as it is.</p>
+<h1 id="reflections">Reflections</h1>
+<h3>Overall</h3>
+
+<p>We knew that the card game could be polarizing. There were a variety of considerations that went into choosing it anyway, but ultimately, we wanted a cohesive whole-hunt story/experience and this theme generated the most interest on the writing team. This went more or less as expected: we received feedback that some solvers who enjoyed past GPHs didn’t enjoy this one at all, but also many solvers who said this was their favorite recent hunt, or even favorite hunt of all time. Of particular interest, we got feedback from multiple solvers who didn’t expect to enjoy the hunt at the beginning, but ended up loving it by the end, which we are very happy about. That said, we appreciate all the solvers who tried the hunt and didn’t like it, and we hope that you will find future GPHs to your liking.</p>
+<h3>What is a puzzlehunt?</h3>
+
+<p>Is this a puzzlehunt? This question has been the topic of much discussion, both internally and externally. It turns out that this is not just semantic nitpicking, but an important aspect of how we talk about and advertise hunts. </p>
+<p>While there isn’t a definite answer to this question, the best alternative we could think of to describe our hunt was a “puzzle game”, and we do think, at least, that our hunt is closer to a puzzlehunt than it is to a puzzle game. (We also considered something more vague like a “puzzle experience”...). The most important reason we decided to call GCC a puzzlehunt was to push the established boundaries of hunts rather than defining ourselves as outside that boundary. </p>
+<p>Even if we excluded the 18 short answerables and the mastery tree meta, we think that many of the battles’ primary mechanics were closer to something you’d see in a hunt puzzle than in any puzzle or strategy game, in that they are novel mechanics that appear in only that puzzle and often aren’t explained; figuring out what they do is more important to the solve experience than figuring out their consequences.</p>
+<p>Examples include deciphering the words in Dargle, determining the symbols in Jabberwock, understanding the rules in Moonick, and understanding the slime splits in Slime. Additionally, some puzzles like beeBay and Spelling Bee require minimal card game strategy and mostly feel like self-contained interactive puzzles.</p>
+<p>On the other hand, there were also several puzzles that required a significant amount of strategy to solve (e.g., defeating Slime).</p>
+<p>A highly subjective table might look like:</p>
+<table><tr><td>\ Game&nbsp;insights
+<p>
+Nongame&nbsp;insights
+   </td><td>low
+   </td><td>medium
+   </td><td>high
+   </td></tr><tr><td>low
+   </td><td></td><td>Angry Boarry Farmer, Gnutmeg, Infinitely Many Hogs (and Logs)
+   </td><td>bb b, Asteroid, The Swarm, Kero, Spirit of the Vines
+   </td></tr><tr><td>medium
+   </td><td>Spelling Bee
+   </td><td>Dargle
+   </td><td></td></tr><tr><td>high
+   </td><td>Moonick, beeBay
+   </td><td>Othello, Jabberwock, Coloring, Miss Yu, Mister Penny
+   </td><td>Slime, Blancmange
+   </td></tr></table>
+
+<p>At an even higher level, the way we envisioned most solvers would participate in our event — by forming teams and collaboratively doing puzzles at the announced time the hunt was running — is much closer to a puzzlehunt than a puzzle game.</p>
+<p>We should mention Jack Lance (the real Captain Pi)’s <a href="https://jacklance.github.io/rt3">Root Three Riddle Search</a>, whose release coincided with our theme proposal deadline. While we weren’t directly inspired, we think the RT3 puzzlehunt reflects similar thoughts we have about pushing the boundaries of traditional answerables and puzzlehunt structure.</p>
+<h3>Pre-hunt information</h3>
+
+<p>When we first announced the hunt, we were very conservative about what information we released, since we too had very little idea what to expect from the hunt at the time. It wasn’t until receiving feedback from BBTS when we knew that many solvers would appreciate more pre-hunt information to set appropriate expectations about the hunt.</p>
+<p>Even then, just how much more information we wanted to release was a subject of much internal debate. On one hand, we wanted to preserve the surprise and the excitement of speculation on the theme – which many of us felt was an integral part of the hunt experience – as well as avoid creating preconceptions about the hunt and what solving it would be like. On the other hand, expectations can have a very large impact on how a solver interacts with different aspects of the hunt’s mechanics, and, ultimately, their solve experience – and, in our case, the precedence of prior GPH shenanigans might not have been enough to prepare solvers for just how unusual this hunt would be.</p>
+<p>We ended up adding an FAQ item revealing that many puzzles would feel more like “puzzle games” than puzzles in previous GPHs, but that there would still be traditional puzzles. We tried to make it stand out by adding an alert to the top of the About page, and encouraged solvers to read that page in an email we sent out a week before the hunt. We hoped that this would strike a good balance by widening solvers’ expectations without giving too much away.</p>
+<p>We had also considered releasing some information about hunt difficulty, but decided against doing so in the end. We knew from prior experience that hunt difficulty was very hard to predict, and were wary about making promises about it before the hunt. This was particularly the case this year, as we expected that the card game aspect would create a large amount of variance in difficulty for teams.</p>
+<p>Our approach to managing solver expectations worked for some but not others. Many solvers were still caught off-guard by the hunt’s format, and some have expressed that it would have helped to know more about the role that battles and answerables were intended to play in the hunt. As hunts continue to experiment with new and interesting ways to break the mold of the traditional hunt format, we hope that this hunt would serve as a useful precedent to help future hunts set solvers up to get the most out of their hunt experience.</p>
+<h3>Tutorial</h3>
+
+<p>Designing the tutorial was challenging. We needed to communicate a large amount of information to solvers in a way that was engaging, easy to absorb, and accessible to solvers with all kinds of backgrounds, all without feeling too long or handhold-y. To this end, we subjected the tutorial to more playtests, revisions and tech work than any other puzzle in the hunt.</p>
+<p>One of the key design choices we made was to introduce game mechanics through small puzzly challenges as much as possible. We hoped that this would not only make the tutorial more engaging for our target audience, but also help solvers absorb information better by immediately applying what they’ve learned. This philosophy informed the design of stages 3 and 4.</p>
+<p>We also wanted to ease solvers into the more strategic, open-ended thinking required in many battles. This led to the creation of stage 5, and the intentional placement of Angry Boarry Farmer right at the start of the hunt.</p>
+<p>The tutorial we ultimately released had its flaws. Teams found it harder than we intended, with a large percentage (~5%) of teams spending a lot of time on stage 5 early in the hunt. In response, we issued an erratum clarifying that the enemy battler was not food-limited, along with some tips for that stage.</p>
+<h3>Keepsakes</h3>
+
+<p>Part of teasing the hunt theme involved sending <span class="embed" data-embed-type="keepsake">GCC keepsake</span>s to early donors from our <a href="/donate">🪙 donation page 🪙</a> when we announced the hunt. We were hoping this would subtly clue our theme, that GCC stands for something other than GalactiCosmiCave, and that cards would be involved.</p>
+<p>We were hoping that keepsakes could stoke public discussion of theme predictions, which we have a lot of fun reading. Unfortunately, this didn’t really happen much. Also, many US recipients had their keepsakes lost in the mail, possibly due to border issues. We’re very sorry about this! If you claimed a keepsake in August, never received it, and haven’t contacted us about it, please let us know ASAP at <a href="mailto:contact@galacticpuzzlehunt.com">contact@galacticpuzzlehunt.com</a>.</p>
+<p>That said, we later learned that at least one team correctly guessed (in private) the Cardcaptor Sakura reference from their keepsake! </p>
+<p>A lot of work and care went into designing the keepsakes, getting them printed, and mailing them out, but it was worth the effort to thank you for supporting our hunt! If you’d like to support our work, please see our <a href="/donate">🪙 donation page 🪙</a>. There is a limited number of additional keepsakes available.</p>
+<h3>The Future of GPH</h3>
+
+<p>Will there be a Galactic Puzzle Hunt 2024? Join our <a href="https://groups.google.com/g/galacticpuzzlehunt">mailing list</a> to be the first to know! </p>
+<p>In the interim, you should check out some of these other puzzlehunts coming up:</p>
+<ul>
+<li><a href="https://www.huntinality.com/">Huntinality III: Hunts Upon a Time</a> (December 1)</li>
+<li><a href="https://mitmh2024.com/">MIT Mystery Hunt</a> (January 12)</li>
+</ul>
+<p>Check the <a href="https://puzzlehuntcalendar.com">Puzzle Hunt Calendar</a> for more. We’re excited to see what new ideas the community comes up with!</p>
+<h1>More reflections</h1>
+<p style="overflow: auto"><span style="display: flex; width: 0"><span class="wrapup-embed" data-embed-card="beeflector"></span><span class="wrapup-embed" data-embed-card="beeflector"></span><span class="wrapup-embed" data-embed-card="beeflector"></span><span class="wrapup-embed" data-embed-card="beeflector"></span><span class="wrapup-embed" data-embed-card="beeflector"></span><span class="wrapup-embed" data-embed-card="beeflector"></span></span></p>
+
+<p>This section goes into quite a bit more detail about the various aspects of the hunt-writing/designing process, written by the leads of different departments of our team.</p>
+<h3 id="philosophy">Philosophy</h3>
+
+<p>Puzzlehunting is a hobby that involves many diverse interests. Despite the open-ended nature of puzzles without instructions, the structure of hunts have crystallized into a standard format: solving <strong>answerables</strong>, puzzles with <strong>answers</strong>, which are used as “feeders” in <strong>meta-answerables </strong>that act as “capstones” for progressing the hunt story and structure.</p>
+<p>Puzzle answers are single words or short phrases, so answerables are designed around the solver trying to condense all the information into a single word or phrase.</p>
+<p>This has led to a lot of institutional knowledge over time:</p>
+<ul>
+<li>common extraction techniques like indexing, diagonalization, eigenletters, A1Z26</li>
+<li>advanced solving tools like <a href="https://nutrimatic.org/">nutrimatic</a>, <a href="https://onelook.com/">onelook</a>, <a href="https://qhex.org/">qhex</a>, <a href="https://util.in/">util.in</a></li>
+<li>because the answer is a sensible word or phrase, it can often be obtained without solving or understanding every individual clue or sub-answerable, and may be designed with such a solve path in mind<ul>
+<li>especially when the cluephrase starts with “ANSWERIS” or similar (relatedly, we intentionally banned the phrase “call in”, which is past Mystery Hunt-specific terminology that confused many teams in past GPHs, when our “Submit an answer” button read “Call in an answer”)</li>
+</ul>
+</li>
+<li>backsolving from knowing the constraints of a meta-answerable</li>
+<li>counting the number of clues in an answerable, or feeder answers to a meta-answerable</li>
+</ul>
+<p>Sometimes, answers are also forced into interesting standalone puzzles that are fantastic on their own and have no need for an extraction outside of the hunt – from classic puzzles like crosswords and logic puzzles to activities like interactive games and scavenger hunts. This definition of a “hunt puzzle” is extremely narrow, despite the fact that we like to explain to newcomers that they can “be about anything”. It’s no wonder we have a hard time explaining puzzlehunts!</p>
+<p>This standard format also offloads much of the effort of writing thematic and cohesive puzzles to metas themselves. While metas can place interesting constraints on their feeders, it’s often the case that a feeder answerable is free to use nearly any mechanic, as long as it solves to the assigned answer. By design, authors are free to write any answerable they want – at the expense of a less narratively relevant and thematic puzzle.</p>
+<p>Because of these thoughts, one of the main goals of our hunt was for <strong>every puzzle</strong> to be important, thematic, worth engaging in, and part of the structure of the hunt. Solving each puzzle should be its own reward, and we wanted to explore other ways of tying together puzzles into a hunt package. As you can read from the winning theme document, the initial proposal was so far along the “anti-meta revolution” that it only described card battles, which were intended to be the full experience of hunt; the interaction between capturing new cards to use in other battles (and losing cards in special battles, like the “black hole”) was a cohesive and rich enough design space that metas (and answerables) didn’t feel necessary to tie together the puzzles.</p>
+<p>In the end, the final Kero fight became more of a traditional metapuzzle (tying all the legendary cards together), and the Mastery Tree round was introduced to provide more variety to the hunt, so we leaned back a bit from the initial purist anti-meta vision. To those of you debating whether our hunt was a puzzlehunt at all – consider how far we were willing to go! In fact, many of our theme ideas this year involved novel ideas that would break established puzzlehunt patterns.</p>
+<p>We hope the context change that GalactiCardCaptors provided gave beginner teams and the larger puzzle-curious community more equal footing with experienced teams. There is a point in our hunt when every experienced team says, “we finally unlocked real puzzles” – a value judgment that only those entrenched in the existing framework could have. We hope to see the puzzlehunt community grow and continue to innovate beyond answerable puzzles, and stay inclusive and open-minded of attempts to do so.</p>
+<h3>Puzzle design</h3>
+
+<p>The structure of the hunt this year brought with it many challenges for puzzle writing. Over the years, we’ve learned quite a lot about designing round structures, metapuzzles, and traditional hunt puzzles, but much of that knowledge was not very useful to us this year when we started working on card battle puzzles.</p>
+<p>For a few months after deciding on the theme, we weren’t sure exactly what card battle puzzles should look like, and it was especially difficult to design them for a variety of reasons:</p>
+<ul>
+<li>The exact mechanics of the card game that we wanted to build them on top of took a while to decide on, and there was a feeling that the direction of the first few puzzles to be written would help decide the design of the card game.</li>
+<li>Early on, we had agreed that puzzles could vary the mechanics significantly if the authors wanted, to allow for puzzles like Spelling Bee and Othello. However, this made the potential design space overwhelming.</li>
+<li>There was a significant “ramp-up” required to understand the card game before writing a puzzle, so authors not heavily involved in the hunt writing process found it difficult to participate.</li>
+<li>Authors less involved in the technical implementation of the hunt weren’t sure of what exactly would be reasonable to implement, and found it harder to write because they would also need to ask someone else to help implement their ideas.</li>
+</ul>
+<p>For these reasons, one of the top priorities at the beginning of the writing process was to get a few puzzles written as soon as possible, so that other writers could see what a card battle puzzle could look like, and to help solidify the process of writing card battle puzzles. </p>
+<p>During this period, there were significant concerns that we would not be able to run the hunt as planned, because it was really quite tricky to get the first puzzles written. It took until early July to get the first card battle puzzles into a testable state, and (along with the significant amount of technical work required) was one of the reasons for this year’s hunt happening later than previous hunts.</p>
+<p>Some of the first puzzles to be fleshed out and written were bb b, Dargle, and Blancmange (although they all had very different names at the time). Some trends that we noticed:</p>
+<ul>
+<li>Early puzzles didn’t use the “sub-battle” concept (Dargle was converted to it later), because we hadn’t created it yet, which made it harder to make them feel substantive while also being approachable. For instance, the initial version of Dargle was quite difficult in testing, because it required defeating all of the waves at once sequentially, similar to Kero.</li>
+<li>Early puzzle battles tended to be based around “gimmicks” because the full deck of cards hadn’t been fleshed out yet, so it was ideal to design around only needing a small number of cards to complete them. Many of the battles based more around the “fundamentals” of the card game were added in later.</li>
+</ul>
+<p>While we are happy with the set of card battle puzzles we came up with, a lot of us on the writing team learned a lot about designing these types of puzzles after the internal “big testsolve” events, and might be able to come up with a lot of new, interesting ideas if we were to design a new set of card battles now 😉.</p>
+<h5>The Mastery Tree and answerables</h5>
+
+<p>The answerable puzzles (i.e., the puzzles with traditional puzzlehunt answers) in this hunt were intended to complement the card battle puzzles, both for the writing team and for solvers. Some reasons for the inclusion of the round, from my perspective:</p>
+<ul>
+<li>While we intended for the card battle puzzles to appeal to traditional puzzlehunt enthusiasts, we wanted there to be some familiar puzzles for hardcore fans of those types of puzzles.</li>
+<li>Newer authors (and experienced authors who just weren’t as involved this year) had a hard time contributing to the card battle puzzles, so the Mastery Tree round was a good way for them to contribute to the hunt.</li>
+<li>The card battle system was not ideal for expressing certain types of puzzles (although we did find it more expressive than one might expect beforehand), so it would be nice to have a round to include types that don’t mesh well with the card battle setup.</li>
+</ul>
+<p>We targeted a lower level of difficulty for these puzzles, partially to accommodate newer and less involved authors, and also because we didn’t want to make the answerable puzzles blocking items for the card battles. For this reason also, solving answerables does contribute towards unlocking more puzzles, but not as much as solving card battles.</p>
+<p>The first answerables in the Mastery Tree round only unlock after three card battles are solved. This was done primarily to encourage all solvers to give the card battle puzzles a try, as we felt that unlocking them simultaneously with the card battles would result in solvers who started with the card battles becoming “specialists”, whereas solvers who started on answerables would feel like they were too far behind on card battle knowledge to engage with it. This was something we had observed in the past with Puflantu in 2019’s hunt. We also did this to set expectations that card battles were not just a puzzle “gimmick” but the backbone of our hunt.</p>
+<p>For some teams, having dedicated sub-teams working on the card battles and answerables might be ideal, as some solvers feel strongly about what types of puzzles they prefer to work on. However, we did get a lot of feedback from solvers who initially felt like the card game wouldn’t be their type of thing, but ended up really enjoying it.</p>
+<h5>Hunt structure</h5>
+
+<p>Since our card battles did not have traditional answers, there was some discussion early on about what sort of capstone puzzle we should have for the hunt. There were some pretty adventurous ideas, like having a simultaneous battle at a fixed time, with all hunt participants chipping away at a “raid boss” encounter. The “final battle” and legendary cards felt like a good way to bring in the fun of progressing towards a final puzzle in a way that made more sense for the card battle system.</p>
+<p>One interesting aspect of it was that it required solvers to complete a much greater fraction of the puzzles than in a typical hunt, in which metapuzzles can often be unlocked and solved with far fewer than all of the “feeder” puzzles. We considered adding some kind of leniency, like giving solvers the last legendary card if they were only missing one, but decided against it as it did not fit well with our hunt’s theme and mechanics. Moreover, we wanted to have the flexibility for legendary cards to include spoilers for their source puzzle, or rely on having solved the source puzzle to be understood correctly. Instead, we opted to rely on the hint system to get solvers past puzzles they were struggling with. By moving the initial hint release to 12 hours into the hunt instead of the usual 24, and targeting the puzzles easier than our usual fare, we hoped that the requirement to solve all legendary battles would not become a frustrating wall for solvers. </p>
+<h5>Testsolving</h5>
+
+<p>We found that this hunt was more difficult than previous hunts to testsolve adequately. There were numerous enthusiastic solvers on our team who tested essentially all of the puzzles, but we felt that they would likely find the puzzles to be fairly straightforward even if solvers in actual hunt conditions would find them quite difficult, due to our testers being much more familiar with the battle system. On the other hand, it seemed like testers trying out their first card battle puzzle might find it a little more difficult than we’d expect solvers in the actual hunt to (especially for puzzles towards the end of the unlock order).</p>
+<p>For this reason, we placed a lot of emphasis on three “big testsolve” events for tuning the puzzles and hunt structure (named SBTS, MBTS, and BBTS: “small big testsolve”, “medium big testsolve”, and “big big testsolve” respectively). We ran SBTS with about half the hunt written (including both the Mastery Tree and the Kero battle), primarily with team members who hadn’t been involved with the card battles up until that point, and then ran MBTS and BBTS with completely unspoiled solvers, with hunt writing mostly complete. Even more than for a usual hunt, these events proved particularly important in tuning puzzles, and seeing how teams might interact with the unlock structure and hunt flow.</p>
+<h3>A Story about Story</h3>
+
+<p>Way back in the days of yore (a time that probably only the dinos remember), a game prototype was made with colored gems as resources. The story began in a cave, where you found a crystal. You would explore the world, find help along the way, and eventually go to space to fight for the fate of the worlds! (Evil Entities trying to farm planets for the power of gems)</p>
+<p>Then, came the factions. We hoped that each kind of faction might lend itself to a kind of puzzle. (e.g. the bees like spelling, the lobsters liked memes, etc.)</p>
+<ul>
+<li>Red = gnomes</li>
+<li>Blue = crustaceans</li>
+<li>Green = trees </li>
+<li>black/white = night/day snakes</li>
+<li>Yellow = bees</li>
+</ul>
+<p>Come June, new blood was injected into the story. To the forefront came two ideas: cake, and a cute companion named Cerberus (inspired by Cardcaptor Sakura). Cerberus, we thought, could also be a play on the guard of the underworld, and perhaps Sakura was the Queen of the Underworld.</p>
+<p>We wanted to stitch together enough of a story to spark ideas for puzzles and cards during writing retreat, so we made cake:</p>
+<ul>
+<li>Red = dryads, which make fruit</li>
+<li>Blue = gnomes, which make potato (to make into flour)<ul>
+<li>Gnome mana is an island!</li>
+</ul>
+</li>
+<li>Green = dragons, which make eggs</li>
+<li>Black/White = cows (same as now), but they made chocolate and milk</li>
+<li>Yellow = bees (same as now)</li>
+</ul>
+<p>One concept we played around with was for dragons to get more powerful as they got longer, which brought us the cards o and re (who then moved on to become cows later on in their lives).</p>
+<p>But more importantly, you ask, where are the boars?!?!</p>
+<p>Perceptive of you to ask! During that writing retreat, we playtested what cards we had (made by Charles) in a PvP tournament. The Boar was OP, defeated many an opponent, and wooed many a heart. The retreat ended with some Gartic Phone activities in which some boars on the floors became hogs on logs, and it just became very clear that we needed more boars. MOAR! So, they replaced the dryads, and made boarries. And they got their own Discord channel. Twice.</p>
+<p>We were also left with a couple of tough questions. Do the factions live in harmony or are they at odds with one another? In the narrative, are you playing card battles, or are the card battles actual battles? (In a funny turn of communication, proponents of both options called this “playing it straight.”)</p>
+<p>So naturally, having finished with writing retreat, we set aside the questions, and for two months, there was little more movement on the story (this is an important ingredient of puzzlehunts — letting people and creation rest) until there was another push because of the upcoming SBTS (small big testsolve) (another important ingredient of puzzlehunts — deadline driven development). At this point, the Mastery Tree and Final Battle had been spun into existence.</p>
+<p>The story team looked at Captain Pi and thought, we need pie.</p>
+<p>And thus, cake became pie. For pie, one <em>must</em> have butter, and thus the cows changed their industry to make black butter and whipped cream (conveniently, B and W, not that the other factions have the letter of their color and resource match).</p>
+<p>During this riffing session, we also thought, wouldn’t it be cool if Kero took on the traits of the factions, much like the <a href="https://en.wikipedia.org/wiki/Chinese_dragon">Chinese Dragon</a> is made of different animals? “Oh!” said another, “He’s Kero Dos!” And thus, it came to be that the original Kero had to be a magical carp. (Yes, it’s a play on Gyarados – who we learned later is based on a <a href="https://en.wikipedia.org/wiki/Longmen_(mythology)">related myth</a>!)</p>
+<p>This led to some other conundrums.</p>
+<p>What does the gnome provide the dragon? We must have antlers. And thus the dryads made a resurgence and replaced the gnomes, who took their silent G’s and found their way to the Gnutmeg Tree.</p>
+<p><img class="img-float" src="/static/images/wrapup/image7.png"></p>
+<p>Why is it that Kero becomes a dragon, one of the factions? And thus, the dragon faction became the dinos. (Which, ironically, makes them actually the youngest of the factions.)</p>
+<p><img class="img-float" src="/static/images/wrapup/image8.png"></p>
+<p>So were the factions set, and the Final Battle rethemed to relieve Kero Dos of his ill-gotten powers.</p>
+<p>During this super-serious riffing session, it was joked that uwu could be Underwater Usurper, and because we are a very serious team, this became reality. Adding Rock Lobster was only natural at this point.</p>
+<p>With all the story pieces set, we wrote up some example dialogue with the intention of not branching, but in the end, we couldn’t decide if the better ending was to forgive Kero and invite him to eat pie with us or lock him up in a box and start the cycle all over again. So then … the web team … just made that happen. Despite them already being underwater (hah).</p>
+<p><img class="img-full" src="/static/images/wrapup/image9.png"></p>
+<p>The puzzles were written, and to each battle, a faction was assigned. But the factions needed homes! It was only natural that the map be split into five sections, one for each faction.</p>
+<p>But alas, this was not to be. There were more important factors to consider when arranging battles, such as difficulty, variety, and card rewards. And so the battles were arranged without due concern for factions. The draft order looked like a mess at first, but then, a closer look revealed a most intriguing pattern. The first five battles were one of each faction, and beyond them, the battles were mostly neatly split across faction lines! You just had to ignore the cows, which were everywhere.</p>
+<p>And that was when the truth dawned on us. Cows never belonged in one place! They were nomadic. Or, perhaps, they were just everywhere – a sprawling industry that touched every corner of the cave, a massive tax collection apparatus! And then, later, when we realized that we had no non-legendary cow battles, our eyes were opened a second time. The cows were powerful, arrogant creatures that roamed wherever they pleased.</p>
+<h3>Art</h3>
+<figure><img class="img-full" src="/static/images/wrapup/image10.png"><figcaption>
+  All the cards.
+  </figcaption></figure>
+<figure class="img-float" style="width: 60%; display: flex; flex-direction: column; align-items: center"><img style="width: 25%" src="/static/images/wrapup/image11.png"><figcaption style="width: 60%">
+    A real card from a real TCG that served as an inspiration for us to accept a wide variety of art styles.
+  </figcaption></figure>
+
+<p>We made a LOT of art. Like, almost everyone on the team did some art or another. See our <a href="/game/art_credits">art credits</a>!</p>
+<p>A couple decisions we made earlier on were:</p>
+<ul>
+<li>Avoid AI art.</li>
+<li>Accept (and encourage!) widely varying art styles/“quality” for the cards; real TCGs do this, why not us?</li>
+</ul>
+<h5>Concept and “beta” art</h5>
+<div id="wrapup-gallery-0"></div>
+
+<p>Original prototype for Kero’s transformation: <a href="https://scratch.mit.edu/projects/900412088/">https://scratch.mit.edu/projects/900412088/</a></p>
+<p>Original prototype for Kero Dos: <a href="https://scratch.mit.edu/projects/907519553/">https://scratch.mit.edu/projects/907519553/</a></p>
+<h3>Web</h3>
+<h5>Setup</h5>
+
+<ul>
+<li>A modified version of gph-site (Django/gunicorn/nginx/SQLite) for serving static files (directly through nginx), managing accounts, and generating non-dynamic pages (like the errata page).</li>
+<li>Node server (Typescript) on a separate machine to handle interactivity, which includes not just battles but also everything from leaderboards to answer submission.<ul>
+<li>The interactivity server did not persist any data directly. Instead, it called into a custom gph-site endpoint to persist data (on-demand or periodically, depending on the kind of data).</li>
+</ul>
+</li>
+<li>8 instances of the cursors server (technically the same setup as the interactivity server, but with some env vars set to limit functionality) on a separate machine, solely to handle cursors sharing. Teams were load balanced across the instances based on team ID.</li>
+<li>Client based on React + Zustand, with React Router for routing, framer-motion for animations and floating-ui for layout, packaged with Vite.</li>
+</ul>
+<p>The interactivity server relied on typia for validation. We used JWTs to authenticate clients to the Node servers based on accounts from gph-site. We did not rely on any frameworks for the game engine itself.</p>
+<figure><img class="img-full" src="/static/images/wrapup/image13.png"><figcaption>
+    Diagrams of the prod stack and various dev environments.
+  </figcaption></figure>
+
+<p>The advantage of this setup was performance. After our experiences with Django Channels in previous years, we were particularly wary of using Django Channels in any large capacity. (In fact, we still don’t have a definitive answer to what went wrong last year, though we have a few more ideas from our experience with load testing this year.)</p>
+<p>The disadvantage is that restarting the interactivity server would have been very disruptive. This isn’t really a problem with this setup per se, since getting blocked out of an interactive puzzle for a few minutes would have been an unpleasant experience regardless of how it was set up. Given that most of the hunt was going to depend on interactivity, we chose to focus on making a server restart as unlikely as possible, instead of building in a graceful shutdown mechanism. (We did end up making a graceful shutdown protocol as a contingency, but it required users to perform a manual refresh.) Apart from doing lots of load testing and manual runthroughs, we were prepared to, and did, make heavy use of the Node debugger’s REPL to monkeypatch code on the fly in response to serious bugs or errata. We did not need to restart the server at all throughout the entire hunt’s runtime.</p>
+<p>One thing we enjoyed a lot about the new infrastructure (but really, the highly interactive nature of the hunt itself) was the ability to spectate teams’ battles directly. We also enjoyed upgrades to the big board, the page that displays a summary of each team’s progress through the hunt. The new big board updated in real time without adding significantly to server load. It also displayed which battles each team was actively engaged in.</p>
+<h5>Load engineering</h5>
+
+<p>We made load engineering a priority for this hunt, and were glad to see that it succeeded. For context, our past hunts have been plagued with load problems, particularly last year when the site crashed as often as multiple times an hour. This caused a lot of solver frustration. We wanted to avoid this in this hunt to the best of our ability, particularly given how much of the hunt depended on interactivity.</p>
+<p>Since we barely had any load engineering experience as a team, we made sure to set time aside for it this year. We started load testing in earnest just after MBTS, 1.5 months before the hunt date. This was actually a few weeks later than planned, but, fortunately, it worked out for us in the end.</p>
+<p>Here are some highlights:</p>
+<ul>
+<li>Having a budget set aside for server costs helped. We ran a load testing (spot) instance continuously through the last month of hunt development just to reduce the activation energy of running load tests. We also had little qualms about overprovisioning the prod hunt servers.</li>
+<li>We started with k6, as recommended by other hunt organizers. However, we found it difficult to make k6 work for us. k6 had limitations on dependencies that made it hard to write tests on top of our existing hunt infrastructure, and its synchronous VU system made it difficult to simulate asynchronous websockets interactions. We eventually moved to generating load manually from one or two Google Cloud instances when it became clear that network bandwidth wasn’t a bottleneck for us.</li>
+<li>Our initial testing found that nginx could not support a large number of simultaneous websockets connections at once. We resolved this by setting some parameters in nginx.conf (specifically, worker_connections and worker_rlimit_nofile). It seems that we had set them in a previous GPH but had not integrated the changes into our deploy script.</li>
+<li>We then found that Django was rejecting sync packets from the interactivity server because they were too large. At that time, we were uploading the entire server’s dirty state in a single request every sync cycle. It took us quite a bit of work to break the sync into chunks and ensure that the chunks were all appropriately sized. This was around the time of BBTS.</li>
+<li>Next, we found that the server struggled to support the load from our shared cursors load test. While we already expected cursors load to be heavy for the server in theory, seeing the server slow to a crawl in testing gave us the motivation we needed to move cursors out to a separate server. Further testing confirmed that splitting the cursors load across multiple server instances improved performance, and that 8 instances was enough to synchronize cursors smoothly at our highest load setting. (Node is single-threaded, so distributing load across multiple processes removes the 1-CPU bottleneck.)</li>
+<li>As load testing progressed, the staging server started failing on initialization because Django was taking too much time to query initial user data. We deduced that this was because of very inefficient Django database queries, as is always the problem with Django. This was two weeks before hunt.</li>
+<li>Around the same time, we developed a server health monitoring page. The page reported, in real time, the sync progress of almost all objects and queues on the server, along with various other metrics. After setting this up and re-running load tests, we found and fixed a deadlock condition related to answer submission.</li>
+<li>
+<p>We also found that our load tests were performing significantly worse than before. Chillingly, the load tests were failing in a similar way to what happened in GPH2022. The server would appear to be doing fine for a while, and then suddenly fail to accept new connections even after the load is removed. Frantic debugging led us to deduce that the load tests were queuing up a very large request buffer for each connection. Node was spending a lot of time processing these requests even after their source connections were closed. It’s possible that our websockets server during GPH2022 suffered a similar fate.</p>
+<p>It took us a while but we eventually figured out how to profile the server and acquire flame graphs. We found that the server was spending almost all its time in validation, a feature which we had added just a few weeks before. It turned out that Zod, the validation library we were using, was well known to be extremely slow. Right away, we switched to manual validation for cursors requests, since their high frequency made them particularly sensitive to validation performance. We later switched to typia for all other requests once we figured out how to get it set up.</p>
+</li>
+<li>
+<p>Further load testing showed that downloading leaderboards and serializing messages for broadcast were particularly heavy operations. Fortunately, we somewhat anticipated this and were able to quickly implement simple optimizations.</p>
+</li>
+<li>By then, one week before hunt, we had developed a load test that aimed to simulate a realistic load profile by making a large range of different request types at a rate we might expect of actual solvers. This included making game, deckbuilding and mastery tree actions, as well as periodically establishing new connections and downloading the leaderboard. We found that the server could handle up to 600 teams of 5 members each reasonably well. Since we expected most teams to have fewer than 5 members and that teams would likely not all start the hunt at the same time or be as fully engaged in the hunt, this gave us a large enough margin to go into the hunt with reserved confidence.</li>
+</ul>
+<p><img class="img-full" src="/static/images/wrapup/image14.png"><img class="img-full" src="/static/images/wrapup/image15.png"><h5>UI</h5></p>
+<p>For past GPHs, nearly everything frontend-related was built with Django templates, with no other frontend framework, because the UI was mostly simple. (It also helped that we had a great base, gph-site, to build on.) This hunt, in contrast, needed a lot of UI work, which is why we chose to add a React client early on. A lot of the inspiration for the battle and deckbuilding interface comes from existing digital card games, including MTG Arena, Hearthstone, Inscryption, Marvel Snap, and Slay the Spire. <a href="https://interfaceingame.com/">Interface In Game</a> was a great reference for how other games structured the UI.</p>
+<h5>Development timeline</h5>
+
+<ul>
+<li>
+<p>April. We received the first draft of the card game design on April 1st, and developed a client-only prototype for it over the next two weeks. The initial game design had a similar split field as we do now, but was different in almost every other way. Both players would construct their turns at the same time, and then both turns would resolve at once. Cards moved towards the center of the board by one space every turn, similar to Inscryption.</p>
+<p>At this time, authors were struggling to come up with battle ideas, and it was still unclear how integrated we expected most puzzles to be with the card game. On the tech side, we used this time to split the prototype implementation into a separate client and interactivity server.</p>
+<p>At this point, the interactivity server was not yet integrated with gph-site. Instead, it persisted data to disk by writing data directly to a JSON file. Additionally, we made it possible to run the server core directly on the client in a separate development mode, with a mock database interface that persisted data to local storage. We maintained both of these development setups all throughout the development process as they require less developer overhead. In fact, we rely on the client-only setup as our primary development setup even now.</p>
+<p>We also implemented an initial deckbuilding interface. At this stage, the deckbuilding interface was entirely separate from the game, and required the user to manually add a URL parameter string generated from the deckbuilding interface in order to use a custom-built deck.</p>
+</li>
+<li>
+<p>May. The month started with a new game design, along with a set of about 30 sample cards and corresponding card effects, that hoped to give a better foundation for battle ideas. The mechanics laid out in this design is essentially what we have now, barring some minor details. For example, when the design was first proposed, a creature and a structure could occupy the same space. We later dropped this mechanic when we found that it added a lot of technical complexity without making the game much more interesting. The design also called for solvers to be able to select bases as part of deck selection. This got dropped later on when puzzle battles started getting implemented assuming the default bases, but no new bases had been added to the game yet.</p>
+<p>We spent the first few weeks migrating the prototype engine to the new game design, as well as creating a hooks model that allowed different “game specifications” to be loaded to modify engine mechanics for puzzle battles. As we still had no puzzle battles written yet, we started by creating hooks that would allow us to run the old simultaneous-turns game design on the new engine, with the aim of exploring potential modifications that an author might request for a puzzle battle.</p>
+<p>Around the time we completed the new prototype, we added linting and prettifying to our development flow. This signified our transition out of the prototyping phase. We also added a hooks interface for implementing card effects, and implemented all the sample card effects that we were provided with. Finally, we implemented a sample PvE battle. In this battle, the opponent randomly placed “robots” that attacked every turn.</p>
+</li>
+<li>
+<p>June. We started work on integration between the interactivity server and gph-site around this time, but it wouldn’t be until August when we completed the initial prototype. We also had a retreat planned in the later half of the month, which we hoped to use as an opportunity to get more team members familiar with the card game and inspired to design battles.</p>
+<p>In preparation for the retreat, we implemented a tutorial, and set up the staging server deploy to support battles between team members. This tutorial was a lot more rudimentary than the one we have now, but was enough for internal use. We also added tooltips, an enemy battler avatar that could speak with a speech bubble, and a “workshop” interface for experimenting with card effects. To demonstrate what a puzzle battle could look like, we also pushed through with the implementation of our first puzzle battle, though we didn’t have it ready until the second day of retreat. This puzzle would eventually become Blancmange.</p>
+<p>The retreat succeeded in inspiring some battle ideas. To support the renewed interest in puzzle writing, we set up a cleaner, safer hooks API, complete with automatically generated documentation with typedoc. The next two weeks would see us implement what would become Dargle and Slime. The idea for what would become Spelling Bee also came about during the retreat, but it took a while to gain traction as the authors did not feel comfortable implementing the battle themselves. We also made the battle and deckbuilding interfaces look a lot nicer during this time.</p>
+</li>
+<li>
+<p>July. This was when we implemented the deck selection screen, at first just to select between pre-built decks. We integrated it with the deckbuilding interface later that month. At this point, players could create and delete as many decks as they wanted.</p>
+<p>In our original design, decks were primarily managed by Django, meaning that the interactivity server had to download a player’s chosen deck from Django whenever they started a battle. Later in the month, we moved to a simpler model where deck state was entirely managed by the interactivity server, with dirty decks periodically collated and uploaded to Django.</p>
+<p>Work also started on what would become Miss Yu, Mister Penny, Moonick, Jabberwock, and, later, Coloring and the Kero battle. Most of the tech work during this period was focused on supporting hooks for these new battles. We also implemented an initial version of checkpointing with only one save slot, and worked on infrastructure to allow teams to start, stop, and switch between game sessions.</p>
+</li>
+<li>
+<p>August. The first draft of the mastery tree meta was completed just before the month started. We spent the first week of the month setting up the mastery tree page. Our mastery tree implementation then was a lot less user-friendly than it is now. You could not move answers around, could only place a new answer if doing so maintained a valid mastery tree, and could only remove the most recently placed answer each time.</p>
+<p>Originally, masteries were envisioned as affecting gameplay, such as buffing the health of bases. We soon realized that this would be a nightmare to design battles around, and eventually decided to limit mastery effects to lower-impact features. We turned our attention towards QoL features like keyboard shortcuts or animation speed sliders, but came to the consensus that it would be too annoying to have them get disabled in battle while someone else was experimenting with the mastery tree. Work on mastery effects subsequently stalled until after SBTS.</p>
+<p>Around this time, we started work on what would become Gnutmeg Tree, an old puzzle battle idea originally proposed for the old game design. We also started work on what would become bb b and Othello. This gave us the requisite 12 “feeder” battles that we needed in order to assign one battle to each legendary card.</p>
+<p>We originally aimed to freeze the hunt’s list of battles by SBTS, However, by this time, there was considerable interest in implementing more battles, so we allowed implementation for new battles to slip by up to a few weeks beyond that. Some work on answerables had started, but we prioritized battles implementation for SBTS.</p>
+<p>To support SBTS, we implemented support for solving and unlocking in the interactivity server, and created a rudimentary admin page and answer submission mechanism. We also started work on in-battle animations around this time. SBTS came and went successfully, giving us the confidence that we could deliver the hunt by November. In the following week, we announced the hunt. We also did a final renaming pass over the collectible cards. Modifications to the collectible cards after this would be limited.</p>
+<p>We also had a final brainstorming session for mastery effects. It was then when we demoted the draw card ability from a base game feature to a mastery. The masteries assignment we ended up with was mostly the same as what we have now, with a few exceptions. Spark of Inspiration was assigned to base or avatar customization, while Erase Pain was assigned to “one-click mulligan” – a button that allowed you to redraw your hand if you didn’t like it. At this point, we did not have the ability to restart a battle directly from the battle screen. Rather, you had to forfeit, return to the deck selection screen, then start the battle again.</p>
+<p>At this point, the UI was starting to get complicated. We ran into trouble figuring out how to handle edge cases with deck deletion, such as when a solver deletes a deck that another solver was deckbuilding. After a lengthy design discussion, we hit on the idea of having a fixed number of decks shared across all battles.</p>
+<p>It was also around this time when we integrated the client into gph-site, added URL routing, implemented stage selection, and started paying attention to client performance.</p>
+</li>
+<li>
+<p>September. We kicked off art work before the month started. Over the next few weeks, we set up minimal implementations for all mastery effects, including the PvP arena. It was at this time when Spark of Inspiration was descoped to the factions mechanic, primarily to reduce art requirements. Around this time, we made it possible to restart a battle directly from the battle screen, which took more server work than you’d expect. This made the original “one-click mulligan” idea for Erase Pain redundant. Lacking any other ideas to replace it with, we left it as a “do nothing” mastery, which we thought was funnier anyway.</p>
+<p>We also wrote and implemented a new tutorial, which would go on to become the tutorial that we have now. To support this tutorial, we implemented a number of ambitious UI features, such as applying a mask with a cutout over the battle screen, automatically selecting and deselecting units, and attaching dialog boxes to various UI elements. We also implemented recursive tooltips, and a system for cutscenes that could also be used for the tutorial’s and other battles’ dialog sequences.</p>
+<p>Going into MBTS, we implemented the last few battles and answerables, assigned battles to legendaries, implemented Kero’s transformation and pre- and post-battle dialogue, integrated card, battler and map art, and determined a draft puzzle order. We also added support for placing and moving masteries freely in the mastery tree interface.</p>
+<p>Around this time, we realized that we hadn’t autoplayed rock lobster anywhere yet, and hit upon the idea to play it during the Kero battle. It wouldn’t be for another month, though, before we got the idea to replace it with the instrumental version. It was surprising just how well the music fit the battle.</p>
+<p>We had planned to lock down the scope for major, non-QoL-related features by MBTS. Features that got cut at this stage include separate PvP scores and rankings, PvP interactivity and anti-abuse features, achievements and quests, and deeper factions integration.</p>
+</li>
+<li>
+<p>October. MBTS went by successfully, with lots of feedback for UI improvements. Our next target was BBTS, which was our cutoff for large QoL-related features. In the short span of time leading up to BBTS, we implemented the Instancer, cursors, hotkeys, the minimap, and Kero’s notes. We also started load testing, and added buttons to jump directly between the battle and deckbuilding pages as well as between decks in the deckbuilding page.</p>
+<p>The MBTS team had indicated a strong desire for a list of puzzles page, which we really wanted to avoid. Instead, we tried to understand what purpose they imagined a list of puzzles page would fulfill. For example, one of the main purposes of a list of puzzles page is to make it easy to see what puzzles have not been solved yet. We came up with the minimap as an alternate design that would fulfill this purpose. We only added the hotkey to move between unsolved puzzles later, when the BBTS team expressed that they missed the ability to quickly open all unsolved puzzles.</p>
+<p>We created the Instancer in response to requests for individual battle instances, which we repeatedly got in testsolving even before MBTS. We were originally very reluctant to support having multiple instances of each battle per team, as doing so would have added considerable complexity both on the server and in the UI. It wasn’t until after MBTS when we came up with the idea of having a fixed number of separate, team-wide Instancer rooms that could be used for any battle. Such a design, while still risky, was sufficiently limited in scope to try to get into hunt.</p>
+<p>BBTS went by successfully, with barely any issues with the website. The BBTS team’s biggest feedback was to set clearer expectations about the hunt, which prompted us to make adjustments to the hunt info page. We left it until the week before hunt to announce these changes since we also needed to determine if we wanted to commit effort to hiding spoilers in code. At the end of the month, we decided that we did not, and adjusted the hunt info page to reflect this.</p>
+<p>The post-BBTS period also saw us finish up websockets validation, set up the server health monitoring page, triage load issues, and implement the global speedrun and factions leaderboards. We also polished up the PvP arena in preparation for the final PvP playtest, which we had scheduled for the end of the month.</p>
+</li>
+<li>
+<p>November. We moved to typia for validation, and continued fixing load issues up to a few days before hunt. We also added the autosave and extra save slot, and made the big board update in real time.</p>
+<p>We briefly considered using the autosave feature to implement single undo, by autosaving before every action. The ability to undo was a frequently requested feature that we had long concluded was too complex to implement directly. In the end, we chose to autosave after every turn instead, as it seemed more useful and less risky.</p>
+<p>We conducted our final runthrough the weekend before hunt. The final runthrough served as our milestone for our final code freeze, with exceptions for features that were carefully reviewed and tested. Features that were only fully implemented after the final runthrough include the Kero animation, the infinite hogs art, sound effects, and Slime’s duplication on the victory page.</p>
+</li>
+</ul>
+<h5>Gallery</h5>
+<div id="wrapup-gallery-1"></div>
+<h1 id="fun">Fun stuff</h1>
+<h3>Team shoutouts</h3>
+
+<ul>
+<li>Top speedrunners in our <a href="/speedruns">bonus categories</a> (at the time of writing):<ul>
+<li><strong>100% fastest time</strong>: <span class="wrapup-embed" data-embed-team="103">Please Clap</span> (23:56.256)</li>
+<li><strong>Fastest cutscene clicking</strong>: <span class="wrapup-embed" data-embed-team="640">Nova Excavation Society</span> (The Treasure Chest, Entering the Water, The End), <span class="wrapup-embed" data-embed-team="471">IM PATRICK</span> (Your First ANSWER), <span class="wrapup-embed" data-embed-team="103">Please Clap</span> (Your First Legendary)</li>
+<li><strong>Fewest turns</strong>: <span class="wrapup-embed" data-embed-team="90">Eggplant Parms</span> (canonical%, 274 turns), <span class="wrapup-embed" data-embed-team="21">ghostbloods</span> (100%, 524 turns)</li>
+<li><strong>Fewest actions</strong>: <span class="wrapup-embed" data-embed-team="90">Eggplant Parms</span> (canonical%, 1298 actions), <span class="wrapup-embed" data-embed-team="30">Time Vultures</span> (100%, 2371 actions)</li>
+</ul>
+</li>
+<li>Most PvP wins: <ul>
+<li><span class="wrapup-embed" data-embed-team="421">————————🥇🏆🥇————————</span> (99 wins!)</li>
+<li><span class="wrapup-embed" data-embed-team="308">zitmen</span></li>
+<li><span class="wrapup-embed" data-embed-team="462">The Blizzards 🔮</span></li>
+</ul>
+</li>
+<li>Most PvP wins − losses:<ul>
+<li><span class="wrapup-embed" data-embed-team="421">————————🥇🏆🥇————————</span> (99 wins, 52 losses!)</li>
+<li><span class="wrapup-embed" data-embed-team="338">idk</span></li>
+<li><span class="wrapup-embed" data-embed-team="353">funkin' spelunkin' slam-dunkin' astronaughts ඞ</span></li>
+</ul>
+</li>
+<li><span class="wrapup-embed" data-embed-team="47">The Funky Town Monkey Pimps</span> for finishing the final battle 6 seconds before the end of the hunt and locking Kero away 11 seconds after the end of the hunt</li>
+<li>Top faction contributors:<ul>
+<li><strong>Dinos</strong>: <span class="wrapup-embed" data-embed-team="631">The Coraline Schism</span>, <span class="wrapup-embed" data-embed-team="21">ghostbloods</span>, <span class="wrapup-embed" data-embed-team="256">3 Woodpecker Wormholes</span></li>
+<li><strong>Cows</strong>: <span class="wrapup-embed" data-embed-team="90">Eggplant Parms</span>, <span class="wrapup-embed" data-embed-team="30">Time Vultures</span>, <span class="wrapup-embed" data-embed-team="528">17th Collectible Hidden Behind a Waterfall</span></li>
+<li><strong>Bees</strong>: <span class="wrapup-embed" data-embed-team="629">EolithiCosmonauts of r/PictureGame</span>, <span class="wrapup-embed" data-embed-team="421">————————🥇🏆🥇————————</span>, <span class="wrapup-embed" data-embed-team="481">🐝Beetahs 🐝</span></li>
+<li><strong>Dryads</strong>: <span class="wrapup-embed" data-embed-team="626">♀!</span>, <span class="wrapup-embed" data-embed-team="492">ErratiClocks of /r/PictureGame</span>, <span class="wrapup-embed" data-embed-team="257">TruFact™</span></li>
+<li><strong>Boars</strong>: <span class="wrapup-embed" data-embed-team="338">idk</span>, <span class="wrapup-embed" data-embed-team="289">🎏🎏🎏 GeomantiChromatiClupeids 🎏🎏🎏</span>, <span class="wrapup-embed" data-embed-team="558">Mathemagicians Astronauts Rambunctiously Spelunking</span></li>
+</ul>
+</li>
+<li>All 1051 teams that played GalactiCardCaptors!</li>
+</ul>
+<h3>More stats</h3>
+
+<ul>
+<li>2,746 registered participants</li>
+<li>3,591 hints answered (special thanks to Yannick and Wayne, who each answered around 1,500 hints)</li>
+<li>After the final battle, 28 teams chose to lock Kero back in the box, while 266 teams chose to have Kero join for some pie.</li>
+<li>44% of teams thought that using the power of UWU to make more friends made sense.</li>
+<li>59% of teams claimed to have read Chocolate Calf’s and Beeowulf’s card text upon starting the 4th stage of the tutorial.</li>
+<li>74% of teams breezed through their first answerable, while 26% of teams thought it was tough.</li>
+</ul>
+<p>Links</p>
+<ul>
+<li><a href="/wrapup/ama">Questions</a> you asked us in the feedback form</li>
+<li>A themed <a href="https://www.youtube.com/playlist?list=PLfC1luFHduGtjPTkK1indb0gBubtNzmgV">YouTube playlist</a></li>
+</ul>
+<h3>Fan art (send us more!)</h3>
+
+<p>From <a href="https://twitter.com/RedBirdRabbit">@RedBirdRabbit</a> (<a href="https://twitter.com/RedBirdRabbit/status/1725453256179187712">original tweet</a>):</p>
+<iframe src="https://drive.google.com/file/d/1ujoKFp9icA6MGeUn-spv_u9D_YLG-py4/preview" width="640" height="480" allow="autoplay" style="display: block; margin: 0 auto 3rem"></iframe>
+
+<p>From <a href="https://twitter.com/tetaes001">@tetaes001</a> (<a href="https://twitter.com/tetaes001/status/1728538117764972846">original tweet</a>):</p>
+<iframe src="https://drive.google.com/file/d/1Gj_oo5xAwecdE_UNAklYI-yxzHvN9HtN/preview" width="640" height="480" allow="autoplay" style="display: block; margin: 0 auto 3rem"></iframe>
+
+<h3>Funny answers</h3>
+<h6>Trigram Hell</h6>
+<ul>
+<li>World's Delicacy Official Fan Club submitted UWU</li>
+<li>seals submitted <span class="funny-answer">SINCEBIRTHIHADAFAVOROFKETCHUPORMUSTARDINMYMEALINTHEOPPOSITEPOORLYLITHOLESSMALLSUBORDINATESHANDLETHEPROMEDIANTSSOLFEGEWELLNOTAYEARHASPASSEDWITHOUTMEMAKINGUSEOFIT</span></li>
+</ul>
+<h6>Petroglyph</h6>
+<ul>
+<li>excavATE Minerals submitted <span class="funny-answer">GETSTICKBUGGED</span></li>
+</ul>
+<h6>Limericks</h6>
+<ul>
+<li>3 teams submitted <span class="funny-answer">PENGUINFIRE</span></li>
+<li>7-2-15-25-26 submitted <span class="funny-answer">EGGBALL</span></li>
+<li>Pepsimen submitted <span class="funny-answer">ITURNEDMYSELFINTOALIMEMORTYIMLIMERICK</span></li>
+</ul>
+<h6>Make Your Own Star Battle</h6>
+<ul>
+<li>The Managers submitted <span class="funny-answer">SINEWYSNAIL</span></li>
+</ul>
+<h6>Now I Know</h6>
+<ul>
+<li>Isotopes Puzzles United submitted <span class="funny-answer">WAITTHECOMMONUSAVERSIONOFLETTERSONGGOESHIJKLMNOPTHATSVERYLOLSMHSMH</span></li>
+</ul>
+<h6>Gessner Mom</h6>
+<ul>
+<li>small books and big data submitted <span class="funny-answer">HOUSTONSPOTTED</span> and <span class="funny-answer">ILEARNEDTODRIVEONTHISHIGHWAY</span></li>
+<li>Quartzite Drillers (East) submitted <span class="funny-answer">COMEONDOWEREALLYHAVETOFIGUREOUTHOUSTONTEXASTRAFFICLAWS</span></li>
+<li>Deepspace Jeno1an Cave G1adiators submitted <span class="funny-answer">PLEASEJUSTONEMORELANEISWEARITLLFIXTHETRAFFICTHISTIME</span></li>
+</ul>
+<h6>Console-ation Prize</h6>
+<ul>
+<li>Singles Ready to Stay Inside submitted <span class="funny-answer">MEWANTCOOKIE</span></li>
+<li>The Caroline Schism submitted <span class="funny-answer">STYOUGOTOBURKINAFASO</span></li>
+</ul>
+<h6>Beige Flags</h6>
+<ul>
+<li>weeklies.enigmatics.org submitted <span class="funny-answer">THEREISABUGWITHFLAGS</span></li>
+</ul>
+<h6>#vent</h6>
+<ul>
+<li>Quartzite Drillers (East) and Sufficiently Large N submitted <span class="funny-answer">AMONGUS</span></li>
+<li>possibly a heron submitted <span class="funny-answer">ISTHATANAMONGUSREFERENCE</span></li>
+<li>team_blet submitted <span class="funny-answer">ASDFJKLDKAHGASDJKL</span></li>
+<li>Welcome to the JuMBLE ⚛ submitted <span class="funny-answer">FJAFJKLDSKFJKFDJ</span></li>
+<li>:praytrick: submitted <span class="funny-answer">WHATPSYCHOPATHKEYSMASHESWITHNUMBERSINITAISHDGAHSDFGKASDFFGASDLFVBASLFB</span></li>
+</ul>
+<h6>Paint By Numbers</h6>
+<p>:praytrick: submitted:</p>
+<ul>
+<li><span class="funny-answer">SPACED</span></li>
+<li><span class="funny-answer">BRACED</span></li>
+<li><span class="funny-answer">PLACED</span></li>
+<li><span class="funny-answer">TRACED</span></li>
+<li><span class="funny-answer">IAMSUBMITTINGTOTHEWRONGPUZZLE</span></li>
+</ul>
+<h6>Mastery Tree</h6>
+<p>Some teams got close to the answer…</p>
+<ul>
+<li>8 teams submitted CAPTAINΠ</li>
+<li>5 teams submitted <span class="funny-answer">OCAPTAINPICAPTAIN</span></li>
+<li>PuzzlePath Travelers submitted Π</li>
+<li>Insane Troll Logic submitted <span class="funny-answer">CAPTAINPIKACHU</span></li>
+<li>Cosmos Charting Challengers submitted <span class="funny-answer">CAPTAINOWO</span></li>
+<li>The Good, the Bad, and the Yoda submitted <span class="funny-answer">TAPIOCAPIE</span></li>
+</ul>
+<p>Some teams tried answering the question directly…</p>
+<ul>
+<li>3 teams submitted <span class="funny-answer">WORDPEACE</span></li>
+<li>Wizards of Aus submitted <span class="funny-answer">WORLDPEACE</span> and <span class="funny-answer">THEPOWEROFFRIENDSHIP</span></li>
+<li>I'll keep you my twisty little passage (twisty little passage) / Don't tell anyone or you'll just be another backsolve submitted <span class="funny-answer">MANAJUICE</span></li>
+<li>Dora submitted <span class="funny-answer">BELIEVEINTHEHEARTOFTHECARDS</span></li>
+<li>if MATE has 1 MILLION fans i am one of them. if MATE has 1 THOUSAND FANS i am 1 of them. if MATE has 10 fans i am one. if MATE has 1 fan i am the fan. if MATE has no fans i am dead. submitted <span class="funny-answer">ONEHUNDREDYEARSINTHEINFINITEPAINCUBE</span></li>
+</ul>
+<h6>Gauss’s Sketches</h6>
+<p>if MATE has 1 MILLION fans i am one of them. if MATE has 1 THOUSAND FANS i am 1 of them. if MATE has 10 fans i am one. if MATE has 1 fan i am the fan. if MATE has no fans i am dead. submitted:</p>
+<ul>
+<li><span class="funny-answer">HEREISALISTOFPHRASESWEREALLYLIKEFROMTHELIFEOFFREDPAGE</span></li>
+<li><span class="funny-answer">WHYBLOWINGYOURNOSEANDWIPINGYOUREYESISNOTCOMMUTATIVE</span></li>
+<li><span class="funny-answer">PIECHARTSCIRRHOSIS</span></li>
+<li><span class="funny-answer">HOWTODEALWITHADUCKTHATNEVERTELLSTHETRUTH</span></li>
+</ul>
+<h3>Fun stories</h3>
+<p>After the infamous writing retreat tournament where Boar (now <span class="embed">Boarry Farmer</span>) was extremely strong and popular, our card ideas channel was full of new Boar cards:</p>
+<p><img class="img-full" src="/static/images/wrapup/image16.png"></p>
+<p>And thus, the Boar faction was boarn.</p>
+<p><img class="img-full" src="/static/images/wrapup/image17.png"><img class="img-full" src="/static/images/wrapup/all-factions-boar.png"></p>
+<p>We can’t forget Boarbie, who fell into relative obscurity...</p>
+<p><img class="img-full" style="width: 25%" src="/static/images/wrapup/image18.png"></p>
+<p>Much of the inspiration of Cows come from <a href="https://www.youtube.com/playlist?list=PLfC1luFHduGvOouPliojOV5qBKFBWWLHp">these legendairy videos</a> by ProZD.</p>
+<p>One cut mechanic from GCC is the ability to customize the Bases you start with in each battle. We imagined being able to upgrade them and even specialize for particular factions (like producing 2 Boarries instead of 1 Pie). Here are some faction-specific Base concepts that never made it into the game:</p>
+<ul>
+<li><span class="wrapup-embed" data-embed-color="W/B"></span> Clock Tower: alternates <span class="wrapup-embed" data-embed-color="B"></span> and <span class="wrapup-embed" data-embed-color="W"></span> production, also allows 1 use of conversion between <span class="wrapup-embed" data-embed-color="B"></span> and <span class="wrapup-embed" data-embed-color="W"></span></li>
+<li><span class="wrapup-embed" data-embed-color="R"></span> Beacon: +1 Power to adjacent Creatures.</li>
+<li><span class="wrapup-embed" data-embed-color="Y"></span> Yurt: Can Move. Creatures can be Summoned to Spaces adjacent to this Base as if they were Friendly. (<span class="embed">Yurt</span> made it into The Swarm, without those abilities.)</li>
+<li><span class="wrapup-embed" data-embed-color="P"></span> Library: Draw a card for 1 food instead of 2.</li>
+<li><span class="wrapup-embed" data-embed-color="G"></span> Hatchery: Protect itself next turn instead of gaining Food.</li>
+</ul>
+<p>There were many polish features that were almost cut from hunt because they caused our web team stress right before deadlines:</p>
+<ul>
+<li>Card animation in deckbuilding, including the holographic foil on Legendaries, inspired by <a href="https://store.steampowered.com/app/2379780/Balatro/">Balatro</a></li>
+<li>Map art for Infinitely Many Hogs (and Logs)</li>
+<li>Animation for the Kero fight</li>
+</ul>
+<p>We’re glad they made it in, we personally love them and we heard lots of positive feedback too!</p>
+<p><em>WTFTadashi</em>: I figured out Now I Know while driving my 4 year-old daughter home from pre-school. We had worked out that the words were shared between Baa Baa Black Sheep and Twinkle Twinkle. I was thinking about the puzzle in the car, and I kept singing the two songs and thinking about where the words overlapped. At one point, I was humming the tune, and my daughter started singing the A,B,C’s. That’s when it occurred to me that we had to also overlap the songs with the Alphabet Song. I suppose I should add her to the team roster now.</p>
+<p><em>Gibbon Group</em> managed to predict the final battle:</p>
+<p><img class="img-full" src="/static/images/wrapup/image19.png"></p>
+<p>They also built Animal Shelter in Minecraft:</p>
+<p><img class="img-full" src="/static/images/wrapup/image20.png"></p>
+<p><em>The Hunt Slayers</em> appreciated the Slimes “a healthy amount”:</p>
+<p><img class="img-full" src="/static/images/wrapup/image21.png"></p>
+<p><em>Eggplant Parms</em> had a special strategy for Infinitely Many Hogs and Logs:</p>
+<p><img class="img-full" src="/static/images/wrapup/image22.png"><img class="img-full" src="/static/images/wrapup/image23.png"><h1>Credits</h1></p>
+<p>Chairs: Amon Ge, Yannick Yao</p>
+<p>Art Leads: Chris Jones, DD Liu</p>
+<p><a href="/game/art_credits">Art Credits</a></p>
+<p>Story: Kat Fang, DD Liu</p>
+<p>Taskmaster: Jenna Himawan</p>
+<p>Scribe: CJ Quines</p>
+<p>Head Editors: Anderson Wang, Colin Lu</p>
+<p>Editors: Charles Tam, Lewis Chen</p>
+<p>Card Game Design: Charles Tam, Amon Ge</p>
+<p>Onboarding Lead: Josh Alman</p>
+<p>Email Lead: Alan Huang</p>
+<p>Factchecking Lead: Jenna Himawan</p>
+<p>Testsolving Lead: Kevin Li</p>
+<p>Web Lead: Mark</p>
+<p>Web: Alan Huang, Amon Ge, Andy Hauge, Brian Chen, Charles Tam, Chris Jones, CJ Quines, Colin Lu, DD Liu, Dominick Joo, Jenna Himawan, Jinna, Violet Xiao</p>
+<p>Puzzle Writers: Amon Ge, Anderson Wang, Ben Yang, Brian Chen, CJ Quines, Charles Tam, Chris Jones, Colin Lu, Dai Yang, Jenna Himawan, Jinna, Josh Alman, Kat Fang, Kevin Li, Lewis Chen, Mark, Nathan Pinsker, Patrick Xia, Violet Xiao, Yannick Yao</p>
+<p>Factcheckers: Anderson Wang, Andy Hauge, Charles Tam, Colin Lu, Dai Yang, Dominick Joo, Jenna Himawan, Jon Schneider, Max Murin, Sam Kim, Wayne Zhao, Yannick Yao</p>
+<p>Postprodders: Amon Ge, Brian Chen, CJ Quines, Colin Lu, Jenna Himawan, Violet Xiao, Yannick Yao</p>
+<p>Additional Testsolvers: Alwina, Andrew He, Bex Lin, Cameron Montag, Catherine Wu, Connor Tilley, Harrison Ho, Ian Osborn, Jacqui Fashimpaur, Katie Dunn, Leo Marchand, Leon Zhou, Lumia Neyo, Maddie Dawson, Rahul Sridhar, Steven Keyes, Tom Panenko, Vlad Firoiu</p>
+</main>
+
+<aside>
+  <script>
+    const heads = [...$('h1,h2,h3,h4,h5')].map(head => [head, $('<div>')
+      .text(head.textContent)
+      .css('padding-left', head.tagName.substr(1) + 'ch')
+      .click(() => head.scrollIntoView())
+      .appendTo('aside')]);
+    function highlight() {
+      const rects = heads.map(([head]) => head.getBoundingClientRect());
+      heads.forEach(([head, link], i) => link.toggleClass('highlight',
+        (!rects[i + 1] || rects[i + 1].top > 0) && rects[i].top < innerHeight));
+    }
+    document.addEventListener('scroll', highlight, { passive: true });
+    highlight();
+  </script>
+</aside>
+
+<!-- heavily inspired by CTFd (via paradox puzzlehunt) -->
+<script src="https://cdn.jsdelivr.net/npm/echarts@5.1.1/dist/echarts.min.js" integrity="sha256-Yhe8c0oOs2dPYVQKLAi1aBB9uhr7yMmh67ukoWBqDuU=" crossorigin="anonymous"></script>
+<script type="text/javascript">
+echarts.init(document.getElementById('biggraph')).setOption({
+  title: {
+    left: "center",
+    textStyle: { color: "white" },
+    text: "Top 30 Teams",
+  },
+  tooltip: {
+    trigger: "axis",
+    axisPointer: {
+      type: "cross"
+    }
+  },
+  legend: {
+    type: "scroll",
+    orient: "horizontal",
+    align: "left",
+    bottom: 35,
+    textStyle: { color: "white", overflow: "truncate", width: 70 },
+    pageTextStyle: { color: "white" },
+    data: [
+      
+        "we left it too late to come up with something witty for the leaderboard ):",
+      
+        "idk",
+      
+        "And now, I said, let me show in a figure how far our nature is enlightened or unenlightened: \u002D\u002DBehold! human beings living in a GalactiCosmiCave, which has a mouth open towards the light and reaching",
+      
+        "The Coraline Schism",
+      
+        "I\u0027ll keep you my twisty little passage (twisty little passage) / Don\u0027t tell anyone or you\u0027ll just be another backsolve",
+      
+        "Pusheen Appreciation Society",
+      
+        "excavATE Minerals",
+      
+        "EolithiCosmonauts of r/PictureGame",
+      
+        "Eggplant Parms",
+      
+        "🐣🐧🦃🐦‍⬛\u0026🐢",
+      
+        "༆ TIBETAN MARK SPELUNKING LIGHT SOURCE",
+      
+        "Nova Excavation Society",
+      
+        "Please Clap",
+      
+        "⚗ MISCELLANEOUS SYMBOL TREASURE ON PEDESTAL",
+      
+        "Needlessly Eating Stalactites",
+      
+        "weeklies.enigmatics.org",
+      
+        "Just\u002DUs League",
+      
+        "5 cheese blend",
+      
+        "Have You Tried Reading The Braille on the Loon\u0027s Neck?",
+      
+        "[Redacted]",
+      
+        "🎏🎏🎏 GeomantiChromatiClupeids 🎏🎏🎏",
+      
+        "The Blizzards 🔮",
+      
+        "Cavernality",
+      
+        "Yuki",
+      
+        "Flemish Giants",
+      
+        "barbara kingsolver",
+      
+        "Amateur Hour",
+      
+        "The Caroline Schism",
+      
+        "Spakacarith\u0027s Tights",
+      
+        "Like Llamas Very Much",
+      
+    ],
+  },
+  toolbox: {
+    feature: {
+      dataZoom: {
+        yAxisIndex: "none"
+      },
+      saveAsImage: {}
+    }
+  },
+  grid: {
+    containLabel: true
+  },
+  xAxis: [
+    {
+      type: "time",
+      boundaryGap: false,
+      data: []
+    }
+  ],
+  yAxis: [
+    {
+      type: "value"
+    }
+  ],
+  dataZoom: [
+    {
+      id: "dataZoomX",
+      type: "slider",
+      xAxisIndex: [0],
+      filterMode: "filter",
+      height: 20,
+      top: 35,
+      fillerColor: "rgba(233, 236, 241, 0.4)"
+    }
+  ],
+  tooltip: {
+    formatter: function(params) {
+      var teamName = params.seriesName;
+
+      var date = params.data[0];
+      var score = params.data[1];
+      var info = params.data[2];
+
+      // team name and color;
+      var div1 = document.createElement('div');
+      var span = document.createElement('span');
+      span.className = 'tooltip-colored-circle';
+      span.style.backgroundColor = params.color;
+      div1.appendChild(span);
+      div1.appendChild(document.createTextNode(teamName));
+
+      var div2 = document.createElement('div');
+      var sl = document.createElement('small');
+      sl.textContent = 'Solved: '
+      div2.appendChild(sl);
+      div2.appendChild(document.createTextNode(info));
+      var ns = document.createElement('strong');
+      ns.textContent = ' → ' + score;
+      div2.appendChild(ns);
+
+      var div3 = document.createElement('div');
+      div3.textContent = date.toLocaleString();
+
+      var div = document.createElement('div');
+      div.appendChild(div1);
+      div.appendChild(div2);
+      div.appendChild(div3);
+      return div.outerHTML;
+    },
+  },
+  series: [
+    { name: "we left it too late to come up with something witty for the leaderboard ):", type: "line", itemStyle: { normal: { color: "hsl(349, 83%, 41%)", } }, symbolSize: function(data) { return data[3] ? 10 : 4; }, data: [ [new Date(1699663016989.285), 1, 'Tutorial', 0], [new Date(1699663540658.109), 2, 'Angry Boarry Farmer', 0], [new Date(1699665161455.3572), 3, 'Dargle', 0], [new Date(1699665231637.069), 4, 'Miss Yu', 0], [new Date(1699665608784.861), 5, 'Gnutmeg Tree', 0], [new Date(1699665742359.435), 6, 'Trigram Hell', 0], [new Date(1699666321761.31), 7, 'Limericks', 0], [new Date(1699667726712.6912), 8, 'beeBay Fulfillment Center', 0], [new Date(1699668350558.582), 9, 'Petroglyph', 0], [new Date(1699668811785.281), 10, 'Now I Know', 0], [new Date(1699669180878.03), 11, 'Make Your Own Star Battle', 0], [new Date(1699670601510.2798), 12, 'Spirit of the Vines', 0], [new Date(1699671784306.925), 13, 'Othello', 0], [new Date(1699672094221.272), 14, 'Coloring', 0], [new Date(1699673853155.54), 15, 'Beige Flags', 0], [new Date(1699674544028.5398), 16, 'Faces', 0], [new Date(1699675206273.811), 17, 'bb b', 0], [new Date(1699677026280.783), 18, 'Animal Shelter', 0], [new Date(1699679974697.267), 19, 'Jabberwock', 0], [new Date(1699680380401.115), 20, 'Paint By Numbers', 0], [new Date(1699680899263.316), 21, 'Bovine Social Media Corp', 0], [new Date(1699681000237.531), 22, 'Gessner Mom', 0], [new Date(1699682419504.28), 23, 'Asteroid', 0], [new Date(1699684049178.7861), 24, 'Moonick', 0], [new Date(1699684907635.864), 25, 'Spelling Bee', 0], [new Date(1699685146055.738), 26, 'Two Worlds Collide', 0], [new Date(1699687528121.9749), 27, 'OP pls nerf', 0], [new Date(1699688285217.8098), 28, 'Infinitely Many Hogs (and Logs)', 0], [new Date(1699689906871.356), 29, 'Postseason Tournaments', 0], [new Date(1699690486786.857), 30, 'Slime', 0], [new Date(1699690611273.484), 31, '#vent', 0], [new Date(1699691082331.1292), 32, 'Gauss\u0027s Sketches', 0], [new Date(1699691178345.412), 33, 'Console\u002Dation Prize', 0], [new Date(1699691676108.819), 34, 'Mastery Tree', 0], [new Date(1699691816899.545), 35, 'Blancmange', 0], [new Date(1699691902013.681), 36, 'ARECIBOAR', 0], [new Date(1699693206305.279), 37, 'Mister Penny', 0], [new Date(1699694426239.2349), 38, 'The Swarm', 0], [new Date(1699704623035.981), 39, 'Kero', 0], ], }, { name: "idk", type: "line", itemStyle: { normal: { color: "hsl(72, 91%, 52%)", } }, symbolSize: function(data) { return data[3] ? 10 : 4; }, data: [ [new Date(1699662972908.33), 1, 'Tutorial', 0], [new Date(1699663298646.068), 2, 'Angry Boarry Farmer', 0], [new Date(1699664889755.507), 3, 'Dargle', 0], [new Date(1699665152509.031), 4, 'Gnutmeg Tree', 0], [new Date(1699665800541.807), 5, 'Trigram Hell', 0], [new Date(1699666768511.2751), 6, 'Miss Yu', 0], [new Date(1699667648292.8381), 7, 'Limericks', 0], [new Date(1699668542433.75), 8, 'Petroglyph', 0], [new Date(1699669321777.657), 9, 'Make Your Own Star Battle', 0], [new Date(1699670884313.4502), 10, 'beeBay Fulfillment Center', 0], [new Date(1699671506676.969), 11, 'Spirit of the Vines', 0], [new Date(1699671562862.285), 12, 'Coloring', 0], [new Date(1699672349537.041), 13, 'Now I Know', 0], [new Date(1699673271290.6648), 14, 'Gessner Mom', 0], [new Date(1699673547862.189), 15, 'Othello', 0], [new Date(1699673745332.782), 16, 'Faces', 0], [new Date(1699675005148.619), 17, 'Asteroid', 0], [new Date(1699675876390.198), 18, '#vent', 0], [new Date(1699676574059.665), 19, 'bb b', 0], [new Date(1699678573003.932), 20, 'The Swarm', 0], [new Date(1699678704525.0261), 21, 'Paint By Numbers', 0], [new Date(1699680507661.598), 22, 'Beige Flags', 0], [new Date(1699681535381.403), 23, 'Bovine Social Media Corp', 0], [new Date(1699682491253.723), 24, 'Spelling Bee', 0], [new Date(1699684796855.196), 25, 'Blancmange', 0], [new Date(1699686893195.375), 26, 'Moonick', 0], [new Date(1699687181676.437), 27, 'Postseason Tournaments', 0], [new Date(1699688397025.9958), 28, 'Infinitely Many Hogs (and Logs)', 0], [new Date(1699688596025.065), 29, 'ARECIBOAR', 0], [new Date(1699689285232.87), 30, 'Console\u002Dation Prize', 0], [new Date(1699690868603.471), 31, 'Two Worlds Collide', 0], [new Date(1699692659247.4329), 32, 'Gauss\u0027s Sketches', 0], [new Date(1699695936162.134), 33, 'Jabberwock', 0], [new Date(1699697268866.617), 34, 'Mister Penny', 0], [new Date(1699700337356.304), 35, 'Animal Shelter', 0], [new Date(1699700797568.716), 36, 'OP pls nerf', 0], [new Date(1699701379093.425), 37, 'Mastery Tree', 0], [new Date(1699703702541.02), 38, 'Slime', 0], [new Date(1699709942206.7002), 39, 'Kero', 0], ], }, { name: "And now, I said, let me show in a figure how far our nature is enlightened or unenlightened: \u002D\u002DBehold! human beings living in a GalactiCosmiCave, which has a mouth open towards the light and reaching", type: "line", itemStyle: { normal: { color: "hsl(37, 84%, 47%)", } }, symbolSize: function(data) { return data[3] ? 10 : 4; }, data: [ [new Date(1699664570947.5032), 1, 'Tutorial', 0], [new Date(1699666041145.756), 2, 'Angry Boarry Farmer', 0], [new Date(1699666168200.929), 3, 'Dargle', 0], [new Date(1699666876105.552), 4, 'Gnutmeg Tree', 0], [new Date(1699667327309.186), 5, 'Trigram Hell', 0], [new Date(1699668230383.621), 6, 'Petroglyph', 0], [new Date(1699668996214.705), 7, 'Miss Yu', 0], [new Date(1699669216564.271), 8, 'Limericks', 0], [new Date(1699670516141.447), 9, 'Make Your Own Star Battle', 0], [new Date(1699673298518.668), 10, 'Coloring', 0], [new Date(1699674093759.6272), 11, 'Now I Know', 0], [new Date(1699674518624.4558), 12, 'Othello', 0], [new Date(1699674620548.884), 13, 'beeBay Fulfillment Center', 0], [new Date(1699675176301.5498), 14, 'Console\u002Dation Prize', 0], [new Date(1699675637525.574), 15, 'Faces', 0], [new Date(1699675674641.269), 16, 'Spirit of the Vines', 0], [new Date(1699676518343.201), 17, 'bb b', 0], [new Date(1699676572762.027), 18, 'Gessner Mom', 0], [new Date(1699677370196.1301), 19, 'Asteroid', 0], [new Date(1699678350487.745), 20, 'Paint By Numbers', 0], [new Date(1699678691593.3372), 21, 'Beige Flags', 0], [new Date(1699679199104.21), 22, 'Animal Shelter', 0], [new Date(1699680031859.907), 23, 'Bovine Social Media Corp', 0], [new Date(1699682868834.2112), 24, '#vent', 0], [new Date(1699683033893.6838), 25, 'Jabberwock', 0], [new Date(1699686743988.58), 26, 'OP pls nerf', 0], [new Date(1699691119967.812), 27, 'Gauss\u0027s Sketches', 0], [new Date(1699692772850.802), 28, 'Spelling Bee', 0], [new Date(1699693360183.339), 29, 'Two Worlds Collide', 0], [new Date(1699695184030.77), 30, 'Mastery Tree', 0], [new Date(1699695588558.5908), 31, 'Postseason Tournaments', 0], [new Date(1699696804071.703), 32, 'Blancmange', 0], [new Date(1699697074996.5962), 33, 'Infinitely Many Hogs (and Logs)', 0], [new Date(1699697736904.16), 34, 'Mister Penny', 0], [new Date(1699700050852.644), 35, 'Moonick', 0], [new Date(1699700642687.8008), 36, 'ARECIBOAR', 0], [new Date(1699705691232.893), 37, 'The Swarm', 0], [new Date(1699706523504.803), 38, 'Slime', 0], [new Date(1699711195764.625), 39, 'Kero', 0], ], }, { name: "The Coraline Schism", type: "line", itemStyle: { normal: { color: "hsl(61, 85%, 52%)", } }, symbolSize: function(data) { return data[3] ? 10 : 4; }, data: [ [new Date(1699662611534.561), 1, 'Tutorial', 0], [new Date(1699663191828.2659), 2, 'Angry Boarry Farmer', 0], [new Date(1699663978887.378), 3, 'Dargle', 0], [new Date(1699665670463.9138), 4, 'Miss Yu', 0], [new Date(1699665808598.509), 5, 'Gnutmeg Tree', 0], [new Date(1699667064553.113), 6, 'Trigram Hell', 0], [new Date(1699667146689.7432), 7, 'Limericks', 0], [new Date(1699668624122.8171), 8, 'beeBay Fulfillment Center', 0], [new Date(1699669296391.228), 9, 'Spirit of the Vines', 0], [new Date(1699670012913.828), 10, 'Petroglyph', 0], [new Date(1699670492935.23), 11, 'Othello', 0], [new Date(1699671288059.391), 12, 'Make Your Own Star Battle', 0], [new Date(1699671830756.58), 13, 'Now I Know', 0], [new Date(1699672475710.709), 14, 'Faces', 0], [new Date(1699672934311.2458), 15, 'bb b', 0], [new Date(1699675044597.5151), 16, 'Beige Flags', 0], [new Date(1699675970751.2031), 17, 'Coloring', 0], [new Date(1699678861254.49), 18, 'Animal Shelter', 0], [new Date(1699680117107.218), 19, '#vent', 0], [new Date(1699681617425.04), 20, 'The Swarm', 0], [new Date(1699682984146.48), 21, 'Bovine Social Media Corp', 0], [new Date(1699686167704.535), 22, 'Moonick', 0], [new Date(1699686613572.945), 23, 'Blancmange', 0], [new Date(1699687038130.24), 24, 'Paint By Numbers', 0], [new Date(1699687463768.032), 25, 'Asteroid', 0], [new Date(1699687897418.686), 26, 'Two Worlds Collide', 0], [new Date(1699688826467.73), 27, 'Infinitely Many Hogs (and Logs)', 0], [new Date(1699690224012.728), 28, 'ARECIBOAR', 0], [new Date(1699693654605.129), 29, 'Postseason Tournaments', 0], [new Date(1699694947505.7659), 30, 'Gauss\u0027s Sketches', 0], [new Date(1699697494905.171), 31, 'Jabberwock', 0], [new Date(1699698948494.447), 32, 'Spelling Bee', 0], [new Date(1699702852835.9321), 33, 'OP pls nerf', 0], [new Date(1699704722353.496), 34, 'Console\u002Dation Prize', 0], [new Date(1699705711459.3289), 35, 'Mastery Tree', 0], [new Date(1699705772706.719), 36, 'Gessner Mom', 0], [new Date(1699708159378.179), 37, 'Slime', 0], [new Date(1699708679115.231), 38, 'Mister Penny', 0], [new Date(1699711557099.4539), 39, 'Kero', 0], ], }, { name: "I\u0027ll keep you my twisty little passage (twisty little passage) / Don\u0027t tell anyone or you\u0027ll just be another backsolve", type: "line", itemStyle: { normal: { color: "hsl(302, 80%, 42%)", } }, symbolSize: function(data) { return data[3] ? 10 : 4; }, data: [ [new Date(1699663180810.127), 1, 'Tutorial', 0], [new Date(1699663691899.212), 2, 'Angry Boarry Farmer', 0], [new Date(1699665509723.752), 3, 'Miss Yu', 0], [new Date(1699665922830.185), 4, 'Dargle', 0], [new Date(1699666268678.791), 5, 'Trigram Hell', 0], [new Date(1699667781235.224), 6, 'Gnutmeg Tree', 0], [new Date(1699668078747.194), 7, 'Limericks', 0], [new Date(1699670711530.374), 8, 'beeBay Fulfillment Center', 0], [new Date(1699671132677.001), 9, 'Coloring', 0], [new Date(1699671977183.916), 10, 'Now I Know', 0], [new Date(1699672173420.0361), 11, 'Make Your Own Star Battle', 0], [new Date(1699673534256.0068), 12, 'Petroglyph', 0], [new Date(1699674376036.24), 13, 'Spirit of the Vines', 0], [new Date(1699674991076.383), 14, 'Faces', 0], [new Date(1699676669315.196), 15, 'bb b', 0], [new Date(1699677543043.153), 16, 'Othello', 0], [new Date(1699678805971.253), 17, 'Animal Shelter', 0], [new Date(1699678857730.3071), 18, 'Beige Flags', 0], [new Date(1699679650627.4731), 19, 'Asteroid', 0], [new Date(1699679887179.7979), 20, 'Paint By Numbers', 0], [new Date(1699680162183.5598), 21, 'Bovine Social Media Corp', 0], [new Date(1699681465300.9739), 22, '#vent', 0], [new Date(1699682086218.6611), 23, 'The Swarm', 0], [new Date(1699682318881.5789), 24, 'Console\u002Dation Prize', 0], [new Date(1699684601613.806), 25, 'Blancmange', 0], [new Date(1699686050155.202), 26, 'Gauss\u0027s Sketches', 0], [new Date(1699687207233.0388), 27, 'Gessner Mom', 0], [new Date(1699687901805.503), 28, 'Infinitely Many Hogs (and Logs)', 0], [new Date(1699688354048.841), 29, 'Two Worlds Collide', 0], [new Date(1699689041644.3838), 30, 'ARECIBOAR', 0], [new Date(1699689372375.924), 31, 'OP pls nerf', 0], [new Date(1699689716551.117), 32, 'Mastery Tree', 0], [new Date(1699695617240.9958), 33, 'Spelling Bee', 0], [new Date(1699699860480.239), 34, 'Mister Penny', 0], [new Date(1699699984818.645), 35, 'Slime', 0], [new Date(1699702841464.958), 36, 'Jabberwock', 0], [new Date(1699705377103.2031), 37, 'Postseason Tournaments', 0], [new Date(1699705447236.4321), 38, 'Moonick', 0], [new Date(1699711945098.205), 39, 'Kero', 0], ], }, { name: "Pusheen Appreciation Society", type: "line", itemStyle: { normal: { color: "hsl(103, 80%, 47%)", } }, symbolSize: function(data) { return data[3] ? 10 : 4; }, data: [ [new Date(1699663334277.059), 1, 'Tutorial', 0], [new Date(1699663862573.539), 2, 'Angry Boarry Farmer', 0], [new Date(1699664813635.489), 3, 'Dargle', 0], [new Date(1699665683200.835), 4, 'Gnutmeg Tree', 0], [new Date(1699666247701.8508), 5, 'Trigram Hell', 0], [new Date(1699667091703.2522), 6, 'Miss Yu', 0], [new Date(1699667427499.9648), 7, 'Limericks', 0], [new Date(1699668115353.565), 8, 'Petroglyph', 0], [new Date(1699669671852.082), 9, 'Make Your Own Star Battle', 0], [new Date(1699672183955.476), 10, 'beeBay Fulfillment Center', 0], [new Date(1699673761967.667), 11, 'Now I Know', 0], [new Date(1699674270988.914), 12, 'Othello', 0], [new Date(1699675168568.752), 13, 'Console\u002Dation Prize', 0], [new Date(1699675313969.809), 14, 'Spirit of the Vines', 0], [new Date(1699676167527.6091), 15, 'bb b', 0], [new Date(1699676297754.7332), 16, 'Gessner Mom', 0], [new Date(1699676756653.178), 17, 'Faces', 0], [new Date(1699677359332.368), 18, 'Asteroid', 0], [new Date(1699680623474.846), 19, 'Animal Shelter', 0], [new Date(1699681489307.94), 20, 'Beige Flags', 0], [new Date(1699681831245.874), 21, 'Coloring', 0], [new Date(1699682194024.662), 22, 'Bovine Social Media Corp', 0], [new Date(1699683731491.614), 23, 'Paint By Numbers', 0], [new Date(1699684888482.52), 24, '#vent', 0], [new Date(1699688333213.6382), 25, 'Spelling Bee', 0], [new Date(1699688371992.778), 26, 'Gauss\u0027s Sketches', 0], [new Date(1699689618004.318), 27, 'OP pls nerf', 0], [new Date(1699689719574.941), 28, 'Mastery Tree', 0], [new Date(1699690368437.437), 29, 'Jabberwock', 0], [new Date(1699690392033.737), 30, 'Postseason Tournaments', 0], [new Date(1699690468926.33), 31, 'Two Worlds Collide', 0], [new Date(1699692913773.0151), 32, 'The Swarm', 0], [new Date(1699693080182.147), 33, 'ARECIBOAR', 0], [new Date(1699694718663.562), 34, 'Infinitely Many Hogs (and Logs)', 0], [new Date(1699696653312.4038), 35, 'Moonick', 0], [new Date(1699700739712.486), 36, 'Slime', 0], [new Date(1699703390498.012), 37, 'Mister Penny', 0], [new Date(1699704590622.7578), 38, 'Blancmange', 0], [new Date(1699714708620.326), 39, 'Kero', 0], ], }, { name: "excavATE Minerals", type: "line", itemStyle: { normal: { color: "hsl(124, 92%, 49%)", } }, symbolSize: function(data) { return data[3] ? 10 : 4; }, data: [ [new Date(1699662912246.412), 1, 'Tutorial', 0], [new Date(1699665347113.085), 2, 'Dargle', 0], [new Date(1699665955114.961), 3, 'Angry Boarry Farmer', 0], [new Date(1699670038763.0269), 4, 'beeBay Fulfillment Center', 0], [new Date(1699670671756.124), 5, 'Trigram Hell', 0], [new Date(1699671522576.9219), 6, 'Miss Yu', 0], [new Date(1699671732799.3728), 7, 'Limericks', 0], [new Date(1699674973370.788), 8, 'Coloring', 0], [new Date(1699676111290.694), 9, 'Make Your Own Star Battle', 0], [new Date(1699677279476.246), 10, 'Spirit of the Vines', 0], [new Date(1699678193375.08), 11, 'Gnutmeg Tree', 0], [new Date(1699678835432.948), 12, 'Gessner Mom', 0], [new Date(1699680028375.764), 13, 'Faces', 0], [new Date(1699680352460.651), 14, 'Jabberwock', 0], [new Date(1699681561708.8162), 15, 'Beige Flags', 0], [new Date(1699682139995.7732), 16, 'Petroglyph', 0], [new Date(1699682299554.2468), 17, 'Othello', 0], [new Date(1699683094122.72), 18, 'Now I Know', 0], [new Date(1699683219317.52), 19, '#vent', 0], [new Date(1699684673926.552), 20, 'Animal Shelter', 0], [new Date(1699684901998.747), 21, 'The Swarm', 0], [new Date(1699685114909.955), 22, 'Paint By Numbers', 0], [new Date(1699685237151.658), 23, 'Bovine Social Media Corp', 0], [new Date(1699689476399.2988), 24, 'Spelling Bee', 0], [new Date(1699692388522.735), 25, 'Blancmange', 0], [new Date(1699694215038.5488), 26, 'Infinitely Many Hogs (and Logs)', 0], [new Date(1699694538969.887), 27, 'Postseason Tournaments', 0], [new Date(1699696295858.963), 28, 'bb b', 0], [new Date(1699696462699.4988), 29, 'Two Worlds Collide', 0], [new Date(1699697726317.3088), 30, 'ARECIBOAR', 0], [new Date(1699699262243.613), 31, 'Asteroid', 0], [new Date(1699700757712.025), 32, 'Mister Penny', 0], [new Date(1699701135714.147), 33, 'Gauss\u0027s Sketches', 0], [new Date(1699701399453.951), 34, 'OP pls nerf', 0], [new Date(1699701766547.178), 35, 'Console\u002Dation Prize', 0], [new Date(1699701825115.8271), 36, 'Mastery Tree', 0], [new Date(1699703146466.92), 37, 'Slime', 0], [new Date(1699704195865.3008), 38, 'Moonick', 0], [new Date(1699716487548.531), 39, 'Kero', 0], ], }, { name: "EolithiCosmonauts of r/PictureGame", type: "line", itemStyle: { normal: { color: "hsl(228, 88%, 47%)", } }, symbolSize: function(data) { return data[3] ? 10 : 4; }, data: [ [new Date(1699662530663.121), 1, 'Tutorial', 0], [new Date(1699664290291.556), 2, 'Angry Boarry Farmer', 0], [new Date(1699664305040.091), 3, 'Dargle', 0], [new Date(1699665068593.399), 4, 'Gnutmeg Tree', 0], [new Date(1699665189638.955), 5, 'Miss Yu', 0], [new Date(1699665459122.186), 6, 'Limericks', 0], [new Date(1699665655552.044), 7, 'Trigram Hell', 0], [new Date(1699667641261.3162), 8, 'Coloring', 0], [new Date(1699668423155.3372), 9, 'Now I Know', 0], [new Date(1699670326824.193), 10, 'Make Your Own Star Battle', 0], [new Date(1699671150427.769), 11, 'Othello', 0], [new Date(1699671577430.191), 12, 'beeBay Fulfillment Center', 0], [new Date(1699671867337.983), 13, 'Gessner Mom', 0], [new Date(1699672717553.649), 14, 'Faces', 0], [new Date(1699673254193.105), 15, 'Console\u002Dation Prize', 0], [new Date(1699674249730.8582), 16, 'Spirit of the Vines', 0], [new Date(1699675741873.611), 17, 'Beige Flags', 0], [new Date(1699678068100.355), 18, 'Asteroid', 0], [new Date(1699681152474.976), 19, '#vent', 0], [new Date(1699682517168.622), 20, 'The Swarm', 0], [new Date(1699683613148.4102), 21, 'Petroglyph', 0], [new Date(1699683861621.8481), 22, 'Paint By Numbers', 0], [new Date(1699684230351.374), 23, 'bb b', 0], [new Date(1699684470887.5762), 24, 'Bovine Social Media Corp', 0], [new Date(1699686863083.782), 25, 'Moonick', 0], [new Date(1699687825733.98), 26, 'Animal Shelter', 0], [new Date(1699688254546.012), 27, 'Gauss\u0027s Sketches', 0], [new Date(1699689675147.85), 28, 'Infinitely Many Hogs (and Logs)', 0], [new Date(1699690571486.5989), 29, 'OP pls nerf', 0], [new Date(1699691112977.229), 30, 'Two Worlds Collide', 0], [new Date(1699692532370.801), 31, 'ARECIBOAR', 0], [new Date(1699694213913.2422), 32, 'Mastery Tree', 0], [new Date(1699694644007.144), 33, 'Jabberwock', 0], [new Date(1699696218768.926), 34, 'Postseason Tournaments', 0], [new Date(1699701114835.989), 35, 'Spelling Bee', 0], [new Date(1699704517877.513), 36, 'Mister Penny', 0], [new Date(1699706326921.4211), 37, 'Blancmange', 0], [new Date(1699710623502.36), 38, 'Slime', 0], [new Date(1699718687489.8938), 39, 'Kero', 0], ], }, { name: "Eggplant Parms", type: "line", itemStyle: { normal: { color: "hsl(261, 97%, 56%)", } }, symbolSize: function(data) { return data[3] ? 10 : 4; }, data: [ [new Date(1699663622419.517), 1, 'Tutorial', 0], [new Date(1699664765268.473), 2, 'Angry Boarry Farmer', 0], [new Date(1699665132734.303), 3, 'Dargle', 0], [new Date(1699666533882.672), 4, 'Gnutmeg Tree', 0], [new Date(1699666885306.8162), 5, 'Trigram Hell', 0], [new Date(1699669866638.5469), 6, 'Miss Yu', 0], [new Date(1699670080307.838), 7, 'Limericks', 0], [new Date(1699670249805.278), 8, 'beeBay Fulfillment Center', 0], [new Date(1699670848508.05), 9, 'Make Your Own Star Battle', 0], [new Date(1699671652309.0862), 10, 'Now I Know', 0], [new Date(1699671733773.5989), 11, 'Spirit of the Vines', 0], [new Date(1699672196435.049), 12, 'Othello', 0], [new Date(1699675008812.773), 13, 'Asteroid', 0], [new Date(1699676950170.324), 14, 'bb b', 0], [new Date(1699677306966.754), 15, 'Beige Flags', 0], [new Date(1699677661240.295), 16, 'Gessner Mom', 0], [new Date(1699678471941.476), 17, 'Faces', 0], [new Date(1699679488203.2559), 18, 'Jabberwock', 0], [new Date(1699679984894.811), 19, 'Paint By Numbers', 0], [new Date(1699680649383.931), 20, 'The Swarm', 0], [new Date(1699681041589.8782), 21, 'Bovine Social Media Corp', 0], [new Date(1699682428752.26), 22, 'Spelling Bee', 0], [new Date(1699684066641.1309), 23, 'Blancmange', 0], [new Date(1699685608718.211), 24, 'Infinitely Many Hogs (and Logs)', 0], [new Date(1699686020857.637), 25, 'Two Worlds Collide', 0], [new Date(1699686693835.302), 26, 'Console\u002Dation Prize', 0], [new Date(1699688048258.2122), 27, 'OP pls nerf', 0], [new Date(1699690942571.2112), 28, 'ARECIBOAR', 0], [new Date(1699691504277.424), 29, 'Postseason Tournaments', 0], [new Date(1699691758672.947), 30, 'Mister Penny', 0], [new Date(1699697256165.7131), 31, 'Moonick', 0], [new Date(1699707941350.2332), 32, 'Coloring', 0], [new Date(1699709301004.3), 33, 'Slime', 0], [new Date(1699709495060.622), 34, '#vent', 0], [new Date(1699711590813.04), 35, 'Gauss\u0027s Sketches', 0], [new Date(1699712330772.5579), 36, 'Animal Shelter', 0], [new Date(1699712942755.6182), 37, 'Petroglyph', 0], [new Date(1699713792775.0498), 38, 'Mastery Tree', 0], [new Date(1699727703845.372), 39, 'Kero', 0], ], }, { name: "🐣🐧🦃🐦‍⬛\u0026🐢", type: "line", itemStyle: { normal: { color: "hsl(329, 84%, 46%)", } }, symbolSize: function(data) { return data[3] ? 10 : 4; }, data: [ [new Date(1699662723629.009), 1, 'Tutorial', 0], [new Date(1699663928642.708), 2, 'Angry Boarry Farmer', 0], [new Date(1699665140819.967), 3, 'Dargle', 0], [new Date(1699665418304.607), 4, 'Gnutmeg Tree', 0], [new Date(1699668216743.5278), 5, 'Miss Yu', 0], [new Date(1699668487108.252), 6, 'Limericks', 0], [new Date(1699668902448.0989), 7, 'Trigram Hell', 0], [new Date(1699669226335.163), 8, 'Coloring', 0], [new Date(1699670329694.76), 9, 'Petroglyph', 0], [new Date(1699671053906.7532), 10, 'Now I Know', 0], [new Date(1699672735770.066), 11, 'Make Your Own Star Battle', 0], [new Date(1699675822792.939), 12, 'beeBay Fulfillment Center', 0], [new Date(1699676969366.7368), 13, 'Othello', 0], [new Date(1699678359686.282), 14, 'Faces', 0], [new Date(1699681412880.147), 15, 'Gessner Mom', 0], [new Date(1699683622432.904), 16, 'Spirit of the Vines', 0], [new Date(1699684732401.52), 17, 'Beige Flags', 0], [new Date(1699687613627.896), 18, 'Asteroid', 0], [new Date(1699690931746.649), 19, 'Animal Shelter', 0], [new Date(1699691549501.48), 20, '#vent', 0], [new Date(1699692196168.932), 21, 'Paint By Numbers', 0], [new Date(1699692237230.8481), 22, 'bb b', 0], [new Date(1699692570840.503), 23, 'Bovine Social Media Corp', 0], [new Date(1699694395239.2312), 24, 'The Swarm', 0], [new Date(1699695773516.581), 25, 'Gauss\u0027s Sketches', 0], [new Date(1699698035502.354), 26, 'Spelling Bee', 0], [new Date(1699699104565.481), 27, 'Blancmange', 0], [new Date(1699699459967.262), 28, 'Two Worlds Collide', 0], [new Date(1699700440985.631), 29, 'Jabberwock', 0], [new Date(1699703600478.546), 30, 'Infinitely Many Hogs (and Logs)', 0], [new Date(1699707518205.219), 31, 'Mister Penny', 0], [new Date(1699709270937.0552), 32, 'OP pls nerf', 0], [new Date(1699712149496.4248), 33, 'Mastery Tree', 0], [new Date(1699717963701.3499), 34, 'Slime', 0], [new Date(1699720609082.0562), 35, 'Moonick', 0], [new Date(1699721895552.1082), 36, 'Console\u002Dation Prize', 0], [new Date(1699722320427.4958), 37, 'Postseason Tournaments', 0], [new Date(1699722361659.789), 38, 'ARECIBOAR', 0], [new Date(1699733031005.307), 39, 'Kero', 0], ], }, { name: "༆ TIBETAN MARK SPELUNKING LIGHT SOURCE", type: "line", itemStyle: { normal: { color: "hsl(167, 87%, 48%)", } }, symbolSize: function(data) { return data[3] ? 10 : 4; }, data: [ [new Date(1699663753137.1418), 1, 'Tutorial', 0], [new Date(1699664725066.904), 2, 'Dargle', 0], [new Date(1699665699257.004), 3, 'Angry Boarry Farmer', 0], [new Date(1699669860235.981), 4, 'beeBay Fulfillment Center', 0], [new Date(1699670200202.1338), 5, 'Trigram Hell', 0], [new Date(1699671469928.708), 6, 'Petroglyph', 0], [new Date(1699672396064.024), 7, 'Gnutmeg Tree', 0], [new Date(1699672712689.421), 8, 'Limericks', 0], [new Date(1699674535561.333), 9, 'Miss Yu', 0], [new Date(1699675178252.805), 10, 'Now I Know', 0], [new Date(1699675889982.688), 11, 'Spirit of the Vines', 0], [new Date(1699677211363.738), 12, 'Make Your Own Star Battle', 0], [new Date(1699678108168.233), 13, 'Othello', 0], [new Date(1699678351172.3782), 14, 'Coloring', 0], [new Date(1699678489403.286), 15, 'Faces', 0], [new Date(1699679272241.02), 16, 'Beige Flags', 0], [new Date(1699681016699.6628), 17, 'Animal Shelter', 0], [new Date(1699682955776.178), 18, 'Asteroid', 0], [new Date(1699683341513.051), 19, 'bb b', 0], [new Date(1699684096276.474), 20, '#vent', 0], [new Date(1699684292697.652), 21, 'Bovine Social Media Corp', 0], [new Date(1699685805960.638), 22, 'Paint By Numbers', 0], [new Date(1699689533845.787), 23, 'The Swarm', 0], [new Date(1699691216401.609), 24, 'Spelling Bee', 0], [new Date(1699697517194.166), 25, 'OP pls nerf', 0], [new Date(1699699468944.6), 26, 'Infinitely Many Hogs (and Logs)', 0], [new Date(1699700122782.519), 27, 'Two Worlds Collide', 0], [new Date(1699706031407.8728), 28, 'Console\u002Dation Prize', 0], [new Date(1699707377810.4739), 29, 'ARECIBOAR', 0], [new Date(1699709559239.0398), 30, 'Postseason Tournaments', 0], [new Date(1699709935752.413), 31, 'Gauss\u0027s Sketches', 0], [new Date(1699710914211.4612), 32, 'Gessner Mom', 0], [new Date(1699711073985.6821), 33, 'Mastery Tree', 0], [new Date(1699713416968.581), 34, 'Mister Penny', 0], [new Date(1699717665353.3389), 35, 'Moonick', 0], [new Date(1699721208977.655), 36, 'Jabberwock', 0], [new Date(1699722894786.5579), 37, 'Blancmange', 0], [new Date(1699730604948.503), 38, 'Slime', 0], [new Date(1699733927476.406), 39, 'Kero', 0], ], }, { name: "Nova Excavation Society", type: "line", itemStyle: { normal: { color: "hsl(228, 99%, 43%)", } }, symbolSize: function(data) { return data[3] ? 10 : 4; }, data: [ [new Date(1699662982855.9229), 1, 'Tutorial', 0], [new Date(1699663452943.6929), 2, 'Angry Boarry Farmer', 0], [new Date(1699664812395.417), 3, 'Dargle', 0], [new Date(1699667165898.836), 4, 'Miss Yu', 0], [new Date(1699667598818.195), 5, 'Trigram Hell', 0], [new Date(1699668335603.838), 6, 'beeBay Fulfillment Center', 0], [new Date(1699668475334.0781), 7, 'Limericks', 0], [new Date(1699669160665.236), 8, 'Gnutmeg Tree', 0], [new Date(1699670318280.845), 9, 'Make Your Own Star Battle', 0], [new Date(1699671790344.493), 10, 'Spirit of the Vines', 0], [new Date(1699672166012.7102), 11, 'Now I Know', 0], [new Date(1699673402829.292), 12, 'Othello', 0], [new Date(1699674006695.583), 13, 'Gessner Mom', 0], [new Date(1699674352852.916), 14, 'Console\u002Dation Prize', 0], [new Date(1699674950153.403), 15, 'Faces', 0], [new Date(1699675650122.7031), 16, 'Asteroid', 0], [new Date(1699677948715.503), 17, 'Animal Shelter', 0], [new Date(1699678600214.4312), 18, 'Beige Flags', 0], [new Date(1699680363007.724), 19, 'Petroglyph', 0], [new Date(1699680934072.552), 20, 'Jabberwock', 0], [new Date(1699681246112.237), 21, 'bb b', 0], [new Date(1699681692122.897), 22, 'Bovine Social Media Corp', 0], [new Date(1699682105755.399), 23, 'The Swarm', 0], [new Date(1699683029920.692), 24, 'Coloring', 0], [new Date(1699686934716.79), 25, 'Blancmange', 0], [new Date(1699687430600.5808), 26, 'Spelling Bee', 0], [new Date(1699687671600.697), 27, 'Two Worlds Collide', 0], [new Date(1699688136897.573), 28, 'Paint By Numbers', 0], [new Date(1699688252786.13), 29, 'ARECIBOAR', 0], [new Date(1699690452515.6428), 30, 'Infinitely Many Hogs (and Logs)', 0], [new Date(1699691141058.959), 31, 'OP pls nerf', 0], [new Date(1699691427766.936), 32, '#vent', 0], [new Date(1699692066509.788), 33, 'Mastery Tree', 0], [new Date(1699692165874.277), 34, 'Gauss\u0027s Sketches', 0], [new Date(1699692227999.293), 35, 'Postseason Tournaments', 0], [new Date(1699703412358.9229), 36, 'Slime', 0], [new Date(1699707152117.442), 37, 'Moonick', 0], [new Date(1699717860394.977), 38, 'Mister Penny', 0], [new Date(1699735155018.788), 39, 'Kero', 0], ], }, { name: "Please Clap", type: "line", itemStyle: { normal: { color: "hsl(142, 92%, 44%)", } }, symbolSize: function(data) { return data[3] ? 10 : 4; }, data: [ [new Date(1699666086204.498), 1, 'Tutorial', 0], [new Date(1699667023073.804), 2, 'Angry Boarry Farmer', 0], [new Date(1699667736015.6501), 3, 'Miss Yu', 0], [new Date(1699667927362.086), 4, 'Gnutmeg Tree', 0], [new Date(1699669339995.1301), 5, 'Trigram Hell', 0], [new Date(1699672744964.635), 6, 'beeBay Fulfillment Center', 0], [new Date(1699672895648.531), 7, 'Limericks', 0], [new Date(1699674511271.867), 8, 'Spirit of the Vines', 0], [new Date(1699675255596.969), 9, 'Now I Know', 0], [new Date(1699675916577.8289), 10, 'Dargle', 0], [new Date(1699677296677.475), 11, 'Othello', 0], [new Date(1699679471323.021), 12, 'Jabberwock', 0], [new Date(1699682358881.875), 13, 'Beige Flags', 0], [new Date(1699682443150.6108), 14, 'Faces', 0], [new Date(1699683836167.897), 15, 'Asteroid', 0], [new Date(1699684617763.918), 16, 'Gessner Mom', 0], [new Date(1699688113548.875), 17, 'bb b', 0], [new Date(1699688455905.7751), 18, 'Paint By Numbers', 0], [new Date(1699689709554.887), 19, 'The Swarm', 0], [new Date(1699690133603.269), 20, 'Bovine Social Media Corp', 0], [new Date(1699693482255.422), 21, 'Moonick', 0], [new Date(1699695261128.062), 22, 'Make Your Own Star Battle', 0], [new Date(1699697730210.697), 23, 'Gauss\u0027s Sketches', 0], [new Date(1699712025133.377), 24, 'Blancmange', 0], [new Date(1699713706100.2869), 25, 'Infinitely Many Hogs (and Logs)', 0], [new Date(1699715003142.044), 26, 'Two Worlds Collide', 0], [new Date(1699715223397.113), 27, 'Animal Shelter', 0], [new Date(1699719661719.971), 28, 'Spelling Bee', 0], [new Date(1699723024205.605), 29, 'Coloring', 0], [new Date(1699723825802.957), 30, '#vent', 0], [new Date(1699724260564.269), 31, 'OP pls nerf', 0], [new Date(1699725208240.864), 32, 'Petroglyph', 0], [new Date(1699726219303.2688), 33, 'Console\u002Dation Prize', 0], [new Date(1699726276266.227), 34, 'Postseason Tournaments', 0], [new Date(1699726359355.826), 35, 'Mastery Tree', 0], [new Date(1699726547430.64), 36, 'ARECIBOAR', 0], [new Date(1699728195134.168), 37, 'Mister Penny', 0], [new Date(1699730312691.4429), 38, 'Slime', 0], [new Date(1699735336875.183), 39, 'Kero', 0], ], }, { name: "⚗ MISCELLANEOUS SYMBOL TREASURE ON PEDESTAL", type: "line", itemStyle: { normal: { color: "hsl(311, 90%, 50%)", } }, symbolSize: function(data) { return data[3] ? 10 : 4; }, data: [ [new Date(1699663319401.0552), 1, 'Tutorial', 0], [new Date(1699663960049.8108), 2, 'Angry Boarry Farmer', 0], [new Date(1699665839450.674), 3, 'Dargle', 0], [new Date(1699666885694.638), 4, 'Miss Yu', 0], [new Date(1699667209731.097), 5, 'Trigram Hell', 0], [new Date(1699669465317.2979), 6, 'Petroglyph', 0], [new Date(1699673556628.801), 7, 'beeBay Fulfillment Center', 0], [new Date(1699673879602.8608), 8, 'Limericks', 0], [new Date(1699674592761.894), 9, 'Make Your Own Star Battle', 0], [new Date(1699675044257.138), 10, 'Gnutmeg Tree', 0], [new Date(1699676229351.099), 11, 'Now I Know', 0], [new Date(1699678781889.159), 12, 'Coloring', 0], [new Date(1699679241911.1272), 13, 'Console\u002Dation Prize', 0], [new Date(1699681515101.913), 14, 'Spirit of the Vines', 0], [new Date(1699682069231.019), 15, 'Faces', 0], [new Date(1699684821853.957), 16, 'Othello', 0], [new Date(1699686927852.329), 17, 'Asteroid', 0], [new Date(1699688062085.81), 18, 'Animal Shelter', 0], [new Date(1699689191368.345), 19, 'Beige Flags', 0], [new Date(1699689900798.793), 20, '#vent', 0], [new Date(1699690763776.211), 21, 'bb b', 0], [new Date(1699693053355.06), 22, 'The Swarm', 0], [new Date(1699694218318.393), 23, 'Bovine Social Media Corp', 0], [new Date(1699695286180.593), 24, 'Blancmange', 0], [new Date(1699698049788.531), 25, 'Infinitely Many Hogs (and Logs)', 0], [new Date(1699700614535.2112), 26, 'Postseason Tournaments', 0], [new Date(1699705263741.528), 27, 'Spelling Bee', 0], [new Date(1699707854417.1182), 28, 'Gauss\u0027s Sketches', 0], [new Date(1699708317588.857), 29, 'Paint By Numbers', 0], [new Date(1699708430100.7148), 30, 'ARECIBOAR', 0], [new Date(1699709328404.8), 31, 'Two Worlds Collide', 0], [new Date(1699711551237.323), 32, 'Gessner Mom', 0], [new Date(1699711565488.1548), 33, 'OP pls nerf', 0], [new Date(1699711827140.6182), 34, 'Mastery Tree', 0], [new Date(1699713137767.056), 35, 'Mister Penny', 0], [new Date(1699720509565.5662), 36, 'Jabberwock', 0], [new Date(1699728077003.306), 37, 'Moonick', 0], [new Date(1699730469859.045), 38, 'Slime', 0], [new Date(1699738252923.396), 39, 'Kero', 0], ], }, { name: "Needlessly Eating Stalactites", type: "line", itemStyle: { normal: { color: "hsl(157, 89%, 53%)", } }, symbolSize: function(data) { return data[3] ? 10 : 4; }, data: [ [new Date(1699664214014.124), 1, 'Tutorial', 0], [new Date(1699665447716.613), 2, 'Angry Boarry Farmer', 0], [new Date(1699666686185.3281), 3, 'Dargle', 0], [new Date(1699668162947.881), 4, 'Gnutmeg Tree', 0], [new Date(1699668367895.022), 5, 'beeBay Fulfillment Center', 0], [new Date(1699668527325.533), 6, 'Trigram Hell', 0], [new Date(1699668531343.093), 7, 'Limericks', 0], [new Date(1699670020625.7031), 8, 'Miss Yu', 0], [new Date(1699670127685.989), 9, 'Petroglyph', 0], [new Date(1699670912198.677), 10, 'Othello', 0], [new Date(1699671121407.572), 11, 'Now I Know', 0], [new Date(1699672747218.501), 12, 'Make Your Own Star Battle', 0], [new Date(1699672848495.125), 13, 'Spirit of the Vines', 0], [new Date(1699672943967.497), 14, 'Gessner Mom', 0], [new Date(1699673736536.789), 15, 'Faces', 0], [new Date(1699674344830.7249), 16, 'Console\u002Dation Prize', 0], [new Date(1699675262018.3452), 17, 'bb b', 0], [new Date(1699675821275.21), 18, 'Beige Flags', 0], [new Date(1699677285898.966), 19, 'Animal Shelter', 0], [new Date(1699682845176.934), 20, 'Asteroid', 0], [new Date(1699683305215.864), 21, 'Paint By Numbers', 0], [new Date(1699684931677.1082), 22, '#vent', 0], [new Date(1699688360809.45), 23, 'The Swarm', 0], [new Date(1699688803589.3718), 24, 'Bovine Social Media Corp', 0], [new Date(1699689536869.3188), 25, 'Moonick', 0], [new Date(1699689929827.345), 26, 'Jabberwock', 0], [new Date(1699691165077.678), 27, 'Gauss\u0027s Sketches', 0], [new Date(1699692632992.999), 28, 'Infinitely Many Hogs (and Logs)', 0], [new Date(1699693193933.301), 29, 'Two Worlds Collide', 0], [new Date(1699695375988.3982), 30, 'Postseason Tournaments', 0], [new Date(1699695543471.791), 31, 'OP pls nerf', 0], [new Date(1699696272612.221), 32, 'Mastery Tree', 0], [new Date(1699696437376.983), 33, 'ARECIBOAR', 0], [new Date(1699698795013.367), 34, 'Mister Penny', 0], [new Date(1699705031643.863), 35, 'Spelling Bee', 0], [new Date(1699723287145.797), 36, 'Blancmange', 0], [new Date(1699725574407.229), 37, 'Slime', 0], [new Date(1699726190270.572), 38, 'Coloring', 0], [new Date(1699739336872.689), 39, 'Kero', 0], ], }, { name: "weeklies.enigmatics.org", type: "line", itemStyle: { normal: { color: "hsl(357, 78%, 49%)", } }, symbolSize: function(data) { return data[3] ? 10 : 4; }, data: [ [new Date(1699663809396.728), 1, 'Tutorial', 0], [new Date(1699664370180.187), 2, 'Angry Boarry Farmer', 0], [new Date(1699665656937.963), 3, 'Dargle', 0], [new Date(1699666178209.648), 4, 'Gnutmeg Tree', 0], [new Date(1699667338401.3691), 5, 'Petroglyph', 0], [new Date(1699667874304.061), 6, 'Trigram Hell', 0], [new Date(1699669164773.9028), 7, 'Miss Yu', 0], [new Date(1699669261519.2349), 8, 'Limericks', 0], [new Date(1699670019004.8252), 9, 'Make Your Own Star Battle', 0], [new Date(1699671915134.5388), 10, 'beeBay Fulfillment Center', 0], [new Date(1699672350612.015), 11, 'Now I Know', 0], [new Date(1699673414921.884), 12, 'Othello', 0], [new Date(1699673931813.4302), 13, 'Console\u002Dation Prize', 0], [new Date(1699676009590.58), 14, 'Spirit of the Vines', 0], [new Date(1699676342021.972), 15, 'Faces', 0], [new Date(1699677655504.0022), 16, 'Gessner Mom', 0], [new Date(1699678137902.975), 17, 'Asteroid', 0], [new Date(1699679038705.791), 18, 'Beige Flags', 0], [new Date(1699680484822.567), 19, 'bb b', 0], [new Date(1699681374685.036), 20, 'The Swarm', 0], [new Date(1699681441893.424), 21, '#vent', 0], [new Date(1699681812886.2332), 22, 'Paint By Numbers', 0], [new Date(1699682229450.406), 23, 'Bovine Social Media Corp', 0], [new Date(1699687259302.376), 24, 'Spelling Bee', 0], [new Date(1699691060331.24), 25, 'Gauss\u0027s Sketches', 0], [new Date(1699693278228.3062), 26, 'Moonick', 0], [new Date(1699698671590.956), 27, 'Infinitely Many Hogs (and Logs)', 0], [new Date(1699699263698.9219), 28, 'Two Worlds Collide', 0], [new Date(1699700304626.799), 29, 'ARECIBOAR', 0], [new Date(1699702725261.098), 30, 'OP pls nerf', 0], [new Date(1699703379318.348), 31, 'Postseason Tournaments', 0], [new Date(1699703478553.652), 32, 'Animal Shelter', 0], [new Date(1699704615348.979), 33, 'Mastery Tree', 0], [new Date(1699715525804.8242), 34, 'Blancmange', 0], [new Date(1699717527636.558), 35, 'Mister Penny', 0], [new Date(1699717959843.607), 36, 'Slime', 0], [new Date(1699718914419.167), 37, 'Coloring', 0], [new Date(1699724897662.271), 38, 'Jabberwock', 0], [new Date(1699739951184.5), 39, 'Kero', 0], ], }, { name: "Just\u002DUs League", type: "line", itemStyle: { normal: { color: "hsl(200, 98%, 53%)", } }, symbolSize: function(data) { return data[3] ? 10 : 4; }, data: [ [new Date(1699663127723.529), 1, 'Tutorial', 0], [new Date(1699663610701.345), 2, 'Angry Boarry Farmer', 0], [new Date(1699664577623.2778), 3, 'Dargle', 0], [new Date(1699665707481.147), 4, 'Gnutmeg Tree', 0], [new Date(1699666993181.613), 5, 'Trigram Hell', 0], [new Date(1699671154980.9028), 6, 'Coloring', 0], [new Date(1699671541788.2769), 7, 'Limericks', 0], [new Date(1699672192767.322), 8, 'beeBay Fulfillment Center', 0], [new Date(1699673678399.53), 9, 'Spirit of the Vines', 0], [new Date(1699674906051.371), 10, 'Gessner Mom', 0], [new Date(1699675050266.562), 11, 'Make Your Own Star Battle', 0], [new Date(1699675297961.3718), 12, 'Now I Know', 0], [new Date(1699678946513.04), 13, 'Jabberwock', 0], [new Date(1699680114236.4768), 14, 'Faces', 0], [new Date(1699681646807.8289), 15, 'Asteroid', 0], [new Date(1699682459731.751), 16, 'bb b', 0], [new Date(1699684452789.378), 17, 'Beige Flags', 0], [new Date(1699691311816.493), 18, 'Animal Shelter', 0], [new Date(1699696393618.33), 19, 'Moonick', 0], [new Date(1699697819196.1501), 20, 'The Swarm', 0], [new Date(1699699826119.953), 21, 'Bovine Social Media Corp', 0], [new Date(1699701071725.0928), 22, 'Othello', 0], [new Date(1699704920621.481), 23, 'Blancmange', 0], [new Date(1699706502951.405), 24, 'Infinitely Many Hogs (and Logs)', 0], [new Date(1699707089028.285), 25, 'Two Worlds Collide', 0], [new Date(1699712733404.187), 26, 'Paint By Numbers', 0], [new Date(1699713097710.539), 27, 'Slime', 0], [new Date(1699715267224.9739), 28, 'Miss Yu', 0], [new Date(1699717647151.694), 29, 'ARECIBOAR', 0], [new Date(1699719804627.158), 30, 'Postseason Tournaments', 0], [new Date(1699723574295.356), 31, '#vent', 0], [new Date(1699724996239.718), 32, 'Mister Penny', 0], [new Date(1699725357223.526), 33, 'Gauss\u0027s Sketches', 0], [new Date(1699728063691.322), 34, 'Petroglyph', 0], [new Date(1699731435286.385), 35, 'OP pls nerf', 0], [new Date(1699732409842.491), 36, 'Spelling Bee', 0], [new Date(1699733852932.036), 37, 'Console\u002Dation Prize', 0], [new Date(1699734264033.219), 38, 'Mastery Tree', 0], [new Date(1699742111494.2341), 39, 'Kero', 0], ], }, { name: "5 cheese blend", type: "line", itemStyle: { normal: { color: "hsl(107, 93%, 55%)", } }, symbolSize: function(data) { return data[3] ? 10 : 4; }, data: [ [new Date(1699664044899.882), 1, 'Tutorial', 0], [new Date(1699665257862.715), 2, 'Angry Boarry Farmer', 0], [new Date(1699665505547.56), 3, 'Dargle', 0], [new Date(1699666312384.733), 4, 'Gnutmeg Tree', 0], [new Date(1699669120308.6099), 5, 'Petroglyph', 0], [new Date(1699670015739.383), 6, 'Trigram Hell', 0], [new Date(1699671034053.148), 7, 'Miss Yu', 0], [new Date(1699671266893.5361), 8, 'Limericks', 0], [new Date(1699672125598.937), 9, 'Make Your Own Star Battle', 0], [new Date(1699674917842.081), 10, 'beeBay Fulfillment Center', 0], [new Date(1699675644499.074), 11, 'Othello', 0], [new Date(1699675803012.2312), 12, 'Spirit of the Vines', 0], [new Date(1699677259247.282), 13, 'Faces', 0], [new Date(1699677827223.1191), 14, 'Console\u002Dation Prize', 0], [new Date(1699678191669.755), 15, 'bb b', 0], [new Date(1699679062949.096), 16, 'Asteroid', 0], [new Date(1699681544539.69), 17, 'Animal Shelter', 0], [new Date(1699684123537.1348), 18, 'Beige Flags', 0], [new Date(1699685387142.942), 19, '#vent', 0], [new Date(1699687705949.116), 20, 'Now I Know', 0], [new Date(1699687861354.991), 21, 'Moonick', 0], [new Date(1699688940382.934), 22, 'The Swarm', 0], [new Date(1699720077635.178), 23, 'Bovine Social Media Corp', 0], [new Date(1699724409663.118), 24, 'OP pls nerf', 0], [new Date(1699728181037.379), 25, 'Jabberwock', 0], [new Date(1699729227843.058), 26, 'Infinitely Many Hogs (and Logs)', 0], [new Date(1699729495271.94), 27, 'Two Worlds Collide', 0], [new Date(1699730439281.128), 28, 'Paint By Numbers', 0], [new Date(1699730889084.6091), 29, 'ARECIBOAR', 0], [new Date(1699731065066.894), 30, 'Gessner Mom', 0], [new Date(1699731218254.06), 31, 'Postseason Tournaments', 0], [new Date(1699731515944.658), 32, 'Gauss\u0027s Sketches', 0], [new Date(1699731637216.736), 33, 'Mastery Tree', 0], [new Date(1699735397420.1401), 34, 'Mister Penny', 0], [new Date(1699738221584.2249), 35, 'Slime', 0], [new Date(1699738536570.2441), 36, 'Spelling Bee', 0], [new Date(1699739251570.131), 37, 'Blancmange', 0], [new Date(1699740242467.543), 38, 'Coloring', 0], [new Date(1699744825344.2349), 39, 'Kero', 0], ], }, { name: "Have You Tried Reading The Braille on the Loon\u0027s Neck?", type: "line", itemStyle: { normal: { color: "hsl(225, 87%, 53%)", } }, symbolSize: function(data) { return data[3] ? 10 : 4; }, data: [ [new Date(1699663714106.334), 1, 'Tutorial', 0], [new Date(1699664522095.9612), 2, 'Dargle', 0], [new Date(1699665127250.412), 3, 'Angry Boarry Farmer', 0], [new Date(1699671426834.2139), 4, 'beeBay Fulfillment Center', 0], [new Date(1699671688003.5378), 5, 'Trigram Hell', 0], [new Date(1699672953050.5422), 6, 'Gnutmeg Tree', 0], [new Date(1699673201111.2349), 7, 'Limericks', 0], [new Date(1699674652383.24), 8, 'Petroglyph', 0], [new Date(1699676353055.766), 9, 'Spirit of the Vines', 0], [new Date(1699677423630.114), 10, 'Now I Know', 0], [new Date(1699677944071.1191), 11, 'Make Your Own Star Battle', 0], [new Date(1699680349954.095), 12, 'Othello', 0], [new Date(1699682390246.956), 13, 'Gessner Mom', 0], [new Date(1699683735818.9958), 14, 'Miss Yu', 0], [new Date(1699684454245.1611), 15, 'Faces', 0], [new Date(1699685155366.873), 16, 'Console\u002Dation Prize', 0], [new Date(1699686360980.766), 17, 'Jabberwock', 0], [new Date(1699687135824.227), 18, 'Beige Flags', 0], [new Date(1699690507328.416), 19, 'Coloring', 0], [new Date(1699692962622.366), 20, '#vent', 0], [new Date(1699693467359.374), 21, 'Paint By Numbers', 0], [new Date(1699693727299.06), 22, 'The Swarm', 0], [new Date(1699693941302.447), 23, 'Bovine Social Media Corp', 0], [new Date(1699694599316.732), 24, 'Animal Shelter', 0], [new Date(1699699746462.311), 25, 'Spelling Bee', 0], [new Date(1699700616949.2), 26, 'Asteroid', 0], [new Date(1699701646093.615), 27, 'Gauss\u0027s Sketches', 0], [new Date(1699703541785.4731), 28, 'Postseason Tournaments', 0], [new Date(1699704171216.964), 29, 'Two Worlds Collide', 0], [new Date(1699704340007.9392), 30, 'OP pls nerf', 0], [new Date(1699704628079.9001), 31, 'Mastery Tree', 0], [new Date(1699717746429.522), 32, 'Infinitely Many Hogs (and Logs)', 0], [new Date(1699717767803.691), 33, 'ARECIBOAR', 0], [new Date(1699720716125.647), 34, 'Moonick', 0], [new Date(1699721309503.5479), 35, 'Blancmange', 0], [new Date(1699725341956.906), 36, 'bb b', 0], [new Date(1699728156022.619), 37, 'Mister Penny', 0], [new Date(1699736548341.027), 38, 'Slime', 0], [new Date(1699744864331.98), 39, 'Kero', 0], ], }, { name: "[Redacted]", type: "line", itemStyle: { normal: { color: "hsl(122, 82%, 56%)", } }, symbolSize: function(data) { return data[3] ? 10 : 4; }, data: [ [new Date(1699663391393.469), 1, 'Tutorial', 0], [new Date(1699664112414.249), 2, 'Angry Boarry Farmer', 0], [new Date(1699665492638.603), 3, 'Dargle', 0], [new Date(1699666133767.855), 4, 'Gnutmeg Tree', 0], [new Date(1699666815479.834), 5, 'Trigram Hell', 0], [new Date(1699667587436.465), 6, 'Miss Yu', 0], [new Date(1699668094903.75), 7, 'Limericks', 0], [new Date(1699670321484.579), 8, 'beeBay Fulfillment Center', 0], [new Date(1699671523980.713), 9, 'Spirit of the Vines', 0], [new Date(1699672775859.4028), 10, 'Petroglyph', 0], [new Date(1699676079346.125), 11, 'Jabberwock', 0], [new Date(1699679135734.697), 12, 'Make Your Own Star Battle', 0], [new Date(1699680449933.2559), 13, 'Othello', 0], [new Date(1699683015501.8188), 14, 'Now I Know', 0], [new Date(1699685795508.462), 15, 'Asteroid', 0], [new Date(1699696378744.975), 16, 'Coloring', 0], [new Date(1699697133278.289), 17, 'Paint By Numbers', 0], [new Date(1699697313407.303), 18, 'The Swarm', 0], [new Date(1699699032434.031), 19, 'Moonick', 0], [new Date(1699699434420.66), 20, 'Bovine Social Media Corp', 0], [new Date(1699700306872.952), 21, 'Spelling Bee', 0], [new Date(1699700471496.649), 22, 'Blancmange', 0], [new Date(1699702359890.278), 23, 'Infinitely Many Hogs (and Logs)', 0], [new Date(1699702977368.464), 24, 'ARECIBOAR', 0], [new Date(1699705611691.801), 25, 'bb b', 0], [new Date(1699708491743.628), 26, 'Mister Penny', 0], [new Date(1699710672687.246), 27, 'Slime', 0], [new Date(1699712678261.404), 28, 'Beige Flags', 0], [new Date(1699713794601.6172), 29, 'Two Worlds Collide', 0], [new Date(1699714707193.974), 30, 'Animal Shelter', 0], [new Date(1699715732599.8079), 31, 'Console\u002Dation Prize', 0], [new Date(1699717239637.9521), 32, '#vent', 0], [new Date(1699719642229.5898), 33, 'Gauss\u0027s Sketches', 0], [new Date(1699722130325.656), 34, 'Faces', 0], [new Date(1699724457048.74), 35, 'Gessner Mom', 0], [new Date(1699739448325.283), 36, 'OP pls nerf', 0], [new Date(1699742808940.083), 37, 'Postseason Tournaments', 0], [new Date(1699743928197.792), 38, 'Mastery Tree', 0], [new Date(1699748441331.5908), 39, 'Kero', 0], ], }, { name: "🎏🎏🎏 GeomantiChromatiClupeids 🎏🎏🎏", type: "line", itemStyle: { normal: { color: "hsl(0, 95%, 55%)", } }, symbolSize: function(data) { return data[3] ? 10 : 4; }, data: [ [new Date(1699664818227.367), 1, 'Tutorial', 0], [new Date(1699666387400.637), 2, 'Dargle', 0], [new Date(1699668673152.103), 3, 'Miss Yu', 0], [new Date(1699671072778.84), 4, 'Angry Boarry Farmer', 0], [new Date(1699671370094.301), 5, 'Trigram Hell', 0], [new Date(1699672153675.821), 6, 'Gnutmeg Tree', 0], [new Date(1699672383581.3079), 7, 'Limericks', 0], [new Date(1699673630214.367), 8, 'Petroglyph', 0], [new Date(1699675536201.121), 9, 'Make Your Own Star Battle', 0], [new Date(1699685560945.6711), 10, 'beeBay Fulfillment Center', 0], [new Date(1699686383332.481), 11, 'Now I Know', 0], [new Date(1699688242166.173), 12, 'Spirit of the Vines', 0], [new Date(1699692613571.404), 13, 'Gessner Mom', 0], [new Date(1699694600386.9219), 14, 'Othello', 0], [new Date(1699698453056.387), 15, 'Faces', 0], [new Date(1699710425482.2769), 16, 'Jabberwock', 0], [new Date(1699711433294.3188), 17, 'Beige Flags', 0], [new Date(1699712002128.782), 18, 'bb b', 0], [new Date(1699717119633.272), 19, 'The Swarm', 0], [new Date(1699717608362.949), 20, 'Paint By Numbers', 0], [new Date(1699717804428.8508), 21, 'Bovine Social Media Corp', 0], [new Date(1699718547420.0461), 22, 'Animal Shelter', 0], [new Date(1699722952517.063), 23, 'Spelling Bee', 0], [new Date(1699725127118.102), 24, 'Blancmange', 0], [new Date(1699727042925.998), 25, 'Infinitely Many Hogs (and Logs)', 0], [new Date(1699727321612.643), 26, 'OP pls nerf', 0], [new Date(1699727370909.96), 27, 'Two Worlds Collide', 0], [new Date(1699729112477.555), 28, 'Postseason Tournaments', 0], [new Date(1699729748833.434), 29, 'ARECIBOAR', 0], [new Date(1699731193746.885), 30, '#vent', 0], [new Date(1699731538762.049), 31, 'Asteroid', 0], [new Date(1699733122874.4421), 32, 'Gauss\u0027s Sketches', 0], [new Date(1699735142146.095), 33, 'Console\u002Dation Prize', 0], [new Date(1699735265504.556), 34, 'Mastery Tree', 0], [new Date(1699736400092.754), 35, 'Coloring', 0], [new Date(1699743259874.845), 36, 'Moonick', 0], [new Date(1699747212961.404), 37, 'Slime', 0], [new Date(1699747692841.715), 38, 'Mister Penny', 0], [new Date(1699751018128.35), 39, 'Kero', 0], ], }, { name: "The Blizzards 🔮", type: "line", itemStyle: { normal: { color: "hsl(46, 83%, 53%)", } }, symbolSize: function(data) { return data[3] ? 10 : 4; }, data: [ [new Date(1699662709635.911), 1, 'Tutorial', 0], [new Date(1699663013150.531), 2, 'Angry Boarry Farmer', 0], [new Date(1699664260410.998), 3, 'Dargle', 0], [new Date(1699664442702.912), 4, 'Gnutmeg Tree', 0], [new Date(1699664827767.083), 5, 'Trigram Hell', 0], [new Date(1699667380386.414), 6, 'Miss Yu', 0], [new Date(1699667633362.928), 7, 'Limericks', 0], [new Date(1699668587678.292), 8, 'Petroglyph', 0], [new Date(1699671395295.5142), 9, 'Make Your Own Star Battle', 0], [new Date(1699674307489.327), 10, 'Coloring', 0], [new Date(1699675721399.005), 11, 'Othello', 0], [new Date(1699675735725.44), 12, 'Now I Know', 0], [new Date(1699677345019.69), 13, 'Asteroid', 0], [new Date(1699678029441.291), 14, 'beeBay Fulfillment Center', 0], [new Date(1699678549172.656), 15, 'bb b', 0], [new Date(1699678921892.021), 16, 'Faces', 0], [new Date(1699680267821.481), 17, 'Spirit of the Vines', 0], [new Date(1699681300185.362), 18, 'Beige Flags', 0], [new Date(1699681758204.168), 19, 'The Swarm', 0], [new Date(1699682638473.664), 20, 'Bovine Social Media Corp', 0], [new Date(1699685595937.276), 21, 'Paint By Numbers', 0], [new Date(1699689647906.061), 22, 'Gessner Mom', 0], [new Date(1699690918223.352), 23, 'Jabberwock', 0], [new Date(1699691838703.5898), 24, 'Blancmange', 0], [new Date(1699692585412.662), 25, 'Two Worlds Collide', 0], [new Date(1699693239912.0432), 26, 'Infinitely Many Hogs (and Logs)', 0], [new Date(1699694681231.709), 27, 'Gauss\u0027s Sketches', 0], [new Date(1699721129226.105), 28, 'ARECIBOAR', 0], [new Date(1699727527425.331), 29, 'Console\u002Dation Prize', 0], [new Date(1699727970347.085), 30, 'Animal Shelter', 0], [new Date(1699732979081.082), 31, 'Spelling Bee', 0], [new Date(1699736426626.88), 32, 'Moonick', 0], [new Date(1699741075952.604), 33, 'Postseason Tournaments', 0], [new Date(1699741413548.5972), 34, 'OP pls nerf', 0], [new Date(1699741561551.1401), 35, '#vent', 0], [new Date(1699742481752.851), 36, 'Mastery Tree', 0], [new Date(1699745484315.7), 37, 'Slime', 0], [new Date(1699748225942.544), 38, 'Mister Penny', 0], [new Date(1699751451730.605), 39, 'Kero', 0], ], }, { name: "Cavernality", type: "line", itemStyle: { normal: { color: "hsl(106, 89%, 46%)", } }, symbolSize: function(data) { return data[3] ? 10 : 4; }, data: [ [new Date(1699664893402.894), 1, 'Tutorial', 0], [new Date(1699665776347.5598), 2, 'Angry Boarry Farmer', 0], [new Date(1699667972427.5142), 3, 'Miss Yu', 0], [new Date(1699669761241.3188), 4, 'Gnutmeg Tree', 0], [new Date(1699672879881.785), 5, 'Trigram Hell', 0], [new Date(1699675622877.004), 6, 'Dargle', 0], [new Date(1699675754147.02), 7, 'Limericks', 0], [new Date(1699677298531.082), 8, 'beeBay Fulfillment Center', 0], [new Date(1699678553473.234), 9, 'Make Your Own Star Battle', 0], [new Date(1699679092436.302), 10, 'Now I Know', 0], [new Date(1699681897961.096), 11, 'Spirit of the Vines', 0], [new Date(1699684478940.5178), 12, 'Othello', 0], [new Date(1699684917626.421), 13, 'Gessner Mom', 0], [new Date(1699684987290.08), 14, 'Faces', 0], [new Date(1699686484207.721), 15, 'Console\u002Dation Prize', 0], [new Date(1699687723371.468), 16, 'bb b', 0], [new Date(1699688935896.603), 17, 'Petroglyph', 0], [new Date(1699689567422.817), 18, 'Animal Shelter', 0], [new Date(1699689962599.626), 19, 'Beige Flags', 0], [new Date(1699691081679.6829), 20, 'Coloring', 0], [new Date(1699691651261.608), 21, 'Asteroid', 0], [new Date(1699692308945.352), 22, '#vent', 0], [new Date(1699692644228.768), 23, 'Bovine Social Media Corp', 0], [new Date(1699693735856.442), 24, 'The Swarm', 0], [new Date(1699694359978.473), 25, 'Paint By Numbers', 0], [new Date(1699695361219.96), 26, 'Gauss\u0027s Sketches', 0], [new Date(1699697268444.494), 27, 'OP pls nerf', 0], [new Date(1699702647795.9648), 28, 'Blancmange', 0], [new Date(1699703461657.178), 29, 'Two Worlds Collide', 0], [new Date(1699704081307.057), 30, 'Infinitely Many Hogs (and Logs)', 0], [new Date(1699704137245.5671), 31, 'ARECIBOAR', 0], [new Date(1699705438360.832), 32, 'Postseason Tournaments', 0], [new Date(1699705701543.484), 33, 'Mastery Tree', 0], [new Date(1699728336705.3772), 34, 'Spelling Bee', 0], [new Date(1699729578903.0261), 35, 'Mister Penny', 0], [new Date(1699732946422.7021), 36, 'Moonick', 0], [new Date(1699736619126.8088), 37, 'Jabberwock', 0], [new Date(1699746829098.062), 38, 'Slime', 0], [new Date(1699752933921.334), 39, 'Kero', 0], ], }, { name: "Yuki", type: "line", itemStyle: { normal: { color: "hsl(298, 90%, 44%)", } }, symbolSize: function(data) { return data[3] ? 10 : 4; }, data: [ [new Date(1699663525956.446), 1, 'Tutorial', 0], [new Date(1699664205663.8801), 2, 'Angry Boarry Farmer', 0], [new Date(1699668827461.58), 3, 'Miss Yu', 0], [new Date(1699669673061.541), 4, 'beeBay Fulfillment Center', 0], [new Date(1699670812720.873), 5, 'Petroglyph', 0], [new Date(1699673347728.169), 6, 'Gnutmeg Tree', 0], [new Date(1699673380189.829), 7, 'Dargle', 0], [new Date(1699673764177.0688), 8, 'Limericks', 0], [new Date(1699674596239.8838), 9, 'Othello', 0], [new Date(1699674813382.114), 10, 'Now I Know', 0], [new Date(1699676068641.412), 11, 'Trigram Hell', 0], [new Date(1699676101592.084), 12, 'Make Your Own Star Battle', 0], [new Date(1699676804053.482), 13, 'Console\u002Dation Prize', 0], [new Date(1699678822679.789), 14, 'Gessner Mom', 0], [new Date(1699679722815.2239), 15, 'Asteroid', 0], [new Date(1699680589029.253), 16, 'bb b', 0], [new Date(1699682951567.0012), 17, 'Beige Flags', 0], [new Date(1699684201776.3418), 18, 'Faces', 0], [new Date(1699685396704.418), 19, 'Animal Shelter', 0], [new Date(1699712963590.131), 20, 'Spirit of the Vines', 0], [new Date(1699714208266.8718), 21, 'Paint By Numbers', 0], [new Date(1699718010105.657), 22, 'Coloring', 0], [new Date(1699718274456.793), 23, '#vent', 0], [new Date(1699719085110.7212), 24, 'Bovine Social Media Corp', 0], [new Date(1699722838469.135), 25, 'Moonick', 0], [new Date(1699722891194.9812), 26, 'Gauss\u0027s Sketches', 0], [new Date(1699724967358.154), 27, 'OP pls nerf', 0], [new Date(1699726084247.597), 28, 'The Swarm', 0], [new Date(1699726330040.973), 29, 'Postseason Tournaments', 0], [new Date(1699726462675.149), 30, 'Mastery Tree', 0], [new Date(1699727144240.197), 31, 'Two Worlds Collide', 0], [new Date(1699728568364.637), 32, 'Infinitely Many Hogs (and Logs)', 0], [new Date(1699728585966.888), 33, 'ARECIBOAR', 0], [new Date(1699732180217.5442), 34, 'Jabberwock', 0], [new Date(1699736056317.538), 35, 'Mister Penny', 0], [new Date(1699746372207.877), 36, 'Spelling Bee', 0], [new Date(1699748138844.2258), 37, 'Blancmange', 0], [new Date(1699751390073.604), 38, 'Slime', 0], [new Date(1699754725749.099), 39, 'Kero', 0], ], }, { name: "Flemish Giants", type: "line", itemStyle: { normal: { color: "hsl(6, 94%, 53%)", } }, symbolSize: function(data) { return data[3] ? 10 : 4; }, data: [ [new Date(1699663256012.274), 1, 'Tutorial', 0], [new Date(1699664339754.7842), 2, 'Angry Boarry Farmer', 0], [new Date(1699664738638.539), 3, 'Dargle', 0], [new Date(1699669058422.291), 4, 'Gnutmeg Tree', 0], [new Date(1699669101363.473), 5, 'beeBay Fulfillment Center', 0], [new Date(1699670419933.001), 6, 'Miss Yu', 0], [new Date(1699670482677.582), 7, 'Limericks', 0], [new Date(1699671695600.697), 8, 'Trigram Hell', 0], [new Date(1699671866605.8828), 9, 'Petroglyph', 0], [new Date(1699672582611.72), 10, 'Make Your Own Star Battle', 0], [new Date(1699673027134.0808), 11, 'Othello', 0], [new Date(1699674142698.72), 12, 'Spirit of the Vines', 0], [new Date(1699675823341.614), 13, 'Faces', 0], [new Date(1699676559796.793), 14, 'Coloring', 0], [new Date(1699678155918.5532), 15, 'Now I Know', 0], [new Date(1699712449437.451), 16, 'Gessner Mom', 0], [new Date(1699714433036.963), 17, 'bb b', 0], [new Date(1699720561888.491), 18, 'Beige Flags', 0], [new Date(1699723073810.145), 19, 'Jabberwock', 0], [new Date(1699723611562.764), 20, 'Paint By Numbers', 0], [new Date(1699723899481.157), 21, 'Asteroid', 0], [new Date(1699725241557.311), 22, 'Bovine Social Media Corp', 0], [new Date(1699726785458.001), 23, 'Spelling Bee', 0], [new Date(1699730910381.284), 24, 'Gauss\u0027s Sketches', 0], [new Date(1699732013605.355), 25, 'The Swarm', 0], [new Date(1699732508170.2239), 26, 'Two Worlds Collide', 0], [new Date(1699733428028.6628), 27, 'Infinitely Many Hogs (and Logs)', 0], [new Date(1699734306554.9), 28, 'ARECIBOAR', 0], [new Date(1699736422072.9138), 29, 'Moonick', 0], [new Date(1699737939172.848), 30, 'Postseason Tournaments', 0], [new Date(1699740176120.6628), 31, 'OP pls nerf', 0], [new Date(1699740625066.375), 32, 'Mister Penny', 0], [new Date(1699741172881.5762), 33, '#vent', 0], [new Date(1699741355125.984), 34, 'Animal Shelter', 0], [new Date(1699742712950.414), 35, 'Console\u002Dation Prize', 0], [new Date(1699742838298.208), 36, 'Mastery Tree', 0], [new Date(1699750193736.125), 37, 'Blancmange', 0], [new Date(1699751798929.79), 38, 'Slime', 0], [new Date(1699757050268.3079), 39, 'Kero', 0], ], }, { name: "barbara kingsolver", type: "line", itemStyle: { normal: { color: "hsl(345, 97%, 55%)", } }, symbolSize: function(data) { return data[3] ? 10 : 4; }, data: [ [new Date(1699664157817.156), 1, 'Tutorial', 0], [new Date(1699667727964.319), 2, 'Angry Boarry Farmer', 0], [new Date(1699667986081.076), 3, 'Dargle', 0], [new Date(1699669289716.469), 4, 'Gnutmeg Tree', 0], [new Date(1699669664010.191), 5, 'Trigram Hell', 0], [new Date(1699671718360.093), 6, 'Petroglyph', 0], [new Date(1699676075525.847), 7, 'Miss Yu', 0], [new Date(1699676524090.108), 8, 'Limericks', 0], [new Date(1699677074174.8098), 9, 'beeBay Fulfillment Center', 0], [new Date(1699677890383.938), 10, 'Othello', 0], [new Date(1699679944689.788), 11, 'Now I Know', 0], [new Date(1699682075733.891), 12, 'Jabberwock', 0], [new Date(1699683293043.763), 13, 'Coloring', 0], [new Date(1699683814617.179), 14, 'Faces', 0], [new Date(1699684944558.086), 15, 'Beige Flags', 0], [new Date(1699685019448.982), 16, 'Asteroid', 0], [new Date(1699686515978.8289), 17, 'Make Your Own Star Battle', 0], [new Date(1699689847312.685), 18, 'Animal Shelter', 0], [new Date(1699690961506.754), 19, 'Spirit of the Vines', 0], [new Date(1699691751687.396), 20, 'The Swarm', 0], [new Date(1699692157639.354), 21, 'Bovine Social Media Corp', 0], [new Date(1699692370992.2632), 22, 'bb b', 0], [new Date(1699693588919.572), 23, '#vent', 0], [new Date(1699695144109.291), 24, 'Blancmange', 0], [new Date(1699696305446.5361), 25, 'Paint By Numbers', 0], [new Date(1699696452885.366), 26, 'Two Worlds Collide', 0], [new Date(1699699242852.0898), 27, 'Gauss\u0027s Sketches', 0], [new Date(1699722893437.397), 28, 'Postseason Tournaments', 0], [new Date(1699728276319.745), 29, 'ARECIBOAR', 0], [new Date(1699728636529.674), 30, 'Infinitely Many Hogs (and Logs)', 0], [new Date(1699730227199.1848), 31, 'Spelling Bee', 0], [new Date(1699733217443.883), 32, 'Console\u002Dation Prize', 0], [new Date(1699733987171.306), 33, 'Gessner Mom', 0], [new Date(1699735948627.879), 34, 'OP pls nerf', 0], [new Date(1699736815309.071), 35, 'Mastery Tree', 0], [new Date(1699743675199.46), 36, 'Mister Penny', 0], [new Date(1699749847371.544), 37, 'Slime', 0], [new Date(1699753605293.355), 38, 'Moonick', 0], [new Date(1699757506816.4119), 39, 'Kero', 0], ], }, { name: "Amateur Hour", type: "line", itemStyle: { normal: { color: "hsl(209, 91%, 41%)", } }, symbolSize: function(data) { return data[3] ? 10 : 4; }, data: [ [new Date(1699665912515.487), 1, 'Tutorial', 0], [new Date(1699666344747.761), 2, 'Angry Boarry Farmer', 0], [new Date(1699668460464.494), 3, 'Dargle', 0], [new Date(1699669765293.719), 4, 'Gnutmeg Tree', 0], [new Date(1699670766798.91), 5, 'Trigram Hell', 0], [new Date(1699672161422.618), 6, 'beeBay Fulfillment Center', 0], [new Date(1699672333287.595), 7, 'Limericks', 0], [new Date(1699675694543.992), 8, 'Miss Yu', 0], [new Date(1699676851688.4001), 9, 'Coloring', 0], [new Date(1699677267854.1091), 10, 'Spirit of the Vines', 0], [new Date(1699677646394.796), 11, 'Now I Know', 0], [new Date(1699682810714.002), 12, 'Jabberwock', 0], [new Date(1699684826316.218), 13, 'Asteroid', 0], [new Date(1699685193710.9438), 14, 'Faces', 0], [new Date(1699685802080.167), 15, 'Beige Flags', 0], [new Date(1699686264419.2659), 16, 'Othello', 0], [new Date(1699687338419.931), 17, 'Paint By Numbers', 0], [new Date(1699689853058.702), 18, 'Animal Shelter', 0], [new Date(1699690558108.622), 19, 'bb b', 0], [new Date(1699690792187.863), 20, 'Bovine Social Media Corp', 0], [new Date(1699692956281.498), 21, 'OP pls nerf', 0], [new Date(1699710347563.688), 22, 'Make Your Own Star Battle', 0], [new Date(1699713283624.261), 23, 'Gessner Mom', 0], [new Date(1699720293009.913), 24, '#vent', 0], [new Date(1699722878122.766), 25, 'Gauss\u0027s Sketches', 0], [new Date(1699727940668.719), 26, 'Petroglyph', 0], [new Date(1699729145996.0662), 27, 'The Swarm', 0], [new Date(1699730977455.912), 28, 'Infinitely Many Hogs (and Logs)', 0], [new Date(1699731244969.643), 29, 'Two Worlds Collide', 0], [new Date(1699731370777.153), 30, 'Console\u002Dation Prize', 0], [new Date(1699733075583.7659), 31, 'ARECIBOAR', 0], [new Date(1699739365729.6392), 32, 'Mastery Tree', 0], [new Date(1699739472429.911), 33, 'Postseason Tournaments', 0], [new Date(1699741188926.328), 34, 'Mister Penny', 0], [new Date(1699743259353.542), 35, 'Moonick', 0], [new Date(1699745575380.2048), 36, 'Blancmange', 0], [new Date(1699748675755.952), 37, 'Spelling Bee', 0], [new Date(1699753192833.187), 38, 'Slime', 0], [new Date(1699757975936.337), 39, 'Kero', 0], ], }, { name: "The Caroline Schism", type: "line", itemStyle: { normal: { color: "hsl(165, 79%, 59%)", } }, symbolSize: function(data) { return data[3] ? 10 : 4; }, data: [ [new Date(1699663530429.354), 1, 'Tutorial', 0], [new Date(1699664082990.717), 2, 'Angry Boarry Farmer', 0], [new Date(1699666431454.231), 3, 'Dargle', 0], [new Date(1699667043365.68), 4, 'Miss Yu', 0], [new Date(1699667914164.5579), 5, 'Gnutmeg Tree', 0], [new Date(1699668278283.074), 6, 'Limericks', 0], [new Date(1699672952267.119), 7, 'beeBay Fulfillment Center', 0], [new Date(1699673687968.235), 8, 'Make Your Own Star Battle', 0], [new Date(1699674907956.368), 9, 'Othello', 0], [new Date(1699675197555.5151), 10, 'Now I Know', 0], [new Date(1699677152179.8), 11, 'Coloring', 0], [new Date(1699677438266.724), 12, 'Petroglyph', 0], [new Date(1699678223379.803), 13, 'Faces', 0], [new Date(1699678700799.9019), 14, 'Gessner Mom', 0], [new Date(1699679236165.111), 15, 'Trigram Hell', 0], [new Date(1699679578849.1262), 16, 'bb b', 0], [new Date(1699680541691.0369), 17, 'Asteroid', 0], [new Date(1699683654653.169), 18, 'Beige Flags', 0], [new Date(1699684285869.259), 19, 'Animal Shelter', 0], [new Date(1699684886078.85), 20, '#vent', 0], [new Date(1699685395884.318), 21, 'Paint By Numbers', 0], [new Date(1699686608476.605), 22, 'Spirit of the Vines', 0], [new Date(1699686889002.537), 23, 'Bovine Social Media Corp', 0], [new Date(1699688584102.811), 24, 'The Swarm', 0], [new Date(1699695007744.876), 25, 'Spelling Bee', 0], [new Date(1699708683588.876), 26, 'Gauss\u0027s Sketches', 0], [new Date(1699709387112.609), 27, 'Postseason Tournaments', 0], [new Date(1699709822940.1191), 28, 'OP pls nerf', 0], [new Date(1699710320693.3179), 29, 'Two Worlds Collide', 0], [new Date(1699716779146.559), 30, 'Infinitely Many Hogs (and Logs)', 0], [new Date(1699718886132.103), 31, 'ARECIBOAR', 0], [new Date(1699719364704.5432), 32, 'Console\u002Dation Prize', 0], [new Date(1699719481501.848), 33, 'Mastery Tree', 0], [new Date(1699722840374.257), 34, 'Mister Penny', 0], [new Date(1699724448170.7139), 35, 'Blancmange', 0], [new Date(1699731922645.051), 36, 'Jabberwock', 0], [new Date(1699750417227.367), 37, 'Slime', 0], [new Date(1699752356894.743), 38, 'Moonick', 0], [new Date(1699758636916.3042), 39, 'Kero', 0], ], }, { name: "Spakacarith\u0027s Tights", type: "line", itemStyle: { normal: { color: "hsl(46, 91%, 47%)", } }, symbolSize: function(data) { return data[3] ? 10 : 4; }, data: [ [new Date(1699663168335.8), 1, 'Tutorial', 0], [new Date(1699664225970.908), 2, 'Angry Boarry Farmer', 0], [new Date(1699665468893.338), 3, 'Dargle', 0], [new Date(1699665878812.0042), 4, 'Gnutmeg Tree', 0], [new Date(1699666176842.0989), 5, 'Trigram Hell', 0], [new Date(1699669246794.386), 6, 'Miss Yu', 0], [new Date(1699669508001.2031), 7, 'Limericks', 0], [new Date(1699669934502.325), 8, 'Petroglyph', 0], [new Date(1699673305486.728), 9, 'Coloring', 0], [new Date(1699673898999.291), 10, 'beeBay Fulfillment Center', 0], [new Date(1699674281158.158), 11, 'Make Your Own Star Battle', 0], [new Date(1699674325244.4739), 12, 'Now I Know', 0], [new Date(1699674369667.815), 13, 'Othello', 0], [new Date(1699675299142.15), 14, 'Faces', 0], [new Date(1699676149459.3489), 15, 'Gessner Mom', 0], [new Date(1699676965741.341), 16, 'Asteroid', 0], [new Date(1699678481980.4448), 17, 'Animal Shelter', 0], [new Date(1699678521216.058), 18, 'Spirit of the Vines', 0], [new Date(1699679407570.714), 19, 'Beige Flags', 0], [new Date(1699680870367.097), 20, '#vent', 0], [new Date(1699681078529.644), 21, 'bb b', 0], [new Date(1699681289680.027), 22, 'Bovine Social Media Corp', 0], [new Date(1699688010880.839), 23, 'The Swarm', 0], [new Date(1699692188969.853), 24, 'Spelling Bee', 0], [new Date(1699694266564.558), 25, 'OP pls nerf', 0], [new Date(1699695294315.733), 26, 'Infinitely Many Hogs (and Logs)', 0], [new Date(1699695641990.9028), 27, 'Jabberwock', 0], [new Date(1699699406401.1099), 28, 'Blancmange', 0], [new Date(1699700444123.929), 29, 'Gauss\u0027s Sketches', 0], [new Date(1699729688601.998), 30, 'ARECIBOAR', 0], [new Date(1699731799760.251), 31, 'Two Worlds Collide', 0], [new Date(1699739700079.18), 32, 'Postseason Tournaments', 0], [new Date(1699739757367.6099), 33, 'Console\u002Dation Prize', 0], [new Date(1699739765283.228), 34, 'Paint By Numbers', 0], [new Date(1699739979455.3298), 35, 'Mastery Tree', 0], [new Date(1699743333168.801), 36, 'Mister Penny', 0], [new Date(1699749018393.449), 37, 'Slime', 0], [new Date(1699750895871.758), 38, 'Moonick', 0], [new Date(1699760774805.1792), 39, 'Kero', 0], ], }, { name: "Like Llamas Very Much", type: "line", itemStyle: { normal: { color: "hsl(142, 99%, 53%)", } }, symbolSize: function(data) { return data[3] ? 10 : 4; }, data: [ [new Date(1699663581452.1912), 1, 'Tutorial', 0], [new Date(1699665930849.4111), 2, 'Angry Boarry Farmer', 0], [new Date(1699668183152.3481), 3, 'Miss Yu', 0], [new Date(1699668697101.951), 4, 'Dargle', 0], [new Date(1699669678808.4531), 5, 'Trigram Hell', 0], [new Date(1699672616023.353), 6, 'beeBay Fulfillment Center', 0], [new Date(1699674050256.0388), 7, 'Gnutmeg Tree', 0], [new Date(1699675158635.9502), 8, 'Limericks', 0], [new Date(1699675911498.105), 9, 'Now I Know', 0], [new Date(1699677749595.8271), 10, 'Make Your Own Star Battle', 0], [new Date(1699678960770.483), 11, 'Coloring', 0], [new Date(1699680070289.4001), 12, 'Othello', 0], [new Date(1699681223829.996), 13, 'Spirit of the Vines', 0], [new Date(1699681962344.255), 14, 'Gessner Mom', 0], [new Date(1699682912504.146), 15, 'Faces', 0], [new Date(1699689647573.8809), 16, 'Jabberwock', 0], [new Date(1699691703639.239), 17, 'Beige Flags', 0], [new Date(1699692209186.882), 18, 'Asteroid', 0], [new Date(1699694598582.491), 19, 'The Swarm', 0], [new Date(1699695286617.6401), 20, 'Bovine Social Media Corp', 0], [new Date(1699695373346.621), 21, '#vent', 0], [new Date(1699695769179.092), 22, 'Paint By Numbers', 0], [new Date(1699722091873.032), 23, 'Petroglyph', 0], [new Date(1699723621141.18), 24, 'Console\u002Dation Prize', 0], [new Date(1699726094369.751), 25, 'OP pls nerf', 0], [new Date(1699726294722.11), 26, 'Spelling Bee', 0], [new Date(1699727930167.812), 27, 'Gauss\u0027s Sketches', 0], [new Date(1699732532675.845), 28, 'Animal Shelter', 0], [new Date(1699732890282.636), 29, 'Two Worlds Collide', 0], [new Date(1699735983496.0798), 30, 'Postseason Tournaments', 0], [new Date(1699736544522.398), 31, 'Infinitely Many Hogs (and Logs)', 0], [new Date(1699737334597.819), 32, 'ARECIBOAR', 0], [new Date(1699737584785.226), 33, 'Mastery Tree', 0], [new Date(1699747196810.503), 34, 'Moonick', 0], [new Date(1699749017024.198), 35, 'bb b', 0], [new Date(1699749352109.8572), 36, 'Blancmange', 0], [new Date(1699752272114.653), 37, 'Mister Penny', 0], [new Date(1699757558557.2358), 38, 'Slime', 0], [new Date(1699762147059.5542), 39, 'Kero', 0], ], },
+  ],
+});
+
+function duration(secs) {
+  const hours = Math.floor(secs / (60 * 60));
+  secs -= hours * 60 * 60;
+  const mins = Math.floor(secs / 60);
+  secs -= mins * 60;
+  return `${hours}:${String(mins).padStart(2, 0)}:${secs.toFixed(3).padStart(6, 0)}`;
+}
+</script>
+
+<script src="https://twemoji.maxcdn.com/v/latest/twemoji.min.js" crossorigin="anonymous"></script>
+<script>for (const p of document.querySelectorAll('main p')) twemoji.parse(p);</script>
+
+    </div>
+    
+    <script>
+        const skipToMainLink = document.querySelector("a.skip-to-main");
+        const mainContentElement = document.getElementsByTagName("main")?.item(0) || document.querySelector("div.content");
+        if (skipToMainLink && mainContentElement) {
+            const mainContentAnchor = document.createElement("a");
+            const anchorId = "main-content-anchor"
+            mainContentAnchor.className = anchorId;
+            mainContentAnchor.id = anchorId;
+            skipToMainLink.href = `#${anchorId}`;
+            mainContentElement.parentNode.insertBefore(mainContentAnchor, mainContentElement);
+        }
+    </script>
+
+    
+    <script>
+        window.djangoBaseUrl = "https://2023.galacticpuzzlehunt.com/";
+        window.wsEndpoint = "wss://2023.galacticpuzzlehunt.com/game-ws-django/";
+        
+    </script>
+    <link rel="stylesheet" href="/static/game/assets/main-a586d973.css">
+    <script type="module" src="/static/game/assets/main-8c846e1d.js"></script>
+    
+
+    <script>
+        
+            window.isPosthunt = true;
+        
+    </script>
+</body>
+</html>

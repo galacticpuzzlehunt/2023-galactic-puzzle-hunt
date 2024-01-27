@@ -1,0 +1,309 @@
+
+
+
+
+
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no">
+    
+    <title>Galactic Puzzle Hunt</title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=0.5">
+    <meta property="og:title" content="Galactic Puzzle Hunt 2023">
+    <meta property="og:description" content="What will you find inside the GalactiCosmiCave? Register now!">
+    <meta property="og:image" content="https://2023.galacticpuzzlehunt.com/static/images/banner.png">
+    <meta property="twitter:card" content="summary_large_image">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Asap+Condensed:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital@0;1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital@0;1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Recursive:slnt,CASL,CRSV,MONO@-3,0.5,1,1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/skeleton.css">
+    <link rel="stylesheet" href="/static/css/base.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.19/jquery.touchSwipe.min.js"></script>
+    <script src="/jsi18n/"></script>
+    <script src="/static/js/jquery.formset.js"></script>
+    <script src="/static/js/sorttable.js"></script>
+    <script src="/static/js/tray.js"></script>
+    <script src="/static/js/notify.js"></script>
+    <script src="/static/js/time.js"></script>
+    <link rel="icon" sizes="16x16 32x32 48x48 64x64" href="/static/images/favicon.ico" type="image/vnd.microsoft.icon">
+    
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Y1N52VY61R"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-Y1N52VY61R', {cookie_flags: 'secure;samesite=none'});
+</script>
+
+</head>
+<body>
+    <a class="skip-to-main">Press enter to skip to main content.</a>
+    <nav class="top-navbar">
+        <span class="tray">
+            <div class="top-tabs">
+                <div class="top-team-actions">
+                    <div id="nav-team-name">
+                        
+                    </div>
+                    
+                </div>
+                <div class="site-nav">
+                    
+                        <a href="/">
+                            Home
+                        </a>
+                        <a href="/about">
+                            About
+                        </a>
+                        
+                        
+                        <a href="/puzzles">
+                            Puzzles
+                        </a>
+                        
+                        <a href="/teams">
+                            Teams
+                        </a>
+                        
+                        <a href="/errata">
+                            Updates
+                        </a>
+                        
+                        
+                        <a href="/wrapup">
+                            Wrap-Up
+                        </a>
+                        
+                        <a href="https://galacticpuzzlehunt.com/archive">
+                            Archive
+                        </a>
+                        <a href="/donate">
+                            Donate
+                        </a>
+                    
+                </div>
+            </div>
+        </span>
+    </nav>
+    <script>
+    
+    
+    </script>
+    
+    <div class="top-more-actions">
+        
+    </div>
+    <div class="content">
+        
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,700&display=swap" rel="stylesheet">
+<style>
+.bg {
+    background-color: white;
+    background-image: url(/static/images/bg/slice/2-cave-full.00.png);
+    background-size: cover;
+    background-position: center;
+    z-index: -100;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    filter: sepia(0.3) brightness(0.7) blur(0.5em);
+}
+
+.fancy-container {
+    --height: 10rem;
+
+    --font-size: calc(var(--height) * 0.8);
+    --main-stroke: calc(var(--height) * 0.1);
+    --adjustment: calc(var(--height) * 0.01);
+    position: relative;
+    height: var(--height);
+}
+
+.fancy-2,
+.fancy,
+.fancy::before {
+    border: none;
+    font-family: 'Playfair Display', serif;
+    font-variant: small-caps;
+    font-style: italic;
+    font-size: var(--font-size);
+    letter-spacing: 0.05ch;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-color: transparent;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.fancy-2 {
+    background-color: #fefffd;
+    -webkit-text-stroke-width: var(--main-stroke);
+    filter: drop-shadow(0px 0px 3px rgba(0,0,0,0.5));
+}
+
+.fancy {
+    background-color: #f63f76;
+    -webkit-text-stroke-width: calc(var(--main-stroke) / 2);
+}
+
+.fancy::before {
+    content: attr(data-text);
+    background-image: linear-gradient(180deg, #ecc94c 40%, #fffffd 60%, #e7c700 85%);
+    -webkit-text-stroke-width: 0rem;
+    top: calc(0px - var(--adjustment));
+    left: var(--adjustment);
+    right: calc(0px - var(--adjustment));
+}
+
+.team-label {
+    border-bottom: 0;
+    margin: 2rem 0 0;
+}
+
+.pie {
+    position: relative;
+    display: inline-block;
+    line-height: 0;
+    margin: 3rem 0;
+}
+
+.bottom {
+    background-color: var(--info-bg-color);
+    padding: 2.5rem 2rem 1rem;
+}
+</style>
+<main style="text-align: center">
+    <div class="bg"></div>
+    <div class="fancy-container">
+        <h3 class="fancy-2" data-text="Congratulations!">Congratulations!</h3>
+        <h3 class="fancy" data-text="Congratulations!">Congratulations!</h3>
+    </div>
+    
+    <div class="pie"></div>
+    <div class="bottom">
+    <p>
+    Your dream of finding great riches in this cave was more than a pie-in-the-sky fantasy. You did quite a bit to make it this far: deciphered Jargle, played Othello, battled slimes—you might say you had your fingers in a lot of pies! No matter how you slice it, your journey was <i>not</i> as easy as pie, but it was fun.
+    </p>
+    <p>
+    You made Kero eat some humble pie. You helped the factions of the cave work through their crust issues. And now, thanks to you, everyone in the cave can get a piece of the pie. (Not the humble pie. A different pie. Too many pie idioms? Maybe you should shut your pie hole.)
+    </p>
+    <p>
+    Congratulations! You’ve finished <b>Galactic Puzzle Hunt 2023</b>!<br>
+    You will receive more information shortly via email.
+    <!-- Please fill out our <a href="https://docs.google.com/forms/d/e/1FAIpQLSf_p8qcCOT_XzBejOmDaZdlBdzeYKjNsVWIpUvXrijN3XIbOQ/viewform">feedback form</a>, and we hope you had fun! -->
+    </p>
+    </div>
+</main>
+<script>
+const pie = document.querySelector('.pie');
+const layers = [{"u": "layer00.png", "l": 0, "t": 0, "w": 800, "h": 600, "z": true, "s": false, "x": null}, {"u": "layer01.png", "l": 325, "t": 15, "w": 406, "h": 230, "z": true, "s": false, "x": null}, {"u": "layer02.png", "l": 0, "t": 103, "w": 800, "h": 497, "z": true, "s": false, "x": null}, {"u": "layer03.png", "l": 770, "t": 217, "w": 22, "h": 25, "z": false, "s": false, "x": null}, {"u": "layer04.png", "l": 608, "t": 176, "w": 189, "h": 126, "z": false, "s": false, "x": null}, {"u": "layer05.png", "l": 701, "t": 290, "w": 39, "h": 27, "z": false, "s": false, "x": null}, {"u": "layer06.png", "l": 104, "t": 215, "w": 50, "h": 105, "z": false, "s": false, "x": null}, {"u": "layer07.png", "l": 0, "t": 232, "w": 157, "h": 88, "z": false, "s": false, "x": null}, {"u": "layer08.png", "l": 207, "t": 108, "w": 44, "h": 71, "z": false, "s": false, "x": null}, {"u": "layer09.png", "l": 156, "t": 96, "w": 529, "h": 365, "z": false, "s": false, "x": null}, {"u": "layer10.png", "l": 0, "t": 381, "w": 381, "h": 219, "z": true, "s": false, "x": null}, {"u": "layer11.png", "l": 22, "t": 317, "w": 30, "h": 23, "z": false, "s": false, "x": null}, {"u": "layer12.png", "l": 30, "t": 398, "w": 33, "h": 28, "z": false, "s": false, "x": null}, {"u": "layer13.png", "l": 143, "t": 346, "w": 73, "h": 71, "z": false, "s": true, "x": null}, {"u": "layer14.png", "l": 180, "t": 366, "w": 73, "h": 71, "z": false, "s": true, "x": null}, {"u": "layer15.png", "l": 37, "t": 321, "w": 103, "h": 91, "z": false, "s": false, "x": null}, {"u": "layer16.png", "l": 84, "t": 397, "w": 181, "h": 139, "z": false, "s": false, "x": null}, {"u": "layer17.png", "l": 541, "t": 377, "w": 184, "h": 156, "z": false, "s": false, "x": null}, {"u": "layer18.png", "l": 499, "t": 419, "w": 50, "h": 49, "z": false, "s": false, "x": null}, {"u": "layer19.png", "l": 435, "t": 416, "w": 69, "h": 47, "z": false, "s": false, "x": null}, {"u": "layer20.png", "l": 386, "t": 329, "w": 153, "h": 224, "z": false, "s": false, "x": null}, {"u": "layer21.png", "l": 308, "t": 432, "w": 251, "h": 158, "z": false, "s": false, "x": null}, {"u": "layer22.png", "l": 607, "t": 294, "w": 178, "h": 101, "z": false, "s": false, "x": null}, {"u": "layer23.png", "l": 766, "t": 408, "w": 34, "h": 30, "z": false, "s": false, "x": null}, {"u": "layer24.png", "l": 680, "t": 372, "w": 97, "h": 94, "z": false, "s": false, "x": 0}, {"u": "layer25.png", "l": 691, "t": 442, "w": 99, "h": 77, "z": false, "s": false, "x": null}, {"u": "layer26.png", "l": 522, "t": 483, "w": 265, "h": 107, "z": false, "s": false, "x": null}, {"u": "layer27.png", "l": 14, "t": 539, "w": 99, "h": 60, "z": false, "s": false, "x": null}, {"u": "layer28.png", "l": 105, "t": 5, "w": 256, "h": 148, "z": false, "s": false, "x": null}, {"u": "layer29.png", "l": 706, "t": 76, "w": 78, "h": 92, "z": false, "s": false, "x": null}, {"u": "layer30.png", "l": 646, "t": 35, "w": 108, "h": 67, "z": false, "s": false, "x": 1}];
+for (const layer of layers) {
+    const {u, l, t, w, h, z, s, x} = layer;
+    if (x !== null && x !== 0) continue;
+    const img = layer.i = new Image();
+    img.src = '/static/images/pie/' + u;
+    if (layer !== layers[0]) {
+      img.style.position = 'absolute';
+      img.style.left = (l / layers[0].w) * 100 + '%';
+      img.style.top = (t / layers[0].h) * 100 + '%';
+      img.style.width = (w / layers[0].w) * 100 + '%';
+      img.style.height = (h / layers[0].h) * 100 + '%';
+      img.style.zIndex = z ? 0 : Math.floor(t + h / 2);
+    }
+    pie.appendChild(img);
+}
+let counter = 0;
+setInterval(() => {
+    function cond1(l, t) {
+        const rx = ((l + w / 2) - layers[0].w / 2) / (layers[0].w / 3);
+        const ry = ((t + h / 2) - layers[0].h / 2) / (layers[0].h / 4);
+        return rx * rx + ry * ry < 1;
+    }
+    function cond2(l, t) {
+        return Math.min(...slimes.map(slime => {
+            const dx = (slime.l - l) / w;
+            const dy = (slime.t - t) / (h / 3);
+            return dx * dx + dy * dy;
+        }));
+    }
+    const slimes = layers.filter(layer => layer.s);
+    const {u, w, h, z, s, x, i} = slimes[0];
+    const xmin = Math.max(
+        Math.min(...slimes.map(slime => slime.l)) - 2 * w,
+        -counter * w / 10);
+    const xmax = Math.min(
+        Math.max(...slimes.map(slime => slime.l)) + 2 * w,
+        layers[0].w - w + counter * w / 10);
+    const ymin = Math.max(
+        Math.min(...slimes.map(slime => slime.t)) - h,
+        layers[0].h / 3);
+    const ymax = Math.min(
+        Math.max(...slimes.map(slime => slime.t)) + h,
+        layers[0].h - h);
+    const choices = [];
+    while (choices.length < 10) {
+        const l = Math.floor(Math.random() * (xmax - xmin) + xmin);
+        const t = Math.floor(Math.random() * (ymax - ymin) + ymin);
+        const d = cond2(l, t);
+        if (!cond1(l, t) && d < 2) choices.push({l, t, d});
+    }
+    const {l, t, d} = choices.sort((a, b) => b.d - a.d)[0];
+    if (d < 1) counter++;
+    const img = i.cloneNode(true);
+    img.style.left = (l / layers[0].w) * 100 + '%';
+    img.style.top = (t / layers[0].h) * 100 + '%';
+    img.style.zIndex = Math.floor(t + h / 2);
+    layers.push({u, l, t, w, h, z, s, x, i: img});
+    pie.appendChild(img);
+}, 30 * 1000);
+</script>
+
+    </div>
+    
+    <script>
+        const skipToMainLink = document.querySelector("a.skip-to-main");
+        const mainContentElement = document.getElementsByTagName("main")?.item(0) || document.querySelector("div.content");
+        if (skipToMainLink && mainContentElement) {
+            const mainContentAnchor = document.createElement("a");
+            const anchorId = "main-content-anchor"
+            mainContentAnchor.className = anchorId;
+            mainContentAnchor.id = anchorId;
+            skipToMainLink.href = `#${anchorId}`;
+            mainContentElement.parentNode.insertBefore(mainContentAnchor, mainContentElement);
+        }
+    </script>
+
+    
+    <script>
+        window.djangoBaseUrl = "https://2023.galacticpuzzlehunt.com/";
+        window.wsEndpoint = "wss://2023.galacticpuzzlehunt.com/game-ws-django/";
+        
+    </script>
+    <link rel="stylesheet" href="/static/game/assets/main-a586d973.css">
+    <script type="module" src="/static/game/assets/main-8c846e1d.js"></script>
+    
+
+    <script>
+        
+            window.isPosthunt = true;
+        
+    </script>
+</body>
+</html>
