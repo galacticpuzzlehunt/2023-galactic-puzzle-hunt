@@ -1,0 +1,261 @@
+
+
+
+
+
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no">
+    
+<title>Solution: Moonick</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=0.5">
+    <meta property="og:title" content="Galactic Puzzle Hunt 2023">
+    <meta property="og:description" content="What will you find inside the GalactiCosmiCave? Register now!">
+    <meta property="og:image" content="https://2023.galacticpuzzlehunt.com/static/images/banner.png">
+    <meta property="twitter:card" content="summary_large_image">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Asap+Condensed:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital@0;1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital@0;1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Recursive:slnt,CASL,CRSV,MONO@-3,0.5,1,1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/skeleton.css">
+    <link rel="stylesheet" href="/static/css/base.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.19/jquery.touchSwipe.min.js"></script>
+    <script src="/jsi18n/"></script>
+    <script src="/static/js/jquery.formset.js"></script>
+    <script src="/static/js/sorttable.js"></script>
+    <script src="/static/js/tray.js"></script>
+    <script src="/static/js/notify.js"></script>
+    <script src="/static/js/time.js"></script>
+    <link rel="icon" sizes="16x16 32x32 48x48 64x64" href="/static/images/favicon.ico" type="image/vnd.microsoft.icon">
+    
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Y1N52VY61R"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-Y1N52VY61R', {cookie_flags: 'secure;samesite=none'});
+</script>
+
+</head>
+<body>
+    <a class="skip-to-main">Press enter to skip to main content.</a>
+    <nav class="top-navbar">
+        <span class="tray">
+            <div class="top-tabs">
+                <div class="top-team-actions">
+                    <div id="nav-team-name">
+                        
+                    </div>
+                    
+                </div>
+                <div class="site-nav">
+                    
+                        <a href="/">
+                            Home
+                        </a>
+                        <a href="/about">
+                            About
+                        </a>
+                        
+                        
+                        <a class="selected-tab" href="/puzzles">
+                            Puzzles
+                        </a>
+                        
+                        <a href="/teams">
+                            Teams
+                        </a>
+                        
+                        <a href="/errata">
+                            Updates
+                        </a>
+                        
+                        
+                        <a href="/wrapup">
+                            Wrap-Up
+                        </a>
+                        
+                        <a href="https://galacticpuzzlehunt.com/archive">
+                            Archive
+                        </a>
+                        <a href="/donate">
+                            Donate
+                        </a>
+                    
+                </div>
+            </div>
+        </span>
+    </nav>
+    <script>
+    
+    
+    </script>
+    
+    <div class="top-more-actions">
+        
+<a href="/puzzle/moonick" class="btn">Back to the puzzle</a>
+
+    </div>
+    <div class="content">
+        
+
+<style>
+h2 {
+    font-size: 2.5rem;
+    font-weight: normal;
+    font-style: italic;
+    margin-bottom: 2rem;
+}
+
+h4 {
+    font-size: 2rem;
+    font-weight: normal;
+    margin: 2rem 0;
+}
+</style>
+
+<h1>
+    Solution: Moonick
+    
+</h1>
+
+<main class="puzzle-main">
+    <h2 style="margin-top: 0">
+        Written by
+        
+Yannick Yao
+
+    </h2>
+
+    
+    <p>This battle consists of 25 sub-battles, separated into four stages:</p>
+<ul><li>Stage 1 consists of battles 1&ndash;12; winning 9 of them unlocks Stage 2.</li><li>Stage 2 consists of battles 13&ndash;21; winning 7 of them unlocks Stage 3.</li><li>Stage 3 consists of battles 22&ndash;24; winning 2 of them unlocks Stage 4.</li><li>Stage 4 consists of battle 25; winning the battle allows us to befriend Moonick.</li></ul>
+
+<p>All sub-battles follow the same basic structure:</p>
+<ul><li>The battle takes place on a 7 by 5 grid, where the player can play cards on any of the rows except for the topmost one.</li><li>Our base is a single <span class="embed">B/W Copier</span> on the bottommost row, which produces 3 Food each turn and allows us to add a copy of each Creature on that row to our hand each turn.</li><li>The enemy starts with a <span class="embed">Pasture Planner</span> base as well as 0&ndash;4 other mysteriously-named B or W cards on the same row. On each enemy turn after the first one, the enemy plays one additional mysteriously-named B or W card on the one of the spaces in the center 5 by 5 grid (destroying anything there if it was occupied). All enemy cards have Immobile and also cannot be destroyed.</li><li>Once the enemy stops playing cards, there will be a notification indicating how many double-turns there are until the “audit”.</li><li>Once the “audit” happens, one of the following happens:</li><ul><li>The enemy base attacks our base directly and destroys it.</li><li>One or more of the enemy cards gain 100 Power, and one of them attacks and destroys our base.</li><li>The enemy base destroys itself if neither of the previous two happens, which wins us the battle.</li></ul></ul>
+
+<p>Hence, the goal of the battles is always to prevent any of the opponent cards from attacking our base during the audit.</p>
+<h3>Stage 1: Learning the Rules</h3>
+<p>In Stage 1, if we fail the audit, the enemy will also replace some cards or empty spaces in the center 5 by 5 grid (which we will henceforth refer to as “the board”) by a B or W “Resident” card, resulting in a black-and-white pattern. If the board is not completely filled with B or W cards, then the enemy base will destroy our base.</p>
+<p>By examining different examples, one may notice that these are actually solutions to some logic puzzle, with constraints given by the enemy cards played before the audit. The cards on the top row indicate “global” constraints where the cards on the rest of the board indicate “local” clues. The goal is always to play a correctly-colored card (B or W) in each empty slot of the board to satisfy these constraints. If any constraint fails, then that card will gain 100 Power. The names of the enemy cards give a clue on what these constraints are:</p>
+<table><tr><th>Name</th><th>Description</th></tr><tr><td>Tight-knit Community</td><td>All cards of this color must form a single orthogonally connected component
+(For convenience, we will refer to (maximal) orthogonally connected components as groups, corresponding to “communities” in the card names)</td></tr><tr><td>Loose-knit Communities</td><td>All cards of this color must form a single orthogonally or diagonally connected component</td></tr><tr><td>Coastal Communities</td><td>All groups of this color must be adjacent to the boundary of the board
+(Coastal = Not landlocked)</td><td><tr><td>Narrow Communities</td><td>There cannot be any 2&times;2 block of cards that all have this color (i.e. all parts must be “narrow” with “width 1”)</td></tr><tr><td>Uniform Communities</td><td>There cannot be any two cards of this color that are orthogonally adjacent 
+(Alternatively, all groups of cards of this color must have area given by the Health of this card, but 1 is the only possible value in this battle)</td></tr><tr><td>Signposted Communities</td><td>In each group of this color, there must be exactly one card that the enemy placed as a clue</td></tr><tr><td>Optionally Signposted Communities</td><td>In each group of this color, there must be at most one card that the enemy placed as a clue</td></tr><tr><td>Courtyards</td><td>Each group of this color must form a rectangle
+(Courtyards ≈ Quadrangles ≈ Rectangles)</td></tr><tr><td>Plazas</td><td>Each group of this color must form a square
+(Plazas ≈ Squares)</td></tr><tr><td>Esplanades</td><td>Each group of this color must form a path, defined by all but two of the cards in the group having exactly two orthogonal neighbors of the same color, and the remaining two having exactly one neighbor.
+(Esplanades ≈ Paths)</td></tr></table>
+
+<p>For the cards on the board, their health values indicate something about the solution, as follows:</p>
+<table><tr><th>Name</th><th>Description</th></tr><tr><td>Resident</td><td>Only serves to indicate the correct color (all other clue cards will have this function as well)</td></tr><tr><td>Neighbors</td><td>Health value indicates the number of orthogonal neighbors of the same color</td></tr><tr><td>Inverted Scanner</td><td>Health value indicates the number of orthogonal and diagonal neighbors of the opposite color
+(Inverted always means “of the opposite color”)</td><td><tr><td>Inverted Horizontal/Vertical Scout</td><td>Health value indicates the number of cards in this card’s row/column of the opposite color</td></tr><tr><td>Neighborhood Surveyor</td><td>Health value indicates the number of cards in the same orthogonally connected group as this card (including itself)</td></tr><tr><td>Inverted Surveyor</td><td>Health value indicates the number of cards in any of the orthogonally connected groups of the opposite color that are orthogonally adjacent to this card</td></tr><tr><td>Watchtower</td><td>Health value indicates the number of cards of the same color that this card can “see” in one of the four orthogonal directions without going through a card of the opposite color, including itself</td></tr><tr><td>Inverted Watchtower</td><td>Health value indicates the number of cards of the opposite color that this card can “see” in one of the four orthogonal directions without going through a card of the same color, not including itself</td></tr></table>
+
+<p>While the sub-battles can be completed in any order, it is somewhat intended for the solvers to go through them roughly in the given order for the smoothest learning experience. Each battle in this stage tries its best to simulate the ruleset of a known logic puzzle genre, so prior knowledge about these genres will certainly be helpful.</p>
+<p>(<strong>Bold entries</strong> below indicate the ones that are newly introduced)</p>
+<table><tr><th>No.</th><th>Genre</th><th>Global constraints</th><th>Local Clue types</th></tr><tr><td>1</td><td><a href="https://puzz.link/rules.html?mines">Minesweeper</a></td><td>(none)</td><td><strong>Inverted Scanner</strong> (W)</td></tr><tr><td>2</td><td><a href="https://puzz.link/rules.html?yinyang">Yin-Yang</a></td><td><strong>Tight-knit Community</strong> (B/W)
+<strong>Narrow Communities</strong> (B/W)</td><td><strong>Resident</strong> (B/W)</td></tr><tr><td>3</td><td><a href="https://puzz.link/rules.html?lightshadow">Light and Shadow</a></td><td><strong>Signposted Communities</strong> (B/W)</td><td><strong>Neighborhood Surveyor</strong> (B/W)
+Resident (B/W)</td></tr><tr><td>4</td><td><a href="https://puzz.link/rules.html?nurikabe">Nurikabe</a></td><td>Tight-knit Community (B)
+Narrow Communities (B)
+Signposted Communities (W)</td><td>Neighborhood Surveyor (W)
+Resident (B/W)</td></tr><tr><td>5</td><td><a href="https://puzz.link/rules.html?kurotto">Kurotto</a></td><td>(none)</td><td><strong>Inverted Surveyor</strong> (W)</td></tr><tr><td>6</td><td><a href="https://puzz.link/rules.html?kurodoko">Kurodoko</a></td><td>Tight-knit Community (W)
+<strong>Uniform Communities</strong> (B)</td><td><strong>Watchtower</strong> (W)</td></tr><tr><td>7</td><td><a href="https://puzz.link/rules.html?cave">Cave</a></td><td>Tight-knit Community (W)
+<strong>Coastal Communities</strong> (B)</td><td>Watchtower (W)</td></tr><tr><td>8</td><td><a href="https://puzz.link/rules.html?slither">Slitherlink</a></td><td>Tight-knit Community (B)
+Coastal Communities (W)</td><td><strong>Neighbors</strong> (B/W)</td></tr><tr><td>9</td><td><a href="https://puzz.link/rules.html?canal">Canal View</a></td><td>Tight-knit Community (B)
+Narrow Communities (B)</td><td><strong>Inverted Watchtower</strong> (W)</td></tr><tr><td>10</td><td><a href="https://puzz.link/rules.html?snake">Snake</a></td><td>Tight-knit Community (B)
+<strong>Esplanades</strong> (B)
+Coastal Communities (W)</td><td>Neighbors (B)
+<strong>Inverted Horizontal/Vertical Scout</strong> (W)</td></tr><tr><td>11</td><td><a href="https://puzz.link/rules.html?mochikoro">Mochikoro</a></td><td><strong>Courtyards</strong> (W)
+<strong>Loose-knit Communities</strong> (W)
+<strong>Optionally Signposted Communities</strong> (W)
+Narrow Communities (B)</td><td>Neighborhood Surveyor (W)</td></tr><tr><td>12</td><td><a href="https://puzz.link/rules.html?tasquare">Tasquare</a></td><td>Tight-knit Community (W)
+<strong>Plazas</strong> (B)</td><td>Inverted Surveyor (W)</td></tr></table>
+
+<p>Some general strategy advice:</p>
+<ul>
+<li>Bringing two copies of <span class="embed">o</span> and <span class="embed">re</span> each is quite useful. </li>
+<li>Make sure to use the copy ability of the <span class="embed">B/W Copier</span> each turn. Normally we would want to copy two of each color, but occasionally the colors might be imbalanced enough (such as in Kurodoko or Snake) that a 3/1 split would be better.</li>
+<li>We can also bring a few other cheap B/W cards, as producing the required number of cards tends to be the bottleneck.</li>
+<li>Occasionally it might be good to place some cards early, as some deductions become available, although there is some risk of the enemy overwriting our cards with their clues and hence wasting them.</li>
+<li>As a last resort (if we are still short on cards), we can move the cards in the bottom row onto the board in the last turn before the audit.</li>
+</ul>
+<h3>Stage 2: Testing Rule Understanding</h3>
+<p>In this stage, the audit will no longer show the correct solution if the audit fails (only displaying which enemy cards gained Power). Therefore, the solver should understand most of the rules using Stage 1 before proceeding.</p>
+<p>This Stage has two halves: the first half (battles 13&ndash;16) tests understanding of the clue types, and the second half (battles 17&ndash;21) tests understanding of the global constraints.</p>
+<p>For the first half, the clue types are paired based on their similarities and tested separately, where clues come in both possible colors.</p>
+<table><tr><th>No.</th><th>Local Clue types</th></tr><tr><td>13</td><td>Neighbors, Inverted Scanner</td></tr><tr><td>14</td><td>Inverted Horizontal/Vertical Scout</td></tr><tr><td>15</td><td>Watchtower, Inverted Watchtower</td></tr><tr><td>16</td><td>Neighborhood Surveyor, Inverted Surveyor</td></tr></table>
+
+<p>For the second half, the global constraints always come in B and W pairs, resulting in heavily constrained puzzles where only a few given Residents can uniquely determine the entire puzzle.</p>
+<table><tr><th>No.</th><th>Global constraints</th><th>Comment</th></tr><tr><td>17</td><td>Signposted Communities</td><td>Only one clue will be given, so the entire board must be filled with that color.</td></tr><tr><td>18</td><td>Uniform Communities</td><td>As all groups must have size 1, the entire board must be filled with a checkerboard pattern.</td></tr><tr><td>19</td><td>Courtyards</td><td>All groups are rectangles, so the entire board will also look like a checkerboard pattern, although with variable widths and heights.</td></tr><tr><td>20</td><td>Plazas</td><td>All groups are squares, so the comment above applies. Moreover, since all widths and heights must be equal and the board has a prime side length (5), the board will either look like a checkerboard or filled with only one color.</td></tr><tr><td>21</td><td>Paths, Tight-knit Community</td><td>The board will be divided into two paths, and one can show that there are only two essentially different configurations, both of them spiraling out from the center (with one of the paths starting on the center cell).</td></tr></table>
+
+<p>For some battles in the second half, we might need to retry a few times to get a color distribution that makes it easier to place all the cards within the turn limit.</p>
+<h3>Stage 3: Breaking the clues</h3>
+<p>These battles are similar to the Stage 2 battles, but some clues will have impossibly high Health values (e.g. Watchtower with 10 Health), rendering the puzzles unsolvable as is. However, a careful inspection reveals that the Invulnerable property of the clues in prior stages has been replaced by the Indestructible property, which means that it is now possible to damage the clues (as long as the remaining Health doesn’t go below 1) so that the puzzles are solvable again. </p>
+<p>The puzzles are made so that it is only necessary to damage one of the clues, but sometimes an “easier” solution will involve damaging more clues. Obviously, puzzles in this Stage no longer have unique solutions.</p>
+<table><tr><th>No.</th><th>Global constraints</th><th>Local Clue types</th></tr><tr><td>22</td><td>Esplanades (B)</td><td>Inverted Scanner (W, with some greater than 7)</td></tr><tr><td>23</td><td>Tight-knit community (W)</td><td>Watchtower (W, with some greater than 9)</td></tr><tr><td>24</td><td>Courtyards (B)</td><td>Neighborhood Surveyor (B, with some having prime factors greater than 5)</td></tr></table>
+
+<h3>Stage 4: Putting it all together</h3>
+<p>This is the “final boss” battle which combines all previous mechanics (including the Indestructible modification from Stage 3). Each possible battle has a randomly chosen set of global constraints and all clue types are possible. If the solver understands all previous mechanics, this battle should not be too difficult.</p>
+
+    
+    
+    <h2 id="authors-notes">Author&rsquo;s Notes</h2>
+    <p>This puzzle battle is a spiritual successor of <a href="https://2021.galacticpuzzlehunt.com/puzzle/duality">Duality</a> from GPH 202<s>2</s>1, although its inspirations came earlier. I have seen or played several puzzle games that involve grid-based rule discovery and mixing different rules, including The Witness, Taiji, 14 Minesweeper Variants, and Islands of Insight (back when it was still named Project S), which naturally lead to the question of whether this modular rule presentation can be adapted to characterize the various logic puzzle genres as well. </p>
+<p>Funnily enough, my initial plan of making a puzzle around this idea was to have a bunch of known puzzle genres with rules represented by symbols on cards, then shuffling all the cards into a deck and redistributing them to make a bunch of new rulesets. The card game theme hence presented an ideal opportunity to make the idea a reality.</p>
+<p>I chose the Stage 1 genres with the goal of having most rules show up in at least two different genres, which might explain some of the more unusual genre choices. Some of the rulesets were not perfectly replicated due to the constraints of the card game, such as Slitherlink (battle 8) including additional information about whether the clue cells are inside/outside the loop or Snake having the row/column numbers tethered to white clues. Hopefully logic puzzle fans still recognized some of the featured genres.</p>
+<p>Perhaps unsurprisingly, all individual puzzles in this battle are computer-generated. I based my generator code on semiexp’s <a href="https://github.com/semiexp/cspuz/tree/master">cspuz library</a>, which includes implementing all possible rules I want to include within a single SAT solver, and modifying the set of rules I want to include for different battles. A few fun facts about implementation:</p>
+<ul>
+<li>The “all black groups are rectangles” condition is actually equivalent to the fact that there cannot be exactly three black cells in a 2&times;2 block, which made the implementation very easy. In contrast, I failed to find an easy way to implement “no groups are rectangles” constraint, so I didn’t include <a href="https://puzz.link/rules.html?cbanana">Choco Banana</a> or <a href="https://puzz.link/rules.html?mochinyoro">Mochinyoro</a>.</li>
+<li>The “all groups are squares” condition is bootstrapped from the Watchtower implementation: in the solver I record the number of visible cells in the four directions separately, so the squares condition is equivalent to “the number of horizontally visible cells is always equal to the number of vertically visible cells for all cells of this color”.</li>
+<li>The “signpost” condition caused quite a bit of trouble for generation: the default generator in cspuz works by adding clues one by one, backtracking when there are no solutions; the signpost condition means that the puzzle could have no solutions even with zero or one clue (imagine a 5 by 5 Nurikabe puzzle with just a 1 clue). Hence, I had to allow for normal Resident clues for those puzzles so that the generator would always be able to produce puzzles.</li>
+</ul>
+<p>Obviously, putting so many constraints in the same SAT solver made it quite slow, but surprisingly still workable. I ended up generating 10 puzzles for each of battles 1&ndash;24, and 25 puzzles for the final battle. I did a bit of manual filtering to remove some blatantly trivial puzzles (there was once a Snake with only two shaded cells), but other than that the outputs were quite reasonable. Hopefully the small grid size meant that the puzzles weren’t too annoying to solve.</p>
+<p>There were a few more ideas I had, including using multi-digit Health values to indicate a clue with multiple numbers (for genres such as Tapa or Nonogram), somehow dividing the board into regions, or having clues be movable, but the battle is already long enough so I decided to leave it in this state. Nevertheless, I hope this puzzle can inspire more people to explore this type of modular presentation of logic puzzle constraints, and perhaps make more interesting rulesets from these ingredients.</p>
+    
+
+    
+    
+</main>
+
+
+    </div>
+    
+    <script>
+        const skipToMainLink = document.querySelector("a.skip-to-main");
+        const mainContentElement = document.getElementsByTagName("main")?.item(0) || document.querySelector("div.content");
+        if (skipToMainLink && mainContentElement) {
+            const mainContentAnchor = document.createElement("a");
+            const anchorId = "main-content-anchor"
+            mainContentAnchor.className = anchorId;
+            mainContentAnchor.id = anchorId;
+            skipToMainLink.href = `#${anchorId}`;
+            mainContentElement.parentNode.insertBefore(mainContentAnchor, mainContentElement);
+        }
+    </script>
+
+    
+    <script>
+        window.djangoBaseUrl = "https://2023.galacticpuzzlehunt.com/";
+        window.wsEndpoint = "wss://2023.galacticpuzzlehunt.com/game-ws-django/";
+        
+    </script>
+    <link rel="stylesheet" href="/static/game/assets/main-a586d973.css">
+    <script type="module" src="/static/game/assets/main-8c846e1d.js"></script>
+    
+
+    <script>
+        
+            window.isPosthunt = true;
+        
+    </script>
+</body>
+</html>

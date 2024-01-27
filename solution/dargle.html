@@ -1,0 +1,246 @@
+
+
+
+
+
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no">
+    
+<title>Solution: Dargle</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=0.5">
+    <meta property="og:title" content="Galactic Puzzle Hunt 2023">
+    <meta property="og:description" content="What will you find inside the GalactiCosmiCave? Register now!">
+    <meta property="og:image" content="https://2023.galacticpuzzlehunt.com/static/images/banner.png">
+    <meta property="twitter:card" content="summary_large_image">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Asap+Condensed:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital@0;1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital@0;1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Recursive:slnt,CASL,CRSV,MONO@-3,0.5,1,1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/skeleton.css">
+    <link rel="stylesheet" href="/static/css/base.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.19/jquery.touchSwipe.min.js"></script>
+    <script src="/jsi18n/"></script>
+    <script src="/static/js/jquery.formset.js"></script>
+    <script src="/static/js/sorttable.js"></script>
+    <script src="/static/js/tray.js"></script>
+    <script src="/static/js/notify.js"></script>
+    <script src="/static/js/time.js"></script>
+    <link rel="icon" sizes="16x16 32x32 48x48 64x64" href="/static/images/favicon.ico" type="image/vnd.microsoft.icon">
+    
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Y1N52VY61R"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-Y1N52VY61R', {cookie_flags: 'secure;samesite=none'});
+</script>
+
+</head>
+<body>
+    <a class="skip-to-main">Press enter to skip to main content.</a>
+    <nav class="top-navbar">
+        <span class="tray">
+            <div class="top-tabs">
+                <div class="top-team-actions">
+                    <div id="nav-team-name">
+                        
+                    </div>
+                    
+                </div>
+                <div class="site-nav">
+                    
+                        <a href="/">
+                            Home
+                        </a>
+                        <a href="/about">
+                            About
+                        </a>
+                        
+                        
+                        <a class="selected-tab" href="/puzzles">
+                            Puzzles
+                        </a>
+                        
+                        <a href="/teams">
+                            Teams
+                        </a>
+                        
+                        <a href="/errata">
+                            Updates
+                        </a>
+                        
+                        
+                        <a href="/wrapup">
+                            Wrap-Up
+                        </a>
+                        
+                        <a href="https://galacticpuzzlehunt.com/archive">
+                            Archive
+                        </a>
+                        <a href="/donate">
+                            Donate
+                        </a>
+                    
+                </div>
+            </div>
+        </span>
+    </nav>
+    <script>
+    
+    
+    </script>
+    
+    <div class="top-more-actions">
+        
+<a href="/puzzle/dargle" class="btn">Back to the puzzle</a>
+
+    </div>
+    <div class="content">
+        
+
+<style>
+h2 {
+    font-size: 2.5rem;
+    font-weight: normal;
+    font-style: italic;
+    margin-bottom: 2rem;
+}
+
+h4 {
+    font-size: 2rem;
+    font-weight: normal;
+    margin: 2rem 0;
+}
+</style>
+
+<h1>
+    Solution: Dargle
+    
+</h1>
+
+<main class="puzzle-main">
+    <h2 style="margin-top: 0">
+        Written by
+        
+Colin Lu, Anderson Wang
+
+    </h2>
+
+    
+    <p>In this battle, we need to battle enemies with powerful effects, where the card text has been altered so that generally
+each word is only visible up to the first vowel. </p>
+<p>We should think about common keywords and possible card effects to figure out exactly what the 
+effects are. Once we know what the card effects are, the stat lines of the enemy Creatures are generally not too 
+threatening in this puzzle.</p>
+<h2>Enemy Descriptions and Strategies</h2>
+<table>
+<thead>
+<tr>
+<th>Enemy</th>
+<th>Plain text effect</th>
+<th>Strategy Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="embed">Cargle</span></td>
+<td>If any Enemy Creature would deal Damage from the first or last column, Destroy it instead.</td>
+<td></td>
+</tr>
+<tr>
+<td><span class="embed">Dorgle</span></td>
+<td>If any Enemy Creature would deal Damage from the second or fourth column, Destroy it instead.</td>
+<td>Most Creatures can handle Cargle and Dorgle without issues.</td>
+</tr>
+<tr>
+<td><span class="embed">Morgle</span></td>
+<td>This Creature can only be Attacked if another Creature moved into its column this turn.</td>
+<td>This uses a very generous interpretation of the text, in which moving up and down within Morgle&rsquo;s column counts.<br/><br/>Moving a pair of Creatures back and forth in the front row of the player area while attacking with a unit behind them is a safe way to defeat Morgle.</td>
+</tr>
+<tr>
+<td><span class="embed">Corgle</span></td>
+<td>When this Creature is Damaged, Destroy the Attacking Creature unless the player controlling it has exactly three Food afterwards.</td>
+<td></td>
+</tr>
+<tr>
+<td><span class="embed">Bargle</span></td>
+<td>Base.<br/>At the beginning of your turn, if this Base&rsquo;s Current Health is not prime, destroy all Enemy Units.</td>
+<td>For this enemy, we can ramp up for some very strong attacks in later turns, or quickly start attacking with 6 Damage.</td>
+</tr>
+<tr>
+<td><span class="embed">Durgle</span></td>
+<td>This Creature does not take Damage from non-Dinosaur Creatures.</td>
+<td></td>
+</tr>
+<tr>
+<td><span class="embed">Gorgle</span></td>
+<td>This Creature takes ten times as much Damage when it is Attacked by Creatures with at least four Current Health.</td>
+<td></td>
+</tr>
+<tr>
+<td><span class="embed">Swargle</span></td>
+<td>If this Creature takes Damage, Destroy all Enemy Units.<br/>This Creature is Destroyed automatically in six turns.</td>
+<td>For this last wave, Dinosaurs and Creatures with high Health (e.g., <span class="embed">Yoshisaur Munchakoopas</span>) are particularly useful.</td>
+</tr>
+</tbody>
+</table>
+
+    
+    
+    <h2 id="authors-notes">Author&rsquo;s Notes</h2>
+    <p>This puzzle was originally written before the &ldquo;sub-battle&rdquo; concept was introduced, so the player needed to defeat
+every wave of enemies in a row, with the player&rsquo;s board being wiped of Creatures in between. </p>
+<p>This version was quite difficult in testing (since the player can&rsquo;t really afford to lose any bases in between rounds, 
+and needs a more optimized deck to handle every wave with the same deck), so we converted it to a series of sub-battles, 
+which we felt was much more in line with its current place in the puzzle order.</p>
+<p>This puzzle was inspired by <a href="https://i.redd.it/tlywltbs8rqa1.png">Rankle and Torbrankle</a>.</p>
+    
+
+    
+    
+</main>
+
+
+    </div>
+    
+    <script>
+        const skipToMainLink = document.querySelector("a.skip-to-main");
+        const mainContentElement = document.getElementsByTagName("main")?.item(0) || document.querySelector("div.content");
+        if (skipToMainLink && mainContentElement) {
+            const mainContentAnchor = document.createElement("a");
+            const anchorId = "main-content-anchor"
+            mainContentAnchor.className = anchorId;
+            mainContentAnchor.id = anchorId;
+            skipToMainLink.href = `#${anchorId}`;
+            mainContentElement.parentNode.insertBefore(mainContentAnchor, mainContentElement);
+        }
+    </script>
+
+    
+    <script>
+        window.djangoBaseUrl = "https://2023.galacticpuzzlehunt.com/";
+        window.wsEndpoint = "wss://2023.galacticpuzzlehunt.com/game-ws-django/";
+        
+    </script>
+    <link rel="stylesheet" href="/static/game/assets/main-a586d973.css">
+    <script type="module" src="/static/game/assets/main-8c846e1d.js"></script>
+    
+
+    <script>
+        
+            window.isPosthunt = true;
+        
+    </script>
+</body>
+</html>

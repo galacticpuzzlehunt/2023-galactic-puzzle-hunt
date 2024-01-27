@@ -1,0 +1,232 @@
+
+
+
+
+
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no">
+    
+<title>Solution: Jabberwock</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=0.5">
+    <meta property="og:title" content="Galactic Puzzle Hunt 2023">
+    <meta property="og:description" content="What will you find inside the GalactiCosmiCave? Register now!">
+    <meta property="og:image" content="https://2023.galacticpuzzlehunt.com/static/images/banner.png">
+    <meta property="twitter:card" content="summary_large_image">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Asap+Condensed:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital@0;1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital@0;1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Recursive:slnt,CASL,CRSV,MONO@-3,0.5,1,1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/skeleton.css">
+    <link rel="stylesheet" href="/static/css/base.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.19/jquery.touchSwipe.min.js"></script>
+    <script src="/jsi18n/"></script>
+    <script src="/static/js/jquery.formset.js"></script>
+    <script src="/static/js/sorttable.js"></script>
+    <script src="/static/js/tray.js"></script>
+    <script src="/static/js/notify.js"></script>
+    <script src="/static/js/time.js"></script>
+    <link rel="icon" sizes="16x16 32x32 48x48 64x64" href="/static/images/favicon.ico" type="image/vnd.microsoft.icon">
+    
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Y1N52VY61R"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-Y1N52VY61R', {cookie_flags: 'secure;samesite=none'});
+</script>
+
+</head>
+<body>
+    <a class="skip-to-main">Press enter to skip to main content.</a>
+    <nav class="top-navbar">
+        <span class="tray">
+            <div class="top-tabs">
+                <div class="top-team-actions">
+                    <div id="nav-team-name">
+                        
+                    </div>
+                    
+                </div>
+                <div class="site-nav">
+                    
+                        <a href="/">
+                            Home
+                        </a>
+                        <a href="/about">
+                            About
+                        </a>
+                        
+                        
+                        <a class="selected-tab" href="/puzzles">
+                            Puzzles
+                        </a>
+                        
+                        <a href="/teams">
+                            Teams
+                        </a>
+                        
+                        <a href="/errata">
+                            Updates
+                        </a>
+                        
+                        
+                        <a href="/wrapup">
+                            Wrap-Up
+                        </a>
+                        
+                        <a href="https://galacticpuzzlehunt.com/archive">
+                            Archive
+                        </a>
+                        <a href="/donate">
+                            Donate
+                        </a>
+                    
+                </div>
+            </div>
+        </span>
+    </nav>
+    <script>
+    
+    
+    </script>
+    
+    <div class="top-more-actions">
+        
+<a href="/puzzle/jabberwock" class="btn">Back to the puzzle</a>
+
+    </div>
+    <div class="content">
+        
+
+<style>
+h2 {
+    font-size: 2.5rem;
+    font-weight: normal;
+    font-style: italic;
+    margin-bottom: 2rem;
+}
+
+h4 {
+    font-size: 2rem;
+    font-weight: normal;
+    margin: 2rem 0;
+}
+</style>
+
+<h1>
+    Solution: Jabberwock
+    
+</h1>
+
+<main class="puzzle-main">
+    <h2 style="margin-top: 0">
+        Written by
+        
+Brian Chen
+
+    </h2>
+
+    
+    <p>In this battle, the enemy Gostaks deal damage to each of our Unprotected Units every turn according to some string of symbols,
+whose meanings depend on various aspects of the Creature being damaged
+and which we must determine.</p>
+<p>Generally, the goal is to experiment with different Creatures until we understand the symbols&rsquo; meanings, then
+&ldquo;stabilize&rdquo; by finding a configuration of Creatures so that our Unprotected Creatures take 0 damage each turn. From there 
+we can either just attack with our Creature repeatedly until the Gostak is defeated, or find ways to optimize and play
+stronger Protected Creatures.</p>
+<h2>Gostaks I, II, III</h2>
+<p>Gostak I introduces &ldquo;◆&rdquo;, Power of target, so we can stabilize by playing any 0-Power Creatures in front.</p>
+<p>Gostak II introduces &ldquo;♠&rdquo;, Health of target (not Current Health, i.e. the number that&rsquo;s unaffected by Damage). You can stabilize by playing <span class="embed">Petroleum Jelly</span> in the middle column.
+This Gostak&rsquo;s health is also low enough for us to survive with various other cards that reduce damage and deal enough damage before our Camps are destroyed.</p>
+<p>Gostak III introduces &ldquo;§&rdquo;, the absolute difference of the next two symbols: here, they are ◆ Power and ♠ Health. It is pretty easy to stabilize since we can play any of the many Creatures with equal Power and Health.</p>
+<p>All three fights can be defeated by bringing a deck with 1&times; <span class="embed">Petroleum Jelly</span>, playing it in R4C3, then repeatedly
+attacking with it over the next 10 turns. To speed things up, we can add 1&times; <span class="embed">Yoshisaur Munchakoopas</span>, playing it in R5C3,
+and then repeatedly attacking with it over the next 5 Turns.</p>
+<h2>Gostak IV</h2>
+<p>This battle introduces &ldquo;‡&rdquo;, length of target&rsquo;s name, as well as a Gostak with a higher Health to encourage more
+optimization. To stabilize, we want a Creature with §◆‡ = 0, that is, a Creature whose Power equals the length of its name; <span class="embed">o</span> fits the bill.</p>
+<p>The solution that&rsquo;s simplest to describe is to bring 1&times; <span class="embed">o</span>, playing it in R4C3, then repeatedly attacking with it over the next 25 turns.</p>
+<p>As before, we can play a <span class="embed">Yoshisaur Munchakoopas</span> behind it to just do it in 1 + 13 turns.</p>
+<p>For even more efficiency, bring 2&times; <span class="embed">o</span>, 1&times; <span class="embed">Glass of Moo</span> or <span class="embed">Glass of Moocha</span>, and 1&times; <span class="embed">Queen of Bison</span>. Then:</p>
+<ol style="list-style-type: lower-latin"><li>Turn 1: Play o on R4C1 and R4C3.</li><li>Turn 2: Play Glass on R5C3.</li><li>Turn 3: Special with Glass and Create with both o&rsquo;s, then play Queen of Bison etc. on R5C3.</li><li>Turn 4, 5, 6: Attack with Queen of Bison.</li></ol>
+
+<h2>Gostak V</h2>
+<p>This battle introduces two new symbols at once: &ldquo;✠&rdquo;, the <a href="https://xlinux.nist.gov/dads/HTML/manhattanDistance.html">Manhattan distance</a>
+between the Gostak and the Creature, and &ldquo;♫&rdquo;, A1Z26 of the first letter of the target&rsquo;s color. (These two can&rsquo;t be
+disambiguated from each other yet, but the symbols are meant to be slightly semantically suggestive, and there&rsquo;s no need to disambiguate them until Gostak VII.)</p>
+<p>Unlike the previous battles, there is no way to stabilize on the first turn, because there&rsquo;s no overlap between the Manhattan distances of Spaces where we can play a Creature (3 to 6) and the A1Z26 numbers of the first letters of colors in the game (2=B for Black, 7=G for Green/Gray, 16=P for Purple, 18=R for Red, and 25=Y for Yellow). However, it&rsquo;s very close on both ends. To stabilize, we
+can protect a <span class="embed">Beeowulf</span> for a turn and move the Gostak one space to the left or right to allow us to play Green or Gray Creatures at a distance of 7, or move the Gostak one space down to allow us to play a Black Creature at a distance of 2. Also, even without moving the Gostak, Green/Gray Creatures at distance 6 and Black Creatures at distance 3 often can survive long enough for us to win anyway.</p>
+<p>One solution: Bring 2&times; <span class="embed">Beeowulf</span>, 2&times; <span class="embed">Petroleum Jelly</span>, 1&times; <span class="embed">Yoshisaur Munchakoopas</span>. Then:</p>
+<ol style="list-style-type: lower-latin"><li>Turn 1: Play Beeowulf R4C3, R5C3 and Petroleum Jelly R4C5.</li><li>Turn 2: Special with Beeowulf to move the Gostak left. Play Petroleum Jelly R5C5.</li><li>Turn 3: Play Yoshisaur Munchakoopas R6C4.</li><li>Turn 4 to 16: Attack with Yoshisaur Munchakoopas.</li></ol>
+
+<p>A faster solution: Bring 1&times; <span class="embed">Nice Cow</span>, 1&times; <span class="embed">Beeowulf</span>. Then:</p>
+<ol style="list-style-type: lower-latin"><li>Turn 1: Play Nice Cow R4C3, Beeowulf R5C3.</li><li>Turn 2: Special with Beeowulf to move Gostak down.</li><li>Turn 3, 4, 5, 6: Create with Beeowulf, then Special with Nice Cow.</li><li>Turn 7, 8, 9, 10: Attack with Beeowulf.</li></ol>
+
+<h2>Gostak VI</h2>
+<p>This battle introduces &ldquo;¶&rdquo;, the product of the next two symbols, as well as demonstrating that symbols can compose. So this Gostak deals §‡¶✠♫ = <code>absdiff(name length, distance × color A1Z26)</code> damage. <span class="embed">Yoshisaur Munchakoopas</span> is 21 letters and Green (G=7), and so can be placed at distance 3 to stabilize.</p>
+<p>Solution: Bring 1&times; <span class="embed">Yoshisaur Munchakoopas</span>. Then:</p>
+<ol style="list-style-type: lower-latin"><li>Turn 1: Play <span class="embed">Yoshisaur Munchakoopas</span> R4C3.</li><li>Turn 2 to 14: Just attack with it repeatedly.</li></ol>
+
+<p>As before, we can put something behind <span class="embed">Yoshisaur Munchakoopas</span> to go faster. If we bring 1&times; <span class="embed">Yoshisaur Munchakoopas</span>, two arbitrary 1-drops, 1 <span class="embed">Glass of Moo</span> or <span class="embed">Glass of Moocha</span>, and 1 <span class="embed">Thesaurus</span>, then we can win as follows:</p>
+<ol style="list-style-type: lower-latin"><li>Turn 1: Play <span class="embed">Yoshisaur Munchakoopas</span> R4C3 and a 1-drop in front of another Camp.</li><li>Turn 2: Create with Yoshisaur Munchakoopas, then play Glass in R5C3 and another 1-drop in front of a Camp.</li><li>Turn 3: Create with Yoshisaur Munchakoopas, Special with the Glass, and play <span class="embed">Thesaurus</span> in R5C3.</li><li>Turn 4 to 9: Attack with <span class="embed">Thesaurus</span>.</li></ol>
+
+<h2>Gostak VII</h2>
+<p>The final battle: Each turn, this Gostak does §✠¶♠‡ damage, then ¶∮§♠‡ damage.</p>
+<p>The new symbol, &ldquo;∮&rdquo;, is turn count, though it&rsquo;s not necessary to determine its meaning. All we need to know (or guess) is that it can&rsquo;t be 0, so to stabilize, we need to make the other factor it gets multiplied with 0. That is, we want §✠¶♠‡ = 0
+and §♠‡ = 0, which means ♠ = ‡ and ✠ = ♠&times;‡ is a square. We can place <span class="embed">re</span> at distance 4 and buff it with <span class="embed">o</span> to 2 Health
+to stabilize.</p>
+<p>Solution: Bring 2&times; <span class="embed">re</span> and 1&times; <span class="embed">o</span>. Play re at R5C3 and R4C4, then play o at R5C4. (The <span class="embed">o</span> must be played last.) Then just repeatedly attack with them.</p>
+<p>We can also Create enough Food with these Creatures to bring a <span class="embed">Rude Cow</span>. Bring 1&times; <span class="embed">o</span>, 2&times; <span class="embed">re</span>, 1&times; <span class="embed">Rude Cow</span>, then:</p>
+<ol style="list-style-type: lower-latin"><li>Turn 1: Play re on R4C4, re on R5C3, o on R5C4.</li><li>Turn 2: Create with all Creatures and play <span class="embed">Rude Cow</span> on R6C4.</li><li>Turn 3 and onwards: Attack with <span class="embed">Rude Cow</span>.</li></ol>
+
+    
+    
+
+    
+    
+</main>
+
+
+    </div>
+    
+    <script>
+        const skipToMainLink = document.querySelector("a.skip-to-main");
+        const mainContentElement = document.getElementsByTagName("main")?.item(0) || document.querySelector("div.content");
+        if (skipToMainLink && mainContentElement) {
+            const mainContentAnchor = document.createElement("a");
+            const anchorId = "main-content-anchor"
+            mainContentAnchor.className = anchorId;
+            mainContentAnchor.id = anchorId;
+            skipToMainLink.href = `#${anchorId}`;
+            mainContentElement.parentNode.insertBefore(mainContentAnchor, mainContentElement);
+        }
+    </script>
+
+    
+    <script>
+        window.djangoBaseUrl = "https://2023.galacticpuzzlehunt.com/";
+        window.wsEndpoint = "wss://2023.galacticpuzzlehunt.com/game-ws-django/";
+        
+    </script>
+    <link rel="stylesheet" href="/static/game/assets/main-a586d973.css">
+    <script type="module" src="/static/game/assets/main-8c846e1d.js"></script>
+    
+
+    <script>
+        
+            window.isPosthunt = true;
+        
+    </script>
+</body>
+</html>

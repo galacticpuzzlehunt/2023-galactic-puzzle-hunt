@@ -1,0 +1,460 @@
+
+
+
+
+
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no">
+    
+<title>Solution: Slime</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=0.5">
+    <meta property="og:title" content="Galactic Puzzle Hunt 2023">
+    <meta property="og:description" content="What will you find inside the GalactiCosmiCave? Register now!">
+    <meta property="og:image" content="https://2023.galacticpuzzlehunt.com/static/images/banner.png">
+    <meta property="twitter:card" content="summary_large_image">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Asap+Condensed:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital@0;1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital@0;1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Recursive:slnt,CASL,CRSV,MONO@-3,0.5,1,1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/skeleton.css">
+    <link rel="stylesheet" href="/static/css/base.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.19/jquery.touchSwipe.min.js"></script>
+    <script src="/jsi18n/"></script>
+    <script src="/static/js/jquery.formset.js"></script>
+    <script src="/static/js/sorttable.js"></script>
+    <script src="/static/js/tray.js"></script>
+    <script src="/static/js/notify.js"></script>
+    <script src="/static/js/time.js"></script>
+    <link rel="icon" sizes="16x16 32x32 48x48 64x64" href="/static/images/favicon.ico" type="image/vnd.microsoft.icon">
+    
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Y1N52VY61R"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-Y1N52VY61R', {cookie_flags: 'secure;samesite=none'});
+</script>
+
+</head>
+<body>
+    <a class="skip-to-main">Press enter to skip to main content.</a>
+    <nav class="top-navbar">
+        <span class="tray">
+            <div class="top-tabs">
+                <div class="top-team-actions">
+                    <div id="nav-team-name">
+                        
+                    </div>
+                    
+                </div>
+                <div class="site-nav">
+                    
+                        <a href="/">
+                            Home
+                        </a>
+                        <a href="/about">
+                            About
+                        </a>
+                        
+                        
+                        <a class="selected-tab" href="/puzzles">
+                            Puzzles
+                        </a>
+                        
+                        <a href="/teams">
+                            Teams
+                        </a>
+                        
+                        <a href="/errata">
+                            Updates
+                        </a>
+                        
+                        
+                        <a href="/wrapup">
+                            Wrap-Up
+                        </a>
+                        
+                        <a href="https://galacticpuzzlehunt.com/archive">
+                            Archive
+                        </a>
+                        <a href="/donate">
+                            Donate
+                        </a>
+                    
+                </div>
+            </div>
+        </span>
+    </nav>
+    <script>
+    
+    
+    </script>
+    
+    <div class="top-more-actions">
+        
+<a href="/puzzle/slime" class="btn">Back to the puzzle</a>
+
+    </div>
+    <div class="content">
+        
+
+<style>
+h2 {
+    font-size: 2.5rem;
+    font-weight: normal;
+    font-style: italic;
+    margin-bottom: 2rem;
+}
+
+h4 {
+    font-size: 2rem;
+    font-weight: normal;
+    margin: 2rem 0;
+}
+</style>
+
+<h1>
+    Solution: Slime
+    
+</h1>
+
+<main class="puzzle-main">
+    <h2 style="margin-top: 0">
+        Written by
+        
+Lewis Chen
+
+    </h2>
+
+    
+    <p>This puzzle begins with a single <span class="embed">Slime</span>. When each slime dies, it produces up to two smaller slimes, one of which has the Speedy ability (&ldquo;This slime likes to dash!&rdquo;: it 
+attacks during the first AI turn after its spawn, and moves every turn) and one of which has the Poisonous ability (&ldquo;This slime deals Damage Over Time!&rdquo;: it inflicts 1 Poison
+when attacking; at the start of each turn, our Poisoned units take damage equal to their Poison counters, which then decrease by 1). Each slime has a different color.</p>
+<p id="data-collection">For gathering data, the Creature <span class="embed">King Bee (who sends his regards)</span> is very powerful. Attacking <span class="embed">Slime</span> with <span class="embed">King Bee</span> three times makes Slime&rsquo;s 
+Power 0, and thus makes it unable to attack. Once Slime can&rsquo;t attack, we have as many turns as we want to set up for the remainder of the fight. In the remaining fight, 
+King Bee allows us to kill all slimes without them having a chance to attack: whenever we split a slime we can attack it with two copies of King Bee to set its Power to 0. The
+Poisonous slime can&rsquo;t attack the turn after it&rsquo;s created, so we can then set its Power to 0 the next turn without taking a hit. Moving King Bee into enemy territory so it
+becomes Sneaky makes sure that slimes can&rsquo;t ever become inaccessible by being stuck behind other slimes.</p>
+
+<p>Now we can compile the slimes and their colors. Killing every slime gives us the following tree:</p>
+<ul><li>Slime</li><ul><li>Yellow Slime (Poisonous)</li><ul><li>Lemon Slime (Poisonous)</li><ul><li>Ebony Slime (Poisonous)</li><ul><li>Indigo Slime (Poisonous)</li><li>Mauve Slime (Speedy)</li></ul><li>Turquoise Slime (Speedy)</li><ul><li>Silver Slime (Poisonous)</li></ul></ul><li>Amber Slime (Speedy)</li><ul><li>Ivory Slime (Poisonous)</li><ul><li>Harlequin Slime (Poisonous)</li></ul><li>Orange Slime (Speedy)</li><ul><li>Red Slime (Poisonous)</li><li>Lilac Slime (Speedy)</li></ul></ul></ul><li>Sepia Slime (Speedy)</li><ul><li>Ecru Slime (Poisonous)</li><ul><li>Auburn Slime (Poisonous)</li><ul><li>Lava Slime (Poisonous)</li><li>Rust Slime (Speedy)</li></ul><li>Teal Slime (Speedy)</li><ul><li>White Slime (Poisonous)</li><li>Saffron Slime (Speedy)</li></ul></ul><li>Emerald Slime (Speedy)</li><ul><li>Khaki Slime (Poisonous)</li><ul><li>Eggplant Slime (Poisonous)</li><li>Lavender Slime (Speedy)</li></ul><li>Apricot Slime (Speedy)</li></ul></ul></ul></ul>
+
+<p>There are 26 total slimes with a color name, which suggests matching the set of slimes with an encoding of the alphabet. The text for the Poisonous ability suspiciously capitalizes 
+&ldquo;Damage Over Time&rdquo;, suggesting the abbreviation DOT, and the text for the Speedy ability uses the word &ldquo;dash&rdquo;, suggesting that this may match up with Morse code.
+Matching each slime with the letter in Morse code given by its path from the root of the tree gives:</p>
+<table>
+<thead>
+<tr>
+<th>Letter</th>
+<th>Morse Code</th>
+<th>Slime</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A</td>
+<td><code>.-</code></td>
+<td>Amber Slime</td>
+</tr>
+<tr>
+<td>B</td>
+<td><code>-...</code></td>
+<td>Lava Slime</td>
+</tr>
+<tr>
+<td>C</td>
+<td><code>-.-.</code></td>
+<td>White Slime</td>
+</tr>
+<tr>
+<td>D</td>
+<td><code>-..</code></td>
+<td>Auburn Slime</td>
+</tr>
+<tr>
+<td>E</td>
+<td><code>.</code></td>
+<td>Yellow Slime</td>
+</tr>
+<tr>
+<td>F</td>
+<td><code>..-.</code></td>
+<td>Silver Slime</td>
+</tr>
+<tr>
+<td>G</td>
+<td><code>--.</code></td>
+<td>Khaki Slime</td>
+</tr>
+<tr>
+<td>H</td>
+<td><code>....</code></td>
+<td>Indigo Slime</td>
+</tr>
+<tr>
+<td>I</td>
+<td><code>..</code></td>
+<td>Lemon Slime</td>
+</tr>
+<tr>
+<td>J</td>
+<td><code>.---</code></td>
+<td>Lilac Slime</td>
+</tr>
+<tr>
+<td>K</td>
+<td><code>-.-</code></td>
+<td>Teal Slime</td>
+</tr>
+<tr>
+<td>L</td>
+<td><code>.-..</code></td>
+<td>Harlequin Slime</td>
+</tr>
+<tr>
+<td>M</td>
+<td><code>--</code></td>
+<td>Emerald Slime</td>
+</tr>
+<tr>
+<td>N</td>
+<td><code>-.</code></td>
+<td>Ecru Slime</td>
+</tr>
+<tr>
+<td>O</td>
+<td><code>---</code></td>
+<td>Apricot Slime</td>
+</tr>
+<tr>
+<td>P</td>
+<td><code>.--.</code></td>
+<td>Red Slime</td>
+</tr>
+<tr>
+<td>Q</td>
+<td><code>--.-</code></td>
+<td>Lavender Slime</td>
+</tr>
+<tr>
+<td>R</td>
+<td><code>.-.</code></td>
+<td>Ivory Slime</td>
+</tr>
+<tr>
+<td>S</td>
+<td><code>...</code></td>
+<td>Ebony Slime</td>
+</tr>
+<tr>
+<td>T</td>
+<td><code>-</code></td>
+<td>Sepia Slime</td>
+</tr>
+<tr>
+<td>U</td>
+<td><code>..-</code></td>
+<td>Turquoise Slime</td>
+</tr>
+<tr>
+<td>V</td>
+<td><code>...-</code></td>
+<td>Mauve Slime</td>
+</tr>
+<tr>
+<td>W</td>
+<td><code>.--</code></td>
+<td>Orange Slime</td>
+</tr>
+<tr>
+<td>X</td>
+<td><code>-..-</code></td>
+<td>Rust Slime</td>
+</tr>
+<tr>
+<td>Y</td>
+<td><code>-.--</code></td>
+<td>Saffron Slime</td>
+</tr>
+<tr>
+<td>Z</td>
+<td><code>--..</code></td>
+<td>Eggplant Slime</td>
+</tr>
+</tbody>
+</table>
+<p>Reading out the first letter of the name of each slime in this order, we get the instruction ALWAYS KILL THE EARLIEST MORSE, which tells us how to solve the puzzle.</p>
+<p>When trying to solve the puzzle, <a href="#data-collection">the strategy we used for data collection</a> doesn&rsquo;t quite work, because some small slimes, like <span class="embed">Mauve Slime</span>, must
+be kept alive for many turns. Since these slimes start out with 1 Power and 2 Health, <span class="embed">King Bee</span> can&rsquo;t attack it without killing it. For these slimes, the Creatures 
+<span class="embed">2 Bees or not 2 Bees?</span> and <span class="embed">Beethoven</span> can help, as these Creatures prevent the damage from 1-Power Creatures.</p>
+<p>Always killing the slime that corresponds to the earliest letter alphabetically in Morse code requires killing the slimes in the following order:</p>
+<table>
+<thead>
+<tr>
+<th>Earliest Morse Slime</th>
+<th>Corresponding Morse Letter</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Yellow Slime</td>
+<td>E</td>
+</tr>
+<tr>
+<td>Amber Slime</td>
+<td>A</td>
+</tr>
+<tr>
+<td>Lemon Slime</td>
+<td>I</td>
+</tr>
+<tr>
+<td>Ivory Slime</td>
+<td>R</td>
+</tr>
+<tr>
+<td>Harlequin Slime</td>
+<td>L</td>
+</tr>
+<tr>
+<td>Ebony Slime</td>
+<td>S</td>
+</tr>
+<tr>
+<td>Indigo Slime</td>
+<td>H</td>
+</tr>
+<tr>
+<td>Sepia Slime</td>
+<td>T</td>
+</tr>
+<tr>
+<td>Emerald Slime</td>
+<td>M</td>
+</tr>
+<tr>
+<td>Khaki Slime</td>
+<td>G</td>
+</tr>
+<tr>
+<td>Ecru Slime</td>
+<td>N</td>
+</tr>
+<tr>
+<td>Auburn Slime</td>
+<td>D</td>
+</tr>
+<tr>
+<td>Lava Slime</td>
+<td>B</td>
+</tr>
+<tr>
+<td>Teal Slime</td>
+<td>K</td>
+</tr>
+<tr>
+<td>White Slime</td>
+<td>C</td>
+</tr>
+<tr>
+<td>Apricot Slime</td>
+<td>O</td>
+</tr>
+<tr>
+<td>Lavender Slime</td>
+<td>Q</td>
+</tr>
+<tr>
+<td>Turquoise Slime</td>
+<td>U</td>
+</tr>
+<tr>
+<td>Silver Slime</td>
+<td>F</td>
+</tr>
+<tr>
+<td>Mauve Slime</td>
+<td>V</td>
+</tr>
+<tr>
+<td>Orange Slime</td>
+<td>W</td>
+</tr>
+<tr>
+<td>Lilac Slime</td>
+<td>J</td>
+</tr>
+<tr>
+<td>Red Slime</td>
+<td>P</td>
+</tr>
+<tr>
+<td>Rust Slime</td>
+<td>X</td>
+</tr>
+<tr>
+<td>Saffron Slime</td>
+<td>Y</td>
+</tr>
+<tr>
+<td>Eggplant Slime</td>
+<td>Z</td>
+</tr>
+</tbody>
+</table>
+<p>If we successfully kill the slimes in this order, the puzzle is marked as solved.</p>
+
+    
+    
+    <h2 id="authors-notes">Author&rsquo;s Notes</h2>
+    <p>Thanks to Max Murin and Jenna Himawan for helping with solution writing!</p>
+    
+
+    
+    
+</main>
+
+
+    </div>
+    
+    <script>
+        const skipToMainLink = document.querySelector("a.skip-to-main");
+        const mainContentElement = document.getElementsByTagName("main")?.item(0) || document.querySelector("div.content");
+        if (skipToMainLink && mainContentElement) {
+            const mainContentAnchor = document.createElement("a");
+            const anchorId = "main-content-anchor"
+            mainContentAnchor.className = anchorId;
+            mainContentAnchor.id = anchorId;
+            skipToMainLink.href = `#${anchorId}`;
+            mainContentElement.parentNode.insertBefore(mainContentAnchor, mainContentElement);
+        }
+    </script>
+
+    
+    <script>
+        window.djangoBaseUrl = "https://2023.galacticpuzzlehunt.com/";
+        window.wsEndpoint = "wss://2023.galacticpuzzlehunt.com/game-ws-django/";
+        
+    </script>
+    <link rel="stylesheet" href="/static/game/assets/main-a586d973.css">
+    <script type="module" src="/static/game/assets/main-8c846e1d.js"></script>
+    
+
+    <script>
+        
+            window.isPosthunt = true;
+        
+    </script>
+</body>
+</html>

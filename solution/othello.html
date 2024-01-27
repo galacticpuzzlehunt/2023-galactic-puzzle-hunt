@@ -1,0 +1,220 @@
+
+
+
+
+
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no">
+    
+<title>Solution: Othello</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=0.5">
+    <meta property="og:title" content="Galactic Puzzle Hunt 2023">
+    <meta property="og:description" content="What will you find inside the GalactiCosmiCave? Register now!">
+    <meta property="og:image" content="https://2023.galacticpuzzlehunt.com/static/images/banner.png">
+    <meta property="twitter:card" content="summary_large_image">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Asap+Condensed:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital@0;1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital@0;1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Recursive:slnt,CASL,CRSV,MONO@-3,0.5,1,1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/skeleton.css">
+    <link rel="stylesheet" href="/static/css/base.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.19/jquery.touchSwipe.min.js"></script>
+    <script src="/jsi18n/"></script>
+    <script src="/static/js/jquery.formset.js"></script>
+    <script src="/static/js/sorttable.js"></script>
+    <script src="/static/js/tray.js"></script>
+    <script src="/static/js/notify.js"></script>
+    <script src="/static/js/time.js"></script>
+    <link rel="icon" sizes="16x16 32x32 48x48 64x64" href="/static/images/favicon.ico" type="image/vnd.microsoft.icon">
+    
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Y1N52VY61R"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-Y1N52VY61R', {cookie_flags: 'secure;samesite=none'});
+</script>
+
+</head>
+<body>
+    <a class="skip-to-main">Press enter to skip to main content.</a>
+    <nav class="top-navbar">
+        <span class="tray">
+            <div class="top-tabs">
+                <div class="top-team-actions">
+                    <div id="nav-team-name">
+                        
+                    </div>
+                    
+                </div>
+                <div class="site-nav">
+                    
+                        <a href="/">
+                            Home
+                        </a>
+                        <a href="/about">
+                            About
+                        </a>
+                        
+                        
+                        <a class="selected-tab" href="/puzzles">
+                            Puzzles
+                        </a>
+                        
+                        <a href="/teams">
+                            Teams
+                        </a>
+                        
+                        <a href="/errata">
+                            Updates
+                        </a>
+                        
+                        
+                        <a href="/wrapup">
+                            Wrap-Up
+                        </a>
+                        
+                        <a href="https://galacticpuzzlehunt.com/archive">
+                            Archive
+                        </a>
+                        <a href="/donate">
+                            Donate
+                        </a>
+                    
+                </div>
+            </div>
+        </span>
+    </nav>
+    <script>
+    
+    
+    </script>
+    
+    <div class="top-more-actions">
+        
+<a href="/puzzle/othello" class="btn">Back to the puzzle</a>
+
+    </div>
+    <div class="content">
+        
+
+<style>
+h2 {
+    font-size: 2.5rem;
+    font-weight: normal;
+    font-style: italic;
+    margin-bottom: 2rem;
+}
+
+h4 {
+    font-size: 2rem;
+    font-weight: normal;
+    margin: 2rem 0;
+}
+</style>
+
+<h1>
+    Solution: Othello
+    
+</h1>
+
+<main class="puzzle-main">
+    <h2 style="margin-top: 0">
+        Written by
+        
+Violet Xiao
+
+    </h2>
+
+    
+    <p>This battle is a game of Othello, modified to fit this card game. After each player&rsquo;s turn, their pieces attack in
+front of them in their column, damaging and potentially destroying enemy pieces. If there is no piece to attack, then the
+opposing Player is dealt 1 damage instead. Another difference in the rules is that we may play a piece touching any other
+piece&mdash;it doesn&rsquo;t have to flip any pieces over.</p>
+<p>As the computer player starts with the first turn and a large health lead, we have to overcome a large deficit to win this
+battle. The computer player has some weaknesses in its play that can be exploited: it doesn&rsquo;t look ahead at any turns,
+and doesn&rsquo;t account for the battle portion of the game rules. It also plays deterministically, so we can
+reliably get to certain positions and look for moves where the situation turns out favorably for us.</p>
+<p>It&rsquo;s hard to describe how best to play, but here are some pointers:</p>
+<ul>
+<li>As in regular Othello, edges and especially corners are harder to take back by capturing, and tend to be stronger places to
+play. In particular, the corners are very desirable, as are the squares on the edges that are two away from the corners (as
+the other player trying to surround them opens us up to respond by playing in the corner).</li>
+<li>The battle portion of the rules adds an asymmetry to the board&mdash;for example, if we have a corner piece on the top row,
+it can never be retaken by the opponent, but if we have a corner piece on the bottom row, the opponent can destroy it with
+battling.</li>
+<li>Because of the way the health numbers are tuned, we are in a bit of a race to stabilize the rate at which we 
+take damage before we lose all our health. Once we start getting an advantage in the number of pieces, we&rsquo;re
+incentivized to have our units fight each other rather than attack past each other.</li>
+<li>Be on the lookout for tactical plays introduced by units destroying each other&mdash;sometimes we can make a capture that
+would normally be immediately recapturable, but an enemy piece that would enable that loses all its remaining Health on the
+same turn!</li>
+</ul>
+<p>Here is an example solving video.</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/iXSrWwzlZcQ?si=S6L2qKCptBVXiMdu" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+    
+    
+    <h2 id="authors-notes">Author&rsquo;s Notes</h2>
+    <p>This was the first card battle that I finished writing. It was written pretty early on in the process,
+I think before we as a team had a good grip on what our card game looked like (or at the very least,
+before I felt I had a grip on it). Due to the nature of this puzzle, I didn't need to understand
+the card game particularly well to make it, and solvers didn't need to know it particularly well to solve this!</p>
+<p>The earliest version had a lot more even starting health totals, but early testers beat it before
+even really thinking through the game, so I ended up tuning that for difficulty. I also added a basic
+heuristic where the AI prefers playing in corners and avoids exposing the corners. Otherwise, the AI
+is not particularly smart, though it starts off with enough of an advantage that it can seem pretty scary at first.</p>
+<p>I also experimented with units having 2 Health or 4 Health instead of the 3 they have now. At 4, the
+attacking mechanic didn't feel relevant at all, and at 2, it seemed like pure chaos and also hard to deal
+with the AI's initial advantage.</p>
+<p>Many thanks to Alan for the card art for this battle and Jenna for drawing Othello!</p>
+    
+
+    
+    
+</main>
+
+
+    </div>
+    
+    <script>
+        const skipToMainLink = document.querySelector("a.skip-to-main");
+        const mainContentElement = document.getElementsByTagName("main")?.item(0) || document.querySelector("div.content");
+        if (skipToMainLink && mainContentElement) {
+            const mainContentAnchor = document.createElement("a");
+            const anchorId = "main-content-anchor"
+            mainContentAnchor.className = anchorId;
+            mainContentAnchor.id = anchorId;
+            skipToMainLink.href = `#${anchorId}`;
+            mainContentElement.parentNode.insertBefore(mainContentAnchor, mainContentElement);
+        }
+    </script>
+
+    
+    <script>
+        window.djangoBaseUrl = "https://2023.galacticpuzzlehunt.com/";
+        window.wsEndpoint = "wss://2023.galacticpuzzlehunt.com/game-ws-django/";
+        
+    </script>
+    <link rel="stylesheet" href="/static/game/assets/main-a586d973.css">
+    <script type="module" src="/static/game/assets/main-8c846e1d.js"></script>
+    
+
+    <script>
+        
+            window.isPosthunt = true;
+        
+    </script>
+</body>
+</html>

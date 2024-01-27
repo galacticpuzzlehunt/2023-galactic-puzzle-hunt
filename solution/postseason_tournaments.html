@@ -1,0 +1,260 @@
+
+
+
+
+
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no">
+    
+<title>Solution: Postseason Tournaments</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=0.5">
+    <meta property="og:title" content="Galactic Puzzle Hunt 2023">
+    <meta property="og:description" content="What will you find inside the GalactiCosmiCave? Register now!">
+    <meta property="og:image" content="https://2023.galacticpuzzlehunt.com/static/images/banner.png">
+    <meta property="twitter:card" content="summary_large_image">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Asap+Condensed:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital@0;1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital@0;1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Recursive:slnt,CASL,CRSV,MONO@-3,0.5,1,1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/skeleton.css">
+    <link rel="stylesheet" href="/static/css/base.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.19/jquery.touchSwipe.min.js"></script>
+    <script src="/jsi18n/"></script>
+    <script src="/static/js/jquery.formset.js"></script>
+    <script src="/static/js/sorttable.js"></script>
+    <script src="/static/js/tray.js"></script>
+    <script src="/static/js/notify.js"></script>
+    <script src="/static/js/time.js"></script>
+    <link rel="icon" sizes="16x16 32x32 48x48 64x64" href="/static/images/favicon.ico" type="image/vnd.microsoft.icon">
+    
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Y1N52VY61R"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-Y1N52VY61R', {cookie_flags: 'secure;samesite=none'});
+</script>
+
+</head>
+<body>
+    <a class="skip-to-main">Press enter to skip to main content.</a>
+    <nav class="top-navbar">
+        <span class="tray">
+            <div class="top-tabs">
+                <div class="top-team-actions">
+                    <div id="nav-team-name">
+                        
+                    </div>
+                    
+                </div>
+                <div class="site-nav">
+                    
+                        <a href="/">
+                            Home
+                        </a>
+                        <a href="/about">
+                            About
+                        </a>
+                        
+                        
+                        <a class="selected-tab" href="/puzzles">
+                            Puzzles
+                        </a>
+                        
+                        <a href="/teams">
+                            Teams
+                        </a>
+                        
+                        <a href="/errata">
+                            Updates
+                        </a>
+                        
+                        
+                        <a href="/wrapup">
+                            Wrap-Up
+                        </a>
+                        
+                        <a href="https://galacticpuzzlehunt.com/archive">
+                            Archive
+                        </a>
+                        <a href="/donate">
+                            Donate
+                        </a>
+                    
+                </div>
+            </div>
+        </span>
+    </nav>
+    <script>
+    
+    
+    </script>
+    
+    <div class="top-more-actions">
+        
+<a href="/puzzle/postseason_tournaments" class="btn">Back to the puzzle</a>
+
+    </div>
+    <div class="content">
+        
+
+<style>
+h2 {
+    font-size: 2.5rem;
+    font-weight: normal;
+    font-style: italic;
+    margin-bottom: 2rem;
+}
+
+h4 {
+    font-size: 2rem;
+    font-weight: normal;
+    margin: 2rem 0;
+}
+</style>
+
+<h1>
+    Solution: Postseason Tournaments
+    <div class="solved-title-marker">Answer: <span class="solved-title-answer spoiler">PLAYOFFS</span></div>
+</h1>
+
+<main class="puzzle-main">
+    <h2 style="margin-top: 0">
+        Written by
+        
+Josh Alman
+
+    </h2>
+
+    
+    <p>For each of the four leagues, we determine the postseason bracket based on the regular season standings, and then determine
+who wins each game in the postseason based on the given matchup table. Note that it&rsquo;s easy to determine the full
+regular season standings because teams&rsquo; numbers of wins are consecutive integers within every league/conference, so
+we can just sort descending by number of wins.</p>
+<p>As hinted by the final paragraph, the two teams who make it to the finals are important for extracting the answer. We have
+one team starting with each letter of the alphabet, so we&rsquo;d like to take their first letters to spell the answer. 
+Taking them in the order of the finals matches named in the puzzle (which also happens to be an alphabetical order), with
+the winner first and loser second, gives the final answer <span class="spoiler">PLAYOFFS</span>.</p>
+<table>
+<thead>
+<tr>
+<th>League</th>
+<th>Finals Winner</th>
+<th>Finals Loser</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>MLB</td>
+<td><strong>P</strong>hiladelphia</td>
+<td><strong>L</strong>os Angeles</td>
+</tr>
+<tr>
+<td>NBA</td>
+<td><strong>A</strong>tlanta</td>
+<td><strong>Y</strong>onkers</td>
+</tr>
+<tr>
+<td>NFL</td>
+<td><strong>O</strong>rlando</td>
+<td><strong>F</strong>ort Worth</td>
+</tr>
+<tr>
+<td>NHL</td>
+<td><strong>F</strong>ort Worth</td>
+<td><strong>S</strong>an Francisco</td>
+</tr>
+</tbody>
+</table>
+
+    
+    
+    <h2 id="authors-notes">Author&rsquo;s Notes</h2>
+    <p>My goal was for this to be a "following directions"/Konundrum-style puzzle, except that the directions were written by the sports leagues instead of by me. I think it's interesting how, even when you fix the standings and who wins each matchup, the postseason success of each team can depend very heavily on the details of the postseason format. I hope solvers learned something about sports leagues or tournament formats!</p>
+<p>It was a little bit awkward writing the text for this puzzle without including the answer. I wonder if anyone guessed the answer just based on this observation.</p>
+<p>The postseason format that frustrates me the most is the MLB's. Frequently, the third-best division winner has a worse record than the best wild card team. In this case, the third-best wild card team gets to face an opponent with a worse record in both the wild card round and (if they win that) the divisional round than the second-best wild card team.</p>
+<p>Thanks to Jenna for making clean bracket images in the solution.</p>
+    
+
+    
+    
+    <h2 id="appendix">
+Full Brackets for Every Division
+</h2>
+    <style>
+  .puzzle-main img {
+    background-color: white;
+    max-width: 100%;
+  }
+</style>
+<h2>MLB</h2>
+<p>In the MLB, in each league (AL and NL), the winners of the three divisions are seeded 1&ndash;3 by record, and then the three best
+remaining teams from all three divisions combined are seeded 4&ndash;6 by record. </p>
+<p><img src="postseason_tournaments/1.svg"/></p>
+<h2>NBA (play-in tournament at top, finals bracket at bottom)</h2>
+<p>In the NBA, the teams ranked 7&ndash;10 by record in each conference (East, West) first have a play-in tournament: the teams
+ranked 7 and 8 play each other to determine who is the final 7 seed, and the loser of that game plays the winner of the 9 vs
+10 game to determine who is the final 8 seed. Finally, those two teams are placed along with the 1&ndash;6 teams by record 
+into the tournament bracket.</p>
+<p><img src="postseason_tournaments/2.svg"/></p>
+<h2>NFL (re-seeding after first round)</h2>
+<p>In the NFL, in each conference (AFC, NFC), the winners of the four divisions are seeded 1&ndash;4 by record, and then the 
+three best remaining teams from among all the divisions are seeded 5&ndash;7. In the first round, the 1 seed gets a bye. In the second 
+round, the 1 seed plays the worst seed of the remaining 3 teams, and the two higher seed winners from the first round play each other.</p>
+<p><img src="postseason_tournaments/3.svg"/></p>
+<h2>NHL</h2>
+<p>The teams that qualify for the playoffs in the NHL are the three best teams in each division (Atlantic, Metropolitan, 
+Central, Pacific), as well as the next two best teams in each conference (Eastern, Western) regardless of division. These two
+teams are the wild cards. The first two rounds are within each division (other than possibly the wild cards). In the first
+round, the division winners play the wild cards (the Eastern division winner with the best record plays the Eastern wild card
+with the worst record, and so on), and the second and third teams from each division play each other. In the second round,
+the winners of the two matches corresponding to each division face each other. In the third round, the two division winners
+from each conference play each other, then the winners of those face off in the Stanley Cup final.</p>
+<p><img src="postseason_tournaments/4.svg"/></p>
+    
+</main>
+
+
+    </div>
+    
+    <script>
+        const skipToMainLink = document.querySelector("a.skip-to-main");
+        const mainContentElement = document.getElementsByTagName("main")?.item(0) || document.querySelector("div.content");
+        if (skipToMainLink && mainContentElement) {
+            const mainContentAnchor = document.createElement("a");
+            const anchorId = "main-content-anchor"
+            mainContentAnchor.className = anchorId;
+            mainContentAnchor.id = anchorId;
+            skipToMainLink.href = `#${anchorId}`;
+            mainContentElement.parentNode.insertBefore(mainContentAnchor, mainContentElement);
+        }
+    </script>
+
+    
+    <script>
+        window.djangoBaseUrl = "https://2023.galacticpuzzlehunt.com/";
+        window.wsEndpoint = "wss://2023.galacticpuzzlehunt.com/game-ws-django/";
+        
+    </script>
+    <link rel="stylesheet" href="/static/game/assets/main-a586d973.css">
+    <script type="module" src="/static/game/assets/main-8c846e1d.js"></script>
+    
+
+    <script>
+        
+            window.isPosthunt = true;
+        
+    </script>
+</body>
+</html>

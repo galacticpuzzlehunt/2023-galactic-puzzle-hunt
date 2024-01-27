@@ -1,0 +1,215 @@
+
+
+
+
+
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no">
+    
+<title>Solution: Gnutmeg Tree</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=0.5">
+    <meta property="og:title" content="Galactic Puzzle Hunt 2023">
+    <meta property="og:description" content="What will you find inside the GalactiCosmiCave? Register now!">
+    <meta property="og:image" content="https://2023.galacticpuzzlehunt.com/static/images/banner.png">
+    <meta property="twitter:card" content="summary_large_image">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Asap+Condensed:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital@0;1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital@0;1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Recursive:slnt,CASL,CRSV,MONO@-3,0.5,1,1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/skeleton.css">
+    <link rel="stylesheet" href="/static/css/base.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.19/jquery.touchSwipe.min.js"></script>
+    <script src="/jsi18n/"></script>
+    <script src="/static/js/jquery.formset.js"></script>
+    <script src="/static/js/sorttable.js"></script>
+    <script src="/static/js/tray.js"></script>
+    <script src="/static/js/notify.js"></script>
+    <script src="/static/js/time.js"></script>
+    <link rel="icon" sizes="16x16 32x32 48x48 64x64" href="/static/images/favicon.ico" type="image/vnd.microsoft.icon">
+    
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Y1N52VY61R"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-Y1N52VY61R', {cookie_flags: 'secure;samesite=none'});
+</script>
+
+</head>
+<body>
+    <a class="skip-to-main">Press enter to skip to main content.</a>
+    <nav class="top-navbar">
+        <span class="tray">
+            <div class="top-tabs">
+                <div class="top-team-actions">
+                    <div id="nav-team-name">
+                        
+                    </div>
+                    
+                </div>
+                <div class="site-nav">
+                    
+                        <a href="/">
+                            Home
+                        </a>
+                        <a href="/about">
+                            About
+                        </a>
+                        
+                        
+                        <a class="selected-tab" href="/puzzles">
+                            Puzzles
+                        </a>
+                        
+                        <a href="/teams">
+                            Teams
+                        </a>
+                        
+                        <a href="/errata">
+                            Updates
+                        </a>
+                        
+                        
+                        <a href="/wrapup">
+                            Wrap-Up
+                        </a>
+                        
+                        <a href="https://galacticpuzzlehunt.com/archive">
+                            Archive
+                        </a>
+                        <a href="/donate">
+                            Donate
+                        </a>
+                    
+                </div>
+            </div>
+        </span>
+    </nav>
+    <script>
+    
+    
+    </script>
+    
+    <div class="top-more-actions">
+        
+<a href="/puzzle/gnutmeg_tree" class="btn">Back to the puzzle</a>
+
+    </div>
+    <div class="content">
+        
+
+<style>
+h2 {
+    font-size: 2.5rem;
+    font-weight: normal;
+    font-style: italic;
+    margin-bottom: 2rem;
+}
+
+h4 {
+    font-size: 2rem;
+    font-weight: normal;
+    margin: 2rem 0;
+}
+</style>
+
+<h1>
+    Solution: Gnutmeg Tree
+    
+</h1>
+
+<main class="puzzle-main">
+    <h2 style="margin-top: 0">
+        Written by
+        
+Amon Ge
+
+    </h2>
+
+    
+    <style>
+video {
+    display: block;
+    margin: auto;
+    text-align: center;
+}
+.tt {
+    display: block;
+    margin: auto;
+    width: 500px;
+    text-align: center;
+    font-size: 1.2rem;
+    font-style: italic;
+}
+</style>
+<p>The Gnutmeg Tree’s gnomes copy every action we take, usually acting before us. 
+If both battlers lose their Camps on the same action, the battle is considered lost. 
+In order to win the battle, we have to break symmetry somehow to attack the tree’s Camps freely.</p>
+<p>The simplest way to do this when Gnutmeg Tree initially unlocks is with <span class="embed">New Boarn</span>, 
+which moves to a random Empty Friendly Space on Summon. As long as the copies aren’t in mirrored 
+Spaces, Attacks will fail to mirror and we can freely Destroy the enemy Camps.</p>
+<p>Similarly, we can use other Summon effects or Special Actions that target multiple Creatures, 
+which may not copy symmetrically. For example, Summoning <span class="embed">Tusk Enhancement</span> will buff only the enemy’s 
+copy to 1 Power. We can then attack the copy with our 0 Power card to Destroy only our copy and play a 
+new Creature in its place, breaking symmetry. Now, we can move the new Creature to a Space where the opponent 
+doesn’t have a mirrored Creature and freely Destroy the enemy Camps.</p>
+
+    
+    
+    <h2 id="authors-notes">Author&rsquo;s Notes</h2>
+    <p>This was the first battle to get prototyped in our hunt, and was originally called Copycat. 
+There are remnants of earlier game mechanics here, where both players acted on simultaneous turns 
+(like rock paper scissors), which required a lot of hacking to reimplement in our final engine.</p>
+<p>The main idea of this battle was to get players to read card effects carefully and start thinking about deckbuilding. Originally, I pitched it as “maybe you don’t have the cards you need and need to come back later”. This kind of thinking might poison the experience of solving other battles (how do you know if a battle is impossible with current cards or not), so we ended up including <span class="embed">New Boarn</span> as a tutorial card and easy solution to this battle.</p>
+<video controls width="500"><source src="gnutmeg_tree/copycat.webm" type="video/webm"></video>
+<div class="tt">Prototype of Copycat. In the first draft of GCC, cards moved up automatically and attacked simultaneously after each turn. The win condition was to control three or more columns, similar to <a href="https://boardgamegeek.com/boardgame/247367/air-land-sea" target="_blank" rel="noopener noreferrer">Air, Land, & Sea</a> / Marvel Snap. Rock Lobster’s card effect is to <a href="gnutmeg_tree/spycrab.png" target="_blank" rel="noopener noreferrer">move to its left</a> each turn, which is used to break symmetry when played with Puflantu Cryptics.</div>
+    
+
+    
+    
+</main>
+
+
+    </div>
+    
+    <script>
+        const skipToMainLink = document.querySelector("a.skip-to-main");
+        const mainContentElement = document.getElementsByTagName("main")?.item(0) || document.querySelector("div.content");
+        if (skipToMainLink && mainContentElement) {
+            const mainContentAnchor = document.createElement("a");
+            const anchorId = "main-content-anchor"
+            mainContentAnchor.className = anchorId;
+            mainContentAnchor.id = anchorId;
+            skipToMainLink.href = `#${anchorId}`;
+            mainContentElement.parentNode.insertBefore(mainContentAnchor, mainContentElement);
+        }
+    </script>
+
+    
+    <script>
+        window.djangoBaseUrl = "https://2023.galacticpuzzlehunt.com/";
+        window.wsEndpoint = "wss://2023.galacticpuzzlehunt.com/game-ws-django/";
+        
+    </script>
+    <link rel="stylesheet" href="/static/game/assets/main-a586d973.css">
+    <script type="module" src="/static/game/assets/main-8c846e1d.js"></script>
+    
+
+    <script>
+        
+            window.isPosthunt = true;
+        
+    </script>
+</body>
+</html>

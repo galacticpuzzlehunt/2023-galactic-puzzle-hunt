@@ -1,0 +1,465 @@
+
+
+
+
+
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no">
+    
+<title>Solution: Animal Shelter</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=0.5">
+    <meta property="og:title" content="Galactic Puzzle Hunt 2023">
+    <meta property="og:description" content="What will you find inside the GalactiCosmiCave? Register now!">
+    <meta property="og:image" content="https://2023.galacticpuzzlehunt.com/static/images/banner.png">
+    <meta property="twitter:card" content="summary_large_image">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Asap+Condensed:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital@0;1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital@0;1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Recursive:slnt,CASL,CRSV,MONO@-3,0.5,1,1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/skeleton.css">
+    <link rel="stylesheet" href="/static/css/base.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.19/jquery.touchSwipe.min.js"></script>
+    <script src="/jsi18n/"></script>
+    <script src="/static/js/jquery.formset.js"></script>
+    <script src="/static/js/sorttable.js"></script>
+    <script src="/static/js/tray.js"></script>
+    <script src="/static/js/notify.js"></script>
+    <script src="/static/js/time.js"></script>
+    <link rel="icon" sizes="16x16 32x32 48x48 64x64" href="/static/images/favicon.ico" type="image/vnd.microsoft.icon">
+    
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Y1N52VY61R"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-Y1N52VY61R', {cookie_flags: 'secure;samesite=none'});
+</script>
+
+</head>
+<body>
+    <a class="skip-to-main">Press enter to skip to main content.</a>
+    <nav class="top-navbar">
+        <span class="tray">
+            <div class="top-tabs">
+                <div class="top-team-actions">
+                    <div id="nav-team-name">
+                        
+                    </div>
+                    
+                </div>
+                <div class="site-nav">
+                    
+                        <a href="/">
+                            Home
+                        </a>
+                        <a href="/about">
+                            About
+                        </a>
+                        
+                        
+                        <a class="selected-tab" href="/puzzles">
+                            Puzzles
+                        </a>
+                        
+                        <a href="/teams">
+                            Teams
+                        </a>
+                        
+                        <a href="/errata">
+                            Updates
+                        </a>
+                        
+                        
+                        <a href="/wrapup">
+                            Wrap-Up
+                        </a>
+                        
+                        <a href="https://galacticpuzzlehunt.com/archive">
+                            Archive
+                        </a>
+                        <a href="/donate">
+                            Donate
+                        </a>
+                    
+                </div>
+            </div>
+        </span>
+    </nav>
+    <script>
+    
+    
+    </script>
+    
+    <div class="top-more-actions">
+        
+<a href="/puzzle/animal_shelter" class="btn">Back to the puzzle</a>
+
+    </div>
+    <div class="content">
+        
+
+<style>
+h2 {
+    font-size: 2.5rem;
+    font-weight: normal;
+    font-style: italic;
+    margin-bottom: 2rem;
+}
+
+h4 {
+    font-size: 2rem;
+    font-weight: normal;
+    margin: 2rem 0;
+}
+</style>
+
+<h1>
+    Solution: Animal Shelter
+    <div class="solved-title-marker">Answer: <span class="solved-title-answer spoiler">RESIDENCY</span></div>
+</h1>
+
+<main class="puzzle-main">
+    <h2 style="margin-top: 0">
+        Written by
+        
+Jenna Himawan
+
+    </h2>
+
+    
+    
+<style>
+  .puzzle-main .table-with-borders {
+    margin-bottom: 0px;
+  }
+
+  .puzzle-main .table-with-borders td {
+    border: 1px solid;
+    text-align: center;
+    padding: 3px;
+  }
+
+  .puzzle-main span.extract {
+    background-color: black;
+  }
+</style>
+
+<p>This puzzle is presented as an Einstein-style logic puzzle. Each animal makes 3 statements, which we will use to determine 3 things about every animal:</p>
+<ol>
+  <li>Its position within a 3&times;3 grid of houses.</li>
+  <li>The number of that type of animal there are within the house.</li>
+  <li>The number of floors their house has.</li>
+</ol>
+
+<p>To skip the step-by-step walkthrough of the logic puzzle, <a href="#extraction">jump to Extraction</a>.</p>
+
+<h2>Logic puzzle walkthrough</h2>
+
+<strong>Eagle: My house has 5 floors and is tied with one other house for second tallest.</strong><br/>
+<strong>Rabbit: My house has strictly more floors than any other.</strong><br/>
+<br/>
+<strong>Chicken: The number of floors in my house is 4 times the number of residents.</strong><br/>
+We know that the tallest house is the Rabbit house, and then 2 animal families (Eagle and one other) are tied for 2nd-tallest
+with 5 floors. If there were 2 Chickens, the Chicken house would have 8 floors. So there must be 1 Chicken and 4 floors.<br/>
+<br/>
+<strong>Squirrel: My family is twice as large as the spiders&rsquo;.</strong><br/>
+<strong>My house is one of 3 that have the same number of floors as residents.</strong><br/>
+From this, we can conclude that there are fewer than 3 Spiders. (If there were 3 Spiders, there would be 6 Squirrels, and 
+then the Squirrel house would have 6 floors, but this also contradicts what we know about the Rabbit & Eagle house heights.)<br/>
+<br/>
+<strong>Spider: My family size is less than my number of floors, and is even.</strong><br/>
+The only even number less than 3 (our current upper bound on the number of Spiders) is 2. Therefore, there are 2 Spiders.<br/>
+<br/>
+<strong>Squirrel: My family is twice as large as the spiders&rsquo;.</strong><br/>
+<strong>My house is one of 3 that have the same number of floors as residents.</strong><br/>
+Since there are 2 Spiders, there must be 4 Squirrels, and the Squirrel house must be 4 floors.<br/>
+<br/>
+<strong>Honeybee: My family is the same size as the squirrels&rsquo;</strong><br/>
+There are 4 Honeybees.<br/>
+<br/>
+<strong>Ant: The number of floors in my house is equal to the number of squirrels.</strong><br/>
+<strong>The number of residents in my house is half the number of floors.</strong><br/>
+The Ant house has 4 floors, and there are 2 Ants.<br/>
+<br/>
+<strong>Honeybee: My house has the same number of floors as the ants&rsquo;.</strong><br/>
+The Honeybees&rsquo; house has 4 floors.<br/>
+<br/>
+<strong>Badger: My house has half the number of floors of the southwest house.</strong><br/>
+<strong>My house has two fewer residents than floors.</strong><br/>
+The minimum # of residents is 1. So the Badger house must have at least 3 floors. Therefore, the minimum # floors of the SW 
+house is 6. So, the Rabbits must live in the southwest house.<br/>
+<br/>
+<strong>Rabbit: My family has 6 members.</strong><br/>
+<strong>Squirrel: I live in the southeast house.</strong><br/>
+<strong>Honeybee: My family is strictly larger than the other families in my row and my column. </strong><br/>
+We know that 6 Rabbits live in the southwest house, 4 Squirrels live in the southeast house, and there are 4 Honeybees. 
+Therefore, the Honeybees cannot live in the west column, or the east column, or the south row.<br/>
+<br/>
+<strong>Beaver: I live in the center house.</strong>
+The central house is already taken, so the Honeybees must live in the north house in the middle column.<br/>
+<br/>
+<strong>Chicken: The honeybees live in my column.</strong>
+The Chicken must live in the south house in the middle column.<br/>
+<br/>
+<strong>Badger: My two neighboring houses contain animals with strictly more legs than me.</strong><br/>
+<strong>Eagle: Both of my neighbors&rsquo; houses have queens.</strong><br/>
+The Badger and Eagle houses are in corners. We also already know that the Rabbits live in the southwest house and the 
+Squirrels live in the southeast house. All corners are now &ldquo;accounted for&rdquo;.<br/>
+<br/>
+<strong>Spider: All of my neighbors&rsquo; names either start with the same letter as mine or end with the same letter as mine.</strong>
+The animal names with this property are BADGER, BEAVER, and SQUIRREL. We know that the Spiders cannot live in a corner, so 
+they live on an &ldquo;edge&rdquo;, and have 3 neighbors. One of those neighbors will be the central house, belonging to 
+Beaver(s). The other two, therefore, must be the Badger and Squirrel houses. We already know that the Squirrels live in the 
+southeast, and that one of the spots adjacent to them is already occupied by Chicken. Therefore, the Spiders live in the 
+east house in the middle row. Then, the northeast house must belong to Badger(s).<br/>
+<br/>
+<strong>Eagle: Both of my neighbors&rsquo; houses have queens.</strong><br/>
+The Eagle house is in one of the corners. The only corner remaining is the northwest corner. This also determines the 
+placement of the Ants, who must live in the west house in the middle row.<br/>
+<br/>
+<strong>Ant: My northern neighbors have 1 more resident than I do.</strong><br/>
+There are 2 Ants, so there are 3 Eagles.<br/>
+<br/>
+<strong>Beaver: My family is the same size as the northwest house&rsquo;s.</strong><br/>
+<strong>My house has the same number of floors as the northwest house.</strong><br/>
+There are 3 Beavers in a house with 5 floors.<br/>
+<br/>
+At this point, our house layout looks like this:<br/>
+<table class="table-with-borders">
+  <tr>
+    <td>
+      <div><strong>Eagle</strong></div>
+      <div>3 residents</div>
+      <div>5 floors</div>
+    </td>
+    <td>
+      <div><strong>Honeybee</strong></div>
+      <div>4 residents</div>
+      <div>4 floors</div>
+    </td>
+    <td>
+      <div><strong>Badger</strong></div>
+      <div>(# floors)&minus;2 residents</div>
+      <div>≥ 3 floors</div>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <div><strong>Ant</strong></div>
+      <div>2 residents</div>
+      <div>4 floors</div>
+    </td>
+    <td>
+      <div><strong>Beaver</strong></div>
+      <div>3 residents</div>
+      <div>5 floors</div>
+    </td>
+    <td>
+      <div><strong>Spider</strong></div>
+      <div>2 residents</div>
+      <div>(# Badger floors) floors</div>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <div><strong>Rabbit</strong></div>
+      <div>6 residents</div>
+      <div>≥ 6 floors</div>
+    </td>
+    <td>
+      <div><strong>Chicken</strong></div>
+      <div>1 resident</div>
+      <div>4 floors</div>
+    </td>
+    <td>
+      <div><strong>Squirrel</strong></div>
+      <div>4 residents</div>
+      <div>4 floors</div>
+    </td>
+  </tr>
+</table><br/>
+
+<strong>Squirrel: My house is one of 3 that have the same number of floors as residents.</strong><br/>
+Currently, the Honeybee and Squirrel have the same number of floors as residents. The Badger cannot have the same number of 
+floors as residents. The Spider also can&rsquo;t, because (# Badger floors) ≥ 3. Therefore, the Rabbits must have 6 floors to
+satisfy this constraint.<br/>
+<strong>Badger: My house has half the number of floors of the southwest house.</strong><br/>
+<strong>My house has two fewer residents than floors.</strong><br/>
+The Badger house has 3 floors, and there is 1 Badger.<br/>
+<strong>Spider: My house has the same number of floors as the house north of mine.</strong><br/>
+The Spider house has 3 floors.
+
+<h2 id="extraction">Extraction</h2>
+Now here is the full solution to the logic puzzle:<br/>
+<table class="table-with-borders">
+  <tr>
+    <td>
+      <div><strong>Eagle</strong></div>
+      <div>3 residents</div>
+      <div>5 floors</div>
+    </td>
+    <td>
+      <div><strong>Honeybee</strong></div>
+      <div>4 residents</div>
+      <div>4 floors</div>
+    </td>
+    <td>
+      <div><strong>Badger</strong></div>
+      <div>1 resident</div>
+      <div>3 floors</div>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <div><strong>Ant</strong></div>
+      <div>2 residents</div>
+      <div>4 floors</div>
+    </td>
+    <td>
+      <div><strong>Beaver</strong></div>
+      <div>3 residents</div>
+      <div>5 floors</div>
+    </td>
+    <td>
+      <div><strong>Spider</strong></div>
+      <div>2 residents</div>
+      <div>3 floors</div>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <div><strong>Rabbit</strong></div>
+      <div>6 residents</div>
+      <div>6 floors</div>
+    </td>
+    <td>
+      <div><strong>Chicken</strong></div>
+      <div>1 resident</div>
+      <div>4 floors</div>
+    </td>
+    <td>
+      <div><strong>Squirrel</strong></div>
+      <div>4 residents</div>
+      <div>4 floors</div>
+    </td>
+  </tr>
+</table><br/>
+
+To extract, we might notice that the # of residents is always less than or equal to the # of floors. So perhaps # of residents
+is indexing into # of floors.<br/>
+<br/>
+The key realization is that there are special names for the houses of each of these animals. In fact, the number of floors of
+each animal&rsquo;s house is the enumeration of that special name. Now we can write them out and perform the indexing (indexed
+letters are bracketed and highlighted):<br/>
+
+<table class="table-with-borders">
+  <tr>
+    <td>
+      <div><strong>Eagle (AE[<span class="extract">R</span>]IE/EY[<span class="extract">R</span>]IE)</strong></div>
+      <div>3 residents</div>
+      <div>5 floors</div>
+    </td>
+    <td>
+      <div><strong>Honeybee (HIV[<span class="extract">E</span>])</strong></div>
+      <div>4 residents</div>
+      <div>4 floors</div>
+    </td>
+    <td>
+      <div><strong>Badger ([<span class="extract">S</span>]ET)</strong></div>
+      <div>1 resident</div>
+      <div>3 floors</div>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <div><strong>Ant (H[<span class="extract">I</span>]LL)</strong></div>
+      <div>2 residents</div>
+      <div>4 floors</div>
+    </td>
+    <td>
+      <div><strong>Beaver (LO[<span class="extract">D</span>]GE)</strong></div>
+      <div>3 residents</div>
+      <div>5 floors</div>
+    </td>
+    <td>
+      <div><strong>Spider (W[<span class="extract">E</span>]B)</strong></div>
+      <div>2 residents</div>
+      <div>3 floors</div>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <div><strong>Rabbit (WARRE[<span class="extract">N</span>])</strong></div>
+      <div>6 residents</div>
+      <div>6 floors</div>
+    </td>
+    <td>
+      <div><strong>Chicken ([<span class="extract">C</span>]OOP)</strong></div>
+      <div>1 resident</div>
+      <div>4 floors</div>
+    </td>
+    <td>
+      <div><strong>Squirrel (DRE[<span class="extract">Y</span>])</strong></div>
+      <div>4 residents</div>
+      <div>4 floors</div>
+    </td>
+  </tr>
+</table><br/>
+
+Now reading the extracted letters in reading order (left-to-right, top-to-bottom) yields the answer, <span class="spoiler">RESIDENCY</span>.
+
+
+    
+    
+    <h2 id="authors-notes">Author&rsquo;s Notes</h2>
+    <p>Thank you to Dany Q for <a href="https://github.com/danyq/claspy">Claspy</a>, which I used to construct the logic puzzle.</p>
+    
+
+    
+    
+</main>
+
+
+    </div>
+    
+    <script>
+        const skipToMainLink = document.querySelector("a.skip-to-main");
+        const mainContentElement = document.getElementsByTagName("main")?.item(0) || document.querySelector("div.content");
+        if (skipToMainLink && mainContentElement) {
+            const mainContentAnchor = document.createElement("a");
+            const anchorId = "main-content-anchor"
+            mainContentAnchor.className = anchorId;
+            mainContentAnchor.id = anchorId;
+            skipToMainLink.href = `#${anchorId}`;
+            mainContentElement.parentNode.insertBefore(mainContentAnchor, mainContentElement);
+        }
+    </script>
+
+    
+    <script>
+        window.djangoBaseUrl = "https://2023.galacticpuzzlehunt.com/";
+        window.wsEndpoint = "wss://2023.galacticpuzzlehunt.com/game-ws-django/";
+        
+    </script>
+    <link rel="stylesheet" href="/static/game/assets/main-a586d973.css">
+    <script type="module" src="/static/game/assets/main-8c846e1d.js"></script>
+    
+
+    <script>
+        
+            window.isPosthunt = true;
+        
+    </script>
+</body>
+</html>

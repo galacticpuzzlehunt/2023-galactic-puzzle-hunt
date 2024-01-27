@@ -1,0 +1,208 @@
+
+
+
+
+
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no">
+    
+<title>Solution: The Swarm</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=0.5">
+    <meta property="og:title" content="Galactic Puzzle Hunt 2023">
+    <meta property="og:description" content="What will you find inside the GalactiCosmiCave? Register now!">
+    <meta property="og:image" content="https://2023.galacticpuzzlehunt.com/static/images/banner.png">
+    <meta property="twitter:card" content="summary_large_image">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Asap+Condensed:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital@0;1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital@0;1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Recursive:slnt,CASL,CRSV,MONO@-3,0.5,1,1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/skeleton.css">
+    <link rel="stylesheet" href="/static/css/base.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.19/jquery.touchSwipe.min.js"></script>
+    <script src="/jsi18n/"></script>
+    <script src="/static/js/jquery.formset.js"></script>
+    <script src="/static/js/sorttable.js"></script>
+    <script src="/static/js/tray.js"></script>
+    <script src="/static/js/notify.js"></script>
+    <script src="/static/js/time.js"></script>
+    <link rel="icon" sizes="16x16 32x32 48x48 64x64" href="/static/images/favicon.ico" type="image/vnd.microsoft.icon">
+    
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Y1N52VY61R"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-Y1N52VY61R', {cookie_flags: 'secure;samesite=none'});
+</script>
+
+</head>
+<body>
+    <a class="skip-to-main">Press enter to skip to main content.</a>
+    <nav class="top-navbar">
+        <span class="tray">
+            <div class="top-tabs">
+                <div class="top-team-actions">
+                    <div id="nav-team-name">
+                        
+                    </div>
+                    
+                </div>
+                <div class="site-nav">
+                    
+                        <a href="/">
+                            Home
+                        </a>
+                        <a href="/about">
+                            About
+                        </a>
+                        
+                        
+                        <a class="selected-tab" href="/puzzles">
+                            Puzzles
+                        </a>
+                        
+                        <a href="/teams">
+                            Teams
+                        </a>
+                        
+                        <a href="/errata">
+                            Updates
+                        </a>
+                        
+                        
+                        <a href="/wrapup">
+                            Wrap-Up
+                        </a>
+                        
+                        <a href="https://galacticpuzzlehunt.com/archive">
+                            Archive
+                        </a>
+                        <a href="/donate">
+                            Donate
+                        </a>
+                    
+                </div>
+            </div>
+        </span>
+    </nav>
+    <script>
+    
+    
+    </script>
+    
+    <div class="top-more-actions">
+        
+<a href="/puzzle/the_swarm" class="btn">Back to the puzzle</a>
+
+    </div>
+    <div class="content">
+        
+
+<style>
+h2 {
+    font-size: 2.5rem;
+    font-weight: normal;
+    font-style: italic;
+    margin-bottom: 2rem;
+}
+
+h4 {
+    font-size: 2rem;
+    font-weight: normal;
+    margin: 2rem 0;
+}
+</style>
+
+<h1>
+    Solution: The Swarm
+    
+</h1>
+
+<main class="puzzle-main">
+    <h2 style="margin-top: 0">
+        Written by
+        
+Lewis Chen
+
+    </h2>
+
+    
+    <p>The grid has 16 rows and 5 columns. The back 7 rows are entirely filled by <span class="embed">Bee Rider</span>s, except for the 1st, 3rd, and 5th cells in the back row, which contain <span class="embed">Yurt</span>s. On our first
+row, there are <span class="embed">Camp</span>s in the 1st, 3rd, and 5th cells.</p>
+<p>We can start by hitting end turn to observe the <span class="embed">Bee Rider</span>s&rsquo; behavior. On the 1st enemy turn, all of the <span class="embed">Bee Rider</span>s move forward 2 spaces (Flex and Move). The 2nd enemy
+turn generates <span class="embed">Bee Rider</span>s on the 2nd and 4th cells of row 2, and a full row of <span class="embed">Bee Rider</span>s on row 3. Subsequent turns move existing <span class="embed">Bee Rider</span>s forward 2 spaces and generate
+more <span class="embed">Bee Rider</span>s 2 rows at a time, forming an alternating checkerboard pattern. <span class="embed">Bee Rider</span>s only attack targets that are adjacent to them after their move phase (including
+diagonals), although they prefer to move forward if possible.</p>
+<p>As we play through this battle, we may notice that units can affect targets at most 5 spaces in front of themselves. This makes it difficult for us to damage the opponent&rsquo;s <span class="embed">Yurt</span>s.
+It also limits the ranges of card effects we might like to use; for example, the <span class="embed">Oklahoma Tusks</span> Special only reaches enemies at most 5 rows away.</p>
+<p>We need to find a way to clear <span class="embed">Bee Rider</span>s quickly! Otherwise, they&rsquo;ll advance to the end of the row, then start damaging our <span class="embed">Camp</span>s and cards.</p>
+<p>Looking through the deck for cards to use, we find <span class="embed">Quail Aboard Fiery Steeds</span>. Placing one in our 2nd column and another in our 4th column allows us to quickly clear the
+<span class="embed">Bee Rider</span>s in our Space (those cards become Sneaky when they enter our Space, which means none of them are protected!).</p>
+<p><span class="embed">Quail Aboard Fiery Steeds</span> is kind of expensive to play, and its Special costs 2 Boarries, so we need some other red cards to support it. Cheap ones that we can play during the first turns
+will allow us to ramp up our Boarry production. We can also include some other cards with useful abilities.</p>
+<p>We spend a turn using <span class="embed">Quail Aboard Fiery Steeds</span> to get a bit of breathing room. After that, we need to advance our units far enough into the enemy Space that they can damage the
+<span class="embed">Yurt</span>s. Specifically, units need to be in the 7th row (the &ldquo;2nd row inside&rdquo; the opponent&rsquo;s Space). Note that these units become Sneaky when they enter enemy Space,
+so we don&rsquo;t have to clear all of the <span class="embed">Bee Rider</span>s in front of the target <span class="embed">Yurt</span>.</p>
+<p>After destroying all the <span class="embed">Yurt</span>s, it turns out the battle isn&rsquo;t over! Thankfully, because the <span class="embed">Yurt</span>s are destroyed, no more <span class="embed">Bee Rider</span>s get generated. We are able to defeat
+all the remaining <span class="embed">Bee Rider</span>s pretty easily, and then the battle ends.</p>
+<p>One example of a deck that can beat The Swarm is:</p>
+<p>2&times; <span class="embed">Hamlet</span><br/>
+2&times; <span class="embed">Hog</span><br/>
+2&times; <span class="embed">Oklahoma Tusks</span><br/>
+2&times; <span class="embed">Quail Aboard Fiery Steeds</span><br/>
+2&times; <span class="embed">Switch Boar&rsquo;d</span><br/></p>
+
+    
+    
+    <h2 id="authors-notes">Author&rsquo;s Notes</h2>
+    <p>Thanks to Jenna Himawan for helping with solution writing!</p>
+    
+
+    
+    
+</main>
+
+
+    </div>
+    
+    <script>
+        const skipToMainLink = document.querySelector("a.skip-to-main");
+        const mainContentElement = document.getElementsByTagName("main")?.item(0) || document.querySelector("div.content");
+        if (skipToMainLink && mainContentElement) {
+            const mainContentAnchor = document.createElement("a");
+            const anchorId = "main-content-anchor"
+            mainContentAnchor.className = anchorId;
+            mainContentAnchor.id = anchorId;
+            skipToMainLink.href = `#${anchorId}`;
+            mainContentElement.parentNode.insertBefore(mainContentAnchor, mainContentElement);
+        }
+    </script>
+
+    
+    <script>
+        window.djangoBaseUrl = "https://2023.galacticpuzzlehunt.com/";
+        window.wsEndpoint = "wss://2023.galacticpuzzlehunt.com/game-ws-django/";
+        
+    </script>
+    <link rel="stylesheet" href="/static/game/assets/main-a586d973.css">
+    <script type="module" src="/static/game/assets/main-8c846e1d.js"></script>
+    
+
+    <script>
+        
+            window.isPosthunt = true;
+        
+    </script>
+</body>
+</html>

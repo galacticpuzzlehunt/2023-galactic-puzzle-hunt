@@ -1,0 +1,334 @@
+
+
+
+
+
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no">
+    
+<title>Solution: Console-ation Prize</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=0.5">
+    <meta property="og:title" content="Galactic Puzzle Hunt 2023">
+    <meta property="og:description" content="What will you find inside the GalactiCosmiCave? Register now!">
+    <meta property="og:image" content="https://2023.galacticpuzzlehunt.com/static/images/banner.png">
+    <meta property="twitter:card" content="summary_large_image">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Asap+Condensed:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital@0;1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital@0;1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Recursive:slnt,CASL,CRSV,MONO@-3,0.5,1,1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/skeleton.css">
+    <link rel="stylesheet" href="/static/css/base.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.19/jquery.touchSwipe.min.js"></script>
+    <script src="/jsi18n/"></script>
+    <script src="/static/js/jquery.formset.js"></script>
+    <script src="/static/js/sorttable.js"></script>
+    <script src="/static/js/tray.js"></script>
+    <script src="/static/js/notify.js"></script>
+    <script src="/static/js/time.js"></script>
+    <link rel="icon" sizes="16x16 32x32 48x48 64x64" href="/static/images/favicon.ico" type="image/vnd.microsoft.icon">
+    
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Y1N52VY61R"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-Y1N52VY61R', {cookie_flags: 'secure;samesite=none'});
+</script>
+
+</head>
+<body>
+    <a class="skip-to-main">Press enter to skip to main content.</a>
+    <nav class="top-navbar">
+        <span class="tray">
+            <div class="top-tabs">
+                <div class="top-team-actions">
+                    <div id="nav-team-name">
+                        
+                    </div>
+                    
+                </div>
+                <div class="site-nav">
+                    
+                        <a href="/">
+                            Home
+                        </a>
+                        <a href="/about">
+                            About
+                        </a>
+                        
+                        
+                        <a class="selected-tab" href="/puzzles">
+                            Puzzles
+                        </a>
+                        
+                        <a href="/teams">
+                            Teams
+                        </a>
+                        
+                        <a href="/errata">
+                            Updates
+                        </a>
+                        
+                        
+                        <a href="/wrapup">
+                            Wrap-Up
+                        </a>
+                        
+                        <a href="https://galacticpuzzlehunt.com/archive">
+                            Archive
+                        </a>
+                        <a href="/donate">
+                            Donate
+                        </a>
+                    
+                </div>
+            </div>
+        </span>
+    </nav>
+    <script>
+    
+    
+    </script>
+    
+    <div class="top-more-actions">
+        
+<a href="/puzzle/console-ation_prize" class="btn">Back to the puzzle</a>
+
+    </div>
+    <div class="content">
+        
+
+<style>
+h2 {
+    font-size: 2.5rem;
+    font-weight: normal;
+    font-style: italic;
+    margin-bottom: 2rem;
+}
+
+h4 {
+    font-size: 2rem;
+    font-weight: normal;
+    margin: 2rem 0;
+}
+</style>
+
+<h1>
+    Solution: Console-ation Prize
+    <div class="solved-title-marker">Answer: <span class="solved-title-answer spoiler">EVALUATION</span></div>
+</h1>
+
+<main class="puzzle-main">
+    <h2 style="margin-top: 0">
+        Written by
+        
+Lewis Chen
+
+    </h2>
+
+    
+    <p>When opening the puzzle, we are greeted with three images and a larger canvas which has a single dot and line drawn on it. We can make a few observations, such that the dot appears at the endpoint of the broken line in the other three images, and that clicking on any image overlays that image on the canvas, but there’s no discernable way to interact with the puzzle. </p>
+<p>Looking at the contents of the three images, they appear to draw out the characters F, 1, and 2. Combined with the title, this suggests pressing <code>F12</code>, which opens up the developer tools sidebar in most modern web browsers. In particular, we want to go to the console tab, where we are greeted with a prompt. As it turns out, we can invoke the functions <code>a()</code>, <code>b()</code>, <code>c()</code>, …, <code>z()</code> to change the drawing, with <code>x()</code> clearing the canvas as stated by the prompt.</p>
+<p>Specifically, the behavior of the functions is as follows:
+The first, and every odd numbered invocation thereafter, function dictates the length of the segment. If this is not supplied, the segment continues until it goes off-screen.
+The second, and every even numbered invocation thereafter, function dictates the angle bearing for the next segment. If this is not supplied, the segment stops.</p>
+<p>Since the three images appear to be generated using these functions, we can try to replicate the images using the functions. One way to do this is by trying functions until the length matches the first segment, then going to the next function and so forth. Another way is to measure lengths and angles in the image first and then try to match up the functions to these values.</p>
+<p>It is not necessary to determine the lengths and angles for all functions, but a full table can be found in the appendix.</p>
+<p>Either way, we can determine that the three images are separately generated via:</p>
+<p><code>a() n() s() w() e() r()</code> <br>
+<code>i() s()</code> <br>
+<code>e() v() a() l() u() a() t() i() o() n()</code></p>
+<p>The answer is <strong>EVALUATION</strong>.</p>
+
+    
+    
+    <h2 id="authors-notes">Author&rsquo;s Notes</h2>
+    <p>The drawing mechanism was inspired by the fact that all three words of ANSWER IS EVALUATION are even length. Viewing the source is certainly possible, and there are deobfuscation tools available. This can help understand the behavior, though the answer isn’t clearly found in the source, as the images are just images. However, if you’re not careful, you might fall into a trap!</p>
+    
+
+    
+    
+    <h2 id="appendix">Appendix</h2>
+    <table>
+<thead>
+<tr>
+<th>function</th>
+<th>length (in pixels)</th>
+<th>angle (times 2&pi;/25 radians = 14.4&deg;)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A</td>
+<td>144</td>
+<td>21</td>
+</tr>
+<tr>
+<td>B</td>
+<td>272</td>
+<td>14</td>
+</tr>
+<tr>
+<td>C</td>
+<td>64</td>
+<td>4</td>
+</tr>
+<tr>
+<td>D</td>
+<td>256</td>
+<td>22</td>
+</tr>
+<tr>
+<td>E</td>
+<td>384</td>
+<td>9</td>
+</tr>
+<tr>
+<td>F</td>
+<td>128</td>
+<td>8</td>
+</tr>
+<tr>
+<td>G</td>
+<td>96</td>
+<td>12</td>
+</tr>
+<tr>
+<td>H</td>
+<td>304</td>
+<td>20</td>
+</tr>
+<tr>
+<td>I</td>
+<td>16</td>
+<td>1</td>
+</tr>
+<tr>
+<td>J</td>
+<td>240</td>
+<td>7</td>
+</tr>
+<tr>
+<td>K</td>
+<td>320</td>
+<td>24</td>
+</tr>
+<tr>
+<td>L</td>
+<td>32</td>
+<td>17</td>
+</tr>
+<tr>
+<td>M</td>
+<td>400</td>
+<td>10</td>
+</tr>
+<tr>
+<td>N</td>
+<td>288</td>
+<td>6</td>
+</tr>
+<tr>
+<td>O</td>
+<td>208</td>
+<td>0</td>
+</tr>
+<tr>
+<td>P</td>
+<td>352</td>
+<td>23</td>
+</tr>
+<tr>
+<td>Q</td>
+<td>48</td>
+<td>5</td>
+</tr>
+<tr>
+<td>R</td>
+<td>336</td>
+<td>13</td>
+</tr>
+<tr>
+<td>S</td>
+<td>224</td>
+<td>18</td>
+</tr>
+<tr>
+<td>T</td>
+<td>176</td>
+<td>11</td>
+</tr>
+<tr>
+<td>U</td>
+<td>160</td>
+<td>2</td>
+</tr>
+<tr>
+<td>V</td>
+<td>80</td>
+<td>16</td>
+</tr>
+<tr>
+<td>W</td>
+<td>112</td>
+<td>19</td>
+</tr>
+<tr>
+<td>Y</td>
+<td>368</td>
+<td>15</td>
+</tr>
+<tr>
+<td>Z</td>
+<td>192</td>
+<td>3</td>
+</tr>
+</tbody>
+</table>
+    
+</main>
+
+
+    </div>
+    
+    <script>
+        const skipToMainLink = document.querySelector("a.skip-to-main");
+        const mainContentElement = document.getElementsByTagName("main")?.item(0) || document.querySelector("div.content");
+        if (skipToMainLink && mainContentElement) {
+            const mainContentAnchor = document.createElement("a");
+            const anchorId = "main-content-anchor"
+            mainContentAnchor.className = anchorId;
+            mainContentAnchor.id = anchorId;
+            skipToMainLink.href = `#${anchorId}`;
+            mainContentElement.parentNode.insertBefore(mainContentAnchor, mainContentElement);
+        }
+    </script>
+
+    
+    <script>
+        window.djangoBaseUrl = "https://2023.galacticpuzzlehunt.com/";
+        window.wsEndpoint = "wss://2023.galacticpuzzlehunt.com/game-ws-django/";
+        
+    </script>
+    <link rel="stylesheet" href="/static/game/assets/main-a586d973.css">
+    <script type="module" src="/static/game/assets/main-8c846e1d.js"></script>
+    
+
+    <script>
+        
+            window.isPosthunt = true;
+        
+    </script>
+</body>
+</html>

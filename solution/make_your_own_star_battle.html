@@ -1,0 +1,284 @@
+
+
+
+
+
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no">
+    
+<title>Solution: Make Your Own Star Battle</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=0.5">
+    <meta property="og:title" content="Galactic Puzzle Hunt 2023">
+    <meta property="og:description" content="What will you find inside the GalactiCosmiCave? Register now!">
+    <meta property="og:image" content="https://2023.galacticpuzzlehunt.com/static/images/banner.png">
+    <meta property="twitter:card" content="summary_large_image">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Asap+Condensed:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital@0;1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital@0;1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Recursive:slnt,CASL,CRSV,MONO@-3,0.5,1,1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/skeleton.css">
+    <link rel="stylesheet" href="/static/css/base.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.19/jquery.touchSwipe.min.js"></script>
+    <script src="/jsi18n/"></script>
+    <script src="/static/js/jquery.formset.js"></script>
+    <script src="/static/js/sorttable.js"></script>
+    <script src="/static/js/tray.js"></script>
+    <script src="/static/js/notify.js"></script>
+    <script src="/static/js/time.js"></script>
+    <link rel="icon" sizes="16x16 32x32 48x48 64x64" href="/static/images/favicon.ico" type="image/vnd.microsoft.icon">
+    
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Y1N52VY61R"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-Y1N52VY61R', {cookie_flags: 'secure;samesite=none'});
+</script>
+
+</head>
+<body>
+    <a class="skip-to-main">Press enter to skip to main content.</a>
+    <nav class="top-navbar">
+        <span class="tray">
+            <div class="top-tabs">
+                <div class="top-team-actions">
+                    <div id="nav-team-name">
+                        
+                    </div>
+                    
+                </div>
+                <div class="site-nav">
+                    
+                        <a href="/">
+                            Home
+                        </a>
+                        <a href="/about">
+                            About
+                        </a>
+                        
+                        
+                        <a class="selected-tab" href="/puzzles">
+                            Puzzles
+                        </a>
+                        
+                        <a href="/teams">
+                            Teams
+                        </a>
+                        
+                        <a href="/errata">
+                            Updates
+                        </a>
+                        
+                        
+                        <a href="/wrapup">
+                            Wrap-Up
+                        </a>
+                        
+                        <a href="https://galacticpuzzlehunt.com/archive">
+                            Archive
+                        </a>
+                        <a href="/donate">
+                            Donate
+                        </a>
+                    
+                </div>
+            </div>
+        </span>
+    </nav>
+    <script>
+    
+    
+    </script>
+    
+    <div class="top-more-actions">
+        
+<a href="/puzzle/make_your_own_star_battle" class="btn">Back to the puzzle</a>
+
+    </div>
+    <div class="content">
+        
+
+<style>
+h2 {
+    font-size: 2.5rem;
+    font-weight: normal;
+    font-style: italic;
+    margin-bottom: 2rem;
+}
+
+h4 {
+    font-size: 2rem;
+    font-weight: normal;
+    margin: 2rem 0;
+}
+</style>
+
+<h1>
+    Solution: Make Your Own Star Battle
+    <div class="solved-title-marker">Answer: <span class="solved-title-answer spoiler">LOTTERY</span></div>
+</h1>
+
+<main class="puzzle-main">
+    <h2 style="margin-top: 0">
+        Written by
+        
+Josh Alman
+
+    </h2>
+
+    
+    <p>As described in the instructions, we can submit any 5 by 5 star battle puzzle to the solvers, who will give us back a one-letter answer. The key insight, which is clued in the last sentence of the instructions (“your puzzle doesn’t even need to have a unique solution”), and which we likely discover through experimentation, is that the answer given to us depends only on the number of solutions to the star battle puzzle we give.</p>
+<p>A 5 by 5 star battle can have between 0 and 14 solutions: ignoring the region constraints, there are only 14 different ways to arrange 5 stars in a 5 by 5 grid so that there is one in each row, one in each column, and no two adjacent. </p>
+<p><img src="myosb/myosb-solns.png" style="max-width: 100%;" alt="Star battle star arrangements"/></p>
+<p>Thus, there are 15 different letters we can get, and putting them in order tells us the <strong>ANSWER IS LOTTE_Y</strong>:</p>
+<table>
+<thead>
+<tr>
+<th>Number of solutions</th>
+<th>Extracted letter</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>A</td>
+<td><img src="myosb/myosb-0.png" alt="Star battle with 0 solutions"/></td>
+</tr>
+<tr>
+<td>1</td>
+<td>N</td>
+<td><img src="myosb/myosb-1.png" alt="Star battle with 1 solutions"/></td>
+</tr>
+<tr>
+<td>2</td>
+<td>S</td>
+<td><img src="myosb/myosb-2.png" alt="Star battle with 2 solutions"/></td>
+</tr>
+<tr>
+<td>3</td>
+<td>W</td>
+<td><img src="myosb/myosb-3.png" alt="Star battle with 3 solutions"/></td>
+</tr>
+<tr>
+<td>4</td>
+<td>E</td>
+<td><img src="myosb/myosb-4.png" alt="Star battle with 4 solutions"/></td>
+</tr>
+<tr>
+<td>5</td>
+<td>R</td>
+<td><img src="myosb/myosb-5.png" alt="Star battle with 5 solutions"/></td>
+</tr>
+<tr>
+<td>6</td>
+<td>I</td>
+<td><img src="myosb/myosb-6.png" alt="Star battle with 6 solutions"/></td>
+</tr>
+<tr>
+<td>7</td>
+<td>S</td>
+<td><img src="myosb/myosb-7.png" alt="Star battle with 7 solutions"/></td>
+</tr>
+<tr>
+<td>8</td>
+<td>L</td>
+<td><img src="myosb/myosb-8.png" alt="Star battle with 8 solutions"/></td>
+</tr>
+<tr>
+<td>9</td>
+<td>O</td>
+<td><img src="myosb/myosb-9.png" alt="Star battle with 9 solutions"/></td>
+</tr>
+<tr>
+<td>10</td>
+<td>T</td>
+<td><img src="myosb/myosb-10.png" alt="Star battle with 10 solutions"/></td>
+</tr>
+<tr>
+<td>11</td>
+<td>T</td>
+<td><img src="myosb/myosb-11.png" alt="Star battle with 11 solutions"/></td>
+</tr>
+<tr>
+<td>12</td>
+<td>E</td>
+<td><img src="myosb/myosb-12.png" alt="Star battle with 12 solutions"/></td>
+</tr>
+<tr>
+<td>13</td>
+<td>(R)</td>
+<td>(impossible)</td>
+</tr>
+<tr>
+<td>14</td>
+<td>Y</td>
+<td><img src="myosb/myosb-14.png" alt="Star battle with 14 solutions"/></td>
+</tr>
+</tbody>
+</table>
+<p>Solvers do need to fill in the blank, since it isn't possible to create a grid with 13 solutions, to get the answer, <span class="spoiler">LOTTERY</span>.</p>
+<p>There are many different approaches to designing puzzles with a certain number of answers. Here are a few strategies that worked well for the author:</p>
+<ul>
+<li>When aiming for a small number of solutions, start with a puzzle with a unique solution, and make slight modifications.</li>
+<li>Similarly, when aiming for a large number of solutions, start with the puzzle where the 5 regions are the 5 columns (so it has all 14 solutions), and then make slight modifications.</li>
+<li>Often, designing puzzles arbitrarily and then checking how many solutions they have is more effective than aiming to design puzzles with specific solution counts, since we can get the final answer without hitting all the different solution counts and getting all the letters.</li>
+</ul>
+
+    
+    
+    <h2 id="authors-notes">Author&rsquo;s Notes</h2>
+    <p>The main idea of this puzzle was inspired by star battle apps on my phone. The grids can't be too large in these apps, since otherwise it's annoying to accurately click on the cell you want. (Some apps let you zoom in and scroll around a larger grid, but I don't like this so much since star battles usually use global logic that requires looking at the whole grid.) One notices after solving enough puzzles on these apps that there aren't too many ways that stars can even be arranged in a smaller grid.</p>
+<p>At first, I considered using a larger grid and using star battle with 2 stars per row/column/region for this puzzle, but I eventually decided this very small 1 star setup got in the main insight and avoided too much tedium.</p>
+<p>Originally, we were going to make the puzzle "Spelling Bee" into a "Make Your Own" puzzle, and I was going to save this idea for another time. I'm glad I got to use it here, since I think it fit well as a smaller puzzle in this hunt.</p>
+<p>Thanks to Yannick for help with the solution pictures, and to CJ and the tech team for implementation help.</p>
+    
+
+    
+    
+</main>
+
+
+    </div>
+    
+    <script>
+        const skipToMainLink = document.querySelector("a.skip-to-main");
+        const mainContentElement = document.getElementsByTagName("main")?.item(0) || document.querySelector("div.content");
+        if (skipToMainLink && mainContentElement) {
+            const mainContentAnchor = document.createElement("a");
+            const anchorId = "main-content-anchor"
+            mainContentAnchor.className = anchorId;
+            mainContentAnchor.id = anchorId;
+            skipToMainLink.href = `#${anchorId}`;
+            mainContentElement.parentNode.insertBefore(mainContentAnchor, mainContentElement);
+        }
+    </script>
+
+    
+    <script>
+        window.djangoBaseUrl = "https://2023.galacticpuzzlehunt.com/";
+        window.wsEndpoint = "wss://2023.galacticpuzzlehunt.com/game-ws-django/";
+        
+    </script>
+    <link rel="stylesheet" href="/static/game/assets/main-a586d973.css">
+    <script type="module" src="/static/game/assets/main-8c846e1d.js"></script>
+    
+
+    <script>
+        
+            window.isPosthunt = true;
+        
+    </script>
+</body>
+</html>

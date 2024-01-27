@@ -1,0 +1,282 @@
+
+
+
+
+
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no">
+    
+<title>Solution: Miss Yu</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=0.5">
+    <meta property="og:title" content="Galactic Puzzle Hunt 2023">
+    <meta property="og:description" content="What will you find inside the GalactiCosmiCave? Register now!">
+    <meta property="og:image" content="https://2023.galacticpuzzlehunt.com/static/images/banner.png">
+    <meta property="twitter:card" content="summary_large_image">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Asap+Condensed:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital@0;1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital@0;1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Recursive:slnt,CASL,CRSV,MONO@-3,0.5,1,1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/skeleton.css">
+    <link rel="stylesheet" href="/static/css/base.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.19/jquery.touchSwipe.min.js"></script>
+    <script src="/jsi18n/"></script>
+    <script src="/static/js/jquery.formset.js"></script>
+    <script src="/static/js/sorttable.js"></script>
+    <script src="/static/js/tray.js"></script>
+    <script src="/static/js/notify.js"></script>
+    <script src="/static/js/time.js"></script>
+    <link rel="icon" sizes="16x16 32x32 48x48 64x64" href="/static/images/favicon.ico" type="image/vnd.microsoft.icon">
+    
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Y1N52VY61R"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-Y1N52VY61R', {cookie_flags: 'secure;samesite=none'});
+</script>
+
+</head>
+<body>
+    <a class="skip-to-main">Press enter to skip to main content.</a>
+    <nav class="top-navbar">
+        <span class="tray">
+            <div class="top-tabs">
+                <div class="top-team-actions">
+                    <div id="nav-team-name">
+                        
+                    </div>
+                    
+                </div>
+                <div class="site-nav">
+                    
+                        <a href="/">
+                            Home
+                        </a>
+                        <a href="/about">
+                            About
+                        </a>
+                        
+                        
+                        <a class="selected-tab" href="/puzzles">
+                            Puzzles
+                        </a>
+                        
+                        <a href="/teams">
+                            Teams
+                        </a>
+                        
+                        <a href="/errata">
+                            Updates
+                        </a>
+                        
+                        
+                        <a href="/wrapup">
+                            Wrap-Up
+                        </a>
+                        
+                        <a href="https://galacticpuzzlehunt.com/archive">
+                            Archive
+                        </a>
+                        <a href="/donate">
+                            Donate
+                        </a>
+                    
+                </div>
+            </div>
+        </span>
+    </nav>
+    <script>
+    
+    
+    </script>
+    
+    <div class="top-more-actions">
+        
+<a href="/puzzle/miss_yu" class="btn">Back to the puzzle</a>
+
+    </div>
+    <div class="content">
+        
+
+<style>
+h2 {
+    font-size: 2.5rem;
+    font-weight: normal;
+    font-style: italic;
+    margin-bottom: 2rem;
+}
+
+h4 {
+    font-size: 2rem;
+    font-weight: normal;
+    margin: 2rem 0;
+}
+</style>
+
+<h1>
+    Solution: Miss Yu
+    
+</h1>
+
+<main class="puzzle-main">
+    <h2 style="margin-top: 0">
+        Written by
+        
+Amon Ge
+
+    </h2>
+
+    
+    <style>
+  .puzzle-main img {
+    max-width: 100%;
+  }
+</style>
+
+<h2>Overview</h2>
+<p>The <span class="embed">Barn</span> only lets us Summon on the first two turns. It’s Invulnerable when there are four or more Cyclows.</p>
+<p>The six Cyclows, which are all Invulnerable at the start of the battle, cycle through various phases:</p>
+<ul>
+<li><span class="embed">Chocolate Cyclow (SLEEPING)</span>: On their next turn, they become AWAKE.</li>
+<li><span class="embed">Chocolate Cyclow (AWAKE)</span>: Every Cyclow opens their eye and curls up into a ball. 
+    On their next turn, they use a special “cow-ordinated lasso” attack and become TIRED. Afterwards, one Cyclow becomes WEAK.</li>
+<li><span class="embed">Chocolate Cyclow (TIRED)</span>: Nothing special.</li>
+<li><span class="embed">Chocolate Cyclow (WEAK)</span>: Unlike other Cyclows, the WEAK Cyclow is vulnerable to Attacks. 
+    On the turn after it’s Destroyed, the other TIRED Cyclows Move and return to SLEEPING or ANGRY (if there are only three left).</li>
+<li><span class="embed">Chocolate Cyclow (ANGRY)</span>: The ANGRY Cyclows are vulnerable, but now have 3 power, and attack each turn.</li>
+</ul>
+<p>The Vanilla Cyclows act the same as the Chocolate Cyclows.</p>
+<p>Basic strategy involves:</p>
+<ul>
+<li>Turn 1: Summon 2–3 cheap Creatures to Create next turn (eg. <span class="embed">Hamlet</span>, <span class="embed">Chicken</span>, <span class="embed">o</span>, <span class="embed">re</span>)</li>
+<li>Turn 2: Summon 1–2 stronger Creatures (eg. <span class="embed">New Boarn</span>, <span class="embed">Yoshisaur Munchakoopas</span>, <span class="embed">Chocolate Calf</span>)</li>
+<li>Attack the WEAK Cyclow in each cycle using the stronger Creatures until 
+    there are only three Cyclows left, then Attack the Barn.</li>
+</ul>
+<p>However, the Cyclows’ attack seems to vaporize our Creatures, and we can’t Summon 
+any more after their first attack! The key to this battle is figuring out what Spaces the Cyclows attack.</p>
+<p>There are a few clues to this:</p>
+<ul>
+<li>Miss Yu’s name</li>
+<li>Miss Yu describes the attack as a “cow-ordinated lasso”, suggesting the Cyclows are working together to create a loop</li>
+<li>The Cyclows form white or black circles before they attack</li>
+</ul>
+<p>The Cyclows are positioning themselves into a <a href="https://en.wikipedia.org/wiki/Masyu" target="_blank" rel="noopener noreferrer">Masyu</a> puzzle. 
+There exists a single closed loop through Spaces on the 6&times;5 battlefield, where 
+<span class="embed">Vanilla Cyclow (AWAKE)</span>s represent white circles (the loop goes straight through and turns in at least 
+one of the Spaces before/after the loop) and <span class="embed">Chocolate Cyclow (AWAKE)</span>s represent black circles 
+(the loop turns, and goes straight in both cells before/after the loop).</p>
+<p>The Cyclows attack the Spaces on the loop, vaporizing any friendly Creatures on them. 
+In order to keep our Creatures through multiple cycles, we need them on safe Spaces off 
+the loop (either inside or outside). On the first cycle, we can Summon them to safe Spaces. 
+On subsequent cycles, we have two turns to Move them to safe Spaces.</p>
+<h2>Example strategy with a Bee deck:</h2>
+<p>Deck (all cards are befriended from the Tutorial):</p>
+<ul>
+<li>1× <span class="embed">Beeowulf</span></li>
+<li>2× <span class="embed">Beethoven</span></li>
+<li>2× <span class="embed">PBee &amp; J</span></li>
+</ul>
+<p><img src="miss_yu/miss-yu-1.png"/></p>
+<p>After solving the Masyu, there are only two safe Friendly Spaces, but there are safe Enemy Spaces 
+on the third row. We can Summon our cheap Creatures near them to move them next turn and prepare to 
+Summon two <span class="embed">Beethoven</span>s to the safe Friendly Spaces.</p>
+<p><img src="miss_yu/miss-yu-2.png"/></p>
+<p>We need four Food to Summon two <span class="embed">Beethoven</span>s, so let’s Create with the last PBee &amp; J, sacrificing it. 
+Now Summon the <span class="embed">Beethoven</span>s to the safe Friendly Spaces. After ending turn, the Cyclows’ first attack 
+leaves us with <span class="embed">Beeowulf</span>, <span class="embed">PBee &amp; J</span>, and two <span class="embed">Beethoven</span>s for the remainder of the battle.</p>
+<p><img src="miss_yu/miss-yu-3.png"/></p>
+<p>Once the Cyclows are TIRED/WEAK, we can attack with the <span class="embed">Beethoven</span>s and another Bee to deal 5 damage 
+to the WEAK Cyclow and Destroy it. The other TIRED Cyclows will Move and form a new Masyu puzzle 
+with 5 circles, pushing aside any other cards in their way, and return to SLEEPING.</p>
+<p>Now we have two turns to move our Creatures into new safe Spaces, then Attack the WEAK Cyclow, and repeat. 
+Note that we also have free turns during the TIRED/WEAK phase to relocate our Creatures to more 
+central Spaces to anticipate the next attack.</p>
+<h2>The final ANGRY phase</h2>
+<p>After surviving the third attack, all four remaining Cyclows are WEAK. After Destroying one, the <span class="embed">Barn</span> 
+becomes vulnerable, but the last three Cyclows turn ANGRY! They now each have 3 Power and start 
+Attacking normally, threatening to Destroy our Camps. They never curl back up into balls, suggesting that 
+the Masyu-based attacks are over and we have to play the remainder of the battle regularly.</p>
+<p>Normal battle strategy works here, as long as we've kept a decent number of Creatures alive up until this point:
+Attack one of the Cyclows on the first turn, prioritizing any that are Protecting the <span class="embed">Barn</span>.
+Now we should race to Destroy the <span class="embed">Barn</span> with our remaining turns, or if we have enough damage, take down the
+remaining Cyclows first.</p>
+<p>If the final phase proves too difficult, we can update our strategy on future attempts, now we know what to expect. 
+When all four Cyclows are WEAK, we can weaken all of them before Destroying one or even two of them on the same turn. 
+This leaves weaker Cyclows for the ANGRY phase.</p>
+<p>Once we Destroy Miss Yu’s <span class="embed">Barn</span>, we win the battle as normal and befriend the legendary <span class="embed">Miss Yu</span>!</p>
+
+    
+    
+    <h2 id="authors-notes">Author&rsquo;s Notes</h2>
+    <p>I love Masyu. I generated every single 6×5 Masyu (using <a href="https://github.com/obijywk/grilops" target="_blank" rel="noopener noreferrer">grilops</a>) and filtered them down to possible solutions where:</p>
+<ul>
+<li>there are between 2–4 safe Spaces on one half of the grid, so it’s not too easy or too hard</li>
+<li>when transitioning to one fewer cow, the remaining cows only have to move up to one Space away</li>
+<li>at least one of the safe Spaces becomes unsafe after the transition</li>
+<li>every safe Space pre-transition has a safe Space at most one Space away post-transition</li>
+</ul>
+<p>In the end, I hand-picked 51 configurations that met these conditions. Unfortunately, there are a few unlucky situations where cows and Camps could trap a Creature into a corner, unable to reach a safe Space before the attack. Sorry if this happened to you – one way to avoid this was pre-moving Creatures into the center of the field before Attacking.</p>
+<p>Originally, I was hoping I could find configurations where you could destroy any possible cow and the remaining cows have a unique Masyu solution up to one move away, but this seemed too constrained – can you find a possible arrangement?</p>
+<p>I imagined Miss Yu as early as the theme proposal for GalactiCardCaptors. Along with other example battles, I wanted to show the flexibility of the card-game format, to not only create original puzzles, but also extend to classic puzzlehunt genres including grid-based logic puzzles. I’m very happy to see this battle in its final form, and I hope you had fun playing it.</p>
+<p>Excerpt from the theme proposal:</p>
+<ul>
+<li>Ms. Yu has a 2D play grid and plays white and black circles</li>
+<li>On each turn, the Masyu laser corresponding to her played circles kills all your played cards on the loop</li>
+<li>Ms. Yu moves a few circles around each turn, modifying the laser’s path</li>
+<li>It’s a placement puzzle! Place your cards in safe spots to survive lasers and deal enough damage</li>
+</ul>
+<h2>See also</h2>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Spherical_cow" target="_blank" rel="noopener noreferrer">Spherical cow</a></li>
+</ul>
+    
+
+    
+    
+</main>
+
+
+    </div>
+    
+    <script>
+        const skipToMainLink = document.querySelector("a.skip-to-main");
+        const mainContentElement = document.getElementsByTagName("main")?.item(0) || document.querySelector("div.content");
+        if (skipToMainLink && mainContentElement) {
+            const mainContentAnchor = document.createElement("a");
+            const anchorId = "main-content-anchor"
+            mainContentAnchor.className = anchorId;
+            mainContentAnchor.id = anchorId;
+            skipToMainLink.href = `#${anchorId}`;
+            mainContentElement.parentNode.insertBefore(mainContentAnchor, mainContentElement);
+        }
+    </script>
+
+    
+    <script>
+        window.djangoBaseUrl = "https://2023.galacticpuzzlehunt.com/";
+        window.wsEndpoint = "wss://2023.galacticpuzzlehunt.com/game-ws-django/";
+        
+    </script>
+    <link rel="stylesheet" href="/static/game/assets/main-a586d973.css">
+    <script type="module" src="/static/game/assets/main-8c846e1d.js"></script>
+    
+
+    <script>
+        
+            window.isPosthunt = true;
+        
+    </script>
+</body>
+</html>

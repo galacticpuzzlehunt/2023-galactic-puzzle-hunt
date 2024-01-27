@@ -1,0 +1,510 @@
+
+
+
+
+
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no">
+    
+<title>Solution: Mister Penny</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=0.5">
+    <meta property="og:title" content="Galactic Puzzle Hunt 2023">
+    <meta property="og:description" content="What will you find inside the GalactiCosmiCave? Register now!">
+    <meta property="og:image" content="https://2023.galacticpuzzlehunt.com/static/images/banner.png">
+    <meta property="twitter:card" content="summary_large_image">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Asap+Condensed:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital@0;1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital@0;1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Recursive:slnt,CASL,CRSV,MONO@-3,0.5,1,1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/skeleton.css">
+    <link rel="stylesheet" href="/static/css/base.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.19/jquery.touchSwipe.min.js"></script>
+    <script src="/jsi18n/"></script>
+    <script src="/static/js/jquery.formset.js"></script>
+    <script src="/static/js/sorttable.js"></script>
+    <script src="/static/js/tray.js"></script>
+    <script src="/static/js/notify.js"></script>
+    <script src="/static/js/time.js"></script>
+    <link rel="icon" sizes="16x16 32x32 48x48 64x64" href="/static/images/favicon.ico" type="image/vnd.microsoft.icon">
+    
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Y1N52VY61R"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-Y1N52VY61R', {cookie_flags: 'secure;samesite=none'});
+</script>
+
+</head>
+<body>
+    <a class="skip-to-main">Press enter to skip to main content.</a>
+    <nav class="top-navbar">
+        <span class="tray">
+            <div class="top-tabs">
+                <div class="top-team-actions">
+                    <div id="nav-team-name">
+                        
+                    </div>
+                    
+                </div>
+                <div class="site-nav">
+                    
+                        <a href="/">
+                            Home
+                        </a>
+                        <a href="/about">
+                            About
+                        </a>
+                        
+                        
+                        <a class="selected-tab" href="/puzzles">
+                            Puzzles
+                        </a>
+                        
+                        <a href="/teams">
+                            Teams
+                        </a>
+                        
+                        <a href="/errata">
+                            Updates
+                        </a>
+                        
+                        
+                        <a href="/wrapup">
+                            Wrap-Up
+                        </a>
+                        
+                        <a href="https://galacticpuzzlehunt.com/archive">
+                            Archive
+                        </a>
+                        <a href="/donate">
+                            Donate
+                        </a>
+                    
+                </div>
+            </div>
+        </span>
+    </nav>
+    <script>
+    
+    
+    </script>
+    
+    <div class="top-more-actions">
+        
+<a href="/puzzle/mister_penny" class="btn">Back to the puzzle</a>
+
+    </div>
+    <div class="content">
+        
+
+<style>
+h2 {
+    font-size: 2.5rem;
+    font-weight: normal;
+    font-style: italic;
+    margin-bottom: 2rem;
+}
+
+h4 {
+    font-size: 2rem;
+    font-weight: normal;
+    margin: 2rem 0;
+}
+</style>
+
+<h1>
+    Solution: Mister Penny
+    
+</h1>
+
+<main class="puzzle-main">
+    <h2 style="margin-top: 0">
+        Written by
+        
+Amon Ge
+
+    </h2>
+
+    
+    <p>Mister Penny’s <span class="embed">Mint</span>s aren’t minting coins, but colorful paper Creatures. 
+Also, notice that they all have 2 Power, but varying Health. 
+For instance, <span class="embed">Spicy Fermented Cabbage</span> has 5000 Health! 
+The names of the Creatures each clue a country: the aforementioned card clues kimchi, which is Korean. </p>
+<p>Googling “Korean 5000” will show a red 5000 KRW banknote, and comparing with the other bills 
+reveals the mechanic of this battle:</p>
+<p><img src="mister_penny/krw.png"/></p>
+<p>Each Creature's name is cluing a particular country with colorful bill denominations (unrelated to the design of any banknote). 
+They share the color and health of a particular banknote from that country. They also take damage accordingly to 
+their currency – both a yellow Bee and a green Dinosaur will destroy <span class="embed">Spicy Fermented Cabbage</span> in one Attack, 
+dealing 50000 and 10000 damage respectively. There aren’t blue cards, so they’re ignored.</p>
+<p>The strategy to win the battle is to play a variety of colorful Creatures without consideration 
+for their base Power. Attacking an enemy Creature with any color of a higher denomination for 
+their respective currency instantly destroys them. </p>
+<p>After dealing with the Creatures on the board, we’ll have a few leftover Attacks to start 
+taking down the <span class="embed">Mint</span>s. Eventually, we can destroy all the Mints and befriend <span class="embed">Mister Penny</span>!</p>
+<h2>List of enemy Creatures</h2>
+<table>
+<thead>
+<tr>
+<th>name</th>
+<th>color</th>
+<th>beaten by (only colors in game)</th>
+<th>currency</th>
+<th>denom = health</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="embed">Goose                     </span></td>
+<td>green</td>
+<td>red</td>
+<td>CAD</td>
+<td>20</td>
+</tr>
+<tr>
+<td><span class="embed">Poutine                   </span></td>
+<td>purple</td>
+<td>green, red</td>
+<td>CAD</td>
+<td>10</td>
+</tr>
+<tr>
+<td><span class="embed">Wisent                    </span></td>
+<td>red</td>
+<td>green, yellow, purple</td>
+<td>EUR</td>
+<td>10</td>
+</tr>
+<tr>
+<td><span class="embed">Twelve stars              </span></td>
+<td>green</td>
+<td>yellow, purple</td>
+<td>EUR</td>
+<td>100</td>
+</tr>
+<tr>
+<td><span class="embed">Consort on a bull deity   </span></td>
+<td>grey</td>
+<td>red, green, yellow, purple</td>
+<td>EUR</td>
+<td>5</td>
+</tr>
+<tr>
+<td><span class="embed">Spicy fermented cabbage   </span></td>
+<td>red</td>
+<td>green, yellow</td>
+<td>KRW</td>
+<td>5000</td>
+</tr>
+<tr>
+<td><span class="embed">Hallyu                    </span></td>
+<td>green</td>
+<td>yellow</td>
+<td>KRW</td>
+<td>10000</td>
+</tr>
+<tr>
+<td><span class="embed">Wombat mob                </span></td>
+<td>purple</td>
+<td>red, yellow, green</td>
+<td>AUD</td>
+<td>5</td>
+</tr>
+<tr>
+<td><span class="embed">Jar of Vegemite           </span></td>
+<td>red</td>
+<td>yellow, green</td>
+<td>AUD</td>
+<td>20</td>
+</tr>
+<tr>
+<td><span class="embed">Didgeridoo                </span></td>
+<td>yellow</td>
+<td>green</td>
+<td>AUD</td>
+<td>50</td>
+</tr>
+<tr>
+<td><span class="embed">Toblerone dipped in fondue</span></td>
+<td>yellow</td>
+<td>red, green, purple</td>
+<td>CHF</td>
+<td>10</td>
+</tr>
+<tr>
+<td><span class="embed">Plus sign                 </span></td>
+<td>red</td>
+<td>green, purple</td>
+<td>CHF</td>
+<td>20</td>
+</tr>
+<tr>
+<td><span class="embed">Army knife                </span></td>
+<td>green</td>
+<td>purple</td>
+<td>CHF</td>
+<td>50</td>
+</tr>
+<tr>
+<td><span class="embed">Pungent canned herring    </span></td>
+<td>purple</td>
+<td>green, red</td>
+<td>SEK</td>
+<td>20</td>
+</tr>
+<tr>
+<td><span class="embed">Dala horse                </span></td>
+<td>green</td>
+<td>red</td>
+<td>SEK</td>
+<td>200</td>
+</tr>
+<tr>
+<td><span class="embed">Green curry               </span></td>
+<td>green</td>
+<td>red, purple</td>
+<td>THB</td>
+<td>20</td>
+</tr>
+<tr>
+<td><span class="embed">Red curry                 </span></td>
+<td>red</td>
+<td>purple</td>
+<td>THB</td>
+<td>100</td>
+</tr>
+<tr>
+<td><span class="embed">Ka’apiûara                </span></td>
+<td>purple</td>
+<td>red, yellow, grey</td>
+<td>BRL</td>
+<td>5</td>
+</tr>
+<tr>
+<td><span class="embed">Toasted cassava           </span></td>
+<td>red</td>
+<td>yellow, grey</td>
+<td>BRL</td>
+<td>10</td>
+</tr>
+<tr>
+<td><span class="embed">Order and Progress        </span></td>
+<td>yellow</td>
+<td>grey</td>
+<td>BRL</td>
+<td>20</td>
+</tr>
+</tbody>
+</table>
+<h2>List of banknotes (bold = ingame faction color)</h2>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>CAD</th>
+<th></th>
+<th>EUR</th>
+<th></th>
+<th>AUD</th>
+<th></th>
+<th>KRW</th>
+<th></th>
+<th>CHF</th>
+<th></th>
+<th>SEK</th>
+<th></th>
+<th>THB</th>
+<th></th>
+<th>BRL</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>5</td>
+<td>blue</td>
+<td><strong> 5   </strong></td>
+<td><strong> grey   </strong></td>
+<td><strong> 5   </strong></td>
+<td><strong> purple </strong></td>
+<td>1000</td>
+<td>blue</td>
+<td><strong> 10   </strong></td>
+<td><strong> yellow </strong></td>
+<td><strong> 20   </strong></td>
+<td><strong> purple </strong></td>
+<td><strong> 20   </strong></td>
+<td><strong> green  </strong></td>
+<td>2</td>
+<td>blue</td>
+</tr>
+<tr>
+<td><strong> 10  </strong></td>
+<td><strong> purple </strong></td>
+<td><strong> 10  </strong></td>
+<td><strong> red    </strong></td>
+<td>10</td>
+<td>blue</td>
+<td><strong> 5000  </strong></td>
+<td><strong> red    </strong></td>
+<td><strong> 20   </strong></td>
+<td><strong> red    </strong></td>
+<td>50</td>
+<td>orange</td>
+<td>50</td>
+<td>blue</td>
+<td><strong> 5   </strong></td>
+<td><strong> purple </strong></td>
+</tr>
+<tr>
+<td><strong> 20  </strong></td>
+<td><strong> green  </strong></td>
+<td>20</td>
+<td>blue</td>
+<td><strong> 20  </strong></td>
+<td><strong> red    </strong></td>
+<td><strong> 10000 </strong></td>
+<td><strong> green  </strong></td>
+<td><strong> 50   </strong></td>
+<td><strong> green  </strong></td>
+<td>100</td>
+<td>blue</td>
+<td><strong> 100  </strong></td>
+<td><strong> red    </strong></td>
+<td><strong> 10  </strong></td>
+<td><strong> red    </strong></td>
+</tr>
+<tr>
+<td><strong> 50  </strong></td>
+<td><strong> red    </strong></td>
+<td>50</td>
+<td>orange</td>
+<td><strong> 50  </strong></td>
+<td><strong> yellow </strong></td>
+<td><strong> 50000 </strong></td>
+<td><strong> yellow </strong></td>
+<td>100</td>
+<td>blue</td>
+<td><strong> 200  </strong></td>
+<td><strong> green  </strong></td>
+<td><strong> 500  </strong></td>
+<td><strong> purple </strong></td>
+<td><strong> 20  </strong></td>
+<td><strong> yellow </strong></td>
+</tr>
+<tr>
+<td>100</td>
+<td>brown</td>
+<td><strong> 100 </strong></td>
+<td><strong> green  </strong></td>
+<td><strong> 100 </strong></td>
+<td><strong> green  </strong></td>
+<td></td>
+<td></td>
+<td>200</td>
+<td>brown</td>
+<td><strong> 500  </strong></td>
+<td><strong> red    </strong></td>
+<td>1000</td>
+<td>brown</td>
+<td>50</td>
+<td>brown</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><strong> 200 </strong></td>
+<td><strong> yellow </strong></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td><strong> 1000 </strong></td>
+<td><strong> purple </strong></td>
+<td>1000</td>
+<td>brown</td>
+<td></td>
+<td></td>
+<td>100</td>
+<td>cyan</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><strong> 500 </strong></td>
+<td><strong> purple </strong></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td><strong> 200 </strong></td>
+<td><strong> grey   </strong></td>
+</tr>
+</tbody>
+</table>
+
+    
+    
+    <h2 id="authors-notes">Author&rsquo;s Notes</h2>
+    <p>This puzzle is an attempt to counter all the US-centric puzzles out there. Imagine having to distinguish your bills by <a href="/puzzle/faces" target="_blank" rel="noopener noreferrer">faces</a> instead of colour!</p>
+<p>Mister Penny actually comes from an <a href="https://www.humfuzz.com/games/misterpenny/" target="_blank" rel="noopener noreferrer">extremely half-baked game jam game</a> S and I made many years ago (arrow keys to move, space to use part of yourself as bait). The best part of that demo is the art and music. I slapped some boar ears and tusks onto Mister Penny as placeholder art. It never changed.</p>
+<p>Mister Penny is married to Miss Yu. Their four-year-old son, Kai Yu, is a bald human.</p>
+<h2>Don’t watch this</h2>
+<p><a href="https://www.youtube.com/watch?v=bFLi0F1fm6E" target="_blank" rel="noopener noreferrer">https://www.youtube.com/watch?v=bFLi0F1fm6E</a>
+(NSFW: guy with chainsaw does murders)</p>
+    
+
+    
+    
+</main>
+
+
+    </div>
+    
+    <script>
+        const skipToMainLink = document.querySelector("a.skip-to-main");
+        const mainContentElement = document.getElementsByTagName("main")?.item(0) || document.querySelector("div.content");
+        if (skipToMainLink && mainContentElement) {
+            const mainContentAnchor = document.createElement("a");
+            const anchorId = "main-content-anchor"
+            mainContentAnchor.className = anchorId;
+            mainContentAnchor.id = anchorId;
+            skipToMainLink.href = `#${anchorId}`;
+            mainContentElement.parentNode.insertBefore(mainContentAnchor, mainContentElement);
+        }
+    </script>
+
+    
+    <script>
+        window.djangoBaseUrl = "https://2023.galacticpuzzlehunt.com/";
+        window.wsEndpoint = "wss://2023.galacticpuzzlehunt.com/game-ws-django/";
+        
+    </script>
+    <link rel="stylesheet" href="/static/game/assets/main-a586d973.css">
+    <script type="module" src="/static/game/assets/main-8c846e1d.js"></script>
+    
+
+    <script>
+        
+            window.isPosthunt = true;
+        
+    </script>
+</body>
+</html>

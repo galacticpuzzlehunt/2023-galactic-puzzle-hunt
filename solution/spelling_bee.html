@@ -1,0 +1,452 @@
+
+
+
+
+
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no">
+    
+<title>Solution: Spelling Bee</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=0.5">
+    <meta property="og:title" content="Galactic Puzzle Hunt 2023">
+    <meta property="og:description" content="What will you find inside the GalactiCosmiCave? Register now!">
+    <meta property="og:image" content="https://2023.galacticpuzzlehunt.com/static/images/banner.png">
+    <meta property="twitter:card" content="summary_large_image">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Asap+Condensed:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital@0;1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital@0;1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Recursive:slnt,CASL,CRSV,MONO@-3,0.5,1,1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/skeleton.css">
+    <link rel="stylesheet" href="/static/css/base.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.19/jquery.touchSwipe.min.js"></script>
+    <script src="/jsi18n/"></script>
+    <script src="/static/js/jquery.formset.js"></script>
+    <script src="/static/js/sorttable.js"></script>
+    <script src="/static/js/tray.js"></script>
+    <script src="/static/js/notify.js"></script>
+    <script src="/static/js/time.js"></script>
+    <link rel="icon" sizes="16x16 32x32 48x48 64x64" href="/static/images/favicon.ico" type="image/vnd.microsoft.icon">
+    
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Y1N52VY61R"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-Y1N52VY61R', {cookie_flags: 'secure;samesite=none'});
+</script>
+
+</head>
+<body>
+    <a class="skip-to-main">Press enter to skip to main content.</a>
+    <nav class="top-navbar">
+        <span class="tray">
+            <div class="top-tabs">
+                <div class="top-team-actions">
+                    <div id="nav-team-name">
+                        
+                    </div>
+                    
+                </div>
+                <div class="site-nav">
+                    
+                        <a href="/">
+                            Home
+                        </a>
+                        <a href="/about">
+                            About
+                        </a>
+                        
+                        
+                        <a class="selected-tab" href="/puzzles">
+                            Puzzles
+                        </a>
+                        
+                        <a href="/teams">
+                            Teams
+                        </a>
+                        
+                        <a href="/errata">
+                            Updates
+                        </a>
+                        
+                        
+                        <a href="/wrapup">
+                            Wrap-Up
+                        </a>
+                        
+                        <a href="https://galacticpuzzlehunt.com/archive">
+                            Archive
+                        </a>
+                        <a href="/donate">
+                            Donate
+                        </a>
+                    
+                </div>
+            </div>
+        </span>
+    </nav>
+    <script>
+    
+    
+    </script>
+    
+    <div class="top-more-actions">
+        
+<a href="/puzzle/spelling_bee" class="btn">Back to the puzzle</a>
+
+    </div>
+    <div class="content">
+        
+
+<style>
+h2 {
+    font-size: 2.5rem;
+    font-weight: normal;
+    font-style: italic;
+    margin-bottom: 2rem;
+}
+
+h4 {
+    font-size: 2rem;
+    font-weight: normal;
+    margin: 2rem 0;
+}
+</style>
+
+<h1>
+    Solution: Spelling Bee
+    
+</h1>
+
+<main class="puzzle-main">
+    <h2 style="margin-top: 0">
+        Written by
+        
+Josh Alman, Jenna Himawan, and Nathan Pinsker
+
+    </h2>
+
+    
+    
+<p>When we open this puzzle, we can make a few observations right away:</p>
+<ul>
+  <li>The grid has 6 rows and 8 columns.</li>
+  <li>We have a base, the <span class="embed">Beehive</span>, with 1 health.</li>
+  <li>The AI has a base, the <span class="embed">Bearhive</span>, with 99 health. The <span class="embed">Bearhive</span> text says that it contains 0 happy bears and 0 sad bears.</li>
+  <li>The flavortext says &ldquo;<i>We&rsquo;ll keep the H, O, N, E, Y fresh, so it won&rsquo;t reset between T, U, R, N, S!</i>&rdquo;</li>
+  <li>We start with 15 honey.</li>
+  <li>Our deck contains 49 cards.</li>
+  <li>Our hand has 5 <span class="embed">Larva</span> cards. <span class="embed">Larva</span>s cannot Attack, Create, or Move. Their Special (costing 1 honey) is to turn into a Bee. They also produce one honey at the start of our turn.</li>
+</ul>
+
+<p>If we progress through the battle, we&rsquo;ll see the following:</p>
+<ul>
+  <li>Bears will sometimes spawn in the grid. Each bear &ldquo;wants to see&rdquo; a certain kind of thing. For example, the first bear to appear, the <span class="embed">Luge Bear</span>, &ldquo;wants to see a winter Olympic sport before it enters the Bearhive next turn&rdquo;.</li>
+  <li>The turn after the bear appears, it will &ldquo;enter the <span class="embed">Bearhive</span>&rdquo;, and the <span class="embed">Bearhive</span>&rsquo;s counts of happy and sad bears will change accordingly.</li>
+</ul>
+
+<p>We can also investigate our cards and what they can do.</p>
+<ul>
+  <li>The <span class="embed">Larva</span> Special allows it to turn into 26 different types of Bee, one for each letter of the alphabet.</li>
+  <li>Bees also cannot Attack, Create, or Move, and they generate honey at the start of the turn. The Bee Flex ability destroys the Bee.</li>
+</ul>
+
+<p>The next question is how to make the bears happy. Given the title, flavortext, and <span class="embed">Larva</span> / Bee abilities, we might try spelling members of the categories that the bears want to see.
+As a simple example, if we use our bees to spell LUGE on Turn 2, we can see that the <span class="embed">Bearhive</span> counter goes up when the <span class="embed">Luge Bear</span> enters it.</p>
+
+<p>Here are some more details about the spelling rules:</p>
+<ul>
+  <li>Substrings are OK. For example, if we use our bees to spell DELUGE, LUGE is a substring and it makes the <span class="embed">Luge Bear</span> happy.</li>
+  <li>The permitted reading orders are top to bottom and left to right (same as Scrabble).</li>
+  <li>We can use the <span class="embed">Beehive</span>, the <span class="embed">Bearhive</span>, and bears for spelling. In all of these cases, the first letter of the card name is used.</li>
+  <li><span class="embed">Larva</span>s cannot be used for spelling.</li>
+</ul>
+
+<p>Note that the Resourceful mastery is helpful for solving this puzzle, since it allows us to draw more cards and play our Larvae faster.</p>
+
+<p>If we get to the end of Turn 15 and all the bears are happy, we win! <a href="#appendix">See the appendix for one possible solution, containing full details about every turn</a>.</p>
+
+
+
+    
+    
+    <h2 id="authors-notes">Author&rsquo;s Notes</h2>
+    
+When we wrote this puzzle, we thought that Larvae and Bees would Create, subject to the usual constraints. This was later changed so the Larvae and Bees would generate honey at the start of turn, and wouldn&rsquo;t be unreadied&mdash;so now they can &ldquo;Create&rdquo; and Special/Flex on the same turn! The solution in the Appendix was supposed to end with 0 honey. You have a lot more energy to play with now! 😅 I guess the number of cards in the deck is still a limiting factor!
+
+    
+
+    
+    
+    <h2 id="appendix">Appendix</h2>
+    
+<style>
+  .puzzle-main table.grid {
+    width: auto;
+  }
+
+  .puzzle-main table.grid tr td.notes {
+    border: none;
+    margin: 0px 10px;
+  }
+
+  .puzzle-main table.grid tr td:not(.notes) {
+    width: 30px;
+    height: 30px;
+    border: 1px solid var(--body-text-color);
+    text-align: center;
+    vertical-align: middle;
+    padding: 0;
+    margin: 0;
+  }
+
+  .puzzle-main table.grid td img {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    display: block;
+  }
+
+  .puzzle-main table.grid td.lightyellow {
+    background-color: lightyellow;
+    color: black;
+  }
+
+  .puzzle-main table.grid td.black {
+    background-color: black;
+  }
+
+  .puzzle-main table.grid td.gray {
+    background-color: gray;
+  }
+
+  .puzzle-main table.grid tr.spacer {
+    height: 10px;
+  }
+
+
+  
+</style>
+
+<table class="grid">
+  <tr><th>Turn #</th><th>Honey</th><th>Notes</th><th colspan="8">Board state at end of turn</th></tr>
+  <tr>
+    <td rowspan="3" class="notes">Initial state</td><td rowspan="3" class="notes">15</td><td rowspan="3" class="notes">The B is the Beehive</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+  </tr>
+  <tr>
+    <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+  </tr>
+  <tr>
+    <td></td><td></td><td class="lightyellow">B</td><td></td><td></td><td></td><td></td><td></td>
+  </tr>
+  <tr class="spacer"></tr>
+  <tr>
+    <td rowspan="3" class="notes">End of turn 1</td><td rowspan="3" class="notes">4</td><td rowspan="3" class="notes">Draw 2 cards with Resourceful</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+  </tr>
+  <tr>
+    <td></td><td><img src="larva.png" alt="larva"/></td><td><img src="larva.png" alt="larva"/></td><td><img src="larva.png" alt="larva"/></td><td><img src="larva.png" alt="larva"/></td><td><img src="larva.png" alt="larva"/></td><td><img src="larva.png" alt="larva"/></td><td><img src="larva.png" alt="larva"/></td>
+  </tr>
+  <tr>
+    <td></td><td></td><td class="lightyellow">B</td><td></td><td></td><td></td><td></td><td></td>
+  </tr>
+  <tr class="spacer"></tr>
+  <tr>
+    <td rowspan="3" class="notes">Turn 2</td><td rowspan="3" class="notes">3</td><td rowspan="3" class="notes">Luge Bear wants to see a winter Olympic sport (BOBSLED)</td><td><img src="larva.png" alt="larva"/></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+  </tr>
+  <tr>
+    <td></td><td>B</td><td>O</td><td>B</td><td>S</td><td>L</td><td>E</td><td>D</td>
+  </tr>
+  <tr>
+    <td></td><td></td><td class="lightyellow">B</td><td></td><td></td><td></td><td></td><td></td>
+  </tr>
+  <tr class="spacer"></tr>
+  <tr>
+    <td rowspan="3" class="notes">Turn 3</td><td rowspan="3" class="notes">10</td><td rowspan="3" class="notes"></td><td><img src="larva.png" alt="larva"/></td><td><img src="larva.png" alt="larva"/></td><td></td><td></td><td></td><td></td><td></td><td></td>
+  </tr>
+  <tr>
+    <td></td><td>B</td><td>O</td><td>B</td><td>S</td><td>L</td><td>E</td><td>D</td>
+  </tr>
+  <tr>
+    <td></td><td></td><td class="lightyellow">B</td><td></td><td></td><td></td><td></td><td></td>
+  </tr>
+  <tr class="spacer"></tr>
+  <tr>
+    <td rowspan="3" class="notes">Turn 4</td><td rowspan="3" class="notes">6</td><td rowspan="3" class="notes">Draw 4 cards</td><td><img src="larva.png" alt="larva"/></td><td><img src="larva.png" alt="larva"/></td><td><img src="larva.png" alt="larva"/></td><td><img src="larva.png" alt="larva"/></td><td><img src="larva.png" alt="larva"/></td><td><img src="larva.png" alt="larva"/></td><td><img src="larva.png" alt="larva"/></td><td></td>
+  </tr>
+  <tr>
+    <td></td><td>B</td><td>O</td><td>B</td><td>S</td><td>L</td><td>E</td><td>D</td>
+  </tr>
+  <tr>
+    <td></td><td></td><td class="lightyellow">B</td><td></td><td></td><td></td><td></td><td></td>
+  </tr>
+  <tr class="spacer"></tr>
+  <tr>
+    <td rowspan="3" class="notes">Turn 5</td><td rowspan="3" class="notes">0</td><td rowspan="3" class="notes">Stufful Bear: Generation I Pokémon (SPEAROW)<br/>Draw 4 cards</td><td>S</td><td>P</td><td>E</td><td>A</td><td>R</td><td>O</td><td>W</td><td></td>
+  </tr>
+  <tr>
+    <td></td><td>B</td><td>O</td><td>B</td><td>S</td><td>L</td><td>E</td><td>D</td>
+  </tr>
+  <tr>
+    <td></td><td></td><td class="lightyellow">B</td><td><img src="larva.png" alt="larva"/></td><td><img src="larva.png" alt="larva"/></td><td><img src="larva.png" alt="larva"/></td><td><img src="larva.png" alt="larva"/></td><td><img src="larva.png" alt="larva"/></td>
+  </tr>
+  <tr class="spacer"></tr>
+  <tr>
+    <td rowspan="3" class="notes">Turn 6</td><td rowspan="3" class="notes">14</td><td rowspan="3" class="notes">Black Bear: Color (BISTRE)</td><td>S</td><td>P</td><td>E</td><td>A</td><td>R</td><td>O</td><td>W</td><td></td>
+  </tr>
+  <tr>
+    <td></td><td>B</td><td>O</td><td>B</td><td>S</td><td>L</td><td>E</td><td>D</td>
+  </tr>
+  <tr>
+    <td></td><td></td><td class="lightyellow">B</td><td>I</td><td>S</td><td>T</td><td>R</td><td>E</td>
+  </tr>
+  <tr class="spacer"></tr>
+  <tr>
+    <td rowspan="3" class="notes">Turn 7</td><td rowspan="3" class="notes">29</td><td rowspan="3" class="notes">Banana Bear: Fruit (PEAR)<br/>Flex to destroy S &amp; R bees; spawn Larvae</td><td>S</td><td>P</td><td>E</td><td>A</td><td>R</td><td>O</td><td>W</td><td></td>
+  </tr>
+  <tr>
+    <td></td><td>B</td><td>O</td><td>B</td><td>S</td><td>L</td><td>E</td><td>D</td>
+  </tr>
+  <tr>
+    <td></td><td></td><td class="lightyellow">B</td><td>I</td><td><img src="larva.png" alt="larva"/></td><td>T</td><td><img src="larva.png" alt="larva"/></td><td>E</td>
+  </tr>
+  <tr class="spacer"></tr>
+  <tr>
+    <td rowspan="3" class="notes">Turn 8</td><td rowspan="3" class="notes">40</td><td rowspan="3" class="notes">SUN Bear: Abbr. of day of week (WED)<br/>ORD Bear: IATA code for FL airport (RSW)<br/>Draw 1 card</td><td>S</td><td><img src="larva.png" alt="larva"/></td><td>E</td><td>A</td><td>R</td><td><img src="larva.png" alt="larva"/></td><td>W</td><td></td>
+  </tr>
+  <tr>
+    <td></td><td>B</td><td>O</td><td>B</td><td>S</td><td>L</td><td>E</td><td>D</td>
+  </tr>
+  <tr>
+    <td></td><td></td><td class="lightyellow">B</td><td>I</td><td>W</td><td>T</td><td>D</td><td>E</td>
+  </tr>
+  <tr class="spacer"></tr>
+  <tr>
+    <td rowspan="3" class="notes">Turn 9</td><td rowspan="3" class="notes">47</td><td rowspan="3" class="notes">Bears Bear: NFL team name (BEARS)<br/>Draw 2 cards</td><td>S</td><td>B</td><td>E</td><td>A</td><td>R</td><td>S</td><td>W</td><td></td>
+  </tr>
+  <tr>
+    <td></td><td>B</td><td><img src="larva.png" alt="larva"/></td><td><img src="larva.png" alt="larva"/></td><td>S</td><td>L</td><td>E</td><td>D</td>
+  </tr>
+  <tr>
+    <td></td><td></td><td class="lightyellow">B</td><td>I</td><td><img src="larva.png" alt="larva"/></td><td>T</td><td>D</td><td>E</td>
+  </tr>
+  <tr class="spacer"></tr>
+  <tr>
+    <td rowspan="3" class="notes">Turn 10</td><td rowspan="3" class="notes">53</td><td rowspan="3" class="notes">Confused Bear: Synonym for tricked (MISLED)<br/>EUR Bear: Currency code (RSD)<br/>Draw 2 cards</td><td>S</td><td><img src="larva.png" alt="larva"/></td><td><img src="larva.png" alt="larva"/></td><td><img src="larva.png" alt="larva"/></td><td>R</td><td>S</td><td>W</td><td></td>
+  </tr>
+  <tr>
+    <td></td><td>B</td><td>M</td><td>I</td><td>S</td><td>L</td><td>E</td><td>D</td>
+  </tr>
+  <tr>
+    <td></td><td></td><td class="lightyellow">B</td><td>I</td><td>D</td><td>T</td><td>D</td><td>E</td>
+  </tr>
+  <tr class="spacer"></tr>
+  <tr>
+    <td rowspan="4" class="notes">Turn 11</td><td rowspan="4" class="notes">69</td><td rowspan="4" class="notes">Bludgeon Bear: Weapon (BOMB)<br/>Three Bear: Number (FOUR)<br/>The black letters on the first row are the Bludgeon Bear and Three Bear</td><td></td><td></td><td class="black">B</td><td class="black">T</td><td></td><td></td><td></td><td></td>
+  </tr>
+  <tr>
+    <td>S</td><td>F</td><td>O</td><td>U</td><td>R</td><td>S</td><td>W</td><td></td>
+  </tr>
+  <tr>
+    <td></td><td>B</td><td>M</td><td>I</td><td>S</td><td>L</td><td>E</td><td>D</td>
+  </tr>
+  <tr>
+    <td></td><td></td><td class="lightyellow">B</td><td>I</td><td>D</td><td>T</td><td>D</td><td>E</td>
+  </tr>
+  <tr class="spacer"></tr>
+  <tr>
+    <td rowspan="3" class="notes">Turn 12</td><td rowspan="3" class="notes">64</td><td rowspan="3" class="notes">Draw 5 cards</td><td>S</td><td>F</td><td>O</td><td><img src="larva.png" alt="larva"/></td><td><img src="larva.png" alt="larva"/></td><td><img src="larva.png" alt="larva"/></td><td><img src="larva.png" alt="larva"/></td><td></td>
+  </tr>
+  <tr>
+    <td></td><td><img src="larva.png" alt="larva"/></td><td><img src="larva.png" alt="larva"/></td><td>I</td><td>S</td><td><img src="larva.png" alt="larva"/></td><td>E</td><td>D</td>
+  </tr>
+  <tr>
+    <td></td><td></td><td class="lightyellow">B</td><td>I</td><td>D</td><td>T</td><td>D</td><td>E</td>
+  </tr>
+  <tr class="spacer"></tr>
+  <tr>
+    <td rowspan="3" class="notes">Turn 13</td><td rowspan="3" class="notes">76</td><td rowspan="3" class="notes">Four Bear: Larger # than last time (FORTY &gt; FOUR)<br/>Grism Bear: Optical component (PRISM)<br/>Assault Bear: Kentucky Derby winner (ORB)</td><td>S</td><td>F</td><td>O</td><td>R</td><td>T</td><td>Y</td><td><img src="larva.png" alt="larva"/></td><td><img src="larva.png" alt="larva"/></td>
+  </tr>
+  <tr>
+    <td></td><td>P</td><td>R</td><td>I</td><td>S</td><td>M</td><td>E</td><td>D</td>
+  </tr>
+  <tr>
+    <td></td><td></td><td class="lightyellow">B</td><td>I</td><td>D</td><td>T</td><td>D</td><td>E</td>
+  </tr>
+  <tr class="spacer"></tr>
+  <tr>
+    <td rowspan="3" class="notes">Turn 14</td><td rowspan="3" class="notes">32</td><td rowspan="3" class="notes">Draw 16 cards</td><td>S</td><td>F</td><td><img src="larva.png" alt="larva"/></td><td><img src="larva.png" alt="larva"/></td><td><img src="larva.png" alt="larva"/></td><td><img src="larva.png" alt="larva"/></td><td><img src="larva.png" alt="larva"/></td><td><img src="larva.png" alt="larva"/></td>
+  </tr>
+  <tr>
+    <td></td><td>P</td><td><img src="larva.png" alt="larva"/></td><td><img src="larva.png" alt="larva"/></td><td><img src="larva.png" alt="larva"/></td><td><img src="larva.png" alt="larva"/></td><td><img src="larva.png" alt="larva"/></td><td><img src="larva.png" alt="larva"/></td>
+  </tr>
+  <tr>
+    <td><img src="larva.png" alt="larva"/></td><td><img src="larva.png" alt="larva"/></td><td class="lightyellow">B</td><td><img src="larva.png" alt="larva"/></td><td><img src="larva.png" alt="larva"/></td><td><img src="larva.png" alt="larva"/></td><td><img src="larva.png" alt="larva"/></td><td><img src="larva.png" alt="larva"/></td>
+  </tr>
+  <tr class="spacer"></tr>
+  <tr>
+    <td rowspan="6" class="notes">Turn 15</td><td rowspan="6" class="notes">35</td><td rowspan="6" class="notes">Archery Bear: Summer Olympic sport (BOXING)<br/>Oak Bear: Tree (BAOBAB)</br>December Bear: Month (AUGUST)<br/>Alabama Bear: US State (NEBRASKA)<br/>Rammus Bear: League of Legends Champion (DARIUS)<br/>Gray B is the Bearhive</td><td></td><td></td><td class="gray">B</td><td></td><td></td><td class="black">D</td><td></td><td></td>
+  </tr>
+  <tr>
+    <td></td><td></td><td class="black">A</td><td></td><td></td><td class="black">A</td><td></td><td></td>
+  </tr>
+  <tr>
+    <td></td><td></td><td class="black">O</td><td></td><td></td><td class="black">R</td><td></td><td></td>
+  </tr>
+  <tr>
+    <td>S</td><td>F</td><td>B</td><td>O</td><td>X</td><td>I</td><td>N</td><td>G</td>
+  </tr>
+  <tr>
+    <td></td><td>P</td><td>A</td><td>U</td><td>G</td><td>U</td><td>S</td><td>T</td>
+  </tr>
+  <tr>
+    <td>N</td><td>E</td><td class="lightyellow">B</td><td>R</td><td>A</td><td>S</td><td>K</td><td>A</td>
+  </tr>
+</table>
+
+    
+</main>
+
+
+    </div>
+    
+    <script>
+        const skipToMainLink = document.querySelector("a.skip-to-main");
+        const mainContentElement = document.getElementsByTagName("main")?.item(0) || document.querySelector("div.content");
+        if (skipToMainLink && mainContentElement) {
+            const mainContentAnchor = document.createElement("a");
+            const anchorId = "main-content-anchor"
+            mainContentAnchor.className = anchorId;
+            mainContentAnchor.id = anchorId;
+            skipToMainLink.href = `#${anchorId}`;
+            mainContentElement.parentNode.insertBefore(mainContentAnchor, mainContentElement);
+        }
+    </script>
+
+    
+    <script>
+        window.djangoBaseUrl = "https://2023.galacticpuzzlehunt.com/";
+        window.wsEndpoint = "wss://2023.galacticpuzzlehunt.com/game-ws-django/";
+        
+    </script>
+    <link rel="stylesheet" href="/static/game/assets/main-a586d973.css">
+    <script type="module" src="/static/game/assets/main-8c846e1d.js"></script>
+    
+
+    <script>
+        
+            window.isPosthunt = true;
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,223 @@
+
+
+
+
+
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no">
+    
+<title>Solution: Infinitely Many Hogs (and Logs)</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=0.5">
+    <meta property="og:title" content="Galactic Puzzle Hunt 2023">
+    <meta property="og:description" content="What will you find inside the GalactiCosmiCave? Register now!">
+    <meta property="og:image" content="https://2023.galacticpuzzlehunt.com/static/images/banner.png">
+    <meta property="twitter:card" content="summary_large_image">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Asap+Condensed:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital@0;1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital@0;1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Recursive:slnt,CASL,CRSV,MONO@-3,0.5,1,1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/skeleton.css">
+    <link rel="stylesheet" href="/static/css/base.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.19/jquery.touchSwipe.min.js"></script>
+    <script src="/jsi18n/"></script>
+    <script src="/static/js/jquery.formset.js"></script>
+    <script src="/static/js/sorttable.js"></script>
+    <script src="/static/js/tray.js"></script>
+    <script src="/static/js/notify.js"></script>
+    <script src="/static/js/time.js"></script>
+    <link rel="icon" sizes="16x16 32x32 48x48 64x64" href="/static/images/favicon.ico" type="image/vnd.microsoft.icon">
+    
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Y1N52VY61R"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-Y1N52VY61R', {cookie_flags: 'secure;samesite=none'});
+</script>
+
+</head>
+<body>
+    <a class="skip-to-main">Press enter to skip to main content.</a>
+    <nav class="top-navbar">
+        <span class="tray">
+            <div class="top-tabs">
+                <div class="top-team-actions">
+                    <div id="nav-team-name">
+                        
+                    </div>
+                    
+                </div>
+                <div class="site-nav">
+                    
+                        <a href="/">
+                            Home
+                        </a>
+                        <a href="/about">
+                            About
+                        </a>
+                        
+                        
+                        <a class="selected-tab" href="/puzzles">
+                            Puzzles
+                        </a>
+                        
+                        <a href="/teams">
+                            Teams
+                        </a>
+                        
+                        <a href="/errata">
+                            Updates
+                        </a>
+                        
+                        
+                        <a href="/wrapup">
+                            Wrap-Up
+                        </a>
+                        
+                        <a href="https://galacticpuzzlehunt.com/archive">
+                            Archive
+                        </a>
+                        <a href="/donate">
+                            Donate
+                        </a>
+                    
+                </div>
+            </div>
+        </span>
+    </nav>
+    <script>
+    
+    
+    </script>
+    
+    <div class="top-more-actions">
+        
+<a href="/puzzle/infinitely_many_hogs_and_logs" class="btn">Back to the puzzle</a>
+
+    </div>
+    <div class="content">
+        
+
+<style>
+h2 {
+    font-size: 2.5rem;
+    font-weight: normal;
+    font-style: italic;
+    margin-bottom: 2rem;
+}
+
+h4 {
+    font-size: 2rem;
+    font-weight: normal;
+    margin: 2rem 0;
+}
+</style>
+
+<h1>
+    Solution: Infinitely Many Hogs (and Logs)
+    
+</h1>
+
+<main class="puzzle-main">
+    <h2 style="margin-top: 0">
+        Written by
+        
+Violet Xiao
+
+    </h2>
+
+    
+    <p>This battle contains 4 sub-battles that involve various combinations of factories, logs, hogs, and stacking.</p>
+<h2>Battle 1</h2>
+<p>This battle only requires us to be able to deal with one <span class="embed">Hog</span> and one <span class="embed">Log</span>, after one setup turn. There are many ways
+to go about this. For example, we could play a <span class="embed">Beeowulf</span> and a <span class="embed">Beethoven</span> on turn 1, then on turn 2, use them to
+destroy the Hog and Log, then spend our remaining food to summon a <span class="embed">Hamlet</span>, then in subsequent turns use the Beeowulf
+and Beethoven to remove the new Hog and Log, while using the Hamlet to whittle down the enemy Factories.</p>
+<h2>Battle 2</h2>
+<p>In this battle, we face a <span class="embed">Hog Factory</span>, a <span class="embed">Log Factory</span>, and a <span class="embed">Stacktory</span>. If all three of the enemy bases are alive,
+the AI alternates between summoning a <span class="embed">Hog on a Log</span> and a <span class="embed">Log on a Hog</span>. If the Stacktory is not alive, any remaining
+factories spawn a Creature just like in Battle 1. If the Stacktory is alive but one or more of the other factories have been
+removed, the Stacktory has no effect, and any remaining factories spawn like in Battle 1.</p>
+<p>In this battle, since the AI starts with a Hog on a Log on our turn 1, we start off on the back foot, at least relative to
+the previous battle. One strategy to beat this battle is to rush down the enemy Log Factory and destroy it on turn 2, since
+the AI doesn&rsquo;t guard that column by then. This can be done by playing two <span class="embed">Hog</span>s (and another unit) on turn 1, then
+using the Hogs to attack down the Log Factory on turn 2. Once this is done, we only need to deal with one Hog per turn. This
+can be done with cheap units in general (since we can play more than one per turn, we&rsquo;ll amass a lead), and it
+especially helps to have units such as <span class="embed">PBee &amp; J</span> or <span class="embed">Beethoven</span>.</p>
+<h2>Battle 3</h2>
+<p>In this battle, we are faced with a <span class="embed">Hog Factorytorytory</span>, and a <span class="embed">Log Factorytorytory</span>. A Factorytorytory spawns a 
+Factorytory, a Factorytory spawns a Factory, and a Factory spawns a Creature (Hog or Log) of the corresponding type. The 
+AI&rsquo;s Factories spawn in top-to-bottom, left-to-right order, and only spawn on their side of the board.</p>
+<p>Though the AI can potentially summon a lot of units this way, if left to its own devices, it will only summon one Creature on
+its side of the board, and fill the rest of its spaces with various types of factories, thanks to the spawning order. If we
+fill up a single enemy space before that point, it won&rsquo;t even have space to summon any Creatures at all! If we do that,
+we will have unlimited time to set up our side of the field however we&rsquo;d like. To proceed from there, we can either
+remove the AI&rsquo;s factories a couple at a time, filling up the empty spaces with our own Creatures to prevent more from
+being spawned, or we can build up a powerful set of forces that can overwhelm the rate that the AI can respawn things
+(which is capped at 7 units per turn). Creatures such as <span class="embed">Quail Aboard Fiery Steeds</span> and <span class="embed">Nice Cow</span> can help with this
+strategy.</p>
+<h2>Battle 4</h2>
+<p>In this battle, the AI spawns units that are essentially an infinite stack: the <span class="embed">Hog on a Log on a...</span> will spawn a 
+<span class="embed">Log on a Hog on a...</span> if destroyed, and vice-versa. However, the enemy factory will only spawn on the same column that 
+it&rsquo;s on, so the total number of enemy units out at a time can be limited a lot more, provided those units never move.</p>
+<p>One strategy to deal with this battle is to immediately fill up an enemy space in the middle column, limiting the AI to a
+single Creature, then building up enough power (while just tanking the 1 Creature&rsquo;s worth of damage every turn) to kill
+the enemy base with either <span class="embed">Murray</span> or with some Sneaky units. We can deal with the single Creature either by repeatedly
+playing low cost units in front of the enemy <span class="embed">Hog on a Log on a...</span>, or by using <span class="embed">Vanilla Calf</span> and spending 2 Food to
+heal off its damage every turn.</p>
+
+    
+    
+    <h2 id="authors-notes">Author&rsquo;s Notes</h2>
+    <p>This idea for this battle started out with Kat saying that she wished she could draw a hog on a log as card art. I proposed the <span class="embed">Hog on a Log</span> and <span class="embed">Log on a Hog</span> cards. I thought that the stacking nature of the cards was really amusing, so I made some levels with more and more ridiculous levels of stacking.</p>
+<p>Many thanks to Lewis for the card art in this battle, and also many thanks to DD for drawing the map page art for this battle, and Alan for writing the special case code to get it on the map page. It was a lot of effort for one little gag, but I think it really added a lot of personality to the hunt!</p>
+    
+
+    
+    
+</main>
+
+
+    </div>
+    
+    <script>
+        const skipToMainLink = document.querySelector("a.skip-to-main");
+        const mainContentElement = document.getElementsByTagName("main")?.item(0) || document.querySelector("div.content");
+        if (skipToMainLink && mainContentElement) {
+            const mainContentAnchor = document.createElement("a");
+            const anchorId = "main-content-anchor"
+            mainContentAnchor.className = anchorId;
+            mainContentAnchor.id = anchorId;
+            skipToMainLink.href = `#${anchorId}`;
+            mainContentElement.parentNode.insertBefore(mainContentAnchor, mainContentElement);
+        }
+    </script>
+
+    
+    <script>
+        window.djangoBaseUrl = "https://2023.galacticpuzzlehunt.com/";
+        window.wsEndpoint = "wss://2023.galacticpuzzlehunt.com/game-ws-django/";
+        
+    </script>
+    <link rel="stylesheet" href="/static/game/assets/main-a586d973.css">
+    <script type="module" src="/static/game/assets/main-8c846e1d.js"></script>
+    
+
+    <script>
+        
+            window.isPosthunt = true;
+        
+    </script>
+</body>
+</html>
