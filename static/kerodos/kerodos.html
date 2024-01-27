@@ -1,0 +1,41 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+	html, body { height: 100%; width: 100%; margin: 0;}
+	body { background: #0e1550; }
+	</style>
+	<link rel="stylesheet" href="kerodosAnim.css">
+</head>
+<body>
+	<div id="kerodos-anim-clip">
+		<div id="kerodos-anim">
+		</div>
+	</div>
+<script src="kerodosAnim.js"></script>
+<script type="text/javascript">
+kerodosAnim.init(document.getElementById("kerodos-anim"), "");
+/*
+Example usage: (as each part is defeated)
+kerodosAnim.deletePart(DeleteTags.DINO_TAIL);
+kerodosAnim.deletePart(DeleteTags.TUSKS);
+kerodosAnim.deletePart(DeleteTags.ANTLERS);
+kerodosAnim.deletePart(DeleteTags.BLACK_LEG1);
+kerodosAnim.deletePart(DeleteTags.WHITE_LEG1);
+kerodosAnim.deletePart(DeleteTags.BLACK_LEG2);
+kerodosAnim.deletePart(DeleteTags.WHITE_LEG2);
+kerodosAnim.deletePart(DeleteTags.BLACK_LEG3);
+kerodosAnim.deletePart(DeleteTags.WHITE_LEG3);
+kerodosAnim.deletePart(DeleteTags.UDDERS);
+kerodosAnim.deletePart(DeleteTags.BLACK_LEG4);
+kerodosAnim.deletePart(DeleteTags.WHITE_LEG4);
+kerodosAnim.deletePart(DeleteTags.BLACK_LEG5);
+kerodosAnim.deletePart(DeleteTags.WINGS);
+kerodosAnim.turnIntoSadFishy();
+kerodosAnim.turnIntoDedFishy();
+*/
+document.addEventListener('click', kerodosAnim.deleteRandomPart);
+</script>
+</body>
+</html>

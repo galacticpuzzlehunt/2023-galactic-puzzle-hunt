@@ -1,0 +1,123 @@
+.kerodos-anim-kero-part {
+  width: 222px;
+  height: 232px;
+  inset: 0;
+  position: absolute;
+  user-select: none;
+  pointer-events: none;
+}
+
+.kerodos-anim-spinny {
+  animation-name: kerodos-anim-spin;
+  animation-duration: 5s;
+  animation-iteration-count: 1;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+@keyframes kerodos-anim-spin {
+  from {
+    transform:rotate(0deg);
+  }
+  to {
+    transform:rotate(360deg) translate(1000px,-1000px) rotate(5000deg);
+  }
+}
+
+.kerodos-anim-splody {
+  animation-name: kerodos-anim-splode;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+@keyframes kerodos-anim-splode {
+  from {
+    transform: translate(0px,0px)
+  }
+  to {
+    transform: translate(1000px,1000px)
+  }
+}
+
+.kerodos-anim-fade-in {
+  animation: kerodosAnimfadeIn 6s forwards;
+}
+@keyframes kerodosAnimfadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.kerodos-anim-slow-fade-in {
+  animation: kerodosAnimSlowFadeIn 15s forwards;
+}
+@keyframes kerodosAnimSlowFadeIn {
+  0% { filter: brightness(0); }
+  33% { filter: brightness(0); }
+  100% { filter: brightness(1); }
+}
+
+.kerodos-anim-come-in-hot {
+  animation: kerodosAnimComeInHot 3s forwards ease-in-out;
+}
+@keyframes kerodosAnimComeInHot {
+  0% { filter: brightness(0); }
+  30% { filter: brightness(0); }
+  80% { filter: brightness(2); }
+  100% { filter: brightness(1); }
+}
+
+.kerodos-anim-fade-out {
+  animation-name: kerodosAnimFadeOut;
+  animation-duration: 4s;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+@keyframes kerodosAnimFadeOut {
+  10% {
+    transform: rotate(0deg);
+  }
+  20% {
+    transform: rotate(200deg);
+  }
+  27% {
+    transform: rotate(170deg);
+  }
+  34% {
+    transform: rotate(190deg);
+  }
+  41% {
+    transform: rotate(180deg);
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: rotate(180deg) translate(0px,50px)
+  }
+}
+
+#kerodos-anim-clip {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+#kerodos-anim-bg {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index:-100;
+}
+
+#kerodos-anim {
+  position: absolute;
+  right: 50%;
+}
+
+#kerodos-fishy {
+  width: 300px;
+}
